@@ -35,7 +35,8 @@ const config: Config = {
           950: "#321a14",
         },
         cream: "#FAF7F2",
-        charcoal: "#1A1A1A",
+        charcoal: "#111111",
+        deep: "#0d0d0d",
       },
       fontFamily: {
         serif: ["var(--font-playfair)", "Georgia", "serif"],
