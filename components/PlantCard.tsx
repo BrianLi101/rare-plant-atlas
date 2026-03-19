@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import type { Plant } from "@/data/plants";
+import type { PlantVariant } from "@/data/plants";
 
-export function PlantCard({ plant }: { plant: Plant }) {
+export function PlantCard({ plant }: { plant: PlantVariant }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 60 }}
