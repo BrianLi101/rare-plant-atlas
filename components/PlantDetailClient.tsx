@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import type { PlantVariant, CinematicPanel as PanelData } from "@/data/types";
+import { Navigation } from "@/components/Navigation";
 import {
   OverviewTab,
   VariegationTab,
@@ -202,20 +203,14 @@ function CinematicNav({ visible }: { visible: boolean }) {
   return (
     <AnimatePresence>
       {visible && (
-        <motion.nav
-          className="fixed top-0 left-0 right-0 z-50 pointer-events-none"
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
         >
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(17,17,17,0.6) 0%, rgba(17,17,17,0.3) 50%, transparent 100%)" }} />
-          <div className="relative px-6 py-4 md:px-10 pointer-events-auto">
-            <div className="max-w-7xl mx-auto">
-              <Link href="/" className="group flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-forest-400 to-forest-700 group-hover:from-forest-300 group-hover:to-forest-600 transition-all duration-500" />
-                <span className="font-serif text-lg tracking-tight text-cream/90 group-hover:text-cream transition-colors">Rare Plant Atlas</span>
-              </Link>
-            </div>
-          </div>
-        </motion.nav>
+          <Navigation />
+        </motion.div>
       )}
     </AnimatePresence>
   );

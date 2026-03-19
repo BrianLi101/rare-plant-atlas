@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: "Rare Plant Atlas",
   description:
     "A cinematic experience for discovering and evaluating rare plants.",
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
