@@ -13,6 +13,7 @@ export type {
   DownsideItem,
   PlantFitWeights,
   PlantIdentity,
+  PlantPhoto,
   PlantRecommendedProduct,
 } from "./types";
 

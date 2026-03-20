@@ -1,6 +1,13 @@
 // ---------------------------------------------------------------------------
 // Image manifest — standardized filenames per role
 // ---------------------------------------------------------------------------
+export interface PlantPhoto {
+  id: string;
+  image: string; // Path under /public
+  caption: string;
+  description: string;
+}
+
 export interface PlantImages {
   hero?: string;
   detail?: string[];
@@ -141,6 +148,7 @@ export interface PlantVariant {
   rarity: string;
   priceRange: string;
   images: PlantImages;
+  photos: PlantPhoto[];
   colors: {
     primary: string;
     accent: string;

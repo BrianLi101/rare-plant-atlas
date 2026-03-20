@@ -21,6 +21,7 @@ import {
   FitCheckTab,
   DownsidesTab,
   ShopTab,
+  PhotoGalleryTab,
 } from "./tabs";
 
 // ---------------------------------------------------------------------------
@@ -54,6 +55,7 @@ interface TabDef {
 
 function buildTabs(plant: PlantVariant): TabDef[] {
   const tabs: TabDef[] = [{ id: "overview", label: "Overview" }];
+  if (plant.photos.length > 0) tabs.push({ id: "gallery", label: "Gallery" });
   if (plant.variegation) tabs.push({ id: "variegation", label: "Variegation" });
   tabs.push({ id: "care", label: "Care" });
   if (plant.substrate) tabs.push({ id: "substrate", label: "Substrate" });
@@ -68,6 +70,7 @@ function buildTabs(plant: PlantVariant): TabDef[] {
 function buildTabContent(plant: PlantVariant): Record<string, React.ReactNode> {
   const content: Record<string, React.ReactNode> = {
     overview: <OverviewTab plant={plant} />,
+    gallery: <PhotoGalleryTab plant={plant} />,
     care: <CareTab plant={plant} />,
     fit: <FitCheckTab plant={plant} />,
     downsides: <DownsidesTab plant={plant} />,
