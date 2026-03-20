@@ -31,6 +31,20 @@ const type1UnstablePhoto: PlantPhoto = {
     "Variegated gloriosums can put out many green leaves before throwing out another variegated one. Unlike many other albos, green leaves do not mean the plant has reverted.",
 };
 
+const type1RhizomeVariegationPhoto: PlantPhoto = {
+  id: "gloriosum-type-1-rhizome-variegation",
+  image: `${IMG}/type-1-rhizome-variegation.jpg`,
+  caption: "Rhizome variegation",
+  description:
+    "You can tell a gloriosum is variegated by the white coloring it carries in its rhizome. Sometimes this can fade away to green but because gloriosums tend to have thick rhizomes, they can hold variegation well even when it isn't visible.",
+};
+const type1Roots: PlantPhoto = {
+  id: "gloriosum-type-1-roots",
+  image: `${IMG}/type-1-roots.jpg`,
+  caption: "A view of the roots",
+  description:"The roots of a gloriosum tend to have ",
+};
+
 
 const type1UglyEmergencePhoto: PlantPhoto = {
   id: "gloriosum-type-1-ugly-emergence",
@@ -72,9 +86,11 @@ export const philodendronGloriosumVariegated: PlantVariant = {
     variegation: type1BlockPhoto.image,
   },
   photos: [
-    type1BlockPhoto,
     type1UnstablePhoto,
-    type1UglyEmergencePhoto
+    type1RhizomeVariegationPhoto,
+    type1BlockPhoto,
+    type1UglyEmergencePhoto,
+    type1Roots
   ],
   colors: {
     primary: "#1a3522",
