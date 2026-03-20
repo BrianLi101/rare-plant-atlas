@@ -64,14 +64,19 @@ export function ShopTab({ plant }: { plant: PlantVariant }) {
                 </p>
               </div>
 
-              <a
-                href={product.amazonUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="mt-1 block text-center text-[11px] tracking-[0.08em] text-cream/50 border border-cream/[0.15] bg-cream/[0.04] rounded-[6px] py-2 px-3 hover:text-cream/75 hover:border-cream/[0.25] transition-colors"
-              >
-                View on Amazon
-              </a>
+              <div className="mt-1 flex flex-col gap-1.5">
+                {product.listings.map((listing) => (
+                  <a
+                    key={`${product.id}-${listing.retailer}-${listing.url}`}
+                    href={listing.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="block text-center text-[11px] tracking-[0.08em] text-cream/50 border border-cream/[0.15] bg-cream/[0.04] rounded-[6px] py-2 px-3 hover:text-cream/75 hover:border-cream/[0.25] transition-colors"
+                  >
+                    {listing.label ?? `View on ${listing.retailer}`}
+                  </a>
+                ))}
+              </div>
             </div>
           </article>
         ))}

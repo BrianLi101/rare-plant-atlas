@@ -1,6 +1,6 @@
 export type { Product } from "./types";
 
-import { ProductCategory, type Product } from "./types";
+import { ProductCategory, ProductRetailer, type Product } from "./types";
 
 export const lechuzaPlanterHorizontalSmall: Product = {
   id: "lechuza-planter-horizontal-small",
@@ -8,7 +8,12 @@ export const lechuzaPlanterHorizontalSmall: Product = {
   product: "Lechuza Delta 10 Self-Watering Planter",
   approximatePriceUsd: 35,
   image: "/products/lechuza-pon-horizontal-planter-small.jpg",
-  amazonUrl: "https://www.amazon.com/dp/B00MUQVT0W",
+  listings: [
+    {
+      retailer: ProductRetailer.Amazon,
+      url: "https://www.amazon.com/dp/B00MUQVT0W",
+    },
+  ],
 };
 
 export const lechuzaPonSubstrate18L: Product = {
@@ -17,7 +22,12 @@ export const lechuzaPonSubstrate18L: Product = {
   product: "Lechuza Pon Substrate 18L",
   approximatePriceUsd: 80,
   image: "/products/lechuza-pon-substrate-18-L.jpg",
-  amazonUrl: "https://www.amazon.com/dp/B085DDH5B2",
+  listings: [
+    {
+      retailer: ProductRetailer.Amazon,
+      url: "https://www.amazon.com/dp/B085DDH5B2",
+    },
+  ],
 };
 
 export const lechuzaPonSubstrate3L: Product = {
@@ -26,7 +36,12 @@ export const lechuzaPonSubstrate3L: Product = {
   product: "Lechuza Pon Substrate 3L",
   approximatePriceUsd: 30,
   image: "/products/lechuza-pon-substrate-3-L.jpg",
-  amazonUrl: "https://www.amazon.com/dp/B085DC5FG9",
+  listings: [
+    {
+      retailer: ProductRetailer.Amazon,
+      url: "https://www.amazon.com/dp/B085DC5FG9",
+    },
+  ],
 };
 
 export const xactoKnifeSet16Pc: Product = {
@@ -37,7 +52,12 @@ export const xactoKnifeSet16Pc: Product = {
     "16 Pcs Exacto Knife Set, 3 Craft Knife and 13 SK5 Steel Blades, Precision Hobby Knife for Carving, Modeling, DIY, Scrapbooking, and Art Projects.",
   approximatePriceUsd: 10,
   image: "/products/jetmore-xacto-16-pc-set.jpg",
-  amazonUrl: "https://www.amazon.com/dp/B0BNQ93N95",
+  listings: [
+    {
+      retailer: ProductRetailer.Amazon,
+      url: "https://www.amazon.com/dp/B0BNQ93N95",
+    },
+  ],
 };
 
 export const nurtureSystemNo1PowerGrow: Product = {
@@ -48,5 +68,27 @@ export const nurtureSystemNo1PowerGrow: Product = {
     "NurtureSystem No1. Power Grow Adaptive Nutrient Concentrate Houseplant food.",
   approximatePriceUsd: 15,
   image: "/products/nurture-system-no1-power-grow.jpg",
-  amazonUrl: "https://www.amazon.co.uk/dp/B0CFQRVBTV",
+  listings: [
+    {
+      retailer: ProductRetailer.Amazon,
+      url: "https://www.amazon.co.uk/dp/B0CFQRVBTV",
+    },
+  ],
+};
+
+export const ikeaOdlaLeca: Product = {
+  id: "ikea-odla-leca-4-5qt",
+  category: ProductCategory.Substrate,
+  product: "Leca 4.5QT",
+  description:
+    "Smaller LECA pellet balls that are denser and rounder than many common Amazon alternatives.",
+  approximatePriceUsd: 8,
+  image: "/products/ikea-leca.avif",
+  listings: [
+    {
+      retailer: ProductRetailer.IKEA,
+      url: "https://www.ikea.com/us/en/p/odla-growing-media-clay-pellets-50288546/",
+      label: "View on IKEA",
+    },
+  ],
 };

@@ -108,6 +108,18 @@ export enum ProductCategory {
   Tools = "Tools",
 }
 
+export enum ProductRetailer {
+  Amazon = "Amazon",
+  IKEA = "IKEA",
+  Other = "Other",
+}
+
+export interface ProductListing {
+  retailer: ProductRetailer;
+  url: string;
+  label?: string;
+}
+
 export interface Product {
   id: string;
   category: ProductCategory;
@@ -115,7 +127,7 @@ export interface Product {
   description?: string;
   approximatePriceUsd: number;
   image: string; // Path under /public, e.g. /products/item.jpg
-  amazonUrl: string;
+  listings: ProductListing[];
 }
 
 export interface PlantRecommendedProduct {

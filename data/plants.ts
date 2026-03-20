@@ -19,8 +19,10 @@ export type {
 
 import type { PlantVariant } from "./types";
 import { philodendronGloriosumVariegated } from "./plants/philodendron-gloriosum-variegated";
+import { alocasiaBlackVelvetVariegatedPink } from "./plants/alocasia-black-velvet-variegated-pink";
 
 export const plants: PlantVariant[] = [
+  alocasiaBlackVelvetVariegatedPink,
   philodendronGloriosumVariegated,
 ];
 

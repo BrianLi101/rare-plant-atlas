@@ -1,0 +1,280 @@
+import type { PlantVariant } from "../types";
+import {
+  lechuzaPonSubstrate3L,
+  lechuzaPonSubstrate18L,
+  lechuzaPlanterHorizontalSmall,
+  nurtureSystemNo1PowerGrow,
+  ikeaOdlaLeca,
+} from "../products";
+
+export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
+  identity: {
+    id: "alocasia_reginula_black_velvet_variegated_pink",
+    slug: "alocasia-black-velvet-variegated-pink",
+    label: "Alocasia Black Velvet - Variegated Pink",
+    genus: "Alocasia",
+    species: "reginula",
+    tradeName: "Alocasia Black Velvet Variegated Pink",
+    variantLabel: "Pink Variegation",
+    aliases: ["Pink variegated Black Velvet", "Alocasia reginula variegated pink"],
+  },
+  tagline: "Dark velvet, blush fire.",
+  heroDescription:
+    "A compact jewel Alocasia with near-black, velvet foliage and pink-to-cream sectoral variegation. High contrast and slow growth make each leaf feel earned.",
+  origin: "Cultivated hybrid line (horticultural selection)",
+  family: "Araceae",
+  rarity: "Rare",
+  priceRange: "$150 - $1,200+",
+  images: {},
+  photos: [],
+  colors: {
+    primary: "#121518",
+    accent: "#d69aa8",
+    gradient: ["#07080a", "#252b31"],
+  },
+  traits: [
+    "Velvet foliage",
+    "Compact growth",
+    "Pink variegation",
+    "Slow grower",
+    "Humidity sensitive",
+    "Collector plant",
+  ],
+  fitWeights: { light: 0.3, humidity: 0.35, space: 0.1, experience: 0.25 },
+
+  panels: [
+    {
+      id: "hero",
+      eyebrow: "Rare - Araceae - Collector cultivar",
+      lines: ["Alocasia", "Black Velvet", "Variegated Pink"],
+      italicLine: 2,
+      earthLine: 2,
+      sub: "Near-black velvet blades cut by pink and cream sectors. Compact, dramatic, and unforgiving of inconsistent care.",
+    },
+    {
+      id: "variegation",
+      eyebrow: "Expression profile",
+      lines: ["Dark velvet", "with", "blush sectors."],
+      italicLine: 2,
+      sub: "Pink expression shifts by leaf age and light: fresh leaves can open brighter, then settle toward softer blush or cream.",
+      fact: "Variegated tissue has lower chlorophyll and grows slower; stability depends on node genetics and plant vigor.",
+    },
+    {
+      id: "origin",
+      eyebrow: "Modern collector line",
+      lines: ["Selected for", "contrast", "and compact form."],
+      italicLine: 1,
+      sub: "Black Velvet is a compact Alocasia valued for texture. Pink-variegated forms are horticultural selections propagated for ornamental expression.",
+    },
+  ],
+
+  glance: [
+    { label: "Price range", value: "$150-$1,200+", note: "Maturity and variegation drive price" },
+    { label: "Leaf cycle", value: "4-8+ weeks", note: "Often slower in home conditions" },
+    { label: "Difficulty", value: "Advanced", note: "Consistency matters" },
+    { label: "Humidity", value: "65%+", note: "Leaf quality drops below this" },
+    { label: "Space", value: "Compact", note: "Best for small shelves or cabinets" },
+    { label: "Growth habit", value: "Upright clumper", note: "Not a crawler or climber" },
+  ],
+
+  verdict:
+    "A compact, high-contrast collector Alocasia that rewards stable humidity, careful watering, and patience.",
+  recommendedProducts: [
+    {
+      product: lechuzaPonSubstrate3L,
+      reason:
+        "Useful for small jewel Alocasia repots and staged transitions into semi-hydro conditions.",
+    },
+    {
+      product: lechuzaPonSubstrate18L,
+      reason:
+        "A stable mineral substrate for growers running multiple Alocasia in a consistent medium.",
+    },
+    {
+      product: ikeaOdlaLeca,
+      reason:
+        "A practical LECA option for semi-hydro transitions and moisture-buffered root aeration in jewel Alocasia setups.",
+    },
+    {
+      product: lechuzaPlanterHorizontalSmall,
+      reason:
+        "Works as a compact reservoir-style planter for controlled moisture when root volume is still small.",
+    },
+    {
+      product: nurtureSystemNo1PowerGrow,
+      reason:
+        "Supports steady growth and color retention when used at light, consistent feed rates.",
+    },
+  ],
+
+  variegation: {
+    intro:
+      "Pink-variegated Black Velvet expression can range from soft blush sectors to cream and pale mint over dark velvet tissue. Pattern and intensity vary by node and leaf.",
+    types: [
+      {
+        name: "Sectoral Pink",
+        color: "#d69aa8",
+        pattern:
+          "Larger blocks, arcs, or half-sectors of pink-to-cream variegation against dark green-black velvet.",
+        stability:
+          "Moderate. Can alternate between high-color and greener leaves depending on vigor and node expression.",
+        market:
+          "Higher premium due to dramatic contrast and lower frequency of strongly pink sectors.",
+        note: "Most collectible look; also carries the highest risk of weak growth on heavily variegated leaves.",
+      },
+      {
+        name: "Mottled / Marbled Pink",
+        color: "#c9a0ad",
+        pattern:
+          "Fine flecks and mottling across the leaf blade with softer, more diffuse pink expression.",
+        stability:
+          "Usually more consistent than large-sector forms, but still variable leaf to leaf.",
+        market:
+          "More commonly available than bold sectoral specimens; pricing is generally lower.",
+        note: "A steadier expression for growers prioritizing continuity over dramatic single-leaf outcomes.",
+      },
+    ],
+    closing:
+      "Treat this as a variable-expression cultivar: even strong plants can swing between greener and higher-color leaves.",
+  },
+
+  care: [
+    {
+      label: "Light",
+      value: "Bright indirect",
+      detail:
+        "Strong filtered light supports compact growth and variegation quality. Avoid harsh direct sun on variegated tissue.",
+    },
+    {
+      label: "Humidity",
+      value: "65-80%",
+      detail:
+        "Higher humidity improves leaf expansion and texture. Low humidity increases risk of edge crisping and stalled unfurls.",
+    },
+    {
+      label: "Temperature",
+      value: "68-84F",
+      detail:
+        "Keep warm and stable. Cold stress quickly stalls growth and can trigger root decline.",
+    },
+    {
+      label: "Watering",
+      value: "Evenly moist, not wet",
+      detail:
+        "Allow the top layer to begin drying, then water thoroughly. Prolonged saturation raises corm and root rot risk.",
+    },
+    {
+      label: "Feeding",
+      value: "Weakly weekly",
+      detail:
+        "Light, frequent feeding during active growth is generally safer than heavy infrequent doses.",
+    },
+    {
+      label: "Airflow",
+      value: "Gentle circulation",
+      detail:
+        "Good airflow helps reduce fungal and bacterial pressure, especially in high humidity setups.",
+    },
+    {
+      label: "Difficulty",
+      value: "Advanced",
+      detail:
+        "Best results come from stable environment control, careful moisture management, and close monitoring.",
+    },
+  ],
+
+  substrate: {
+    intro:
+      "Black Velvet forms prefer oxygen-rich media that hold light, even moisture without compaction.",
+    options: [
+      {
+        name: "Chunky Aroid Mix",
+        components: [
+          "Fine orchid bark 35%",
+          "Perlite/pumice 30%",
+          "Coco chips or coir 20%",
+          "Worm castings 10%",
+          "Charcoal 5%",
+        ],
+        body: "A breathable mix with enough retention for compact root systems that dislike prolonged drought.",
+        verdict: "Good baseline for soil-style culture if watering discipline is strong.",
+        recommended: false,
+      },
+      {
+        name: "Pon in Semi-Hydro",
+        components: [
+          "Pumice",
+          "Zeolite",
+          "Lava rock",
+          "Reservoir planter",
+        ],
+        body: "Stable mineral media can reduce compaction and improve root-zone consistency when transition is managed carefully.",
+        verdict: "Excellent once established; transition gradually and watch roots closely.",
+        recommended: true,
+      },
+    ],
+    note: "Whichever medium you choose, avoid dense waterlogged conditions around the corm.",
+  },
+
+  provenance: {
+    body: "Alocasia reginula (Black Velvet) originates from Borneo and became a staple jewel Alocasia in cultivation. Pink-variegated Black Velvet forms are modern horticultural selections distributed through specialist growers.",
+    timeline: [
+      {
+        year: "Pre-2000s",
+        event:
+          "Black Velvet enters specialty cultivation as a compact foliage Alocasia valued for dark textured leaves.",
+      },
+      {
+        year: "2010s",
+        event:
+          "Variegated reginula lines gain visibility in collector circles as social media and boutique imports expand demand.",
+      },
+      {
+        year: "2020-now",
+        event:
+          "Pink-expression forms command premiums, with pricing tied to sector size, color intensity, and plant stability.",
+      },
+    ],
+  },
+
+  propagation: {
+    method: "Corm and offset division",
+    timing: "Spring to midsummer during active growth",
+    successRate: "Moderate to high with healthy parent stock",
+    steps: [
+      "Unpot and identify mature corms/offsets with visible growth points.",
+      "Separate cleanly with a sterile blade, preserving roots when possible.",
+      "Root in high humidity using lightly moist sphagnum or a fine mineral medium.",
+      "Keep warm, bright, and stable while new roots and first leaves establish.",
+      "Transition gradually into the final substrate once growth is active.",
+    ],
+    warnings: [
+      "Overwatering newly separated corms is the most common failure point.",
+      "Heavily variegated offsets may root and grow slower than greener counterparts.",
+      "Do not divide weak plants; recovery time can be long.",
+    ],
+  },
+
+  downsides: [
+    {
+      title: "Slow and variable growth",
+      body: "Leaf cadence is slow, and variegation intensity can swing leaf-to-leaf even in stable setups.",
+    },
+    {
+      title: "High humidity dependence",
+      body: "Low humidity commonly causes imperfect unfurls, crispy margins, and weaker overall presentation.",
+    },
+    {
+      title: "Rot risk",
+      body: "Corm and fine roots are sensitive to overwatering and stagnant media.",
+    },
+    {
+      title: "Price volatility",
+      body: "Strong pink sectoring and established plants can be expensive, and market pricing shifts quickly.",
+    },
+    {
+      title: "Pest pressure",
+      body: "Spider mites and thrips can escalate quickly on stressed foliage; frequent checks are required.",
+    },
+  ],
+};
