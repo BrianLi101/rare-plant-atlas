@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import type { PlantVariant } from "@/data/plants";
 import {
@@ -9,8 +10,28 @@ import {
   getPlantVariantLabel,
 } from "@/data/identity";
 
+function hexToRgba(hex: string, alpha: number): string {
+  const cleaned = hex.replace("#", "");
+  const normalized =
+    cleaned.length === 3
+      ? cleaned
+          .split("")
+          .map((c) => c + c)
+          .join("")
+      : cleaned;
+  const r = parseInt(normalized.slice(0, 2), 16);
+  const g = parseInt(normalized.slice(2, 4), 16);
+  const b = parseInt(normalized.slice(4, 6), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
 export function PlantCard({ plant }: { plant: PlantVariant }) {
   const variant = getPlantVariantLabel(plant);
+  const heroImage = plant.panels[0]?.image;
+  const accent = plant.colors.accent || "#85b98e";
+  const accentSoft = hexToRgba(accent, 0.5);
+  const accentMid = hexToRgba(accent, 0.3);
+  const accentStrong = hexToRgba(accent, 0.75);
 
   return (
     <motion.div
@@ -21,93 +42,187 @@ export function PlantCard({ plant }: { plant: PlantVariant }) {
     >
       <Link
         href={`/plants/${plant.identity.slug}`}
-        className="group block relative overflow-hidden rounded-2xl"
+        className="group block relative overflow-hidden rounded-[18px]"
       >
-        <div
-          className="aspect-[3/4] md:aspect-[4/5] relative"
-          style={{
-            background: `linear-gradient(135deg, ${plant.colors.gradient[0]}, ${plant.colors.gradient[1]})`,
-          }}
-        >
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(133,185,142,0.2)_0%,transparent_70%)]" />
-
-          <motion.svg
-            viewBox="0 0 200 300"
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] opacity-[0.12]"
-            initial={false}
-          >
-            <motion.path
-              d="M100 20 C40 60, 20 140, 100 280 C180 140, 160 60, 100 20Z"
-              fill="none"
-              stroke="rgba(250,247,242,0.4)"
-              strokeWidth="1"
-              className="group-hover:stroke-forest-300/50 transition-all duration-700"
+        <div className="aspect-[3/4] md:aspect-[4/5] relative">
+          {heroImage ? (
+            <Image
+              src={heroImage}
+              alt={getPlantFullName(plant)}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
             />
-            <motion.line
-              x1="100"
-              y1="40"
-              x2="100"
-              y2="260"
-              stroke="rgba(250,247,242,0.2)"
+          ) : (
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `linear-gradient(145deg, ${plant.colors.gradient[0]}, ${plant.colors.gradient[1]})`,
+              }}
+            />
+          )}
+
+          <svg
+            viewBox="0 0 400 533"
+            className="absolute inset-0 w-full h-full opacity-[0.07] pointer-events-none"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            <ellipse
+              cx="200"
+              cy="160"
+              rx="120"
+              ry="200"
+              fill="none"
+              stroke={accent}
+              strokeWidth="1"
+            />
+            <line
+              x1="200"
+              y1="0"
+              x2="200"
+              y2="360"
+              stroke={accent}
+              strokeWidth="0.6"
+            />
+            <line
+              x1="200"
+              y1="80"
+              x2="110"
+              y2="120"
+              stroke={accent}
               strokeWidth="0.5"
             />
-            {[60, 90, 120, 150, 180, 210].map((cy, i) => (
-              <motion.line
-                key={i}
-                x1="100"
-                y1={cy}
-                x2={i % 2 === 0 ? "55" : "145"}
-                y2={cy - 15}
-                stroke="rgba(250,247,242,0.15)"
-                strokeWidth="0.5"
-              />
-            ))}
-          </motion.svg>
+            <line
+              x1="200"
+              y1="110"
+              x2="290"
+              y2="150"
+              stroke={accent}
+              strokeWidth="0.5"
+            />
+            <line
+              x1="200"
+              y1="140"
+              x2="100"
+              y2="190"
+              stroke={accent}
+              strokeWidth="0.5"
+            />
+            <line
+              x1="200"
+              y1="175"
+              x2="300"
+              y2="215"
+              stroke={accent}
+              strokeWidth="0.5"
+            />
+            <line
+              x1="200"
+              y1="210"
+              x2="105"
+              y2="260"
+              stroke={accent}
+              strokeWidth="0.5"
+            />
+            <line
+              x1="200"
+              y1="250"
+              x2="295"
+              y2="290"
+              stroke={accent}
+              strokeWidth="0.5"
+            />
+            <ellipse
+              cx="200"
+              cy="120"
+              rx="55"
+              ry="85"
+              fill={accentSoft}
+            />
+          </svg>
 
-          <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-8">
-            <div className="space-y-3 pt-1">
-              <p className="text-xs tracking-[0.3em] uppercase text-cream/40">
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: `radial-gradient(ellipse 70% 50% at 40% 30%, ${accentMid} 0%, transparent 65%)`,
+            }}
+          />
+
+          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
+          <div
+            className="absolute inset-x-0 bottom-0 pointer-events-none"
+            style={{
+              height: "65%",
+              background:
+                "linear-gradient(to top, rgba(10,10,10,0.98) 0%, rgba(14,22,16,0.82) 30%, rgba(16,26,18,0.45) 55%, transparent 100%)",
+            }}
+          />
+          <div
+            className="absolute inset-x-0 bottom-0 pointer-events-none"
+            style={{
+              height: "40%",
+              background:
+                "linear-gradient(to top, rgba(8,8,8,1) 0%, rgba(9,12,9,0.9) 30%, transparent 100%)",
+            }}
+          />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(0,0,0,0.4)_100%)] pointer-events-none" />
+
+          <div className="absolute inset-0 flex flex-col justify-between p-5">
+            <div className="flex items-start justify-between">
+              <span className="text-[8.5px] tracking-[0.38em] uppercase text-cream/40 px-[11px] py-[5px] rounded-full border border-cream/[0.12] bg-black/25">
                 {plant.rarity}
-              </p>
-              <h3 className="font-serif text-heading leading-[1.2] text-cream group-hover:text-gradient transition-all duration-500">
-                {getPlantFullName(plant)}
-              </h3>
-              <p className="text-sm text-cream/50 italic">
-                {getPlantScientificName(plant)}
-              </p>
+              </span>
+            </div>
+
+            <div className="flex flex-col gap-1.5">
               {variant && (
-                <p className="text-[10px] tracking-[0.2em] uppercase text-forest-300/80">
+                <p
+                  className="text-[8px] tracking-[0.3em] uppercase"
+                  style={{ color: accentStrong }}
+                >
                   {variant}
                 </p>
               )}
-              <p className="text-sm text-cream/40 leading-relaxed max-w-sm line-clamp-2">
-                {plant.heroDescription}
+
+              <h3 className="font-serif text-[clamp(1.1rem,2.5vw,1.5rem)] leading-[1.1] tracking-[-0.015em] text-cream m-0">
+                {getPlantFullName(plant)}
+              </h3>
+
+              <p className="text-[12px] text-cream/35 italic m-0">
+                {getPlantScientificName(plant)}
               </p>
 
-              <div className="flex flex-wrap gap-2 pt-2">
-                {plant.traits.slice(0, 3).map((trait) => (
+              <div className="flex flex-wrap gap-[5px] pt-0.5">
+                {plant.traits.slice(0, 2).map((trait) => (
                   <span
                     key={trait}
-                    className="text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full border border-cream/10 text-cream/35"
+                    className="text-[8px] tracking-[0.18em] uppercase px-[9px] py-1 rounded-full border border-cream/[0.1] text-cream/30"
                   >
                     {trait}
                   </span>
                 ))}
               </div>
-            </div>
 
-            <motion.div
-              className="mt-4 flex items-center gap-2 text-sm text-forest-300/70 group-hover:text-forest-200 transition-colors duration-500"
-              whileHover={{ x: 4 }}
-            >
-              <span className="tracking-widest uppercase text-xs">
-                Explore
-              </span>
-              <span className="text-lg">→</span>
-            </motion.div>
+              <div className="pt-1.5 flex items-center gap-1.5">
+                <span
+                  className="text-[9.5px] tracking-[0.3em] uppercase transition-colors duration-500"
+                  style={{ color: hexToRgba(accent, 0.5) }}
+                >
+                  Explore
+                </span>
+                <motion.span
+                  className="transition-colors duration-500 text-[13px]"
+                  style={{ color: hexToRgba(accent, 0.5) }}
+                  animate={{ x: 0 }}
+                  whileHover={{ x: 3 }}
+                >
+                  →
+                </motion.span>
+              </div>
+            </div>
           </div>
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+          <div className="absolute inset-0 rounded-[18px] shadow-[inset_0_0_0_1px_rgba(250,247,242,0.06)] pointer-events-none" />
         </div>
       </Link>
     </motion.div>

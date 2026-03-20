@@ -19,3 +19,12 @@ export const lechuzaPonSubstrate18L: Product = {
   image: "/products/lechuza-pon-substrate-18-L.jpg",
   amazonUrl: "https://www.amazon.com/dp/B085DDH5B2",
 };
+
+export const lechuzaPonSubstrate3L: Product = {
+  id: "lechuza-pon-substrate-3l",
+  category: ProductCategory.Substrate,
+  product: "Lechuza Pon Substrate 3L",
+  approximatePriceUsd: 30,
+  image: "/products/lechuza-pon-substrate-3-L.jpg",
+  amazonUrl: "https://www.amazon.com/dp/B085DC5FG9",
+};
