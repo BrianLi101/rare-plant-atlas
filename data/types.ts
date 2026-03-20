@@ -91,6 +91,29 @@ export interface PlantFitWeights {
   experience: number;
 }
 
+export type ProductCategory =
+  | "Substrate"
+  | "Planter/Pot"
+  | "Nutrients"
+  | "Humidity"
+  | "Lighting"
+  | "Pest Control"
+  | "Tools";
+
+export interface Product {
+  id: string;
+  category: ProductCategory;
+  product: string;
+  approximatePriceUsd: number;
+  image: string; // Path under /public, e.g. /products/item.jpg
+  amazonUrl: string;
+}
+
+export interface PlantRecommendedProduct {
+  product: Product;
+  reason: string;
+}
+
 export interface PlantIdentity {
   id: string;
   slug: string;
@@ -128,6 +151,7 @@ export interface PlantVariant {
   panels: CinematicPanel[];
   glance: GlanceFact[];
   verdict: string;
+  recommendedProducts: PlantRecommendedProduct[];
 
   // Required sections
   care: CareItem[];

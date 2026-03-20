@@ -28,20 +28,6 @@ export function Navigation() {
               Rare Plant Atlas
             </span>
           </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm tracking-wide text-cream/50">
-            <Link
-              href="/"
-              className="hover:text-cream/90 transition-colors duration-300"
-            >
-              Atlas
-            </Link>
-            <Link
-              href="/#fit-engine"
-              className="hover:text-cream/90 transition-colors duration-300"
-            >
-              Fit Engine
-            </Link>
-          </div>
         </div>
       </div>
     </nav>

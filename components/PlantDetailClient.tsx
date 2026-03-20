@@ -20,6 +20,7 @@ import {
   PropagationTab,
   FitCheckTab,
   DownsidesTab,
+  ShopTab,
 } from "./tabs";
 
 // ---------------------------------------------------------------------------
@@ -60,6 +61,7 @@ function buildTabs(plant: PlantVariant): TabDef[] {
   if (plant.propagation) tabs.push({ id: "propagation", label: "Propagation" });
   tabs.push({ id: "fit", label: "Fit Check" });
   tabs.push({ id: "downsides", label: "Downsides" });
+  if (plant.recommendedProducts.length > 0) tabs.push({ id: "shop", label: "Shop" });
   return tabs;
 }
 
@@ -69,6 +71,7 @@ function buildTabContent(plant: PlantVariant): Record<string, React.ReactNode> {
     care: <CareTab plant={plant} />,
     fit: <FitCheckTab plant={plant} />,
     downsides: <DownsidesTab plant={plant} />,
+    shop: <ShopTab plant={plant} />,
   };
   if (plant.variegation) content.variegation = <VariegationTab plant={plant} />;
   if (plant.substrate) content.substrate = <SubstrateTab plant={plant} />;

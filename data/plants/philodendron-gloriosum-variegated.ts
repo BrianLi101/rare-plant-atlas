@@ -1,4 +1,8 @@
 import type { PlantVariant } from "../types";
+import {
+  lechuzaPlanterHorizontalSmall,
+  lechuzaPonSubstrate18L,
+} from "../products";
 
 const IMG = "/plants/philodendron-gloriosum-variegated";
 
@@ -81,6 +85,18 @@ export const philodendronGloriosumVariegated: PlantVariant = {
 
   verdict:
     "A slow, demanding, extraordinarily beautiful plant that rewards patience and punishes neglect. Not a casual purchase.",
+  recommendedProducts: [
+    {
+      product: lechuzaPlanterHorizontalSmall,
+      reason:
+        "Gloriosums are crawlers and need to grow horizontally. This planter is best when leaves are under 1 foot long; beyond that, stability drops and it cannot hold enough water.",
+    },
+    {
+      product: lechuzaPonSubstrate18L,
+      reason:
+        "Lechuza Pon works well for the thin roots of Gloriosum and provides a stable medium as the plant gets heavier.",
+    },
+  ],
 
   // ─── Variegation ──────────────────────────────────────────────────────
   variegation: {

@@ -13,6 +13,7 @@ export type {
   DownsideItem,
   PlantFitWeights,
   PlantIdentity,
+  PlantRecommendedProduct,
 } from "./types";
 
 import type { PlantVariant } from "./types";
