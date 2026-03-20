@@ -112,6 +112,7 @@ export interface Product {
   id: string;
   category: ProductCategory;
   product: string;
+  description?: string;
   approximatePriceUsd: number;
   image: string; // Path under /public, e.g. /products/item.jpg
   amazonUrl: string;

@@ -3,6 +3,7 @@ import {
   lechuzaPlanterHorizontalSmall,
   lechuzaPonSubstrate3L,
   lechuzaPonSubstrate18L,
+  xactoKnifeSet16Pc,
 } from "../products";
 
 const IMG = "/plants/philodendron-gloriosum-variegated";
@@ -156,14 +157,19 @@ export const philodendronGloriosumVariegated: PlantVariant = {
         "Gloriosums are crawlers and need to grow horizontally. This planter is best when leaves are under 1 foot long; beyond that, stability drops and it cannot hold enough water.",
     },
     {
-      product: lechuzaPonSubstrate18L,
-      reason:
-        "Lechuza Pon works well for the thin roots of Gloriosum and provides a stable medium as the plant gets heavier.",
-    },
-    {
       product: lechuzaPonSubstrate3L,
       reason:
         "The 3L size is useful for smaller Gloriosum repots and top-offs while keeping the same stable, root-friendly Pon medium.",
+    },
+    {
+      product: xactoKnifeSet16Pc,
+      reason:
+        "Mature rhizomes can reach around 1 inch in diameter and require deep, clean cuts; multiple blade options help match blade size to rhizome thickness.",
+    },
+    {
+      product: lechuzaPonSubstrate18L,
+      reason:
+        "Lechuza Pon works well for the thin roots of Gloriosum and provides a stable medium as the plant gets heavier.",
     },
   ],
 

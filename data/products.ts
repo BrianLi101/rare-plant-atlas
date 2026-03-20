@@ -28,3 +28,14 @@ export const lechuzaPonSubstrate3L: Product = {
   image: "/products/lechuza-pon-substrate-3-L.jpg",
   amazonUrl: "https://www.amazon.com/dp/B085DC5FG9",
 };
+
+export const xactoKnifeSet16Pc: Product = {
+  id: "xacto-knife-set-16-pc",
+  category: ProductCategory.Tools,
+  product: "16 Pc X-Acto Knife Set",
+  description:
+    "16 Pcs Exacto Knife Set, 3 Craft Knife and 13 SK5 Steel Blades, Precision Hobby Knife for Carving, Modeling, DIY, Scrapbooking, and Art Projects.",
+  approximatePriceUsd: 10,
+  image: "/products/jetmore-xacto-16-pc-set.jpg",
+  amazonUrl: "https://www.amazon.com/dp/B0BNQ93N95",
+};
