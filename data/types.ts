@@ -91,14 +91,15 @@ export interface PlantFitWeights {
   experience: number;
 }
 
-export type ProductCategory =
-  | "Substrate"
-  | "Planter/Pot"
-  | "Nutrients"
-  | "Humidity"
-  | "Lighting"
-  | "Pest Control"
-  | "Tools";
+export enum ProductCategory {
+  Substrate = "Substrate",
+  PlanterPot = "Planter/Pot",
+  Nutrients = "Nutrients",
+  Humidity = "Humidity",
+  Lighting = "Lighting",
+  PestControl = "Pest Control",
+  Tools = "Tools",
+}
 
 export interface Product {
   id: string;

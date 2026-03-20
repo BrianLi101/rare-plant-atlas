@@ -62,7 +62,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          A Cinematic Botanical Experience
+          A Botanical Experience
         </motion.p>
 
         <motion.h1
@@ -82,8 +82,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
         >
-          Discover extraordinary plants through immersive storytelling.
-          Evaluate fit. Cultivate with intention.
+          Discover extraordinary plants. Cultivate with intention.
         </motion.p>
 
         <motion.div

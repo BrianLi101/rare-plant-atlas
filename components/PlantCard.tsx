@@ -23,17 +23,14 @@ export function PlantCard({ plant }: { plant: PlantVariant }) {
         href={`/plants/${plant.identity.slug}`}
         className="group block relative overflow-hidden rounded-2xl"
       >
-        {/* Card background */}
         <div
           className="aspect-[3/4] md:aspect-[4/5] relative"
           style={{
             background: `linear-gradient(135deg, ${plant.colors.gradient[0]}, ${plant.colors.gradient[1]})`,
           }}
         >
-          {/* Decorative elements */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(133,185,142,0.2)_0%,transparent_70%)]" />
 
-          {/* Leaf-shaped decorative SVG */}
           <motion.svg
             viewBox="0 0 200 300"
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] opacity-[0.12]"
@@ -67,16 +64,17 @@ export function PlantCard({ plant }: { plant: PlantVariant }) {
             ))}
           </motion.svg>
 
-          {/* Content overlay */}
-          <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-            <div className="space-y-3">
+          <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-8">
+            <div className="space-y-3 pt-1">
               <p className="text-xs tracking-[0.3em] uppercase text-cream/40">
                 {plant.rarity}
               </p>
-              <h3 className="font-serif text-heading text-cream group-hover:text-gradient transition-all duration-500">
+              <h3 className="font-serif text-heading leading-[1.2] text-cream group-hover:text-gradient transition-all duration-500">
                 {getPlantFullName(plant)}
               </h3>
-              <p className="text-sm text-cream/50 italic">{getPlantScientificName(plant)}</p>
+              <p className="text-sm text-cream/50 italic">
+                {getPlantScientificName(plant)}
+              </p>
               {variant && (
                 <p className="text-[10px] tracking-[0.2em] uppercase text-forest-300/80">
                   {variant}
@@ -86,7 +84,6 @@ export function PlantCard({ plant }: { plant: PlantVariant }) {
                 {plant.heroDescription}
               </p>
 
-              {/* Traits */}
               <div className="flex flex-wrap gap-2 pt-2">
                 {plant.traits.slice(0, 3).map((trait) => (
                   <span
@@ -99,9 +96,8 @@ export function PlantCard({ plant }: { plant: PlantVariant }) {
               </div>
             </div>
 
-            {/* CTA */}
             <motion.div
-              className="mt-6 flex items-center gap-2 text-sm text-forest-300/70 group-hover:text-forest-200 transition-colors duration-500"
+              className="mt-4 flex items-center gap-2 text-sm text-forest-300/70 group-hover:text-forest-200 transition-colors duration-500"
               whileHover={{ x: 4 }}
             >
               <span className="tracking-widest uppercase text-xs">
@@ -111,7 +107,6 @@ export function PlantCard({ plant }: { plant: PlantVariant }) {
             </motion.div>
           </div>
 
-          {/* Hover gradient */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
         </div>
       </Link>

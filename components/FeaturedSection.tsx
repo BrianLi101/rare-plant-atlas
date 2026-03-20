@@ -19,7 +19,7 @@ export function FeaturedSection() {
             Collection
           </p>
           <h2 className="font-serif text-display text-cream">
-            Featured Specimens
+            Featured Plants
           </h2>
           <div className="section-divider mt-6" />
         </motion.div>

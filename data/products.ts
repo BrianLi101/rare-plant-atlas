@@ -1,10 +1,10 @@
 export type { Product } from "./types";
 
-import type { Product } from "./types";
+import { ProductCategory, type Product } from "./types";
 
 export const lechuzaPlanterHorizontalSmall: Product = {
   id: "lechuza-planter-horizontal-small",
-  category: "Planter/Pot",
+  category: ProductCategory.PlanterPot,
   product: "Lechuza Delta 10 Self-Watering Planter",
   approximatePriceUsd: 35,
   image: "/products/lechuza-pon-horizontal-planter-small.jpg",
@@ -13,7 +13,7 @@ export const lechuzaPlanterHorizontalSmall: Product = {
 
 export const lechuzaPonSubstrate18L: Product = {
   id: "lechuza-pon-substrate-18l",
-  category: "Substrate",
+  category: ProductCategory.Substrate,
   product: "Lechuza Pon Substrate 18L",
   approximatePriceUsd: 80,
   image: "/products/lechuza-pon-substrate-18-L.jpg",

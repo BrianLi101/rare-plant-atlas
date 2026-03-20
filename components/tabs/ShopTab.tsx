@@ -77,12 +77,6 @@ export function ShopTab({ plant }: { plant: PlantVariant }) {
         ))}
       </div>
 
-      <div className="mt-5 p-4 border border-cream/[0.06] rounded-[8px] bg-cream/[0.03]">
-        <p className="text-[11px] text-cream/20 leading-[1.65]">
-          As an Amazon Associate, Rare Plant Atlas may earn from qualifying
-          purchases. Recommendations are selected for plant performance first.
-        </p>
-      </div>
     </TabContainer>
   );
 }
