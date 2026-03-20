@@ -3,6 +3,7 @@ import {
   lechuzaPlanterHorizontalSmall,
   lechuzaPonSubstrate3L,
   lechuzaPonSubstrate18L,
+  nurtureSystemNo1PowerGrow,
   xactoKnifeSet16Pc,
 } from "../products";
 
@@ -165,6 +166,11 @@ export const philodendronGloriosumVariegated: PlantVariant = {
       product: xactoKnifeSet16Pc,
       reason:
         "Mature rhizomes can reach around 1 inch in diameter and require deep, clean cuts; multiple blade options help match blade size to rhizome thickness.",
+    },
+    {
+      product: nurtureSystemNo1PowerGrow,
+      reason:
+        "Gloriosums can push large leaves quickly and need balanced nutrients to maintain leaf size and overall growth quality.",
     },
     {
       product: lechuzaPonSubstrate18L,

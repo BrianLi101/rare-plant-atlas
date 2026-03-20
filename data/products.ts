@@ -39,3 +39,14 @@ export const xactoKnifeSet16Pc: Product = {
   image: "/products/jetmore-xacto-16-pc-set.jpg",
   amazonUrl: "https://www.amazon.com/dp/B0BNQ93N95",
 };
+
+export const nurtureSystemNo1PowerGrow: Product = {
+  id: "nurture-system-no1-power-grow",
+  category: ProductCategory.Nutrients,
+  product: "NurtureSystem No1 Power Grow Nutrient Concentrate",
+  description:
+    "NurtureSystem No1. Power Grow Adaptive Nutrient Concentrate Houseplant food.",
+  approximatePriceUsd: 15,
+  image: "/products/nurture-system-no1-power-grow.jpg",
+  amazonUrl: "https://www.amazon.co.uk/dp/B0CFQRVBTV",
+};
