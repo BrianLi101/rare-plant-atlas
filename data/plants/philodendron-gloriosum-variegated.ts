@@ -3,9 +3,16 @@ import type { PlantVariant } from "../types";
 const IMG = "/plants/philodendron-gloriosum-variegated";
 
 export const philodendronGloriosumVariegated: PlantVariant = {
-  slug: "philodendron-gloriosum-variegated",
-  name: "Philodendron Gloriosum Variegated",
-  binomial: "Philodendron gloriosum (Variegated Type I)",
+  identity: {
+    id: "philodendron_gloriosum_variegated_type_1",
+    slug: "philodendron-gloriosum-variegated-type-1",
+    label: "Philodendron gloriosum - Type 1",
+    genus: "Philodendron",
+    species: "gloriosum",
+    tradeName: "Philodendron gloriosum variegated",
+    variantLabel: "Type 1",
+    aliases: ["Type 1 Block Variegation"],
+  },
   tagline: "Velvet meets light.",
   heroDescription:
     "A terrestrial creeper with heart-shaped leaves of deep emerald velvet, interrupted by strokes of cream and white variegation. Each leaf is a living canvas \u2014 no two patterns alike.",

@@ -3,8 +3,15 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import type { PlantVariant } from "@/data/plants";
+import {
+  getPlantFullName,
+  getPlantScientificName,
+  getPlantVariantLabel,
+} from "@/data/identity";
 
 export function PlantCard({ plant }: { plant: PlantVariant }) {
+  const variant = getPlantVariantLabel(plant);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 60 }}
@@ -13,7 +20,7 @@ export function PlantCard({ plant }: { plant: PlantVariant }) {
       transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
     >
       <Link
-        href={`/plants/${plant.slug}`}
+        href={`/plants/${plant.identity.slug}`}
         className="group block relative overflow-hidden rounded-2xl"
       >
         {/* Card background */}
@@ -67,9 +74,14 @@ export function PlantCard({ plant }: { plant: PlantVariant }) {
                 {plant.rarity}
               </p>
               <h3 className="font-serif text-heading text-cream group-hover:text-gradient transition-all duration-500">
-                {plant.name}
+                {getPlantFullName(plant)}
               </h3>
-              <p className="text-sm text-cream/50 italic">{plant.binomial}</p>
+              <p className="text-sm text-cream/50 italic">{getPlantScientificName(plant)}</p>
+              {variant && (
+                <p className="text-[10px] tracking-[0.2em] uppercase text-forest-300/80">
+                  {variant}
+                </p>
+              )}
               <p className="text-sm text-cream/40 leading-relaxed max-w-sm line-clamp-2">
                 {plant.heroDescription}
               </p>

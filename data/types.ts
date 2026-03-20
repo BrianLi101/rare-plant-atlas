@@ -91,14 +91,25 @@ export interface PlantFitWeights {
   experience: number;
 }
 
+export interface PlantIdentity {
+  id: string;
+  slug: string;
+  label: string;
+  genus: string;
+  species?: string;
+  cultivar?: string;
+  tradeName?: string;
+  variantLabel?: string;
+  cloneId?: string;
+  aliases?: string[];
+}
+
 // ---------------------------------------------------------------------------
 // PlantVariant — a specific cultivar or variant entry
 // Required base + optional sections (presence determines tab visibility)
 // ---------------------------------------------------------------------------
 export interface PlantVariant {
-  slug: string;
-  name: string;
-  binomial: string;
+  identity: PlantIdentity;
   tagline: string;
   heroDescription: string;
   origin: string;

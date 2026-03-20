@@ -1,10 +1,11 @@
 import type { PlantVariant } from "@/data/types";
+import { getPlantFullName } from "@/data/identity";
 import { TabContainer, TabHeader } from "./TabContainer";
 
 export function OverviewTab({ plant }: { plant: PlantVariant }) {
   return (
     <TabContainer>
-      <TabHeader label="Plant overview" title={plant.name} />
+      <TabHeader label="Plant overview" title={getPlantFullName(plant)} />
       <p className="text-[13px] text-cream/40 leading-[1.78] mb-7">
         {plant.verdict}
       </p>

@@ -1,16 +1,17 @@
 import { notFound } from "next/navigation";
 import { plants, getPlantBySlug } from "@/data/plants";
+import { getPlantLabel } from "@/data/identity";
 import { PlantDetailClient } from "@/components/PlantDetailClient";
 
 export function generateStaticParams() {
-  return plants.map((p) => ({ slug: p.slug }));
+  return plants.map((p) => ({ slug: p.identity.slug }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const plant = getPlantBySlug(params.slug);
   if (!plant) return { title: "Not Found" };
   return {
-    title: `${plant.name} — Rare Plant Atlas`,
+    title: `${getPlantLabel(plant)} — Rare Plant Atlas`,
     description: plant.heroDescription,
   };
 }

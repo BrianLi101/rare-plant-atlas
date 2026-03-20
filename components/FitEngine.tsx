@@ -3,6 +3,11 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { PlantVariant } from "@/data/plants";
+import {
+  getPlantFullName,
+  getPlantScientificName,
+  getPlantVariantLabel,
+} from "@/data/identity";
 
 interface UserProfile {
   light: number;
@@ -178,6 +183,7 @@ export function FitEngine({ plant }: { plant: PlantVariant }) {
   }, [light, humidity, space, experience, plant, allSelected]);
 
   const verdict = score !== null ? getVerdict(score) : null;
+  const variant = getPlantVariantLabel(plant);
 
   return (
     <motion.div
@@ -192,8 +198,13 @@ export function FitEngine({ plant }: { plant: PlantVariant }) {
         <p className="text-xs tracking-[0.3em] uppercase text-earth-400/50 mb-2">
           Evaluating
         </p>
-        <p className="font-serif text-heading text-cream">{plant.name}</p>
-        <p className="text-sm text-cream/30 italic mt-1">{plant.binomial}</p>
+        <p className="font-serif text-heading text-cream">{getPlantFullName(plant)}</p>
+        <p className="text-sm text-cream/30 italic mt-1">{getPlantScientificName(plant)}</p>
+        {variant && (
+          <p className="text-[10px] tracking-[0.2em] uppercase text-forest-300/70 mt-2">
+            {variant}
+          </p>
+        )}
       </div>
 
       {/* Questions */}

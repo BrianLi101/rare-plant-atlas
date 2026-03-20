@@ -12,6 +12,7 @@ export type {
   PropagationSection,
   DownsideItem,
   PlantFitWeights,
+  PlantIdentity,
 } from "./types";
 
 import type { PlantVariant } from "./types";
@@ -22,5 +23,5 @@ export const plants: PlantVariant[] = [
 ];
 
 export function getPlantBySlug(slug: string): PlantVariant | undefined {
-  return plants.find((p) => p.slug === slug);
+  return plants.find((p) => p.identity.slug === slug);
 }

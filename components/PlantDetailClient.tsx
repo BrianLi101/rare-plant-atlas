@@ -5,6 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import type { PlantVariant, CinematicPanel as PanelData } from "@/data/types";
+import {
+  getPlantFullName,
+  getPlantScientificName,
+  getPlantVariantLabel,
+} from "@/data/identity";
 import { Navigation } from "@/components/Navigation";
 import {
   OverviewTab,
@@ -175,11 +180,19 @@ function AtAGlance({ plant }: { plant: PlantVariant }) {
 // Sidebar (desktop)
 // ---------------------------------------------------------------------------
 function Sidebar({ active, onSelect, plant, tabs }: { active: string; onSelect: (id: string) => void; plant: PlantVariant; tabs: TabDef[] }) {
+  const variant = getPlantVariantLabel(plant);
+
   return (
     <div className="w-[200px] flex-shrink-0 border-r border-cream/[0.08] bg-deep sticky top-0 self-start min-h-[500px]">
       <div className="p-[28px_24px_20px]">
         <p className="text-[9px] tracking-[0.42em] uppercase text-cream/15 mb-1.5">Plant file</p>
-        <p className="font-serif text-xs italic text-cream/25 leading-[1.4]">{plant.binomial}</p>
+        <p className="font-serif text-[13px] text-cream/75 leading-[1.3]">{getPlantFullName(plant)}</p>
+        <p className="font-serif text-xs italic text-cream/30 leading-[1.4] mt-1">{getPlantScientificName(plant)}</p>
+        {variant && (
+          <p className="text-[9px] tracking-[0.18em] uppercase text-forest-300/70 mt-2">
+            {variant}
+          </p>
+        )}
       </div>
       <div className="border-t border-cream/[0.08] pt-1.5 pb-5">
         {tabs.map((t) => (
@@ -221,6 +234,7 @@ function CinematicNav({ visible }: { visible: boolean }) {
 // ---------------------------------------------------------------------------
 function PlantFileHeader({ plant, active, onSelect, visible, tabs }: { plant: PlantVariant; active: string; onSelect: (id: string) => void; visible: boolean; tabs: TabDef[] }) {
   const barRef = useRef<HTMLDivElement>(null);
+  const variant = getPlantVariantLabel(plant);
 
   useEffect(() => {
     if (!visible) return;
@@ -242,7 +256,13 @@ function PlantFileHeader({ plant, active, onSelect, visible, tabs }: { plant: Pl
               <div className="flex items-center justify-between mb-2">
                 <div>
                   <p className="text-[9px] tracking-[0.42em] uppercase text-cream/20 mb-0.5">Plant file</p>
-                  <p className="font-serif text-[13px] italic text-cream/35">{plant.binomial}</p>
+                  <p className="font-serif text-[15px] text-cream/80 leading-[1.2]">{getPlantFullName(plant)}</p>
+                  <p className="font-serif text-[12px] italic text-cream/45 mt-0.5">{getPlantScientificName(plant)}</p>
+                  {variant && (
+                    <p className="text-[9px] tracking-[0.16em] uppercase text-forest-300/70 mt-1">
+                      {variant}
+                    </p>
+                  )}
                 </div>
                 <Link href="/" className="text-[10px] tracking-[0.2em] uppercase text-cream/20 hover:text-cream/40 transition-colors">Atlas</Link>
               </div>
@@ -269,8 +289,18 @@ function PlantFileHeader({ plant, active, onSelect, visible, tabs }: { plant: Pl
 // ---------------------------------------------------------------------------
 // Details Section
 // ---------------------------------------------------------------------------
-function DetailsSection({ plant, active, onSelect, detailsRef, tabs }: { plant: PlantVariant; active: string; onSelect: (id: string) => void; detailsRef: React.RefObject<HTMLDivElement>; tabs: TabDef[] }) {
+function DetailsSection({ plant, active, onSelect, detailsRef, mainRef, tabs }: { plant: PlantVariant; active: string; onSelect: (id: string) => void; detailsRef: React.RefObject<HTMLDivElement>; mainRef: React.RefObject<HTMLDivElement>; tabs: TabDef[] }) {
   const tabContent = useMemo(() => buildTabContent(plant), [plant]);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const content = contentRef.current;
+    const main = mainRef.current;
+    const details = detailsRef.current;
+
+    if (content) content.scrollTo({ top: 0, behavior: "auto" });
+    if (main && details) main.scrollTo({ top: details.offsetTop, behavior: "auto" });
+  }, [active, detailsRef, mainRef]);
 
   return (
     <section ref={detailsRef} className="min-h-[100svh] snap-start snap-always border-t border-cream/[0.08] flex flex-col">
@@ -278,7 +308,7 @@ function DetailsSection({ plant, active, onSelect, detailsRef, tabs }: { plant: 
         <div className="hidden lg:block">
           <Sidebar active={active} onSelect={onSelect} plant={plant} tabs={tabs} />
         </div>
-        <div className="flex-1 bg-charcoal overflow-y-auto pt-[100px] lg:pt-0">
+        <div ref={contentRef} className="flex-1 bg-charcoal overflow-y-auto pt-[100px] lg:pt-0">
           {tabContent[active] ?? null}
         </div>
       </div>
@@ -328,7 +358,7 @@ export function PlantDetailClient({ plant }: { plant: PlantVariant }) {
           <CinematicPanel key={panel.id} panel={panel} isHero={i === 0} />
         ))}
         <AtAGlance plant={plant} />
-        <DetailsSection plant={plant} active={active} onSelect={handleTabSelect} detailsRef={detailsRef} tabs={tabs} />
+        <DetailsSection plant={plant} active={active} onSelect={handleTabSelect} detailsRef={detailsRef} mainRef={mainRef} tabs={tabs} />
       </main>
     </>
   );
