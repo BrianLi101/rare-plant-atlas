@@ -44,7 +44,7 @@ const type1Roots: PlantPhoto = {
   id: "gloriosum-type-1-roots",
   image: `${IMG}/type-1-roots.jpg`,
   caption: "A view of the roots",
-  description:"The roots of a gloriosum tend to have ",
+  description:"The roots of a gloriosum tend to have a thicker root surrounded by smaller roots. This makes it more suited for growing in lechuza pon over leca where the roots can really grasp the growing medium.",
 };
 
 
