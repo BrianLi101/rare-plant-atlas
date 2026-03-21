@@ -48,6 +48,14 @@ const type1Roots: PlantPhoto = {
   description:"The roots of a gloriosum tend to have a thicker root surrounded by smaller roots. This makes it more suited for growing in lechuza pon over leca where the roots can really grasp the growing medium.",
 };
 
+const type1ColorsCloseupPhoto: PlantPhoto = {
+  id: "gloriosum-type-1-colors-closeup",
+  image: `${IMG}/type-1-colors-closeup.jpg`,
+  caption: "Type 1 colors close-up",
+  description:
+    "Close-up of color transition and contrast across velvet tissue in Type 1 variegation.",
+};
+
 
 const type1UglyEmergencePhoto: PlantPhoto = {
   id: "gloriosum-type-1-ugly-emergence",
@@ -92,6 +100,7 @@ export const philodendronGloriosumVariegated: PlantVariant = {
     type1UnstablePhoto,
     type1RhizomeVariegationPhoto,
     type1BlockPhoto,
+    type1ColorsCloseupPhoto,
     type1UglyEmergencePhoto,
     type1Roots
   ],
@@ -128,7 +137,7 @@ export const philodendronGloriosumVariegated: PlantVariant = {
       italicLine: 2,
       sub: "Block variegation against deep green velvet. The pattern never repeats. Each new leaf is a reveal \u2014 emerging yellow, hardening to cream.",
       fact: "The original block-variegated plant traces back to Kaylee Ellen. It is not yet tissue cultured.",
-      image: type1BlockPhoto.image,
+      image: type1ColorsCloseupPhoto.image,
     },
     {
       id: "origin",
