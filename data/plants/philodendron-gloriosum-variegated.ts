@@ -205,6 +205,7 @@ export const philodendronGloriosumVariegated: PlantVariant = {
 
   // ─── Variegation ──────────────────────────────────────────────────────
   variegation: {
+    title: "Type 1 vs Type 2",
     intro:
       "Not all Gloriosum variegation is equal. Two distinct forms exist, and they differ in origin, stability, tissue culture status, and price. Think of it like Monstera albo versus Thai Constellation \u2014 same species, fundamentally different variegation.",
     types: [

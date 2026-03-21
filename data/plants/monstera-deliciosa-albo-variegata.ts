@@ -115,6 +115,7 @@ export const monsteraDeliciosaAlboVariegata: PlantVariant = {
   ],
 
   variegation: {
+    title: "Sectoral vs Marbled",
     intro:
       "Monstera Albo expression varies by node and plant vigor. The best specimens keep enough green tissue to fuel growth while maintaining strong white patterning.",
     types: [

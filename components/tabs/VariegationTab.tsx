@@ -7,7 +7,7 @@ export function VariegationTab({ plant }: { plant: PlantVariant }) {
   if (!variegation) return null;
   return (
     <TabContainer>
-      <TabHeader label="Variegation types" title="Type 1 vs Type 2" />
+      <TabHeader label="Variegation types" title={variegation.title} />
       <p className="text-[13px] text-cream/35 leading-[1.78] mb-6">{variegation.intro}</p>
       {variegation.types.map((t, i) => (
         <div key={i} className="border border-cream/[0.08] rounded-[10px] bg-cream/[0.04] mb-2.5 overflow-hidden">

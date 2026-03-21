@@ -48,6 +48,7 @@ export interface VariegationType {
 }
 
 export interface VariegationSection {
+  title: string;
   intro: string;
   types: VariegationType[];
   closing: string;

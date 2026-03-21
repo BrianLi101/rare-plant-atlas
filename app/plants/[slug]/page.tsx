@@ -10,9 +10,30 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const plant = getPlantBySlug(params.slug);
   if (!plant) return { title: "Not Found" };
+
+  const previewImage =
+    plant.images.hero ?? plant.photos[0]?.image ?? "/icon.png";
+  const title = `${getPlantLabel(plant)} — Rare Plant Atlas`;
+
   return {
-    title: `${getPlantLabel(plant)} — Rare Plant Atlas`,
+    title,
     description: plant.heroDescription,
+    openGraph: {
+      title,
+      description: plant.heroDescription,
+      images: [
+        {
+          url: previewImage,
+          alt: getPlantLabel(plant),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: plant.heroDescription,
+      images: [previewImage],
+    },
   };
 }
 

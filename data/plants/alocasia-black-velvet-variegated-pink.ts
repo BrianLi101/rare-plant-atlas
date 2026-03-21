@@ -139,8 +139,8 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
       eyebrow: "Expression profile",
       lines: ["Dark velvet", "with", "blush sectors."],
       italicLine: 2,
-      sub: "Pink expression shifts by leaf age and light: fresh leaves can open brighter, then settle toward softer blush or cream.",
-      fact: "Variegated tissue has lower chlorophyll and grows slower; stability depends on node genetics and plant vigor.",
+      sub: "Black Velvet variegation is usually grouped by color form: pink, white, or gold. Pattern intensity still shifts leaf-to-leaf by node expression and vigor.",
+      fact: "Care requirements are largely the same across color forms; differences are visual and market-driven more than horticultural.",
       image: heavilyVariegatedLeafPhoto.image,
     },
     // {
@@ -156,7 +156,7 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
   glance: [
     { label: "Price range", value: formatPlantPriceRangeForGlance(alocasiaBlackVelvetVariegatedPinkPlantPriceRange), note: "Maturity and variegation drive price" },
     { label: "Leaf cycle", value: "4-8+ weeks", note: "Often slower in home conditions" },
-    { label: "Difficulty", value: "Advanced", note: "Consistency matters" },
+    { label: "Difficulty", value: "Intermediate", note: "Standard jewel Alocasia care with consistency" },
     { label: "Humidity", value: "65%+", note: "Leaf quality drops below this" },
     { label: "Space", value: "Compact", note: "Best for small shelves or cabinets" },
     { label: "Growth habit", value: "Upright clumper", note: "Not a crawler or climber" },
@@ -193,34 +193,46 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
   ],
 
   variegation: {
+    title: "Pink, White, and Gold forms",
     intro:
-      "Pink-variegated Black Velvet expression can range from soft blush sectors to cream and pale mint over dark velvet tissue. Pattern and intensity vary by node and leaf.",
+      "Variegated Black Velvet is most useful to classify by color form rather than numbered pattern types. The three forms most growers track are pink, white, and gold.",
     types: [
       {
-        name: "Sectoral Pink",
+        name: "Pink form",
         color: "#d69aa8",
         pattern:
-          "Larger blocks, arcs, or half-sectors of pink-to-cream variegation against dark green-black velvet.",
+          "Blush to rosy sectors, marbling, or mottling over near-black velvet foliage.",
         stability:
-          "Moderate. Can alternate between high-color and greener leaves depending on vigor and node expression.",
+          "Moderate and variable by node; expression can soften or intensify across successive leaves.",
         market:
-          "Higher premium due to dramatic contrast and lower frequency of strongly pink sectors.",
-        note: "Most collectible look; also carries the highest risk of weak growth on heavily variegated leaves.",
+          "Often carries a premium when color is saturated and distributed across multiple mature leaves.",
+        note: "Highly collectible for contrast, but still follows standard Black Velvet care.",
       },
       {
-        name: "Mottled / Marbled Pink",
-        color: "#c9a0ad",
+        name: "White form",
+        color: "#ecebe6",
         pattern:
-          "Fine flecks and mottling across the leaf blade with softer, more diffuse pink expression.",
+          "Cream to bright white sectors or marbling that read crisp against dark velvet tissue.",
         stability:
-          "Usually more consistent than large-sector forms, but still variable leaf to leaf.",
+          "Similar to pink and gold forms: variable leaf-to-leaf, driven by genetics and plant vigor.",
         market:
-          "More commonly available than bold sectoral specimens; pricing is generally lower.",
-        note: "A steadier expression for growers prioritizing continuity over dramatic single-leaf outcomes.",
+          "Commonly traded and typically priced below top-end pink or gold examples at similar size.",
+        note: "Can present cleaner contrast, but husbandry remains the same as other color forms.",
+      },
+      {
+        name: "Gold form",
+        color: "#d8b260",
+        pattern:
+          "Yellow to warm-gold sectors or mottling, sometimes shifting toward cream as leaves harden.",
+        stability:
+          "Comparable to pink and white forms, with expression shifts expected across growth cycles.",
+        market:
+          "Usually commands premium pricing when strong gold sectors hold across several mature leaves.",
+        note: "Gold is visually distinct but not a separate care category.",
       },
     ],
     closing:
-      "Treat this as a variable-expression cultivar: even strong plants can swing between greener and higher-color leaves.",
+      "Treat color form as a visual phenotype, not a different care protocol: pink, white, and gold all thrive under the same baseline Black Velvet routine.",
   },
 
   care: [
@@ -228,7 +240,7 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
       label: "Light",
       value: "Bright indirect",
       detail:
-        "Strong filtered light supports compact growth and variegation quality. Avoid harsh direct sun on variegated tissue.",
+        "Strong filtered light supports compact growth and variegation quality. This guidance is the same for pink, white, and gold forms.",
     },
     {
       label: "Humidity",
@@ -262,9 +274,9 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
     },
     {
       label: "Difficulty",
-      value: "Advanced",
+      value: "Intermediate",
       detail:
-        "Best results come from stable environment control, careful moisture management, and close monitoring.",
+        "Care is fairly standard for variegated Black Velvet forms; consistency matters more than color-form selection.",
     },
   ],
 
@@ -302,7 +314,7 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
   },
 
   provenance: {
-    body: "Alocasia reginula (Black Velvet) originates from Borneo and became a staple jewel Alocasia in cultivation. Pink-variegated Black Velvet forms are modern horticultural selections distributed through specialist growers.",
+    body: "Alocasia reginula (Black Velvet) originates from Borneo and became a staple jewel Alocasia in cultivation. Variegated Black Velvet forms now circulate in three commonly referenced color expressions: pink, white, and gold.",
     timeline: [
       {
         year: "Pre-2000s",
@@ -317,7 +329,7 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
       {
         year: "2020-now",
         event:
-          "Pink-expression forms command premiums, with pricing tied to sector size, color intensity, and plant stability.",
+          "Pink, white, and gold forms are all established in collector trade; pink and gold often command stronger premiums when color is saturated and stable.",
       },
     ],
   },
@@ -355,7 +367,7 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
     },
     {
       title: "Price volatility",
-      body: "Strong pink sectoring and established plants can be expensive, and market pricing shifts quickly.",
+      body: "Strongly colored pink and gold plants can be expensive, and market pricing shifts quickly across all color forms.",
     },
     {
       title: "Pest pressure",
