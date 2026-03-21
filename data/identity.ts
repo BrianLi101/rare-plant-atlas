@@ -12,11 +12,25 @@ export function formatScientificName(identity: PlantIdentity): string {
 }
 
 export function getPlantLabel(plant: PlantVariant): string {
-  return plant.identity.label;
+  const label = plant.identity.label?.trim();
+  if (label) return label;
+
+  const tradeName = plant.identity.tradeName?.trim();
+  const variant = plant.identity.variantLabel?.trim();
+  if (tradeName && variant) return `${tradeName} ${variant}`;
+  if (tradeName) return tradeName;
+
+  const scientific = formatScientificName(plant.identity);
+  if (variant) return `${scientific} ${variant}`;
+  return scientific;
 }
 
 export function getPlantFullName(plant: PlantVariant): string {
-  return plant.identity.tradeName ?? plant.identity.label;
+  return (
+    plant.identity.tradeName?.trim() ??
+    plant.identity.label?.trim() ??
+    formatScientificName(plant.identity)
+  );
 }
 
 export function getPlantScientificName(plant: PlantVariant): string {

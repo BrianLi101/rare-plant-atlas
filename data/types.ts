@@ -154,11 +154,19 @@ export interface PlantRecommendedProduct {
 export interface PlantIdentity {
   id: string;
   slug: string;
+  /**
+   * Optional short display label for legacy entries.
+   */
+  label?: string;
   genus: string;
   /**
    * Some plants might be hybrids and have unclear species
    */
   species?: string;
+  /**
+   * Cultivar or clonal name used in scientific formatting.
+   */
+  cultivar?: string;
   /**
    * e.g. "Anthurium 'Delta Force'", "Philodendron gloriosum"
    */
