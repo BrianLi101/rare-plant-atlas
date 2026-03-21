@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback, useMemo } from "react";
+import { useState, useRef, useEffect, useCallback, useMemo, type CSSProperties } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -239,8 +239,23 @@ function CinematicNav({ visible }: { visible: boolean }) {
 // ---------------------------------------------------------------------------
 // Plant file header (shows during details section)
 // ---------------------------------------------------------------------------
-function PlantFileHeader({ plant, active, onSelect, visible, tabs }: { plant: PlantVariant; active: string; onSelect: (id: string) => void; visible: boolean; tabs: TabDef[] }) {
+function PlantFileHeader({
+  plant,
+  active,
+  onSelect,
+  visible,
+  tabs,
+  onHeightChange,
+}: {
+  plant: PlantVariant;
+  active: string;
+  onSelect: (id: string) => void;
+  visible: boolean;
+  tabs: TabDef[];
+  onHeightChange: (height: number) => void;
+}) {
   const barRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
   const variant = getPlantVariantLabel(plant);
   const scientificName = getPlantScientificName(plant);
 
@@ -252,10 +267,32 @@ function PlantFileHeader({ plant, active, onSelect, visible, tabs }: { plant: Pl
     if (btn) btn.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
   }, [active, visible]);
 
+  useEffect(() => {
+    if (!visible) {
+      onHeightChange(0);
+      return;
+    }
+
+    const header = headerRef.current;
+    if (!header) return;
+
+    const updateHeight = () => {
+      onHeightChange(Math.ceil(header.getBoundingClientRect().height));
+    };
+
+    updateHeight();
+
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(header);
+
+    return () => observer.disconnect();
+  }, [visible, onHeightChange, tabs.length]);
+
   return (
     <AnimatePresence>
       {visible && (
         <motion.div
+          ref={headerRef}
           className="fixed top-0 left-0 right-0 z-50 lg:hidden"
           initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.25 }}
         >
@@ -297,9 +334,31 @@ function PlantFileHeader({ plant, active, onSelect, visible, tabs }: { plant: Pl
 // ---------------------------------------------------------------------------
 // Details Section
 // ---------------------------------------------------------------------------
-function DetailsSection({ plant, active, onSelect, detailsRef, mainRef, tabs }: { plant: PlantVariant; active: string; onSelect: (id: string) => void; detailsRef: React.RefObject<HTMLDivElement>; mainRef: React.RefObject<HTMLDivElement>; tabs: TabDef[] }) {
+function DetailsSection({
+  plant,
+  active,
+  onSelect,
+  detailsRef,
+  mainRef,
+  tabs,
+  mobileHeaderHeight,
+  inDetails,
+}: {
+  plant: PlantVariant;
+  active: string;
+  onSelect: (id: string) => void;
+  detailsRef: React.RefObject<HTMLDivElement>;
+  mainRef: React.RefObject<HTMLDivElement>;
+  tabs: TabDef[];
+  mobileHeaderHeight: number;
+  inDetails: boolean;
+}) {
   const tabContent = useMemo(() => buildTabContent(plant), [plant]);
   const contentRef = useRef<HTMLDivElement>(null);
+  const mobileTopOffset = inDetails ? Math.max(mobileHeaderHeight + 8, 108) : 0;
+  const contentStyle = {
+    "--mobile-file-header-offset": `${mobileTopOffset}px`,
+  } as CSSProperties;
 
   useEffect(() => {
     const content = contentRef.current;
@@ -316,7 +375,11 @@ function DetailsSection({ plant, active, onSelect, detailsRef, mainRef, tabs }: 
         <div className="hidden lg:block">
           <Sidebar active={active} onSelect={onSelect} plant={plant} tabs={tabs} />
         </div>
-        <div ref={contentRef} className="flex-1 bg-charcoal overflow-y-auto pt-[100px] lg:pt-0">
+        <div
+          ref={contentRef}
+          style={contentStyle}
+          className="flex-1 bg-charcoal overflow-y-auto pt-[var(--mobile-file-header-offset)] lg:pt-0"
+        >
           {tabContent[active] ?? null}
         </div>
       </div>
@@ -336,6 +399,7 @@ export function PlantDetailClient({ plant }: { plant: PlantVariant }) {
   const detailsRef = useRef<HTMLDivElement>(null);
   const [inDetails, setInDetails] = useState(false);
   const [active, setActive] = useState("overview");
+  const [mobileHeaderHeight, setMobileHeaderHeight] = useState(0);
   const tabs = useMemo(() => buildTabs(plant), [plant]);
 
   useEffect(() => {
@@ -360,13 +424,29 @@ export function PlantDetailClient({ plant }: { plant: PlantVariant }) {
   return (
     <>
       <CinematicNav visible={!inDetails} />
-      <PlantFileHeader plant={plant} active={active} onSelect={handleTabSelect} visible={inDetails} tabs={tabs} />
+      <PlantFileHeader
+        plant={plant}
+        active={active}
+        onSelect={handleTabSelect}
+        visible={inDetails}
+        tabs={tabs}
+        onHeightChange={setMobileHeaderHeight}
+      />
       <main ref={mainRef} className="h-[100svh] overflow-y-auto snap-y snap-mandatory hide-scrollbar">
         {plant.panels.map((panel, i) => (
           <CinematicPanel key={panel.id} panel={panel} isHero={i === 0} />
         ))}
         <AtAGlance plant={plant} />
-        <DetailsSection plant={plant} active={active} onSelect={handleTabSelect} detailsRef={detailsRef} mainRef={mainRef} tabs={tabs} />
+        <DetailsSection
+          plant={plant}
+          active={active}
+          onSelect={handleTabSelect}
+          detailsRef={detailsRef}
+          mainRef={mainRef}
+          tabs={tabs}
+          mobileHeaderHeight={mobileHeaderHeight}
+          inDetails={inDetails}
+        />
       </main>
     </>
   );
