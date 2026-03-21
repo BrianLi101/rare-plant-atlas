@@ -279,20 +279,20 @@ export const philodendronGloriosumVariegated: PlantVariant = {
     intro:
       "Gloriosum is best in a dense, anchoring substrate rather than straight LECA. As roots and foliage gain weight, the medium needs to physically support the plant while keeping moisture consistent.",
     options: [
-      {
-        name: "Dense Aroid Mix",
-        components: [
-          "Orchid bark 40%",
-          "Perlite 25%",
-          "Sphagnum 20%",
-          "Charcoal 10%",
-          "Worm castings 5%",
-        ],
-        body: "A denser aroid blend gives thin roots better anchoring and long-term support than lightweight media while still keeping airflow.",
-        verdict:
-          "Reliable and forgiving. Refresh every 12\u201318 months as bark decomposes.",
-        recommended: false,
-      },
+      // {
+      //   name: "Dense Aroid Mix",
+      //   components: [
+      //     "Orchid bark 40%",
+      //     "Perlite 25%",
+      //     "Sphagnum 20%",
+      //     "Charcoal 10%",
+      //     "Worm castings 5%",
+      //   ],
+      //   body: "A denser aroid blend gives thin roots better anchoring and long-term support than lightweight media while still keeping airflow.",
+      //   verdict:
+      //     "Reliable and forgiving. Refresh every 12\u201318 months as bark decomposes.",
+      //   recommended: false,
+      // },
       {
         name: "Lechuza Pon + Self-Watering Planter",
         components: [
@@ -363,10 +363,10 @@ export const philodendronGloriosumVariegated: PlantVariant = {
       title: "Slow growth is really slow",
       body: "4\u20138 weeks per leaf means 6\u20138 leaves per year in ideal conditions. Most homes aren\u2019t ideal. It will not fill a space quickly.",
     },
-    {
-      title: "Humidity is a hard requirement",
-      body: "Below 50%, the plant survives but quality degrades visibly. Running a humidifier year-round is a real lifestyle commitment.",
-    },
+    // {
+    //   title: "Humidity is a hard requirement",
+    //   body: "Below 50%, the plant survives but quality degrades visibly. Running a humidifier year-round is a real lifestyle commitment.",
+    // },
     {
       title: "Variegation is a gamble (especially Type 1)",
       body: "Type 1 block variegation is unstable \u2014 green leaves happen. Type 2 splash is more reliable, but neither guarantees the leaf you want every time.",
