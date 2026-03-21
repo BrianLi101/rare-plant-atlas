@@ -112,6 +112,26 @@ export default function PlantPage({ params }: { params: { slug: string } }) {
     <>
       {productJsonLd && <JsonLd data={productJsonLd} />}
       {faqJsonLd && <JsonLd data={faqJsonLd} />}
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://rareplantatlas.com",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: label,
+              item: `https://rareplantatlas.com/plants/${plant.identity.slug}`,
+            },
+          ],
+        }}
+      />
 
       {/* Server-rendered semantic content for AI crawlers */}
       <article className="sr-only" aria-hidden="false">
