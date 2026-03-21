@@ -1,17 +1,44 @@
-export type { Product } from "./types";
+export type { Product, PotProduct } from "./types";
 
-import { ProductCategory, ProductRetailer, type Product } from "./types";
+import {
+  ProductCategory,
+  ProductRetailer,
+  PotCompatibleSubstrate,
+  type Product,
+  type PotProduct,
+} from "./types";
 
-export const lechuzaPlanterHorizontalSmall: Product = {
+export const lechuzaPlanterHorizontalSmall: PotProduct = {
   id: "lechuza-planter-horizontal-small",
-  category: ProductCategory.PlanterPot,
+  category: ProductCategory.Pot,
   product: "Lechuza Delta 10 Self-Watering Planter",
   approximatePriceUsd: 35,
   image: "/products/lechuza-pon-horizontal-planter-small.jpg",
+  compatibleSubstrates: [
+    PotCompatibleSubstrate.LechuzaPon,
+    PotCompatibleSubstrate.Leca,
+  ],
   listings: [
     {
       retailer: ProductRetailer.Amazon,
       url: "https://www.amazon.com/dp/B00MUQVT0W",
+    },
+  ],
+};
+
+export const ojyuddSelfWateringPlanter8Pack: PotProduct = {
+  id: "ojyudd-self-watering-planter-8-pack",
+  category: ProductCategory.Pot,
+  product: "8 Pack 4 Inch Self Watering Plastic Planter",
+  description:
+    "Inexpensive self watering planters that work well with lechuza pon.",
+  approximatePriceUsd: 10,
+  image: "/products/ojyudd-self-watering-planter-8-pack.jpg",
+  compatibleSubstrates: [PotCompatibleSubstrate.LechuzaPon],
+  listings: [
+    {
+      retailer: ProductRetailer.Amazon,
+      url: "https://www.amazon.com/dp/B08GFNVKWC?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_4",
     },
   ],
 };

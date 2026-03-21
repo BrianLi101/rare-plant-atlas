@@ -1,11 +1,59 @@
-import type { PlantVariant } from "../types";
+import type { PlantPhoto, PlantVariant } from "../types";
 import {
   lechuzaPonSubstrate3L,
   lechuzaPonSubstrate18L,
-  lechuzaPlanterHorizontalSmall,
+  ojyuddSelfWateringPlanter8Pack,
   nurtureSystemNo1PowerGrow,
   ikeaOdlaLeca,
 } from "../products";
+
+const IMG = "/plants/alocasia-black-velvet-variegated-pink";
+
+const heroPhoto: PlantPhoto = {
+  id: "alocasia-black-velvet-pink-hero",
+  image: `${IMG}/hero.jpg`,
+  caption: "Alocasia Black Velvet Variegated Pink - hero foliage",
+  description:
+    "Primary specimen view showing dark velvet texture contrasted with pink-toned variegation.",
+};
+
+const inflorescencePhoto: PlantPhoto = {
+  id: "alocasia-black-velvet-pink-inflorescence",
+  image: `${IMG}/inflorescence.jpg`,
+  caption: "Influorescence",
+  description:
+    "Influorescences appear in pairs and open up at different times to avoid self pollination. These have been cut open to show the internals.",
+};
+
+const rootsPhoto: PlantPhoto = {
+  id: "alocasia-black-velvet-pink-roots",
+  image: `${IMG}/roots.jpg`,
+  caption: "Root structure",
+  description:
+    "Black velvets have delicate and extensive root systems. They are well suited for growth in soil, leca, and pon",
+};
+
+const cormsPhoto: PlantPhoto = {
+  id: "alocasia-black-velvet-pink-corms",
+  image: `${IMG}/corms.jpg`,
+  caption: "Corms and offsets",
+  description:
+    "Corm cluster and propagation material for division and staged nursery growth.",
+};
+
+const grownFromCormPhoto: PlantPhoto = {
+  id: "alocasia-black-velvet-pink-grown-from-corm",
+  image: `${IMG}/grown-from-corm.jpg`,
+  caption: "A corm grown alocasia",
+  description: "Approximately 3 month old corm-grown plant.",
+};
+
+const heavilyVariegatedLeafPhoto: PlantPhoto = {
+  id: "alocasia-black-velvet-pink-heavily-variegated-leaf",
+  image: `${IMG}/heavily-variegated-leaf.jpg`,
+  caption: "Leaf with more variegation",
+  description: "Black velvets can produce beautiful block variegation.",
+};
 
 export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
   identity: {
@@ -25,8 +73,19 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
   family: "Araceae",
   rarity: "Rare",
   priceRange: "$150 - $1,200+",
-  images: {},
-  photos: [],
+  images: {
+    hero: heroPhoto.image,
+    detail: [rootsPhoto.image, cormsPhoto.image],
+    variegation: heavilyVariegatedLeafPhoto.image,
+  },
+  photos: [
+    heroPhoto,
+    inflorescencePhoto,
+    rootsPhoto,
+    cormsPhoto,
+    grownFromCormPhoto,
+    heavilyVariegatedLeafPhoto,
+  ],
   colors: {
     primary: "#121518",
     accent: "#d69aa8",
@@ -41,6 +100,13 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
     "Collector plant",
   ],
   fitWeights: { light: 0.3, humidity: 0.35, space: 0.1, experience: 0.25 },
+  alocasiaCormData: {
+    ageBeforeCormingMonths: 8,
+    cormsPerYearRange: [6, 10],
+    monthsToCormSproutLeaf: 3,
+    cormViabilityRate: "High",
+    variegationInheritanceLikelihood: "High",
+  },
 
   panels: [
     {
@@ -50,6 +116,7 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
       italicLine: 2,
       earthLine: 2,
       sub: "Near-black velvet blades cut by pink and cream sectors. Compact, dramatic, and unforgiving of inconsistent care.",
+      image: heroPhoto.image,
     },
     {
       id: "variegation",
@@ -58,6 +125,7 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
       italicLine: 2,
       sub: "Pink expression shifts by leaf age and light: fresh leaves can open brighter, then settle toward softer blush or cream.",
       fact: "Variegated tissue has lower chlorophyll and grows slower; stability depends on node genetics and plant vigor.",
+      image: heavilyVariegatedLeafPhoto.image,
     },
     {
       id: "origin",
@@ -65,6 +133,7 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
       lines: ["Selected for", "contrast", "and compact form."],
       italicLine: 1,
       sub: "Black Velvet is a compact Alocasia valued for texture. Pink-variegated forms are horticultural selections propagated for ornamental expression.",
+      image: inflorescencePhoto.image,
     },
   ],
 
@@ -96,9 +165,9 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
         "A practical LECA option for semi-hydro transitions and moisture-buffered root aeration in jewel Alocasia setups.",
     },
     {
-      product: lechuzaPlanterHorizontalSmall,
+      product: ojyuddSelfWateringPlanter8Pack,
       reason:
-        "Works as a compact reservoir-style planter for controlled moisture when root volume is still small.",
+        "Works great with lechuza pon and great for sprouting corms. Typically plants need to be moved into a larger pot when they have 4 or more leaves.",
     },
     {
       product: nurtureSystemNo1PowerGrow,

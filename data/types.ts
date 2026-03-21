@@ -100,12 +100,17 @@ export interface PlantFitWeights {
 
 export enum ProductCategory {
   Substrate = "Substrate",
-  PlanterPot = "Planter/Pot",
+  Pot = "Pot",
   Nutrients = "Nutrients",
   Humidity = "Humidity",
   Lighting = "Lighting",
   PestControl = "Pest Control",
   Tools = "Tools",
+}
+
+export enum PotCompatibleSubstrate {
+  LechuzaPon = "Lechuza Pon",
+  Leca = "Leca",
 }
 
 export enum ProductRetailer {
@@ -120,7 +125,7 @@ export interface ProductListing {
   label?: string;
 }
 
-export interface Product {
+export interface ProductBase {
   id: string;
   category: ProductCategory;
   product: string;
@@ -129,6 +134,17 @@ export interface Product {
   image: string; // Path under /public, e.g. /products/item.jpg
   listings: ProductListing[];
 }
+
+export interface PotProduct extends ProductBase {
+  category: ProductCategory.Pot;
+  compatibleSubstrates: PotCompatibleSubstrate[];
+}
+
+export interface NonPotProduct extends ProductBase {
+  category: Exclude<ProductCategory, ProductCategory.Pot>;
+}
+
+export type Product = PotProduct | NonPotProduct;
 
 export interface PlantRecommendedProduct {
   product: Product;
@@ -146,6 +162,16 @@ export interface PlantIdentity {
   variantLabel?: string;
   cloneId?: string;
   aliases?: string[];
+}
+
+export type Level = "Low" | "Medium" | "High";
+
+export interface AlocasiaCormData {
+  ageBeforeCormingMonths: number;
+  cormsPerYearRange: [number, number];
+  monthsToCormSproutLeaf: number;
+  cormViabilityRate?: Level;
+  variegationInheritanceLikelihood?: Level;
 }
 
 // ---------------------------------------------------------------------------
@@ -184,4 +210,5 @@ export interface PlantVariant {
   substrate?: SubstrateSection;
   provenance?: ProvenanceSection;
   propagation?: PropagationSection;
+  alocasiaCormData?: AlocasiaCormData;
 }

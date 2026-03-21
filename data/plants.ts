@@ -15,6 +15,7 @@ export type {
   PlantIdentity,
   PlantPhoto,
   PlantRecommendedProduct,
+  AlocasiaCormData,
 } from "./types";
 
 import type { PlantVariant } from "./types";

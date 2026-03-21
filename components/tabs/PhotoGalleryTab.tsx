@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import type { PlantVariant } from "@/data/types";
+import { getPlantScientificName } from "@/data/identity";
 
 export function PhotoGalleryTab({ plant }: { plant: PlantVariant }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -111,7 +112,7 @@ export function PhotoGalleryTab({ plant }: { plant: PlantVariant }) {
         </div>
 
         <p className="text-[10px] tracking-[0.18em] uppercase text-cream/15 text-center mt-10">
-          Philodendron gloriosum var. Type I - Cultivated specimens
+          {getPlantScientificName(plant)} - Cultivated specimens
         </p>
       </div>
 

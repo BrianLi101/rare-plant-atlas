@@ -1,4 +1,5 @@
 import type { PlantVariant } from "@/data/types";
+import { ProductCategory } from "@/data/types";
 import { TabContainer, TabHeader } from "./TabContainer";
 
 function formatUsd(amount: number): string {
@@ -63,6 +64,17 @@ export function ShopTab({ plant }: { plant: PlantVariant }) {
                   {reason}
                 </p>
               </div>
+
+              {product.category === ProductCategory.Pot && (
+                <div>
+                  <p className="text-[8px] tracking-[0.2em] uppercase text-cream/20 mb-1">
+                    Works with
+                  </p>
+                  <p className="text-[12px] text-cream/30 leading-[1.7]">
+                    {product.compatibleSubstrates.join(", ")}
+                  </p>
+                </div>
+              )}
 
               <div className="mt-1 flex flex-col gap-1.5">
                 {product.listings.map((listing) => (
