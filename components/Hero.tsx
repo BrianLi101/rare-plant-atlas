@@ -82,7 +82,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
         >
-          Discover extraordinary plants. Cultivate with intention.
+          In-depth guides to extraordinary plants. Cultivate with intention.
         </motion.p>
 
         <motion.div
