@@ -11,7 +11,7 @@ We built something cinematic. Each plant page is designed to give you a true fee
 - [ ] Create a dedicated OG image (1200x630) with site name and plant imagery for social shares and AI link previews
 - [x] Add BreadcrumbList JSON-LD schema for plant page hierarchy (Home > Plant Name)
 - [ ] Add explicit AI bot rules to robots.txt (GPTBot, PerplexityBot, ClaudeBot)
-- [ ] Generate more FAQ schema entries from plant data (care questions like light, substrate, humidity)
+- [x] Add FAQ tab with categorized Q&A and generate FAQ schema from plant-specific FAQ data
 - [ ] Add author/expertise schema to signal content authority to AI engines
 - [ ] Add explicit canonical URLs per page to prevent duplicate content from trailing slashes or query params
 - [ ] Add `<time>` elements to provenance timeline dates for better temporal parsing by crawlers

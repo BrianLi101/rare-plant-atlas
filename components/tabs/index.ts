@@ -9,3 +9,4 @@ export { FitCheckTab } from "./FitCheckTab";
 export { DownsidesTab } from "./DownsidesTab";
 export { ShopTab } from "./ShopTab";
 export { PhotoGalleryTab } from "./PhotoGalleryTab";
+export { FaqTab } from "./FaqTab";

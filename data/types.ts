@@ -191,6 +191,23 @@ export interface AlocasiaCormData {
 }
 
 // ---------------------------------------------------------------------------
+// FAQ section — grouped Q&A pairs
+// ---------------------------------------------------------------------------
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface FaqCategory {
+  category: string;
+  items: FaqItem[];
+}
+
+export interface FaqSection {
+  categories: FaqCategory[];
+}
+
+// ---------------------------------------------------------------------------
 // PlantVariant — a specific cultivar or variant entry
 // Required base + optional sections (presence determines tab visibility)
 // ---------------------------------------------------------------------------
@@ -227,6 +244,7 @@ export interface PlantVariant {
   substrate?: SubstrateSection;
   provenance?: ProvenanceSection;
   propagation?: PropagationSection;
+  faq?: FaqSection;
   alocasiaCormData?: AlocasiaCormData;
 }
 

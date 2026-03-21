@@ -63,24 +63,36 @@ function buildFaqJsonLd(plant: ReturnType<typeof getPlantBySlug>) {
   const label = getPlantLabel(plant);
   const questions: { q: string; a: string }[] = [];
 
-  questions.push({
-    q: `What is the price range for ${label}?`,
-    a: `${label} typically costs between $${plant.priceRange.min} and $${plant.priceRange.max} ${plant.priceRange.currency}.${plant.priceRange.note ? ` ${plant.priceRange.note}` : ""}`,
-  });
-
-  if (plant.propagation) {
-    questions.push({
-      q: `How do you propagate ${label}?`,
-      a: `${label} is propagated by ${plant.propagation.method}. Best timing: ${plant.propagation.timing}. Success rate: ${plant.propagation.successRate}.`,
-    });
+  // Use plant-specific FAQ data when available
+  if (plant.faq) {
+    for (const category of plant.faq.categories) {
+      for (const item of category.items) {
+        questions.push({ q: item.question, a: item.answer });
+      }
+    }
   }
 
-  if (plant.variegation && plant.variegation.types.length > 0) {
-    const typeNames = plant.variegation.types.map((t) => t.name).join(", ");
+  // Fall back to auto-generated FAQs from structured data
+  if (questions.length === 0) {
     questions.push({
-      q: `What types of variegation does ${label} have?`,
-      a: `${label} can display the following variegation types: ${typeNames}. ${plant.variegation.intro}`,
+      q: `What is the price range for ${label}?`,
+      a: `${label} typically costs between $${plant.priceRange.min} and $${plant.priceRange.max} ${plant.priceRange.currency}.${plant.priceRange.note ? ` ${plant.priceRange.note}` : ""}`,
     });
+
+    if (plant.propagation) {
+      questions.push({
+        q: `How do you propagate ${label}?`,
+        a: `${label} is propagated by ${plant.propagation.method}. Best timing: ${plant.propagation.timing}. Success rate: ${plant.propagation.successRate}.`,
+      });
+    }
+
+    if (plant.variegation && plant.variegation.types.length > 0) {
+      const typeNames = plant.variegation.types.map((t) => t.name).join(", ");
+      questions.push({
+        q: `What types of variegation does ${label} have?`,
+        a: `${label} can display the following variegation types: ${typeNames}. ${plant.variegation.intro}`,
+      });
+    }
   }
 
   if (questions.length === 0) return null;
@@ -243,6 +255,25 @@ export default function PlantPage({ params }: { params: { slug: string } }) {
                 </ul>
               </>
             )}
+          </section>
+        )}
+
+        {plant.faq && (
+          <section>
+            <h2>Frequently Asked Questions</h2>
+            {plant.faq.categories.map((cat) => (
+              <div key={cat.category}>
+                <h3>{cat.category}</h3>
+                <dl>
+                  {cat.items.map((item) => (
+                    <div key={item.question}>
+                      <dt>{item.question}</dt>
+                      <dd>{item.answer}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            ))}
           </section>
         )}
 

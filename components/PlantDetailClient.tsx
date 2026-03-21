@@ -22,6 +22,7 @@ import {
   DownsidesTab,
   ShopTab,
   PhotoGalleryTab,
+  FaqTab,
 } from "./tabs";
 
 // ---------------------------------------------------------------------------
@@ -61,6 +62,7 @@ function buildTabs(plant: PlantVariant): TabDef[] {
   if (plant.substrate) tabs.push({ id: "substrate", label: "Substrate" });
   if (plant.provenance) tabs.push({ id: "provenance", label: "Provenance" });
   if (plant.propagation) tabs.push({ id: "propagation", label: "Propagation" });
+  if (plant.faq) tabs.push({ id: "faq", label: "FAQ" });
   tabs.push({ id: "fit", label: "Fit Check" });
   tabs.push({ id: "downsides", label: "Downsides" });
   if (plant.recommendedProducts.length > 0) tabs.push({ id: "shop", label: "Shop" });
@@ -80,6 +82,7 @@ function buildTabContent(plant: PlantVariant): Record<string, React.ReactNode> {
   if (plant.substrate) content.substrate = <SubstrateTab plant={plant} />;
   if (plant.provenance) content.provenance = <ProvenanceTab plant={plant} />;
   if (plant.propagation) content.propagation = <PropagationTab plant={plant} />;
+  if (plant.faq) content.faq = <FaqTab plant={plant} />;
   return content;
 }
 

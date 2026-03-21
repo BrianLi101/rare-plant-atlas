@@ -398,4 +398,105 @@ export const philodendronGloriosumVariegated: PlantVariant = {
       body: "From cutting a node to rooted, verified resale-ready growth is often 6+ months: around 2 months to push new growth, 3-4 months to root after chopping, then extra time to verify stability.",
     },
   ],
+
+  // ─── FAQ ────────────────────────────────────────────────────────────────
+  faq: {
+    categories: [
+      {
+        category: "Pricing & Value",
+        items: [
+          {
+            question: "How much does a variegated Philodendron gloriosum cost?",
+            answer:
+              "Type 1 variegated gloriosum typically ranges from $300–$600, with prices on the higher end reflecting its unstable variegation patterns. Type 2 variegated gloriosum is more affordable, especially in tissue culture form, where specimens go for $100–$300. Regular, non-variegated gloriosum costs $20–$30 by comparison.",
+          },
+          {
+            question: "Is variegated gloriosum worth the price?",
+            answer:
+              "Not if you're attempting to flip the plant for profit. The propagation timeline is extremely long, and the variegation is unstable — often requiring multiple green leaves before producing a consistently well-variegated leaf. However, if you're collecting for personal enjoyment, the rarity justifies the investment for many collectors.",
+          },
+        ],
+      },
+      {
+        category: "Variegation Types & Classification",
+        items: [
+          {
+            question: "What is the difference between Type 1 and Type 2 variegation?",
+            answer:
+              "Type 1 features block variegation similar to Monstera albo, with rich white sections that appear in distinct patches. Type 2, often called splash variegation, displays a softer, more diffuse marbled pattern. Type 1 is less stable and more prone to reverting.",
+          },
+          {
+            question: "What does albo variegated mean for gloriosum?",
+            answer:
+              "Albo variegated typically refers to Type 1 variegation — the block variegation style. This is distinctly different from Type 2 splash variegation.",
+          },
+          {
+            question: "Is gloriosum variegation stable, or will it revert?",
+            answer:
+              "Variegation in gloriosum is naturally unstable. Even a fully green stem can throw variegated leaves if variegation exists elsewhere in the stem structure, since stems can grow over an inch in diameter and carry hidden variegation. Reversion to solid green is part of the plant's natural pattern.",
+          },
+        ],
+      },
+      {
+        category: "Propagation Timeline",
+        items: [
+          {
+            question: "How long does it take to propagate a variegated gloriosum?",
+            answer:
+              "From cutting a node to obtaining one or two consistently variegated leaves, expect four to six months. This lengthy timeline makes the plant unsuitable for quick resale.",
+          },
+          {
+            question: "How do you identify nodes on Philodendron gloriosum?",
+            answer:
+              "Nodes are extremely visible and appear as small white bumps or sections that protrude from the stem, distinctly colored from the rest of the stem material. They're easy to spot once you know what to look for.",
+          },
+          {
+            question: "Can a green-stemmed gloriosum throw variegated leaves?",
+            answer:
+              "Yes — if variegation exists elsewhere in the stem. Since stems can reach over one inch in diameter, variegation may be present internally even if it's not visually apparent on the surface.",
+          },
+          {
+            question: "Is gloriosum worth buying for propagation and resale?",
+            answer:
+              "Only if you acquire it at a reasonable price. Unless Type 1 enters tissue culture production, prices are unlikely to drop significantly below $300, making profitable resale difficult to achieve.",
+          },
+        ],
+      },
+      {
+        category: "Care for Variegated Forms",
+        items: [
+          {
+            question: "Does variegated gloriosum need more light than the standard form?",
+            answer:
+              "Yes — variegated specimens generally need more light to maintain their patterns. However, be cautious with direct light, as it can burn the leaves. Bright, indirect light with added warmth is ideal.",
+          },
+          {
+            question: "What substrate works best for variegated gloriosum?",
+            answer:
+              "Lechuza Pon is the best option. It provides consistent humidity, excellent stability, and is particularly suited to the plant's thin root system.",
+          },
+          {
+            question: "Why are my gloriosum's variegated leaves reverting to green?",
+            answer:
+              "This is the natural pattern of the plant. If reversion becomes problematic, you can attempt propagation and select nodes from clearly variegated portions of the stem.",
+          },
+        ],
+      },
+      {
+        category: "Buying Guidance",
+        items: [
+          {
+            question: "Where should I buy variegated Philodendron gloriosum?",
+            answer:
+              "In the United States, NSE Tropicals is your best source — they maintain the original plant lineage from Kaylee Ellen. In the UK, purchasing directly from Kaylee Ellen is recommended. Pay close attention to plant lineage and verify you're not accidentally buying tissue-cultured Type 2 when seeking Type 1.",
+          },
+          {
+            question: "Tissue culture versus rooted cuttings — which should I buy?",
+            answer:
+              "Type 1 has not yet appeared in tissue culture, so rooted cuttings are your only option and are generally superior anyway. When purchasing, look for plants that have already pushed out one to two variegated leaves, as this demonstrates stability. The plant can revert easily, so past performance is a helpful indicator.",
+          },
+        ],
+      },
+    ],
+  },
 };
