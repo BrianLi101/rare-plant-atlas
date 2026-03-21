@@ -154,11 +154,18 @@ export interface PlantRecommendedProduct {
 export interface PlantIdentity {
   id: string;
   slug: string;
-  label: string;
   genus: string;
+  /**
+   * Some plants might be hybrids and have unclear species
+   */
   species?: string;
-  cultivar?: string;
+  /**
+   * e.g. "Anthurium 'Delta Force'", "Philodendron gloriosum"
+   */
   tradeName?: string;
+  /**
+   * e.g. "Variegated Type 1", "Variegated Pink"
+   */
   variantLabel?: string;
   cloneId?: string;
   aliases?: string[];

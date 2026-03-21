@@ -77,11 +77,10 @@ export const philodendronGloriosumVariegated: PlantVariant = {
   identity: {
     id: "philodendron_gloriosum_variegated_type_1",
     slug: "philodendron-gloriosum-variegated-type-1",
-    label: "Philodendron gloriosum - Type 1",
     genus: "Philodendron",
     species: "gloriosum",
-    tradeName: "Philodendron gloriosum variegated",
-    variantLabel: "Type 1",
+    tradeName: "Philodendron gloriosum",
+    variantLabel: "Variegated Type 1",
     aliases: ["Type 1 Block Variegation"],
   },
   tagline: "Velvet meets light.",
@@ -124,7 +123,7 @@ export const philodendronGloriosumVariegated: PlantVariant = {
     {
       id: "hero",
       eyebrow: "Ultra-rare \u00b7 Araceae \u00b7 Colombia",
-      lines: ["Philodendron", "Gloriosum", "Variegated"],
+      lines: ["Philodendron", "Gloriosum", "Variegated Type 1"],
       italicLine: 2,
       earthLine: 2,
       sub: "A terrestrial creeper with heart-shaped leaves of deep emerald velvet, interrupted by strokes of cream and white. Each leaf is a living canvas.",
@@ -139,14 +138,15 @@ export const philodendronGloriosumVariegated: PlantVariant = {
       fact: "The original block-variegated plant traces back to Kaylee Ellen. It is not yet tissue cultured.",
       image: type1ColorsCloseupPhoto.image,
     },
-    {
-      id: "origin",
-      eyebrow: "Colombia \u00b7 Humid lowland forest",
-      lines: ["From the", "forest", "floor."],
-      italicLine: 1,
-      sub: "Gloriosum carpets premontane forest floors from sea level to 1,500m. It was never meant to climb. It crawls, deliberately, across the earth.",
-      fact: "First formally described in 1900. In serious collector hands by 2010.",
-    },
+    // {
+    //   id: "origin",
+    //   eyebrow: "Colombia \u00b7 Humid lowland forest",
+    //   lines: ["From the", "forest", "floor."],
+    //   italicLine: 1,
+    //   sub: "Gloriosum carpets premontane forest floors from sea level to 1,500m. It was never meant to climb. It crawls, deliberately, across the earth.",
+    //   fact: "First formally described in 1900. In serious collector hands by 2010.",
+    //   image: type1UnstablePhoto.image,
+    // },
   ],
 
   // ─── At a glance ──────────────────────────────────────────────────────

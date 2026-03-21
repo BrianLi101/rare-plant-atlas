@@ -5,6 +5,15 @@ import { plants } from "@/data/plants";
 import { PlantCard } from "./PlantCard";
 
 export function FeaturedSection() {
+  const featuredOrder = [
+    "philodendron-gloriosum-variegated-type-1",
+    "alocasia-black-velvet-variegated-pink",
+  ];
+
+  const featuredPlants = featuredOrder
+    .map((slug) => plants.find((plant) => plant.identity.slug === slug))
+    .filter((plant): plant is NonNullable<typeof plant> => Boolean(plant));
+
   return (
     <section id="featured" className="relative py-32 md:py-40 px-6 md:px-10">
       <div className="max-w-7xl mx-auto">
@@ -25,7 +34,7 @@ export function FeaturedSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-          {plants.map((plant) => (
+          {featuredPlants.map((plant) => (
             <PlantCard key={plant.identity.slug} plant={plant} />
           ))}
         </div>

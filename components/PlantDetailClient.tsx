@@ -187,18 +187,19 @@ function AtAGlance({ plant }: { plant: PlantVariant }) {
 // ---------------------------------------------------------------------------
 function Sidebar({ active, onSelect, plant, tabs }: { active: string; onSelect: (id: string) => void; plant: PlantVariant; tabs: TabDef[] }) {
   const variant = getPlantVariantLabel(plant);
+  const scientificName = getPlantScientificName(plant);
 
   return (
     <div className="w-[200px] flex-shrink-0 border-r border-cream/[0.08] bg-deep sticky top-0 self-start min-h-[500px]">
       <div className="p-[28px_24px_20px]">
         <p className="text-[9px] tracking-[0.42em] uppercase text-cream/15 mb-1.5">Plant file</p>
         <p className="font-serif text-[13px] text-cream/75 leading-[1.3]">{getPlantFullName(plant)}</p>
-        <p className="font-serif text-xs italic text-cream/30 leading-[1.4] mt-1">{getPlantScientificName(plant)}</p>
         {variant && (
-          <p className="text-[9px] tracking-[0.18em] uppercase text-forest-300/70 mt-2">
+          <p className="text-[9px] tracking-[0.18em] uppercase text-forest-300/70 mt-1.5">
             {variant}
           </p>
         )}
+        <p className="font-serif text-xs italic text-cream/30 leading-[1.4] mt-1">{scientificName}</p>
       </div>
       <div className="border-t border-cream/[0.08] pt-1.5 pb-5">
         {tabs.map((t) => (
@@ -241,6 +242,7 @@ function CinematicNav({ visible }: { visible: boolean }) {
 function PlantFileHeader({ plant, active, onSelect, visible, tabs }: { plant: PlantVariant; active: string; onSelect: (id: string) => void; visible: boolean; tabs: TabDef[] }) {
   const barRef = useRef<HTMLDivElement>(null);
   const variant = getPlantVariantLabel(plant);
+  const scientificName = getPlantScientificName(plant);
 
   useEffect(() => {
     if (!visible) return;
@@ -263,12 +265,12 @@ function PlantFileHeader({ plant, active, onSelect, visible, tabs }: { plant: Pl
                 <div>
                   <p className="text-[9px] tracking-[0.42em] uppercase text-cream/20 mb-0.5">Plant file</p>
                   <p className="font-serif text-[15px] text-cream/80 leading-[1.2]">{getPlantFullName(plant)}</p>
-                  <p className="font-serif text-[12px] italic text-cream/45 mt-0.5">{getPlantScientificName(plant)}</p>
                   {variant && (
                     <p className="text-[9px] tracking-[0.16em] uppercase text-forest-300/70 mt-1">
                       {variant}
                     </p>
                   )}
+                  <p className="font-serif text-[12px] italic text-cream/45 mt-0.5">{scientificName}</p>
                 </div>
                 <Link href="/" className="text-[10px] tracking-[0.2em] uppercase text-cream/20 hover:text-cream/40 transition-colors">Atlas</Link>
               </div>

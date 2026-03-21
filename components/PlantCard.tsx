@@ -6,7 +6,6 @@ import Link from "next/link";
 import type { PlantVariant } from "@/data/plants";
 import {
   getPlantFullName,
-  getPlantScientificName,
   getPlantVariantLabel,
 } from "@/data/identity";
 
@@ -174,23 +173,19 @@ export function PlantCard({ plant }: { plant: PlantVariant }) {
               </span>
             </div>
 
-            <div className="flex flex-col gap-1.5">
+              <div className="flex flex-col gap-1.5">
+              <h3 className="font-serif text-[clamp(1.1rem,2.5vw,1.5rem)] leading-[1.1] tracking-[-0.015em] text-cream m-0">
+                {getPlantFullName(plant)}
+              </h3>
+
               {variant && (
                 <p
-                  className="text-[8px] tracking-[0.3em] uppercase"
+                  className="font-serif text-[13px] md:text-[14px] leading-[1.2] m-0"
                   style={{ color: accentStrong }}
                 >
                   {variant}
                 </p>
               )}
-
-              <h3 className="font-serif text-[clamp(1.1rem,2.5vw,1.5rem)] leading-[1.1] tracking-[-0.015em] text-cream m-0">
-                {getPlantFullName(plant)}
-              </h3>
-
-              <p className="text-[12px] text-cream/35 italic m-0">
-                {getPlantScientificName(plant)}
-              </p>
 
               <div className="flex flex-wrap gap-[5px] pt-0.5">
                 {plant.traits.slice(0, 2).map((trait) => (

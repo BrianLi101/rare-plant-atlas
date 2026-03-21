@@ -66,11 +66,10 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
   identity: {
     id: "alocasia_reginula_black_velvet_variegated_pink",
     slug: "alocasia-black-velvet-variegated-pink",
-    label: "Alocasia Black Velvet - Variegated Pink",
     genus: "Alocasia",
     species: "reginula",
-    tradeName: "Alocasia Black Velvet Variegated Pink",
-    variantLabel: "Pink Variegation",
+    tradeName: "Alocasia Black Velvet",
+    variantLabel: "Variegated Pink",
     aliases: ["Pink variegated Black Velvet", "Alocasia reginula variegated pink"],
   },
   tagline: "Dark velvet, blush fire.",
@@ -123,7 +122,7 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
       lines: ["Alocasia", "Black Velvet", "Variegated Pink"],
       italicLine: 2,
       earthLine: 2,
-      sub: "Near-black velvet blades cut by pink and cream sectors. Compact, dramatic, and unforgiving of inconsistent care.",
+      sub: "Near-black velvet blades cut by pink and cream sectors. Compact and dramatic.",
       image: heroPhoto.image,
     },
     {
@@ -135,14 +134,14 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
       fact: "Variegated tissue has lower chlorophyll and grows slower; stability depends on node genetics and plant vigor.",
       image: heavilyVariegatedLeafPhoto.image,
     },
-    {
-      id: "origin",
-      eyebrow: "Modern collector line",
-      lines: ["Selected for", "contrast", "and compact form."],
-      italicLine: 1,
-      sub: "Black Velvet is a compact Alocasia valued for texture. Pink-variegated forms are horticultural selections propagated for ornamental expression.",
-      image: inflorescencePhoto.image,
-    },
+    // {
+    //   id: "origin",
+    //   eyebrow: "Modern collector line",
+    //   lines: ["Selected for", "contrast", "and compact form."],
+    //   italicLine: 1,
+    //   sub: "Black Velvet is a compact Alocasia valued for texture. Pink-variegated forms are horticultural selections propagated for ornamental expression.",
+    //   image: inflorescencePhoto.image,
+    // },
   ],
 
   glance: [
