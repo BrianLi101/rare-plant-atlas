@@ -1,4 +1,4 @@
-import type { PlantPhoto, PlantVariant } from "../types";
+import type { PlantPhoto, PlantPriceRange, PlantVariant } from "../types";
 import {
   lechuzaPlanterHorizontalSmall,
   lechuzaBalconeraColor40Slate,
@@ -7,6 +7,7 @@ import {
   nurtureSystemNo1PowerGrow,
   xactoKnifeSet16Pc,
 } from "../products";
+import { formatPlantPriceRangeForGlance } from "../price";
 
 const IMG = "/plants/philodendron-gloriosum-variegated";
 
@@ -73,6 +74,14 @@ const type2SplashPhoto: PlantPhoto = {
     "Fine splash-style variegation distributed as speckles and flecks rather than large sectoral blocks.",
 };
 
+export const philodendronGloriosumVariegatedPlantPriceRange: PlantPriceRange = {
+  currency: "USD",
+  min: 300,
+  max: 2500,
+  lastObserved: new Date("2026-03-21"),
+  note: "Size and variegation dependent. Exceptional Type 1 specimens can exceed this range.",
+};
+
 export const philodendronGloriosumVariegated: PlantVariant = {
   identity: {
     id: "philodendron_gloriosum_variegated_type_1",
@@ -89,7 +98,7 @@ export const philodendronGloriosumVariegated: PlantVariant = {
   origin: "Colombia",
   family: "Araceae",
   rarity: "Ultra-rare",
-  priceRange: "$300 \u2013 $2,500+",
+  priceRange: philodendronGloriosumVariegatedPlantPriceRange,
   images: {
     hero: heroPhoto.image,
     detail: [type1UnstablePhoto.image, type2SplashPhoto.image,],
@@ -151,7 +160,7 @@ export const philodendronGloriosumVariegated: PlantVariant = {
 
   // ─── At a glance ──────────────────────────────────────────────────────
   glance: [
-    { label: "Price range", value: "$300\u2013$2,500+", note: "Size & variegation dependent" },
+    { label: "Price range", value: formatPlantPriceRangeForGlance(philodendronGloriosumVariegatedPlantPriceRange), note: "Size & variegation dependent" },
     { label: "Leaf cycle", value: "~1 per month (ideal)", note: "Often 2-5 leaves/year in home conditions" },
     { label: "Difficulty", value: "Advanced", note: "Consistency non-negotiable" },
     { label: "Humidity", value: "60%+ (higher is better)", note: "More humidity generally improves performance" },

@@ -1,4 +1,4 @@
-import type { PlantPhoto, PlantVariant } from "../types";
+import type { PlantPhoto, PlantPriceRange, PlantVariant } from "../types";
 import {
   lechuzaPonSubstrate3L,
   lechuzaPonSubstrate18L,
@@ -6,6 +6,7 @@ import {
   lechuzaClassicoLs21CharcoalMetallic,
   nurtureSystemNo1PowerGrow,
 } from "../products";
+import { formatPlantPriceRangeForGlance } from "../price";
 
 const IMG = "/plants/anthurium-delta-force";
 
@@ -33,6 +34,14 @@ const tissueCulturePhoto: PlantPhoto = {
     "Commercial tissue culture is the main route for true-to-type Delta Force availability today.",
 };
 
+export const anthuriumDeltaForcePlantPriceRange: PlantPriceRange = {
+  currency: "USD",
+  min: 50,
+  max: 300,
+  lastObserved: new Date("2026-03-21"),
+  note: "Size and maturity dependent. Premium specimens can exceed this range.",
+};
+
 export const anthuriumDeltaForce: PlantVariant = {
   identity: {
     id: "anthurium_delta_force",
@@ -47,7 +56,7 @@ export const anthuriumDeltaForce: PlantVariant = {
   origin: "Ree Gardens, Miami, Florida",
   family: "Araceae",
   rarity: "Rare",
-  priceRange: "$80 - $500+",
+  priceRange: anthuriumDeltaForcePlantPriceRange,
   images: {
     hero: heroPhoto.image,
     detail: [roundedEmergencePhoto.image, tissueCulturePhoto.image],
@@ -90,7 +99,7 @@ export const anthuriumDeltaForce: PlantVariant = {
   ],
 
   glance: [
-    { label: "Price range", value: "$80-$500+", note: "Size and maturity dependent" },
+    { label: "Price range", value: formatPlantPriceRangeForGlance(anthuriumDeltaForcePlantPriceRange), note: "Size and maturity dependent" },
     { label: "Difficulty", value: "Intermediate", note: "Hardier than many collector Anthuriums" },
     { label: "Humidity", value: "60-80%", note: "Low humidity often browns leaf tips" },
     { label: "Light", value: "Bright indirect", note: "Avoid direct sun on foliage" },

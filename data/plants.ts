@@ -12,6 +12,7 @@ export type {
   PropagationSection,
   DownsideItem,
   PlantFitWeights,
+  PlantPriceRange,
   PlantIdentity,
   PlantPhoto,
   PlantRecommendedProduct,

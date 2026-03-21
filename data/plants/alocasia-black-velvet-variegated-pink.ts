@@ -1,4 +1,4 @@
-import type { PlantPhoto, PlantVariant } from "../types";
+import type { PlantPhoto, PlantPriceRange, PlantVariant } from "../types";
 import {
   lechuzaPonSubstrate3L,
   lechuzaPonSubstrate18L,
@@ -6,6 +6,7 @@ import {
   nurtureSystemNo1PowerGrow,
   ikeaOdlaLeca,
 } from "../products";
+import { formatPlantPriceRangeForGlance } from "../price";
 
 const IMG = "/plants/alocasia-black-velvet-variegated-pink";
 
@@ -62,6 +63,14 @@ const heavilyVariegatedLeafPhoto: PlantPhoto = {
   description: "Black velvets can produce beautiful block variegation.",
 };
 
+export const alocasiaBlackVelvetVariegatedPinkPlantPriceRange: PlantPriceRange = {
+  currency: "USD",
+  min: 50,
+  max: 300,
+  lastObserved: new Date("2026-03-21"),
+  note: "Maturity and variegation drive price; exceptional pink expression can exceed this range.",
+};
+
 export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
   identity: {
     id: "alocasia_reginula_black_velvet_variegated_pink",
@@ -78,7 +87,7 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
   origin: "Cultivated hybrid line (horticultural selection)",
   family: "Araceae",
   rarity: "Rare",
-  priceRange: "$150 - $1,200+",
+  priceRange: alocasiaBlackVelvetVariegatedPinkPlantPriceRange,
   images: {
     hero: heroPhoto.image,
     detail: [rootsPhoto.image, cormsPhoto.image],
@@ -145,7 +154,7 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
   ],
 
   glance: [
-    { label: "Price range", value: "$150-$1,200+", note: "Maturity and variegation drive price" },
+    { label: "Price range", value: formatPlantPriceRangeForGlance(alocasiaBlackVelvetVariegatedPinkPlantPriceRange), note: "Maturity and variegation drive price" },
     { label: "Leaf cycle", value: "4-8+ weeks", note: "Often slower in home conditions" },
     { label: "Difficulty", value: "Advanced", note: "Consistency matters" },
     { label: "Humidity", value: "65%+", note: "Leaf quality drops below this" },

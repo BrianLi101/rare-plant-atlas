@@ -200,7 +200,8 @@ export interface PlantVariant {
   origin: string;
   family: string;
   rarity: string;
-  priceRange: string;
+  // priceRange: string;
+  priceRange: PlantPriceRange;
   images: PlantImages;
   photos: PlantPhoto[];
   colors: {
@@ -226,4 +227,28 @@ export interface PlantVariant {
   provenance?: ProvenanceSection;
   propagation?: PropagationSection;
   alocasiaCormData?: AlocasiaCormData;
+}
+
+/**
+ * Encompasses the seller type:
+ * - Individual (Kaylee Ellen)
+ * - Nursery (NSE Tropicals)
+ */
+export enum PlantSellerType {
+  INDIVIDUAL = 'INDIVIDUAL',
+  NURSERY = 'NURSERY',
+}
+export interface PlantSeller {
+  name: string;
+  url: string;
+  image: string;
+  description: string;
+}
+
+export interface PlantPriceRange {
+  currency: 'USD'
+  min: number
+  max: number
+  lastObserved: Date;
+  note?: string;
 }

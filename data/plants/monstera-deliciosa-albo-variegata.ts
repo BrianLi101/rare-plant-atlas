@@ -1,4 +1,4 @@
-import type { PlantVariant } from "../types";
+import type { PlantPriceRange, PlantVariant } from "../types";
 import {
   lechuzaClassicoLs21CharcoalMetallic,
   lechuzaPonSubstrate3L,
@@ -6,6 +6,15 @@ import {
   nurtureSystemNo1PowerGrow,
   xactoKnifeSet16Pc,
 } from "../products";
+import { formatPlantPriceRangeForGlance } from "../price";
+
+export const monsteraDeliciosaAlboVariegataPlantPriceRange: PlantPriceRange = {
+  currency: "USD",
+  min: 50,
+  max: 500,
+  lastObserved: new Date("2026-03-21"),
+  note: "Pricing spans node cuttings to mature plants; top-end examples can exceed this range.",
+};
 
 export const monsteraDeliciosaAlboVariegata: PlantVariant = {
   identity: {
@@ -22,7 +31,7 @@ export const monsteraDeliciosaAlboVariegata: PlantVariant = {
   origin: "Cultivated variegated mutation of Monstera deliciosa",
   family: "Araceae",
   rarity: "Rare",
-  priceRange: "$50 - $2,000+",
+  priceRange: monsteraDeliciosaAlboVariegataPlantPriceRange,
   images: {},
   photos: [],
   colors: {
@@ -67,7 +76,7 @@ export const monsteraDeliciosaAlboVariegata: PlantVariant = {
   ],
 
   glance: [
-    { label: "Price range", value: "$50-$2,000+", note: "Node cuttings to mature plants" },
+    { label: "Price range", value: formatPlantPriceRangeForGlance(monsteraDeliciosaAlboVariegataPlantPriceRange), note: "Node cuttings to mature plants" },
     { label: "Difficulty", value: "Intermediate", note: "Sensitive but manageable with consistency" },
     { label: "Humidity", value: "60-80%", note: "White tissue browns faster in dry air" },
     { label: "Light", value: "Bright indirect", note: "Needs more light than green deliciosa" },
