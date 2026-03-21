@@ -1,6 +1,7 @@
 import type { PlantPhoto, PlantVariant } from "../types";
 import {
   lechuzaPlanterHorizontalSmall,
+  lechuzaBalconeraColor40Slate,
   lechuzaPonSubstrate3L,
   lechuzaPonSubstrate18L,
   nurtureSystemNo1PowerGrow,
@@ -156,6 +157,11 @@ export const philodendronGloriosumVariegated: PlantVariant = {
       product: lechuzaPlanterHorizontalSmall,
       reason:
         "Gloriosums are crawlers and need to grow horizontally. This planter is best when leaves are under 1 foot long; beyond that, stability drops and it cannot hold enough water.",
+    },
+    {
+      product: lechuzaBalconeraColor40Slate,
+      reason:
+        "Switch to a larger rectangular self watering pot after leaves reach 1-2 ft in length.",
     },
     {
       product: lechuzaPonSubstrate3L,

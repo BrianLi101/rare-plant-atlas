@@ -41,6 +41,13 @@ const cormsPhoto: PlantPhoto = {
     "Corm cluster and propagation material for division and staged nursery growth.",
 };
 
+const cormsStartingToGrowPhoto: PlantPhoto = {
+  id: "alocasia-black-velvet-pink-corms-starting-to-grow",
+  image: `${IMG}/corms-starting-to-grow.jpg`,
+  caption: "First corms",
+  description: "Three white corms starting to grow on a juvenile three leaf plant.",
+};
+
 const grownFromCormPhoto: PlantPhoto = {
   id: "alocasia-black-velvet-pink-grown-from-corm",
   image: `${IMG}/grown-from-corm.jpg`,
@@ -83,6 +90,7 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
     inflorescencePhoto,
     rootsPhoto,
     cormsPhoto,
+    cormsStartingToGrowPhoto,
     grownFromCormPhoto,
     heavilyVariegatedLeafPhoto,
   ],

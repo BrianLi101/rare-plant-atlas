@@ -43,6 +43,44 @@ export const ojyuddSelfWateringPlanter8Pack: PotProduct = {
   ],
 };
 
+export const lechuzaClassicoLs21CharcoalMetallic: PotProduct = {
+  id: "lechuza-classico-ls-21-charcoal-metallic",
+  category: ProductCategory.Pot,
+  product:
+    "Lechuza Classico LS 21 Charcoal Metallic, Self-Watering Round Planter, D8.3 H7.9 in",
+  approximatePriceUsd: 54,
+  image: "/products/lechuza-pon-classico-round-d21-h20.jpg",
+  compatibleSubstrates: [
+    PotCompatibleSubstrate.LechuzaPon,
+    PotCompatibleSubstrate.Leca,
+  ],
+  listings: [
+    {
+      retailer: ProductRetailer.Amazon,
+      url: "https://www.amazon.com/dp/B00FJYLMQI?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_2&th=1",
+    },
+  ],
+};
+
+export const lechuzaBalconeraColor40Slate: PotProduct = {
+  id: "lechuza-balconera-color-40-slate",
+  category: ProductCategory.Pot,
+  product:
+    "Lechuza BALCONERA Color 40 Slate, Self-Watering Window Box (Railing Planter), H7.5 L15.7 W7.5 in",
+  approximatePriceUsd: 55,
+  image: "/products/lechuza-pon-balconera-40.jpg",
+  compatibleSubstrates: [
+    PotCompatibleSubstrate.LechuzaPon,
+    PotCompatibleSubstrate.Leca,
+  ],
+  listings: [
+    {
+      retailer: ProductRetailer.Amazon,
+      url: "https://www.amazon.com/dp/B0DT9ZJHPT?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_3&th=1",
+    },
+  ],
+};
+
 export const lechuzaPonSubstrate18L: Product = {
   id: "lechuza-pon-substrate-18l",
   category: ProductCategory.Substrate,
