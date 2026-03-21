@@ -391,7 +391,7 @@ export const philodendronGloriosumVariegated: PlantVariant = {
     },
     {
       title: "Pest vulnerability",
-      body: "Velvety foliage is highly attractive to spider mites and similar pests. Preventive monitoring and treatment are part of normal care.",
+      body: "Velvety foliage is highly attractive to spider mites and similar pests. Preventive monitoring and treatment are part of normal care. Growing in semi-hydro (leca or pon) can help reduce risks.",
     },
     {
       title: "Not a quick chop-and-prop flip",

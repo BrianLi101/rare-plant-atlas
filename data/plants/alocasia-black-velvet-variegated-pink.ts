@@ -46,7 +46,7 @@ const cormsStartingToGrowPhoto: PlantPhoto = {
   id: "alocasia-black-velvet-pink-corms-starting-to-grow",
   image: `${IMG}/corms-starting-to-grow.jpg`,
   caption: "First corms",
-  description: "Three white corms starting to grow on a juvenile three leaf plant.",
+  description: "Three white corms starting to grow on a juvenile three leaf plant. It will still be a few more months before they are ready to remove and propagate.",
 };
 
 const grownFromCormPhoto: PlantPhoto = {
@@ -368,10 +368,6 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
     {
       title: "Price volatility",
       body: "Strongly colored pink and gold plants can be expensive, and market pricing shifts quickly across all color forms.",
-    },
-    {
-      title: "Pest pressure",
-      body: "Spider mites and thrips can escalate quickly on stressed foliage; frequent checks are required.",
     },
   ],
 };
