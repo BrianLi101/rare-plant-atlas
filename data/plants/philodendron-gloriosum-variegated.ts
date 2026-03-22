@@ -421,7 +421,7 @@ export const philodendronGloriosumVariegated: PlantVariant = {
         category: "Variegation Types & Classification",
         items: [
           {
-            question: "What is the difference between Type 1 and Type 2 variegation?",
+            question: "What is the difference between Type 1 and Type 2 variegation on Philodendron gloriosum?",
             answer:
               "Type 1 features block variegation similar to Monstera albo, with rich white sections that appear in distinct patches. Type 2, often called splash variegation, displays a softer, more diffuse marbled pattern. Type 1 is less stable and more prone to reverting.",
           },
@@ -491,7 +491,7 @@ export const philodendronGloriosumVariegated: PlantVariant = {
               "In the United States, NSE Tropicals is your best source — they maintain the original plant lineage from Kaylee Ellen. In the UK, purchasing directly from Kaylee Ellen is recommended. Pay close attention to plant lineage and verify you're not accidentally buying tissue-cultured Type 2 when seeking Type 1.",
           },
           {
-            question: "Tissue culture versus rooted cuttings — which should I buy?",
+            question: "Tissue culture versus rooted cuttings — which should I buy for variegated gloriosum?",
             answer:
               "Type 1 has not yet appeared in tissue culture, so rooted cuttings are your only option and are generally superior anyway. When purchasing, look for plants that have already pushed out one to two variegated leaves, as this demonstrates stability. The plant can revert easily, so past performance is a helpful indicator.",
           },

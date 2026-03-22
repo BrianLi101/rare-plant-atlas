@@ -370,4 +370,95 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
       body: "Strongly colored pink and gold plants can be expensive, and market pricing shifts quickly across all color forms.",
     },
   ],
+
+  // ─── FAQ ────────────────────────────────────────────────────────────────
+  faq: {
+    categories: [
+      {
+        category: "Corms & Propagation",
+        items: [
+          {
+            question: "Can I grow a variegated Black Velvet Alocasia from corms, and how long does it take?",
+            answer:
+              "Yes — corm propagation is one of the most common ways to acquire this plant. From removing a corm to seeing its first leaf, expect around three months under the right light and temperature conditions. However, variegation is not guaranteed — expression varies from corm to corm, which is why buying sprouted corms with visible variegation is generally advisable.",
+          },
+          {
+            question: "When does a variegated Black Velvet Alocasia start producing corms?",
+            answer:
+              "Corm production typically begins once the plant has developed four to five leaves, which generally happens somewhere between four and eight months after it was itself grown from a corm. Plants in LECA tend to show corm development very visibly, making it easy to track.",
+          },
+          {
+            question: "How do I root Black Velvet Alocasia corms successfully?",
+            answer:
+              "Use a moisture-retaining medium like Fluval Stratum or Lechuza Pon — both keep corms consistently moist without waterlogging, which is critical for the fine root systems on young plants. Keep conditions warm, humid, and in bright indirect light.",
+          },
+        ],
+      },
+      {
+        category: "Variegation",
+        items: [
+          {
+            question: "Why is my variegated Black Velvet Alocasia losing its pink variegation and producing all-green leaves?",
+            answer:
+              "This is normal behaviour for this cultivar. The pink variegation in the Black Velvet Alocasia is inherently unstable — expression varies from plant to plant and even leaf to leaf. Most plants do carry the variegation forward, but it can be inconsistent. Variegation in the stem is a positive indicator, but doesn't guarantee every leaf will express it strongly.",
+          },
+          {
+            question: "Will corms from a variegated Black Velvet Alocasia also produce variegated offspring?",
+            answer:
+              "Most likely, yes — but not guaranteed. The majority of corms from a variegated parent do go on to produce variegated plants, but the expression varies. Some will show strong pink variegation, others may be more subdued or lean green. This instability is part of what makes the cultivar interesting, and also why buying sprouted corms is advisable when sourcing new plants.",
+          },
+        ],
+      },
+      {
+        category: "Watering & Feeding",
+        items: [
+          {
+            question: "How often should I water a variegated Black Velvet Alocasia?",
+            answer:
+              "This depends heavily on your setup. In a semi-hydro or LECA system, the plant regulates its own moisture uptake, and the main concern shifts to nutrient delivery rather than a watering schedule. In soil, allow the top portion to dry between waterings — this plant does not want to sit in wet conditions. Overwatering is a common cause of decline.",
+          },
+          {
+            question: "Is overwatering the main reason Black Velvet Alocasia plants die?",
+            answer:
+              "In traditional soil setups, yes — overwatering and poor drainage are among the leading causes of failure with this plant. Root rot sets in quickly in waterlogged conditions. This is one reason semi-hydro and LECA setups suit it well — the risk of overwatering is largely eliminated when the plant can access water on its own terms.",
+          },
+          {
+            question: "How often should I fertilize a Black Velvet Alocasia?",
+            answer:
+              "This is a reasonably heavy feeder. In a semi-hydro setup, feeding every one to two weeks is appropriate and supports both healthy leaf development and prolific corm production. In soil, feeding frequency will vary with season and growth rate — reduce during slower periods.",
+          },
+        ],
+      },
+      {
+        category: "Light, Humidity & Environment",
+        items: [
+          {
+            question: "What light conditions does a Black Velvet Alocasia need?",
+            answer:
+              "As a natural underbrush plant, the Black Velvet Alocasia does not require strong or direct light. Medium to low indirect light is sufficient for healthy growth. Avoid direct sun, which can stress the foliage. It is more forgiving on the light front than many other aroids.",
+          },
+          {
+            question: "Does a Black Velvet Alocasia need high humidity?",
+            answer:
+              "Less so than many other aroids. The thick, velvety leaves offer some insulation and moisture retention, meaning this plant handles lower humidity more gracefully than thinner-leafed aroids. Standard home humidity is generally adequate, though it will thrive with a bit more.",
+          },
+        ],
+      },
+      {
+        category: "Sourcing & Pricing",
+        items: [
+          {
+            question: "Should I buy an unsprouted or sprouted Black Velvet Alocasia corm?",
+            answer:
+              "Sprouted, every time. Unsprouted corms typically sell for $30–$40, but offer no indication of what the variegation will look like — or whether it will express meaningfully at all. Sprouted corms, which run $50–$70, allow you to assess leaf colour before committing. Given how variable the variegation can be, the premium is well worth paying.",
+          },
+          {
+            question: "Is tissue culture a good option for Black Velvet Alocasia?",
+            answer:
+              "Yes — unlike Monstera tissue culture plantlets, which can be finicky, the Black Velvet Alocasia performs reasonably well from tissue culture. Availability has increased considerably, which is gradually bringing prices down. It's a viable entry point, particularly if you're not concerned with selecting for specific variegation at the outset.",
+          },
+        ],
+      },
+    ],
+  },
 };
