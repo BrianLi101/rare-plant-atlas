@@ -1,5 +1,6 @@
 import type { PlantVariant } from "@/data/types";
 import { ProductCategory } from "@/data/types";
+import { track } from "@vercel/analytics";
 import { TabContainer, TabHeader } from "./TabContainer";
 
 function formatUsd(amount: number): string {
@@ -83,6 +84,14 @@ export function ShopTab({ plant }: { plant: PlantVariant }) {
                     href={listing.url}
                     target="_blank"
                     rel="noreferrer noopener"
+                    onClick={() =>
+                      track("buy_button_clicked", {
+                        plant: plant.identity.tradeName ?? plant.identity.slug,
+                        product: product.product,
+                        category: product.category,
+                        retailer: listing.retailer,
+                      })
+                    }
                     className="block text-center text-[11px] tracking-[0.08em] text-cream/50 border border-cream/[0.15] bg-cream/[0.04] rounded-[6px] py-2 px-3 hover:text-cream/75 hover:border-cream/[0.25] transition-colors"
                   >
                     {listing.label ?? `View on ${listing.retailer}`}

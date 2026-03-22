@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import type { PlantVariant, CinematicPanel as PanelData } from "@/data/types";
+import { track } from "@vercel/analytics";
 import {
   getPlantFullName,
   getPlantScientificName,
@@ -422,7 +423,12 @@ export function PlantDetailClient({ plant }: { plant: PlantVariant }) {
     return () => observer.disconnect();
   }, []);
 
-  const handleTabSelect = useCallback((id: string) => { setActive(id); }, []);
+  const plantName = plant.identity.tradeName ?? plant.identity.slug;
+  const handleTabSelect = useCallback((id: string) => {
+    const label = tabs.find((t) => t.id === id)?.label ?? id;
+    track("tab_clicked", { tab: label, plant: plantName });
+    setActive(id);
+  }, [tabs, plantName]);
 
   return (
     <>
