@@ -83,7 +83,7 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
   },
   tagline: "Dark velvet, blush fire.",
   heroDescription:
-    "A compact jewel Alocasia with near-black, velvet foliage and pink-to-cream sectoral variegation. High contrast and slow growth make each leaf feel earned.",
+    "A compact jewel Alocasia with near-black, velvet foliage and pink-to-cream sectoral variegation. The species name reginula means \u2018little queen\u2019 in Latin \u2014 an apt title for a plant that dominates any shelf it occupies despite its compact size. High contrast and slow growth make each leaf feel earned.",
   origin: "Cultivated hybrid line (horticultural selection)",
   family: "Araceae",
   rarity: "Rare",
@@ -238,15 +238,15 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
   care: [
     {
       label: "Light",
-      value: "Bright indirect",
+      value: "Medium to bright indirect",
       detail:
-        "Strong filtered light supports compact growth and variegation quality. This guidance is the same for pink, white, and gold forms.",
+        "Tolerates lower light better than most aroids \u2014 a reflection of its limestone cliff habitat in deep shade. Medium indirect is sufficient for steady growth; brighter filtered light supports variegation quality. Avoid direct sun.",
     },
     {
       label: "Humidity",
-      value: "65-80%",
+      value: "60\u201375%",
       detail:
-        "Higher humidity improves leaf expansion and texture. Low humidity increases risk of edge crisping and stalled unfurls.",
+        "More forgiving than many aroids \u2014 the thick velvet leaves retain moisture better than thin-leafed species. Standard home humidity (50\u201360%) is workable for the green form; variegated forms with reduced chlorophyll benefit from staying above 60%. Low humidity shows first as crispy margins and failed unfurls.",
     },
     {
       label: "Temperature",
@@ -317,9 +317,24 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
     body: "Alocasia reginula (Black Velvet) originates from Borneo and became a staple jewel Alocasia in cultivation. Variegated Black Velvet forms now circulate in three commonly referenced color expressions: pink, white, and gold.",
     timeline: [
       {
-        year: "Pre-2000s",
+        year: "Pre-1990s",
         event:
-          "Black Velvet enters specialty cultivation as a compact foliage Alocasia valued for dark textured leaves.",
+          "Alocasia reginula is believed native to Sabah, Malaysian Borneo, though its wild habitat remained unknown for decades. Plants entered the hobbyist trade through a Hawaiian arboretum before formal botanical description.",
+      },
+      {
+        year: "1990s",
+        event:
+          "Scott Hyndman propagates the plant commercially via stock obtained from the Lyon Arboretum, Hawaii. The species is sold as \u2018Alocasia Black Velvet\u2019 before receiving a formal botanical name.",
+      },
+      {
+        year: "1998",
+        event:
+          "Formally described as Alocasia reginula by botanist A. Hay in the Singapore Gardens\u2019 Bulletin. Distribution listed as \u2018?Borneo\u2019 \u2014 the exact wild origin remained unconfirmed.",
+      },
+      {
+        year: "2021",
+        event:
+          "Researchers confirm the species is endemic to heavily shaded limestone karst cliffs in Tabin Wildlife Reserve, Sabah, Malaysian Borneo \u2014 one of the most specific and unusual native habitats of any collector Alocasia.",
       },
       {
         year: "2010s",
@@ -368,6 +383,14 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
     {
       title: "Price volatility",
       body: "Strongly colored pink and gold plants can be expensive, and market pricing shifts quickly across all color forms.",
+    },
+    {
+      title: "Toxic to pets and children",
+      body: "Calcium oxalate crystals throughout all tissue. Ingestion causes oral irritation and GI distress. Not suitable on low shelves in pet or child households.",
+    },
+    {
+      title: "Dormancy cycles",
+      body: "Jewel Alocasias drop leaves and go dormant \u2014 commonly mistaken for death. The corm survives and reshoots given warmth and time. Do not overwater during dormancy.",
     },
   ],
 
@@ -435,12 +458,12 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
           {
             question: "What light conditions does a Black Velvet Alocasia need?",
             answer:
-              "As a natural underbrush plant, the Black Velvet Alocasia does not require strong or direct light. Medium to low indirect light is sufficient for healthy growth. Avoid direct sun, which can stress the foliage. It is more forgiving on the light front than many other aroids.",
+              "As a natural underbrush plant, the Black Velvet Alocasia does not require strong or direct light. Medium indirect light is sufficient for steady growth, though brighter filtered light supports variegation quality in variegated forms where photosynthetic capacity is reduced. Avoid direct sun, which can stress the foliage.",
           },
           {
             question: "Does a Black Velvet Alocasia need high humidity?",
             answer:
-              "Less so than many other aroids. The thick, velvety leaves offer some insulation and moisture retention, meaning this plant handles lower humidity more gracefully than thinner-leafed aroids. Standard home humidity is generally adequate, though it will thrive with a bit more.",
+              "Less so than many other aroids. The thick, velvety leaves offer some insulation and moisture retention, meaning this plant handles lower humidity more gracefully than thinner-leafed aroids. Standard home humidity (50\u201360%) is workable, but variegated forms with reduced chlorophyll benefit from staying above 60%. Crispy margins and failed unfurls are the first signs of insufficient humidity.",
           },
         ],
       },
@@ -456,6 +479,26 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
             question: "Is tissue culture a good option for Black Velvet Alocasia?",
             answer:
               "Yes — unlike Monstera tissue culture plantlets, which can be finicky, the Black Velvet Alocasia performs reasonably well from tissue culture. Availability has increased considerably, which is gradually bringing prices down. It's a viable entry point, particularly if you're not concerned with selecting for specific variegation at the outset.",
+          },
+        ],
+      },
+      {
+        category: "Care",
+        items: [
+          {
+            question: "My Black Velvet Alocasia is dropping all its leaves \u2014 is it dying?",
+            answer:
+              "Almost certainly not. Jewel Alocasias including Black Velvet routinely go through dormancy cycles where they drop all above-ground leaves and appear dead. The corm survives underground and will reshoot when conditions improve \u2014 usually warmth, spring light, and consistent moisture. Do not overwater a dormant plant in an attempt to revive it. Keep the substrate barely moist, maintain warmth above 18\u00b0C (65\u00b0F), and wait. New growth typically emerges within 4\u201310 weeks. If the corm is firm when gently squeezed, the plant is alive.",
+          },
+        ],
+      },
+      {
+        category: "Safety",
+        items: [
+          {
+            question: "Is Alocasia Black Velvet toxic to pets or humans?",
+            answer:
+              "Yes. Like all Alocasias, Black Velvet contains calcium oxalate crystals throughout its tissue. Ingestion causes oral pain, swelling, drooling, and gastrointestinal distress in cats, dogs, and humans. Handle with gloves when dividing or repotting, and keep out of reach of pets and children.",
           },
         ],
       },

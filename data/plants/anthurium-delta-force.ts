@@ -75,7 +75,7 @@ export const anthuriumDeltaForce: PlantVariant = {
   },
   tagline: "Military precision. Botanical impact.",
   heroDescription:
-    "A striking hybrid built for durability. Delta Force fuses the bold triangular architecture of its pedatoradiatum parent with clarinervium's legendary velvety texture — producing a plant that grows fast, tolerates ambience, and commands attention at every stage.",
+    "A striking hybrid built for durability. Delta Force fuses the bold triangular architecture of its pedatoradiatum parent with clarinervium's legendary velvety texture \u2014 producing a plant that grows fast, tolerates ambience, and commands attention at every stage. Mature leaves reach 12\u201318 inches, with the characteristic triangular geometry becoming fully defined by the fourth or fifth leaf.",
   origin: "Ree Gardens, Miami, Florida",
   family: "Araceae",
   rarity: "Moderately available",
@@ -97,6 +97,7 @@ export const anthuriumDeltaForce: PlantVariant = {
     "Heavy feeder",
     "Tissue culture stable",
     "LECA-compatible",
+    "Hemiepiphyte",
   ],
   fitWeights: { light: 0.15, humidity: 0.45, space: 0.15, experience: 0.25 },
 
@@ -133,6 +134,7 @@ export const anthuriumDeltaForce: PlantVariant = {
   glance: [
     { label: "Price range", value: formatPlantPriceRangeForGlance(anthuriumDeltaForcePlantPriceRange), note: "TC has stabilised pricing" },
     { label: "Leaf form", value: "Triangular", note: "Tapers to a narrow point" },
+    { label: "Leaf size", value: "12\u201318 inches at maturity", note: "Full geometry by 4th\u20135th leaf" },
     { label: "Difficulty", value: "Intermediate", note: "Hardy, but humidity matters" },
     { label: "Humidity", value: "60–80%", note: "Tip crisp below this" },
     { label: "Light", value: "Low to bright", note: "Handles both well" },
@@ -242,7 +244,7 @@ export const anthuriumDeltaForce: PlantVariant = {
   },
 
   provenance: {
-    body: "Anthurium Delta Force is a deliberate hybrid of two species with well-documented collector histories. A. clarinervium is native to the limestone mountains of Chiapas, Mexico, where it grows as a lithophyte or semi-epiphyte in humid forest shade. A. pedatoradiatum is a Mexican and Central American species known for its dramatically lobed, finger-like leaves. The cross was performed by Steve Nock at Ree Gardens in Miami, Florida in the 1990s. From the resulting seedlings, one plant stood out for a uniquely deltoid, narrow-tipped blade and was named Delta Force. Because this exact phenotype has not been reliably recreated from seed, modern distribution depends heavily on tissue culture and clonal propagation, with prices compressing as TC accessibility has grown.",
+    body: "Anthurium Delta Force is a deliberate hybrid of two species with well-documented collector histories. A. clarinervium is native to the limestone mountains of Chiapas, Mexico, where it grows as a lithophyte or semi-epiphyte in humid forest shade. A. pedatoradiatum is a Mexican and Central American species known for its dramatically lobed, finger-like leaves. The cross was performed by Steve Nock at Ree Gardens in Miami, Florida in the 1990s. From the resulting seedlings, one plant stood out for a uniquely deltoid, narrow-tipped blade and was named Delta Force. As a hemiepiphyte, Delta Force can be grown terrestrially or mounted \u2014 though most collectors grow it as a compact rosette in an open aroid mix or semi-hydro setup. Because this exact phenotype has not been reliably recreated from seed, modern distribution depends heavily on tissue culture and clonal propagation, with prices compressing as TC accessibility has grown.",
     timeline: [
       {
         year: "1990s",

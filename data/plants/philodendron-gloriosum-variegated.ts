@@ -124,6 +124,7 @@ export const philodendronGloriosumVariegated: PlantVariant = {
     "Slow grower",
     "Humidity dependent",
     "Statement plant",
+    "Pink-red new growth",
   ],
   fitWeights: { light: 0.3, humidity: 0.3, space: 0.15, experience: 0.25 },
 
@@ -282,6 +283,12 @@ export const philodendronGloriosumVariegated: PlantVariant = {
       detail:
         "Humidity and consistency are non-negotiable. This is not a plant for casual or intermittent care.",
     },
+    {
+      label: "New growth",
+      value: "Pinkish-red emergence",
+      detail:
+        "New leaves emerge pinkish-red and harden to deep green \u2014 normal and not a sign of stress.",
+    },
   ],
 
   // ─── Substrate ────────────────────────────────────────────────────────
@@ -322,12 +329,17 @@ export const philodendronGloriosumVariegated: PlantVariant = {
 
   // ─── Provenance ───────────────────────────────────────────────────────
   provenance: {
-    body: "Philodendron gloriosum is native to Colombia, carpeting humid lowland and premontane forests from sea level to ~1,500m. First formally described in 1900 \u2014 variegated forms didn\u2019t enter serious collector markets until tissue culture made them more available in the 2010s.",
+    body: "Philodendron gloriosum is native to Colombia, carpeting humid lowland and premontane forests from sea level to ~1,500m. First formally described in 1876 by \u00c9douard Andr\u00e9 \u2014 variegated forms didn\u2019t enter serious collector markets until tissue culture made them more available in the 2010s. Philodendron gloriosum is listed as Vulnerable on the IUCN Red List of Threatened Species.",
     timeline: [
       {
-        year: "1900",
+        year: "1876",
         event:
-          "N.E. Brown formally describes Philodendron gloriosum from Colombian specimens.",
+          "\u00c9douard Andr\u00e9 formally describes Philodendron gloriosum from Colombian specimens, published in L'Illustration Horticole, volume 23, page 194.",
+      },
+      {
+        year: "Conservation",
+        event:
+          "Philodendron gloriosum is listed as Vulnerable on the IUCN Red List of Threatened Species. As of 2021, only approximately 7 locations worldwide have confirmed wild populations, all in Colombia. The cultivated collector market operates entirely on propagated stock \u2014 wild collection is not the source of traded plants.",
       },
       {
         year: "1970s\u201380s",
@@ -394,6 +406,10 @@ export const philodendronGloriosumVariegated: PlantVariant = {
       body: "Velvety foliage is highly attractive to spider mites and similar pests. Preventive monitoring and treatment are part of normal care. Growing in semi-hydro (leca or pon) can help reduce risks.",
     },
     {
+      title: "Toxic to pets and children",
+      body: "Calcium oxalate crystals throughout all tissue \u2014 ingestion causes oral pain and GI distress in cats, dogs, and humans. Not a shelf plant in households with curious pets or young children.",
+    },
+    {
       title: "Not a quick chop-and-prop flip",
       body: "From cutting a node to rooted, verified resale-ready growth is often 6+ months: around 2 months to push new growth, 3-4 months to root after chopping, then extra time to verify stability.",
     },
@@ -408,7 +424,7 @@ export const philodendronGloriosumVariegated: PlantVariant = {
           {
             question: "How much does a variegated Philodendron gloriosum cost?",
             answer:
-              "Type 1 variegated gloriosum typically ranges from $300–$600, with prices on the higher end reflecting its unstable variegation patterns. Type 2 variegated gloriosum is more affordable, especially in tissue culture form, where specimens go for $100–$300. Regular, non-variegated gloriosum costs $20–$30 by comparison.",
+              "Type 1 variegated gloriosum typically ranges from $600\u2013$2,500+, reflecting its unstable variegation, limited supply from the original Kaylee Ellen lineage, and absence from tissue culture. Smaller or less-variegated specimens occasionally appear at the lower end of this range. Type 2 variegated gloriosum is more affordable, especially in tissue culture form, where specimens go for $100\u2013$300. Regular, non-variegated gloriosum costs $20\u2013$30 by comparison.",
           },
           {
             question: "Is variegated gloriosum worth the price?",
@@ -494,6 +510,16 @@ export const philodendronGloriosumVariegated: PlantVariant = {
             question: "Tissue culture versus rooted cuttings — which should I buy for variegated gloriosum?",
             answer:
               "Type 1 has not yet appeared in tissue culture, so rooted cuttings are your only option and are generally superior anyway. When purchasing, look for plants that have already pushed out one to two variegated leaves, as this demonstrates stability. The plant can revert easily, so past performance is a helpful indicator.",
+          },
+        ],
+      },
+      {
+        category: "Safety",
+        items: [
+          {
+            question: "Is Philodendron gloriosum toxic to pets or humans?",
+            answer:
+              "Yes. Like all Philodendrons, gloriosum contains calcium oxalate crystals throughout its tissue. Ingestion causes oral irritation, excessive drooling, swelling, and gastrointestinal distress in cats, dogs, and humans. Keep the plant out of reach of children and animals, and wear gloves when handling damaged tissue.",
           },
         ],
       },
