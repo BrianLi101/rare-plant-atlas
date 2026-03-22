@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rareplantatlas.com"),
+  metadataBase: new URL("https://www.rareplantatlas.com"),
   title: "Rare Plant Atlas | In-Depth Guides for Serious Collectors",
   description:
     "Beautiful guides to rare plants. Evaluate variegation stability, genetics, propagation, and realistic pricing for rare aroids including Monstera Albo, Philodendron Gloriosum, Anthurium, and Alocasia.",
@@ -48,6 +48,13 @@ export const metadata: Metadata = {
     icon: [{ url: "/icon.png", type: "image/png" }],
     shortcut: "/icon.png",
     apple: "/icon.png",
+  },
+  alternates: {
+    canonical: "https://www.rareplantatlas.com",
+  },
+  verification: {
+    google: "YOUR_GOOGLE_VERIFICATION_CODE",
+    // other: { "msvalidate.01": "YOUR_BING_VERIFICATION_CODE" },
   },
 };
 

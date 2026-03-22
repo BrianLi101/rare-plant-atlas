@@ -15,7 +15,7 @@ export default function Home() {
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "Rare Plant Atlas",
-          url: "https://rareplantatlas.com",
+          url: "https://www.rareplantatlas.com",
           description:
             "Beautiful guides to rare plants. Evaluate variegation stability, genetics, propagation, and realistic pricing for rare aroids.",
         }}
@@ -25,13 +25,13 @@ export default function Home() {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           name: "Rare Plant Collection",
-          url: "https://rareplantatlas.com",
+          url: "https://www.rareplantatlas.com",
           description:
             "In-depth profiles of rare aroids for serious plant collectors.",
           hasPart: plants.map((plant) => ({
             "@type": "CreativeWork",
             name: getPlantLabel(plant),
-            url: `https://rareplantatlas.com/plants/${plant.identity.slug}`,
+            url: `https://www.rareplantatlas.com/plants/${plant.identity.slug}`,
           })),
         }}
       />

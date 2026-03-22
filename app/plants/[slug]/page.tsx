@@ -35,6 +35,9 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
       description: plant.heroDescription,
       images: [previewImage],
     },
+    alternates: {
+      canonical: `https://www.rareplantatlas.com/plants/${params.slug}`,
+    },
   };
 }
 
@@ -47,7 +50,7 @@ function buildProductJsonLd(plant: ReturnType<typeof getPlantBySlug>) {
     "@type": "Product",
     name: label,
     description: plant.heroDescription,
-    url: `https://rareplantatlas.com/plants/${plant.identity.slug}`,
+    url: `https://www.rareplantatlas.com/plants/${plant.identity.slug}`,
     category: "Rare Plants",
     offers: {
       "@type": "AggregateOffer",
@@ -133,13 +136,13 @@ export default function PlantPage({ params }: { params: { slug: string } }) {
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://rareplantatlas.com",
+              item: "https://www.rareplantatlas.com",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: label,
-              item: `https://rareplantatlas.com/plants/${plant.identity.slug}`,
+              item: `https://www.rareplantatlas.com/plants/${plant.identity.slug}`,
             },
           ],
         }}

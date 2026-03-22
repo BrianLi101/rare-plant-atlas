@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { plants } from "@/data/plants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://rareplantatlas.com";
+  const baseUrl = "https://www.rareplantatlas.com";
 
   return [
     {

@@ -93,7 +93,7 @@ function buildTabContent(plant: PlantVariant): Record<string, React.ReactNode> {
 // ---------------------------------------------------------------------------
 // Cinematic Panel
 // ---------------------------------------------------------------------------
-function CinematicPanel({ panel, isHero }: { panel: PanelData; isHero?: boolean }) {
+function CinematicPanel({ panel, isHero, plantName }: { panel: PanelData; isHero?: boolean; plantName: string }) {
   const bg = BGSRC[panel.id] ?? BGSRC.hero;
 
   return (
@@ -101,7 +101,7 @@ function CinematicPanel({ panel, isHero }: { panel: PanelData; isHero?: boolean 
       <div className="absolute inset-0">
         {panel.image ? (
           <>
-            <Image src={panel.image} alt="" fill priority={isHero} className="object-cover" sizes="100vw" />
+            <Image src={panel.image} alt={plantName} fill priority={isHero} className="object-cover" sizes="100vw" />
             <div className="absolute inset-0 bg-black/45" />
           </>
         ) : (
@@ -446,7 +446,7 @@ export function PlantDetailClient({ plant }: { plant: PlantVariant }) {
       />
       <main ref={mainRef} className="h-[100svh] overflow-y-auto snap-y snap-mandatory hide-scrollbar">
         {plant.panels.map((panel, i) => (
-          <CinematicPanel key={panel.id} panel={panel} isHero={i === 0} />
+          <CinematicPanel key={panel.id} panel={panel} isHero={i === 0} plantName={getPlantFullName(plant)} />
         ))}
         <AtAGlance plant={plant} />
         <DetailsSection
