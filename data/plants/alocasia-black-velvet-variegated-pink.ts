@@ -504,4 +504,21 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
       },
     ],
   },
+
+  conservation: {
+    iucn: "NE",
+    cites: null,
+    wildCollectionRisk:
+      "Alocasia reginula is endemic to the rainforests of Sabah, Malaysian Borneo, where habitat loss from palm oil expansion is the primary threat \u2014 not direct collection. The pink variegated form has never existed in the wild; it emerged from tissue culture labs in Thailand and Taiwan. Wild collection risk for this variant specifically is zero.",
+    ethicalSourcingTips: [
+      "All legitimate pink variegated stock originates from TC labs \u2014 ask which lab or TC line the plant descends from.",
+      "Corm propagation from established TC plants is common and legitimate \u2014 verify the parent plant is nursery-grown.",
+      "Malaysian and Indonesian hobbyist growers who export through legal channels are trustworthy sources.",
+    ],
+    redFlags: [
+      "Sellers who conflate the straight species and variegated pink as interchangeable \u2014 they have completely different supply chains.",
+      "Claims of \u2018limited wild-collected stock\u2019 for any variegated Alocasia \u2014 this is either fraudulent or a misrepresentation.",
+      "Corms sold without clear TC or nursery lineage.",
+    ],
+  },
 };

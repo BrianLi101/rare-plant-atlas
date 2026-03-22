@@ -525,4 +525,21 @@ export const philodendronGloriosumVariegated: PlantVariant = {
       },
     ],
   },
+
+  conservation: {
+    iucn: "NE",
+    cites: null,
+    wildCollectionRisk:
+      "Philodendron gloriosum has not been formally assessed by the IUCN, but wild collection pressure from Colombia\u2019s cloud forests is well-documented. Colombia\u2019s Ley 99 restricts the export of all native biological resources. The variegated form is a chimeric mutation that exists only in cultivation \u2014 there is no wild variegated population to poach.",
+    ethicalSourcingTips: [
+      "The variegated form is only available as nursery stock or TC \u2014 if a seller claims wild origin for a variegated specimen, that is impossible.",
+      "For straight-species gloriosum, ask for propagation photos or mother plant documentation.",
+      "Tissue culture (TC) stock from reputable labs is the gold standard \u2014 genetically stable, pest-free, and legally unambiguous.",
+    ],
+    redFlags: [
+      "Bare, rootless stems shipped without substrate \u2014 a hallmark of wild-harvested material prepared to bypass customs.",
+      "Origin described as \u2018imported directly from Colombia\u2019 without phytosanitary certificates.",
+      "Sellers who cannot name the nursery or source clone for a variegated specimen.",
+    ],
+  },
 };

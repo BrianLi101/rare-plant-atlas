@@ -208,6 +208,27 @@ export interface FaqSection {
 }
 
 // ---------------------------------------------------------------------------
+// Conservation section
+// ---------------------------------------------------------------------------
+export type IucnCode = "LC" | "NT" | "VU" | "EN" | "CR" | "EW" | "EX" | "DD" | "NE";
+export type CitesAppendix = "I" | "II" | "III";
+
+export interface ConservationSection {
+  /** IUCN Red List category */
+  iucn: IucnCode;
+  /** CITES Appendix, or null if not listed */
+  cites: CitesAppendix | null;
+  /** 1–3 sentence plain-language summary of wild collection risk */
+  wildCollectionRisk: string;
+  /** Actionable tips for buying ethically */
+  ethicalSourcingTips: string[];
+  /** Warning signs of wild-collected or illegally traded specimens */
+  redFlags: string[];
+  /** Optional curated sellers/nurseries */
+  verifiedSources?: PlantSeller[];
+}
+
+// ---------------------------------------------------------------------------
 // PlantVariant — a specific cultivar or variant entry
 // Required base + optional sections (presence determines tab visibility)
 // ---------------------------------------------------------------------------
@@ -246,6 +267,7 @@ export interface PlantVariant {
   propagation?: PropagationSection;
   faq?: FaqSection;
   alocasiaCormData?: AlocasiaCormData;
+  conservation?: ConservationSection;
 }
 
 /**

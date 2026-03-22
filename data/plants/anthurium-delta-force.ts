@@ -360,4 +360,20 @@ export const anthuriumDeltaForce: PlantVariant = {
       },
     ],
   },
+
+  conservation: {
+    iucn: "NE",
+    cites: null,
+    wildCollectionRisk:
+      "Anthurium \u2018Delta Force\u2019 is a registered hybrid cultivar with no wild population \u2014 it cannot be wild-collected. It was bred by Steve Nock of Ree Gardens, Miami, in the mid-1990s from Anthurium clarinervium \u00d7 Anthurium pedatoradiatum, both native to southern Mexico. The specific clone has never been recreated from seed and exists solely as clonally propagated or TC stock. Buyers have no conservation concerns specific to this cultivar.",
+    ethicalSourcingTips: [
+      "As a hybrid cultivar, Delta Force has no wild provenance to verify \u2014 focus on plant health and propagation legitimacy.",
+      "Reputable sellers will be able to name the breeding line or TC source.",
+      "If you care about parent species conservation, support sellers who propagate from existing cultivated stock.",
+    ],
+    redFlags: [
+      "Sellers who cannot confirm whether stock is TC-derived or cutting-propagated \u2014 Delta Force lineage is traceable.",
+      "Claims of \u2018wild hybrid\u2019 origin \u2014 this is botanically incoherent for a registered cultivar.",
+    ],
+  },
 };

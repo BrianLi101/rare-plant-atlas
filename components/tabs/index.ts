@@ -10,3 +10,4 @@ export { DownsidesTab } from "./DownsidesTab";
 export { ShopTab } from "./ShopTab";
 export { PhotoGalleryTab } from "./PhotoGalleryTab";
 export { FaqTab } from "./FaqTab";
+export { ConservationTab } from "./ConservationTab";
