@@ -1,4 +1,5 @@
 import type { PlantPhoto, PlantPriceRange, PlantVariant } from "../types";
+import { PropagationMethodType } from "../types";
 import {
   lechuzaPonSubstrate3L,
   ikeaOdlaLeca,
@@ -264,24 +265,77 @@ export const anthuriumDeltaForce: PlantVariant = {
     ],
   },
 
-  propagation: {
-    method: "Basal division and tissue culture",
-    timing: "Spring through summer during active growth",
-    successRate: "Moderate for division, high for commercial tissue culture",
-    steps: [
-      "Wait until a secondary stem has developed two or more leaves before dividing.",
-      "Unpot and separate offsets with a sterile blade, preserving as many roots as possible on each division.",
-      "Allow the cut surface to callous for 30–60 minutes before potting into an airy mix or LECA.",
-      "Keep warm with elevated humidity during recovery. Do not fertilise for the first 4 weeks post-cut.",
-      "Water lightly but consistently until roots re-establish and new growth resumes.",
-    ],
-    warnings: [
-      "Tight internodal spacing makes stem cuttings difficult — you frequently sacrifice a healthy node in the attempt. Division is preferred.",
-      "Division stress is real — avoid fertilising for the first 4 weeks post-cut to prevent root burn on damaged tissue.",
-      "Seed-grown offspring from the parent cross are not guaranteed to reproduce Delta Force morphology. TC is the dominant commercial route for a reason.",
-      "Delta Force does flower and pollination is possible, but the first one or two inflorescences are often not receptive.",
-    ],
-  },
+  // propagation: {
+  //   intro:
+  //     "Delta Force multiplies most reliably through basal division once the plant has produced offsets. Tissue culture is the dominant commercial route and the reason this hybrid is widely available at accessible prices.",
+  //   methods: [
+  //     {
+  //       type: PropagationMethodType.Division,
+  //       name: "Basal Division",
+  //       badge: "Most common",
+  //       timing: "Spring through summer",
+  //       successRate: "High",
+  //       difficulty: "Moderate",
+  //       overview:
+  //         "Once the plant produces basal offsets with their own root systems, they can be separated and potted independently. This is the safest home propagation method.",
+  //       steps: [
+  //         {
+  //           title: "Wait for offset maturity",
+  //           body: "Wait until a secondary stem has developed two or more leaves before dividing. Premature separation drastically lowers survival.",
+  //         },
+  //         {
+  //           title: "Unpot and separate",
+  //           body: "Unpot and separate offsets with a sterile blade, preserving as many roots as possible on each division.",
+  //           tip: "A clean, decisive cut heals faster than a tear. Sterilize between cuts with 70% isopropyl.",
+  //         },
+  //         {
+  //           title: "Callous the cut surface",
+  //           body: "Allow the cut surface to callous for 30–60 minutes before potting into an airy mix or LECA.",
+  //         },
+  //         {
+  //           title: "Recovery environment",
+  //           body: "Keep warm with elevated humidity during recovery. Do not fertilise for the first 4 weeks post-cut.",
+  //         },
+  //         {
+  //           title: "Resume normal care",
+  //           body: "Water lightly but consistently until roots re-establish and new growth resumes.",
+  //         },
+  //       ],
+  //       warnings: [
+  //         "Tight internodal spacing makes stem cuttings difficult — you frequently sacrifice a healthy node in the attempt. Division is preferred.",
+  //         "Division stress is real — avoid fertilising for the first 4 weeks post-cut to prevent root burn on damaged tissue.",
+  //       ],
+  //     },
+  //     {
+  //       type: PropagationMethodType.TissueCulture,
+  //       name: "Tissue Culture",
+  //       badge: "Commercial",
+  //       timing: "Year-round (lab setting)",
+  //       successRate: "High",
+  //       difficulty: "Expert",
+  //       overview:
+  //         "Tissue culture is the dominant commercial propagation route for Delta Force. It requires sterile lab conditions and is not practical for home growers, but it's the reason this hybrid is widely available.",
+  //       steps: [
+  //         {
+  //           title: "Obtain sterile explant",
+  //           body: "A small piece of meristematic tissue is excised under sterile conditions and placed on nutrient agar.",
+  //         },
+  //         {
+  //           title: "Multiplication phase",
+  //           body: "Explants are subcultured repeatedly in a growth-hormone medium to produce multiple plantlets from a single source.",
+  //         },
+  //         {
+  //           title: "Rooting and hardening",
+  //           body: "Plantlets are transferred to a rooting medium, then gradually acclimatized to ex-vitro conditions before sale.",
+  //         },
+  //       ],
+  //       warnings: [
+  //         "Seed-grown offspring from the parent cross are not guaranteed to reproduce Delta Force morphology. TC is the dominant commercial route for a reason.",
+  //         "Delta Force does flower and pollination is possible, but the first one or two inflorescences are often not receptive.",
+  //       ],
+  //     },
+  //   ],
+  // },
 
   downsides: [
     {

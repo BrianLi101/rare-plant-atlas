@@ -79,12 +79,46 @@ export interface ProvenanceSection {
   timeline: { year: string; event: string }[];
 }
 
-export interface PropagationSection {
-  method: string;
+export enum PropagationMethodType {
+  CormDivision = "Corm Division",
+  Cutting = "Cutting",
+  Division = "Division",
+  TissueCulture = "Tissue Culture",
+  AirLayering = "Air Layering",
+  Offset = "Offset",
+}
+
+export type PropagationDifficulty =
+  | "Easy"
+  | "Moderate"
+  | "Challenging"
+  | "Expert";
+
+export type SuccessRateLevel = "High" | "Medium" | "Low";
+
+export interface PropagationStep {
+  title: string;
+  body: string;
+  image?: string;
+  tip?: string;
+}
+
+export interface PropagationMethod {
+  type: PropagationMethodType;
+  name: string;
+  badge?: string;
   timing: string;
-  successRate: string;
-  steps: string[];
+  successRate: SuccessRateLevel;
+  difficulty: PropagationDifficulty;
+  overview: string;
+  heroImage?: string;
+  steps: PropagationStep[];
   warnings: string[];
+}
+
+export interface PropagationSection {
+  intro?: string;
+  methods: PropagationMethod[];
 }
 
 export interface DownsideItem {

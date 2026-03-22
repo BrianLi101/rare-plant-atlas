@@ -1,4 +1,5 @@
 import type { PlantPhoto, PlantPriceRange, PlantVariant } from "../types";
+import { PropagationMethodType } from "../types";
 import {
   lechuzaPlanterHorizontalSmall,
   lechuzaBalconeraColor40Slate,
@@ -361,21 +362,50 @@ export const philodendronGloriosumVariegated: PlantVariant = {
 
   // ─── Propagation ──────────────────────────────────────────────────────
   propagation: {
-    method: "Cut between nodes (rhizome sectioning)",
-    timing: "Spring or early summer, during active growth",
-    successRate: "High if plant is healthy and mature enough",
-    steps: [
-      "Identify nodes first: they are visible as white strips along the stem/rhizome.",
-      "Cut cleanly between nodes with a sterilized blade. Avoid crushing or sawing through tissue.",
-      "Keep at least one viable growth point and healthy roots on each division.",
-      "Treat cut surfaces with cinnamon or sulfur powder as antifungal.",
-      "Keep humidity above 70% and avoid direct light for 2\u20133 weeks post-division.",
-      "Light moisture only until new growth resumes \u2014 do not saturate.",
-    ],
-    warnings: [
-      "The stem can show yellow-and-green variegation; expression is unstable and leaf output can alternate between green and variegated.",
-      "Even sections that look mostly green can still throw variegated growth later.",
-      "Overwatering fresh divisions is the primary cause of post-division rot.",
+    intro:
+      "Philodendron gloriosum propagates by rhizome sectioning — cutting between nodes on the creeping stem. Each section needs at least one node with healthy roots to establish independently.",
+    methods: [
+      {
+        type: PropagationMethodType.Cutting,
+        name: "Rhizome Sectioning",
+        timing: "Spring or early summer",
+        successRate: "High",
+        difficulty: "Moderate",
+        overview:
+          "The creeping rhizome can be divided at nodes, giving each section a viable growth point and root system. This is the only practical home propagation method for gloriosum.",
+        steps: [
+          {
+            title: "Identify the nodes",
+            body: "Nodes are visible as white strips along the stem/rhizome. Each node is a potential new growth point.",
+          },
+          {
+            title: "Cut between nodes",
+            body: "Cut cleanly between nodes with a sterilized blade. Avoid crushing or sawing through tissue.",
+            tip: "A sharp, single-motion cut heals much faster than a jagged one.",
+          },
+          {
+            title: "Preserve roots on each division",
+            body: "Keep at least one viable growth point and healthy roots on each division.",
+          },
+          {
+            title: "Treat cut surfaces",
+            body: "Treat cut surfaces with cinnamon or sulfur powder as antifungal.",
+          },
+          {
+            title: "High-humidity recovery",
+            body: "Keep humidity above 70% and avoid direct light for 2–3 weeks post-division.",
+          },
+          {
+            title: "Light watering only",
+            body: "Light moisture only until new growth resumes — do not saturate.",
+          },
+        ],
+        warnings: [
+          "The stem can show yellow-and-green variegation; expression is unstable and leaf output can alternate between green and variegated.",
+          "Even sections that look mostly green can still throw variegated growth later.",
+          "Overwatering fresh divisions is the primary cause of post-division rot.",
+        ],
+      },
     ],
   },
 

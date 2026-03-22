@@ -42,6 +42,15 @@ const config: Config = {
         serif: ["var(--font-playfair)", "Georgia", "serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
+      keyframes: {
+        "fade-in": {
+          from: { opacity: "0", transform: "translateY(10px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in 0.3s ease both",
+      },
       fontSize: {
         "display-xl": ["clamp(3rem, 8vw, 7rem)", { lineHeight: "0.95", letterSpacing: "-0.03em" }],
         "display": ["clamp(2.25rem, 5vw, 4.5rem)", { lineHeight: "1.0", letterSpacing: "-0.02em" }],

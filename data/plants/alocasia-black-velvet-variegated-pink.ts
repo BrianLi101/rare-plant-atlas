@@ -1,4 +1,5 @@
 import type { PlantPhoto, PlantPriceRange, PlantVariant } from "../types";
+import { PropagationMethodType } from "../types";
 import {
   lechuzaPonSubstrate3L,
   lechuzaPonSubstrate18L,
@@ -350,20 +351,48 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
   },
 
   propagation: {
-    method: "Corm and offset division",
-    timing: "Spring to midsummer during active growth",
-    successRate: "Moderate to high with healthy parent stock",
-    steps: [
-      "Unpot and identify mature corms/offsets with visible growth points.",
-      "Separate cleanly with a sterile blade, preserving roots when possible.",
-      "Root in high humidity using lightly moist sphagnum or a fine mineral medium.",
-      "Keep warm, bright, and stable while new roots and first leaves establish.",
-      "Transition gradually into the final substrate once growth is active.",
-    ],
-    warnings: [
-      "Overwatering newly separated corms is the most common failure point.",
-      "Heavily variegated offsets may root and grow slower than greener counterparts.",
-      "Do not divide weak plants; recovery time can be long.",
+    intro:
+      "Alocasia Black Velvet produces corms reliably once mature, making corm division the primary propagation route. This is the safest way to multiply the plant while preserving pink variegation.",
+    methods: [
+      {
+        type: PropagationMethodType.CormDivision,
+        name: "Corm & Offset Division",
+        badge: "Most common",
+        timing: "Spring to midsummer",
+        successRate: "Medium",
+        difficulty: "Moderate",
+        overview:
+          "Corms are dormant propagules that form at the rhizome base. Separating them at repot time is the safest way to multiply the plant without stressing the parent.",
+        steps: [
+          {
+            title: "Unpot and expose the rhizome",
+            body: "Remove the mother plant from its substrate. Gently shake away growing media to expose the base of the rhizome.",
+            tip: "Do this in spring when the plant is pushing new growth — corms are most viable then.",
+          },
+          {
+            title: "Identify mature corms",
+            body: "Look for small, round, beige to pale-brown structures attached to the rhizome. They range from 3–15mm across and often cluster together.",
+          },
+          {
+            title: "Separate with a sterile blade",
+            body: "Separate cleanly with a sterile blade, preserving roots when possible. Do not tear — torn edges invite rot.",
+            tip: "Sterilize with 70% isopropyl between each cut. Rot travels fast in aroid tissue.",
+          },
+          {
+            title: "Root in high humidity",
+            body: "Root in high humidity using lightly moist sphagnum or a fine mineral medium. Keep warm, bright, and stable while new roots and first leaves establish.",
+          },
+          {
+            title: "Transition to final substrate",
+            body: "Transition gradually into the final substrate once growth is active. The first leaf typically emerges in 4–10 weeks at 22–26°C.",
+          },
+        ],
+        warnings: [
+          "Overwatering newly separated corms is the most common failure point. Wait for the first leaf before resuming normal watering.",
+          "Heavily variegated offsets may root and grow slower than greener counterparts.",
+          "Do not divide weak plants; recovery time can be long.",
+        ],
+      },
     ],
   },
 

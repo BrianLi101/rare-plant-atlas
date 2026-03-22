@@ -85,7 +85,7 @@ function buildFaqJsonLd(plant: ReturnType<typeof getPlantBySlug>) {
     if (plant.propagation) {
       questions.push({
         q: `How do you propagate ${label}?`,
-        a: `${label} is propagated by ${plant.propagation.method}. Best timing: ${plant.propagation.timing}. Success rate: ${plant.propagation.successRate}.`,
+        a: `${label} is propagated by ${plant.propagation.methods.map((m) => m.name).join(" or ")}. Best timing: ${plant.propagation.methods[0].timing}. Success rate: ${plant.propagation.methods[0].successRate}.`,
       });
     }
 
@@ -238,26 +238,33 @@ export default function PlantPage({ params }: { params: { slug: string } }) {
         {plant.propagation && (
           <section>
             <h2>Propagation</h2>
-            <dl>
-              <div><dt>Method</dt><dd>{plant.propagation.method}</dd></div>
-              <div><dt>Timing</dt><dd>{plant.propagation.timing}</dd></div>
-              <div><dt>Success Rate</dt><dd>{plant.propagation.successRate}</dd></div>
-            </dl>
-            <ol>
-              {plant.propagation.steps.map((step, i) => (
-                <li key={i}>{step}</li>
-              ))}
-            </ol>
-            {plant.propagation.warnings.length > 0 && (
-              <>
-                <h3>Warnings</h3>
-                <ul>
-                  {plant.propagation.warnings.map((w, i) => (
-                    <li key={i}>{w}</li>
+            {plant.propagation.methods.map((m, mi) => (
+              <div key={mi}>
+                <h3>{m.name}</h3>
+                <dl>
+                  <div><dt>Method</dt><dd>{m.name}</dd></div>
+                  <div><dt>Timing</dt><dd>{m.timing}</dd></div>
+                  <div><dt>Success Rate</dt><dd>{m.successRate}</dd></div>
+                  <div><dt>Difficulty</dt><dd>{m.difficulty}</dd></div>
+                </dl>
+                <p>{m.overview}</p>
+                <ol>
+                  {m.steps.map((step, i) => (
+                    <li key={i}><strong>{step.title}</strong>: {step.body}</li>
                   ))}
-                </ul>
-              </>
-            )}
+                </ol>
+                {m.warnings.length > 0 && (
+                  <>
+                    <h4>Warnings</h4>
+                    <ul>
+                      {m.warnings.map((w, i) => (
+                        <li key={i}>{w}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </div>
+            ))}
           </section>
         )}
 
