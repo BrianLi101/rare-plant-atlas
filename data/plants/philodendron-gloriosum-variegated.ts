@@ -337,7 +337,7 @@ export const philodendronGloriosumVariegated: PlantVariant = {
           "\u00c9douard Andr\u00e9 formally describes Philodendron gloriosum from Colombian specimens, published in L'Illustration Horticole, volume 23, page 194.",
       },
       {
-        year: "Conservation",
+        year: "Conservation status",
         event:
           "Philodendron gloriosum is listed as Vulnerable on the IUCN Red List of Threatened Species. As of 2021, only approximately 7 locations worldwide have confirmed wild populations, all in Colombia. The cultivated collector market operates entirely on propagated stock \u2014 wild collection is not the source of traded plants.",
       },

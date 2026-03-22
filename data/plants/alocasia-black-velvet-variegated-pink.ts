@@ -332,14 +332,14 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
           "Formally described as Alocasia reginula by botanist A. Hay in the Singapore Gardens\u2019 Bulletin. Distribution listed as \u2018?Borneo\u2019 \u2014 the exact wild origin remained unconfirmed.",
       },
       {
-        year: "2021",
-        event:
-          "Researchers confirm the species is endemic to heavily shaded limestone karst cliffs in Tabin Wildlife Reserve, Sabah, Malaysian Borneo \u2014 one of the most specific and unusual native habitats of any collector Alocasia.",
-      },
-      {
         year: "2010s",
         event:
           "Variegated reginula lines gain visibility in collector circles as social media and boutique imports expand demand.",
+      },
+      {
+        year: "2021",
+        event:
+          "Researchers confirm the species is endemic to heavily shaded limestone karst cliffs in Tabin Wildlife Reserve, Sabah, Malaysian Borneo \u2014 one of the most specific and unusual native habitats of any collector Alocasia.",
       },
       {
         year: "2020-now",
