@@ -78,7 +78,7 @@ export const anthuriumDeltaForce: PlantVariant = {
     "A striking hybrid built for durability. Delta Force fuses the bold triangular architecture of its pedatoradiatum parent with clarinervium's legendary velvety texture \u2014 producing a plant that grows fast, tolerates ambience, and commands attention at every stage. Mature leaves reach 12\u201318 inches, with the characteristic triangular geometry becoming fully defined by the fourth or fifth leaf.",
   origin: "Ree Gardens, Miami, Florida",
   family: "Araceae",
-  rarity: "Moderately available",
+  rarity: "Rare",
   priceRange: anthuriumDeltaForcePlantPriceRange,
   images: {
     hero: heroPhoto.image,
