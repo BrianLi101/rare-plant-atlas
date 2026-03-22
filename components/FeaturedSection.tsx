@@ -8,6 +8,7 @@ export function FeaturedSection() {
   const featuredOrder = [
     "philodendron-gloriosum-variegated-type-1",
     "alocasia-black-velvet-variegated-pink",
+    "anthurium-delta-force",
   ];
 
   const featuredPlants = featuredOrder
