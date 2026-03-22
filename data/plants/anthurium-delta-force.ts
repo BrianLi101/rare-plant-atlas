@@ -33,6 +33,22 @@ const tissueCulturePhoto: PlantPhoto = {
     "Commercial tissue culture is the main route for true-to-type Delta Force availability today.",
 };
 
+const crispyLeafTipsPhoto: PlantPhoto = {
+  id: "anthurium-delta-force-crispy-leaf-tips",
+  image: `${IMG}/crispy-leaf-tips.jpg`,
+  caption: "Crispy leaf tips",
+  description:
+    "Under low humidity, the tips of the leaves can slowly crisp. This affects the plant aesthetically but generally it can be healthy even when this happens.",
+};
+
+const leafFromCataphyllPhoto: PlantPhoto = {
+  id: "anthurium-delta-force-leaf-from-cataphyll",
+  image: `${IMG}/leaf-from-cataphyll.jpg`,
+  caption: "Leaf emerging from cataphyll",
+  description:
+    "A new leaf emerging from cataphyll. Leaves are densely packed with very tight internodal spacing.",
+};
+
 const multileafTopViewPhoto: PlantPhoto = {
   id: "anthurium-delta-force-multileaf-top-view",
   image: `${IMG}/multileaf-top-view.jpeg`,
@@ -66,9 +82,9 @@ export const anthuriumDeltaForce: PlantVariant = {
   priceRange: anthuriumDeltaForcePlantPriceRange,
   images: {
     hero: heroPhoto.image,
-    detail: [roundedEmergencePhoto.image, tissueCulturePhoto.image],
+    detail: [roundedEmergencePhoto.image, tissueCulturePhoto.image, crispyLeafTipsPhoto.image, leafFromCataphyllPhoto.image],
   },
-  photos: [heroPhoto, roundedEmergencePhoto, tissueCulturePhoto],
+  photos: [heroPhoto, roundedEmergencePhoto, tissueCulturePhoto, crispyLeafTipsPhoto, leafFromCataphyllPhoto],
   colors: {
     primary: "#3a4a30",
     accent: "#6b7c5a",
