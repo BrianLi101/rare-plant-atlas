@@ -46,4 +46,9 @@
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  /* Scrollbar for redesigned home */
+  .home-scrollbar::-webkit-scrollbar { width: 6px; }
+  .home-scrollbar::-webkit-scrollbar-track { background: transparent; }
+  .home-scrollbar::-webkit-scrollbar-thumb { background: rgba(196,184,154,0.2); border-radius: 3px; }
 }

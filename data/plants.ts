@@ -25,9 +25,9 @@ import { alocasiaBlackVelvetVariegatedPink } from "./plants/alocasia-black-velve
 import { anthuriumDeltaForce } from "./plants/anthurium-delta-force";
 
 export const plants: PlantVariant[] = [
+  philodendronGloriosumVariegated,
   anthuriumDeltaForce,
   alocasiaBlackVelvetVariegatedPink,
-  philodendronGloriosumVariegated,
 ];
 
 export function getPlantBySlug(slug: string): PlantVariant | undefined {

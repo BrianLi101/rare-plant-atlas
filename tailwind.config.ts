@@ -41,6 +41,9 @@ const config: Config = {
       fontFamily: {
         serif: ["var(--font-playfair)", "Georgia", "serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        body: ["var(--font-cormorant)", "Palatino Linotype", "serif"],
+        mono: ["var(--font-dm-mono)", "Courier New", "monospace"],
+        caps: ["var(--font-cormorant)", "Palatino Linotype", "serif"],
       },
       keyframes: {
         "fade-in": {
