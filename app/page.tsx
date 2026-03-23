@@ -163,11 +163,10 @@ export default function Home() {
       />
 
       <div className="min-h-screen home-scrollbar" style={{ background: "#0a0a08", color: "#e8e0d0" }}>
-        {/* ── Nav ── */}
-        <Navigation />
-
         {/* ── Hero ── */}
         <div className="relative pt-14">
+          {/* ── Nav (scrolls with page on home) ── */}
+          <Navigation fixed={false} />
           {/* Background image layer — spans full hero including description */}
           <div className="absolute inset-0 overflow-hidden">
             <div

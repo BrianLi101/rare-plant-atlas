@@ -155,7 +155,7 @@ function AtAGlance({ plant }: { plant: PlantVariant }) {
   return (
     <section className="relative bg-deep border-t border-cream/[0.08] min-h-[100svh] snap-start snap-always flex flex-col justify-center">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_50%_50%,rgba(25,65,32,0.18)_0%,transparent_70%)]" />
-      <div className="relative z-10 py-[52px] px-6 lg:py-20 lg:px-14 max-w-[860px] lg:mx-auto">
+      <div className="relative z-10 pt-16 pb-[52px] px-6 lg:pt-20 lg:pb-20 lg:px-14 max-w-[860px] lg:mx-auto">
         <p className="text-[9px] tracking-[0.42em] uppercase text-earth-300/50 mb-3.5">At a glance</p>
         <h2 className="font-serif text-display leading-[0.97] tracking-[-0.02em] text-cream mb-10">At a glance.</h2>
 
