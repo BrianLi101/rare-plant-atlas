@@ -5,7 +5,9 @@
 export interface Seller {
   id: string
   name: string
-  shopifyDomain: string
+  platform: "shopify" | "woocommerce"
+  shopifyDomain?: string
+  wooDomain?: string
   url: string
   tier: 1 | 2
   notes?: string

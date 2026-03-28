@@ -1,12 +1,22 @@
 import type { Seller } from "./types";
 
 export const sellers: Seller[] = [
-  // NSE Tropicals uses WooCommerce, not Shopify — no /products.json endpoint.
-  // Excluded from automated snapshots. Can be added if WooCommerce REST API
-  // support is implemented in the future.
+  {
+    id: "nse-tropicals",
+    name: "NSE Tropicals",
+    platform: "woocommerce",
+    wooDomain: "www.nsetropicals.com",
+    url: "https://www.nsetropicals.com",
+    tier: 1,
+    notes:
+      "WYSIWYG individual specimen listings. Each listing is a unique physical plant " +
+      "with a 4-digit numeric prefix as an internal specimen ID. Multiple listings for " +
+      "the same species are common and expected.",
+  },
   {
     id: "rare-plant-fairy",
     name: "Rare Plant Fairy",
+    platform: "shopify",
     shopifyDomain: "www.rareplantfairy.com",
     url: "https://www.rareplantfairy.com",
     tier: 1,
@@ -18,6 +28,7 @@ export const sellers: Seller[] = [
   {
     id: "steves-leaves",
     name: "Steve's Leaves",
+    platform: "shopify",
     shopifyDomain: "stevesleaves.com",
     url: "https://stevesleaves.com",
     tier: 1,
@@ -27,6 +38,7 @@ export const sellers: Seller[] = [
   {
     id: "carnivero",
     name: "Carnivero",
+    platform: "shopify",
     shopifyDomain: "www.carnivero.com",
     url: "https://www.carnivero.com",
     tier: 1,
@@ -36,6 +48,7 @@ export const sellers: Seller[] = [
   {
     id: "aroid-market",
     name: "Aroid Market",
+    platform: "shopify",
     shopifyDomain: "aroidmarket.com",
     url: "https://aroidmarket.com",
     tier: 1,

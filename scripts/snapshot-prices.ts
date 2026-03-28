@@ -1,6 +1,7 @@
 // scripts/snapshot-prices.ts
-// Fetches Shopify product data from curated sellers, matches to plant slugs
-// via keyword matching, then prompts the user to confirm before writing.
+// Fetches product data from curated sellers (Shopify + WooCommerce),
+// matches to plant slugs via keyword matching, then prompts the user
+// to confirm before writing.
 // Run with: npx tsx scripts/snapshot-prices.ts
 
 import fs from "fs";
@@ -8,6 +9,8 @@ import path from "path";
 import readline from "readline";
 import { sellers } from "../data/prices/sellers";
 import { normalizeListings } from "./match-listings";
+import { fetchWithRetry } from "./fetch-utils";
+import { fetchNSEProducts } from "./fetch-nse";
 import type { RawListing, DailySnapshot, NormalizedListing } from "../data/prices/types";
 
 const TODAY = new Date().toISOString().split("T")[0];
@@ -23,34 +26,6 @@ fs.mkdirSync(HISTORY_DIR, { recursive: true });
 // ---------------------------------------------------------------------------
 
 const PAGE_DELAY_MS = 1500;
-const RETRY_DELAYS_MS = [2000, 5000, 10000];
-
-async function fetchWithRetry(url: string): Promise<Response | null> {
-  for (let attempt = 0; attempt <= RETRY_DELAYS_MS.length; attempt++) {
-    const res = await fetch(url, {
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-        Accept: "application/json",
-      },
-    });
-
-    if (res.ok) return res;
-
-    if (res.status === 503 || res.status === 429) {
-      if (attempt < RETRY_DELAYS_MS.length) {
-        const delay = RETRY_DELAYS_MS[attempt];
-        console.log(`  ${res.status} — retrying in ${delay / 1000}s (attempt ${attempt + 2}/${RETRY_DELAYS_MS.length + 1})`);
-        await new Promise((r) => setTimeout(r, delay));
-        continue;
-      }
-    }
-
-    console.error(`  Failed: ${res.status} ${res.statusText}`);
-    return null;
-  }
-  return null;
-}
 
 async function fetchShopifyProducts(domain: string): Promise<any[]> {
   const products: any[] = [];
@@ -138,16 +113,16 @@ function printProposedPrices(
         ? formatPrice(l.price)
         : `${formatPrice(l.price)}–${formatPrice(l.priceHigh)}`;
     const stock = l.available ? "In Stock" : "Sold Out";
-    const conf = l.confidence === "high" ? "" : ` [${l.confidence}]`;
+    const variant = l.variantSummary ? ` ${l.variantSummary}` : "";
     console.log(
-      `  │  ${l.sellerName.padEnd(20)} ${price.padEnd(14)} ${stock.padEnd(10)} ${l.variantSummary}${conf}`,
+      `  │  ${l.sellerName.padEnd(20)} ${price.padEnd(14)} ${stock.padEnd(10)}${variant}`,
     );
   }
   console.log(`  └─`);
 }
 
 // ---------------------------------------------------------------------------
-// Aggregation (inline — replaces separate aggregate-history.ts call)
+// Aggregation
 // ---------------------------------------------------------------------------
 
 function runAggregation(): void {
@@ -216,21 +191,30 @@ async function run() {
   console.log(`\nRare Plant Atlas — Price Snapshot`);
   console.log(`Date: ${TODAY}\n`);
 
-  // Fetch all products from all sellers
   const allRawListings: RawListing[] = [];
 
   for (const seller of sellers) {
-    console.log(`Fetching ${seller.name} (${seller.shopifyDomain})`);
-    try {
-      const products = await fetchShopifyProducts(seller.shopifyDomain);
-      console.log(`  ${products.length} products\n`);
-
-      const listings = products.map((p) =>
-        shopifyProductToRawListing(p, seller),
-      );
-      allRawListings.push(...listings);
-    } catch (e) {
-      console.error(`  Error fetching ${seller.name}:`, e);
+    if (seller.platform === "woocommerce" && seller.id === "nse-tropicals") {
+      console.log(`Fetching ${seller.name} (WooCommerce Store API)`);
+      try {
+        const listings = await fetchNSEProducts(TODAY);
+        console.log(`  ${listings.length} specimen listings\n`);
+        allRawListings.push(...listings);
+      } catch (e) {
+        console.error(`  Error fetching ${seller.name}:`, e);
+      }
+    } else if (seller.platform === "shopify" && seller.shopifyDomain) {
+      console.log(`Fetching ${seller.name} (${seller.shopifyDomain})`);
+      try {
+        const products = await fetchShopifyProducts(seller.shopifyDomain);
+        console.log(`  ${products.length} products\n`);
+        const listings = products.map((p) =>
+          shopifyProductToRawListing(p, seller),
+        );
+        allRawListings.push(...listings);
+      } catch (e) {
+        console.error(`  Error fetching ${seller.name}:`, e);
+      }
     }
   }
 
@@ -247,9 +231,7 @@ async function run() {
 
   // Match listings to plant slugs (keyword-based, no API)
   const normalized = normalizeListings(allRawListings);
-  console.log(
-    `\nMatched: ${normalized.length} listings to known plants`,
-  );
+  console.log(`\nMatched: ${normalized.length} listings to known plants`);
 
   if (normalized.length === 0) {
     console.log("No matches found. Nothing to update.");
@@ -273,7 +255,9 @@ async function run() {
   for (const [slug, listings] of Array.from(bySlug.entries())) {
     printProposedPrices(slug, listings);
 
-    const answer = await ask(`  Add ${listings.length} price(s) for ${slug}? (y/n/q) `);
+    const answer = await ask(
+      `  Add ${listings.length} price(s) for ${slug}? (y/n/q) `,
+    );
 
     if (answer === "q") {
       console.log("\nAborted. No changes written.");
@@ -293,7 +277,6 @@ async function run() {
       history = JSON.parse(fs.readFileSync(historyPath, "utf-8"));
     }
 
-    // Remove existing entries for today, then add new ones
     history.entries = history.entries.filter((e: any) => e.date !== TODAY);
     history.entries.push(
       ...listings.map((l) => ({
@@ -316,7 +299,6 @@ async function run() {
     confirmedCount++;
   }
 
-  // Aggregate if any prices were confirmed
   if (confirmedCount > 0) {
     runAggregation();
     console.log(`\nDone. ${confirmedCount} plant(s) updated.`);

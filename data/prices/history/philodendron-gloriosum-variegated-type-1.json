@@ -4,6 +4,17 @@
   "entries": [
     {
       "date": "2026-03-28",
+      "sellerId": "nse-tropicals",
+      "sellerName": "NSE Tropicals",
+      "productUrl": "https://www.nsetropicals.com/product/1494-variegated-philodendron-gloriosum-og-type-1/",
+      "price": 595,
+      "priceHigh": 595,
+      "available": false,
+      "variantSummary": "Single specimen",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-03-28",
       "sellerId": "rare-plant-fairy",
       "sellerName": "Rare Plant Fairy",
       "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-albo-variegated-type-1-wk13-e",

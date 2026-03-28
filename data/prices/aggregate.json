@@ -55,14 +55,24 @@
   },
   "philodendron-gloriosum-variegated-type-1": {
     "slug": "philodendron-gloriosum-variegated-type-1",
-    "currentMin": 1500,
+    "currentMin": 595,
     "currentMax": 1500,
-    "allTimeMin": 1500,
+    "allTimeMin": 595,
     "allTimeMax": 1500,
     "lastSeen": "2026-03-28",
-    "sellerCount": 1,
+    "sellerCount": 2,
     "availableNow": true,
     "recentListings": [
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 595,
+        "priceHigh": 595,
+        "productUrl": "https://www.nsetropicals.com/product/1494-variegated-philodendron-gloriosum-og-type-1/",
+        "variantSummary": "Single specimen",
+        "date": "2026-03-28",
+        "available": false
+      },
       {
         "sellerId": "rare-plant-fairy",
         "sellerName": "Rare Plant Fairy",
