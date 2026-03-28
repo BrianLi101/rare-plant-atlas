@@ -222,6 +222,12 @@ export interface PlantIdentity {
   variantLabel?: string;
   cloneId?: string;
   aliases?: string[];
+  /**
+   * Substrings that must appear verbatim in a listing title for price matching.
+   * Use for distinguishing phrases like "Type 1" that must stay together
+   * to avoid matching "Type 2" or "Type 3".
+   */
+  matchPhrases?: string[];
 }
 
 export type Level = "Low" | "Medium" | "High";

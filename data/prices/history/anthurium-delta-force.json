@@ -1,0 +1,28 @@
+{
+  "slug": "anthurium-delta-force",
+  "lastUpdated": "2026-03-28",
+  "entries": [
+    {
+      "date": "2026-03-28",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "productUrl": "https://www.rareplantfairy.com/products/anthurium-crystallinum-variegated-wk13-a",
+      "price": 195,
+      "priceHigh": 195,
+      "available": true,
+      "variantSummary": "",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-03-28",
+      "sellerId": "carnivero",
+      "sellerName": "Carnivero",
+      "productUrl": "https://www.carnivero.com/products/anthurium-delta-force",
+      "price": 99.99,
+      "priceHigh": 99.99,
+      "available": false,
+      "variantSummary": "Small / random selection / potted",
+      "confidence": "high"
+    }
+  ]
+}

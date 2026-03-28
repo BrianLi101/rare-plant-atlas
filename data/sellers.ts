@@ -1,4 +1,4 @@
-import { PlantSeller } from "./types";
+import type { PlantSeller } from "./types";
 
 export const NSETropicals: PlantSeller = {
   name: "NSE Tropicals",

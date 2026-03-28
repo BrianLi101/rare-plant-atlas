@@ -8,13 +8,17 @@
     "build": "next build",
     "start": "next dev",
     "start:prod": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prices:snapshot": "npx tsx scripts/snapshot-prices.ts",
+    "prices:aggregate": "npx tsx scripts/aggregate-history.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
+    "chart.js": "^4.5.1",
     "framer-motion": "^11.11.0",
     "next": "^14.2.15",
     "react": "^18.3.1",
+    "react-chartjs-2": "^5.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
@@ -26,6 +30,7 @@
     "eslint-config-next": "^14.2.15",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
+    "tsx": "^4.21.0",
     "typescript": "^5.6.3"
   }
 }

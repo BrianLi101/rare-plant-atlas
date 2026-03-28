@@ -1,0 +1,88 @@
+{
+  "alocasia-black-velvet-variegated-pink": {
+    "slug": "alocasia-black-velvet-variegated-pink",
+    "currentMin": 75,
+    "currentMax": 75,
+    "allTimeMin": 75,
+    "allTimeMax": 75,
+    "lastSeen": "2026-03-28",
+    "sellerCount": 1,
+    "availableNow": true,
+    "recentListings": [
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 75,
+        "priceHigh": 75,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-black-velvet-pink-variegated-growers-choice",
+        "variantSummary": "",
+        "date": "2026-03-28",
+        "available": true
+      }
+    ]
+  },
+  "anthurium-delta-force": {
+    "slug": "anthurium-delta-force",
+    "currentMin": 99.99,
+    "currentMax": 195,
+    "allTimeMin": 99.99,
+    "allTimeMax": 195,
+    "lastSeen": "2026-03-28",
+    "sellerCount": 2,
+    "availableNow": true,
+    "recentListings": [
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/anthurium-crystallinum-variegated-wk13-a",
+        "variantSummary": "",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://www.carnivero.com/products/anthurium-delta-force",
+        "variantSummary": "Small / random selection / potted",
+        "date": "2026-03-28",
+        "available": false
+      }
+    ]
+  },
+  "philodendron-gloriosum-variegated-type-1": {
+    "slug": "philodendron-gloriosum-variegated-type-1",
+    "currentMin": 1500,
+    "currentMax": 1500,
+    "allTimeMin": 1500,
+    "allTimeMax": 1500,
+    "lastSeen": "2026-03-28",
+    "sellerCount": 1,
+    "availableNow": true,
+    "recentListings": [
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1500,
+        "priceHigh": 1500,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-albo-variegated-type-1-wk13-e",
+        "variantSummary": "",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1500,
+        "priceHigh": 1500,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-albo-variegated-type-1-wk8-b",
+        "variantSummary": "",
+        "date": "2026-03-28",
+        "available": true
+      }
+    ]
+  }
+}

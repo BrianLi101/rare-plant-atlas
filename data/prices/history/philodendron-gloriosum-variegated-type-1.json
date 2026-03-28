@@ -1,0 +1,28 @@
+{
+  "slug": "philodendron-gloriosum-variegated-type-1",
+  "lastUpdated": "2026-03-28",
+  "entries": [
+    {
+      "date": "2026-03-28",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-albo-variegated-type-1-wk13-e",
+      "price": 1500,
+      "priceHigh": 1500,
+      "available": true,
+      "variantSummary": "",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-03-28",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-albo-variegated-type-1-wk8-b",
+      "price": 1500,
+      "priceHigh": 1500,
+      "available": true,
+      "variantSummary": "",
+      "confidence": "high"
+    }
+  ]
+}

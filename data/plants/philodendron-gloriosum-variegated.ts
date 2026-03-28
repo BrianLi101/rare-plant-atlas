@@ -92,6 +92,7 @@ export const philodendronGloriosumVariegated: PlantVariant = {
     tradeName: "Philodendron gloriosum",
     variantLabel: "Variegated Type 1",
     aliases: ["Type 1 Block Variegation"],
+    matchPhrases: ["type 1"],
   },
   tagline: "Velvet meets light.",
   heroDescription:

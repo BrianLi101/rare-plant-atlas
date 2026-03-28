@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import type { PlantVariant, CinematicPanel as PanelData } from "@/data/types";
+import type { PriceSummary } from "@/data/prices/types";
+import priceAggregate from "@/data/prices/aggregate.json";
 import { track } from "@vercel/analytics";
 import {
   getPlantFullName,
@@ -25,6 +27,7 @@ import {
   PhotoGalleryTab,
   FaqTab,
   ConservationTab,
+  PricingTab,
 } from "./tabs";
 
 // ---------------------------------------------------------------------------
@@ -56,6 +59,11 @@ interface TabDef {
   label: string;
 }
 
+function getPriceSummary(slug: string): PriceSummary | undefined {
+  const aggregate = priceAggregate as Record<string, PriceSummary>;
+  return aggregate[slug];
+}
+
 function buildTabs(plant: PlantVariant): TabDef[] {
   const tabs: TabDef[] = [{ id: "overview", label: "Overview" }];
   if (plant.photos.length > 0) tabs.push({ id: "gallery", label: "Gallery" });
@@ -66,6 +74,7 @@ function buildTabs(plant: PlantVariant): TabDef[] {
   if (plant.propagation) tabs.push({ id: "propagation", label: "Propagation" });
   if (plant.faq) tabs.push({ id: "faq", label: "FAQ" });
   if (plant.conservation) tabs.push({ id: "conservation", label: "Conservation" });
+  if (getPriceSummary(plant.identity.slug)) tabs.push({ id: "pricing", label: "Pricing" });
   tabs.push({ id: "fit", label: "Fit Check" });
   tabs.push({ id: "downsides", label: "Downsides" });
   if (plant.recommendedProducts.length > 0) tabs.push({ id: "shop", label: "Shop" });
@@ -87,6 +96,8 @@ function buildTabContent(plant: PlantVariant): Record<string, React.ReactNode> {
   if (plant.propagation) content.propagation = <PropagationTab plant={plant} />;
   if (plant.faq) content.faq = <FaqTab plant={plant} />;
   if (plant.conservation) content.conservation = <ConservationTab plant={plant} />;
+  const priceSummary = getPriceSummary(plant.identity.slug);
+  if (priceSummary) content.pricing = <PricingTab summary={priceSummary} priceNote={plant.priceRange.note} />;
   return content;
 }
 
