@@ -18,8 +18,8 @@ export const alocasiaChantrierVariegatedPink: PlantListing = {
   rarity: "Ultra-Rare",
   priceRange: {
     currency: "USD",
-    min: 60,
-    max: 350,
+    min: 300,
+    max: 2000,
     lastObserved: new Date("2026-03-28"),
     note: "TC availability is increasing but still limited to specialty sellers. Prices vary significantly by variegation quality.",
   },

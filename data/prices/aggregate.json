@@ -379,6 +379,170 @@
       }
     ]
   },
+  "monstera-white-lava": {
+    "slug": "monstera-white-lava",
+    "currentMin": 850,
+    "currentMax": 10975,
+    "allTimeMin": 850,
+    "allTimeMax": 10975,
+    "lastSeen": "2026-03-28",
+    "sellerCount": 2,
+    "availableNow": true,
+    "recentListings": [
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 950,
+        "priceHigh": 950,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk13-ui",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1500,
+        "priceHigh": 1500,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk12-uq",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 850,
+        "priceHigh": 850,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk11-um",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1500,
+        "priceHigh": 1500,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk10-uf",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 10975,
+        "priceHigh": 10975,
+        "productUrl": "https://aroidmarket.com/products/monstera-white-lava",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      }
+    ]
+  },
+  "monstera-white-monster": {
+    "slug": "monstera-white-monster",
+    "currentMin": 29.99,
+    "currentMax": 1950,
+    "allTimeMin": 29.99,
+    "allTimeMax": 1950,
+    "lastSeen": "2026-03-28",
+    "sellerCount": 3,
+    "availableNow": true,
+    "recentListings": [
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1950,
+        "priceHigh": 1950,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-mint-siam-wk48-uv",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-white-monster",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-mutation-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-6",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 59.99,
+        "priceHigh": 59.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-3",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 149.99,
+        "priceHigh": 149.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-4",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 549.99,
+        "priceHigh": 549.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-5-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 29.99,
+        "priceHigh": 29.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-2",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 54.99,
+        "priceHigh": 54.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-3-us-seller",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      }
+    ]
+  },
   "philodendron-gloriosum-variegated-type-1": {
     "slug": "philodendron-gloriosum-variegated-type-1",
     "currentMin": 595,

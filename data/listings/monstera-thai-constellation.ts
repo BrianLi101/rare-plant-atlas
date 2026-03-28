@@ -18,7 +18,7 @@ export const monsteraThaiConstellation: PlantListing = {
   rarity: "Rare",
   priceRange: {
     currency: "USD",
-    min: 40,
+    min: 30,
     max: 250,
     lastObserved: new Date("2026-03-28"),
     note: "Mass TC production has driven prices down dramatically since 2023. Big-box retail availability has compressed the floor to under $50 for small plants.",

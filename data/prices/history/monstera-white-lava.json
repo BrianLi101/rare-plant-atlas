@@ -1,0 +1,66 @@
+{
+  "slug": "monstera-white-lava",
+  "lastUpdated": "2026-03-28",
+  "entries": [
+    {
+      "date": "2026-03-28",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "title": "Monstera Deliciosa 'White Lava' (wk13-UI)",
+      "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk13-ui",
+      "price": 950,
+      "priceHigh": 950,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-03-28",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "title": "Monstera Deliciosa 'White Lava' (wk12-UQ)",
+      "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk12-uq",
+      "price": 1500,
+      "priceHigh": 1500,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-03-28",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "title": "Monstera Deliciosa 'White Lava' (wk11-UM)",
+      "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk11-um",
+      "price": 850,
+      "priceHigh": 850,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-03-28",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "title": "Monstera Deliciosa 'White Lava' (wk10-UF)",
+      "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk10-uf",
+      "price": 1500,
+      "priceHigh": 1500,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-03-28",
+      "sellerId": "aroid-market",
+      "sellerName": "Aroid Market",
+      "title": "Monstera white lava",
+      "productUrl": "https://aroidmarket.com/products/monstera-white-lava",
+      "price": 10975,
+      "priceHigh": 10975,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    }
+  ]
+}

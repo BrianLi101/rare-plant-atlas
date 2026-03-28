@@ -4,7 +4,7 @@ import Link from "next/link";
 import { plants } from "@/data/plants";
 import { listings } from "@/data/listings";
 import type { PlantListing } from "@/data/types";
-import { getPlantLabel, getPlantFullName } from "@/data/identity";
+import { getPlantLabel } from "@/data/identity";
 import { formatPlantPriceRangeForGlance } from "@/data/price";
 import { Navigation } from "@/components/Navigation";
 import { JsonLd } from "@/components/JsonLd";
@@ -211,7 +211,7 @@ export default function GenusPage({ params }: { params: { genus: string } }) {
                           className="font-serif text-[0.95rem] hover:opacity-80 transition-opacity"
                           style={{ color: "#e8e0d0" }}
                         >
-                          {getPlantFullName(plant)}
+                          {getPlantLabel(plant)}
                         </Link>
                       </td>
                       <td
@@ -248,7 +248,7 @@ export default function GenusPage({ params }: { params: { genus: string } }) {
                         className="font-serif text-[0.95rem] hover:opacity-80 transition-opacity"
                         style={{ color: "#e8e0d0" }}
                       >
-                        {getPlantFullName(listing)}
+                        {getPlantLabel(listing)}
                       </Link>
                       <span
                         className="ml-2 font-mono text-[8px] tracking-[0.1em] uppercase px-1.5 py-0.5 rounded"
@@ -329,7 +329,7 @@ export default function GenusPage({ params }: { params: { genus: string } }) {
                         className="font-serif text-[1rem] font-bold leading-tight mb-1 group-hover:opacity-80 transition-opacity"
                         style={{ color: "#e8e0d0" }}
                       >
-                        {getPlantFullName(plant)}
+                        {getPlantLabel(plant)}
                       </div>
                       <div
                         className="font-body text-[0.8rem] leading-relaxed opacity-70 line-clamp-2"
@@ -359,7 +359,7 @@ export default function GenusPage({ params }: { params: { genus: string } }) {
                       className="font-serif text-[1rem] font-bold leading-tight group-hover:opacity-80 transition-opacity"
                       style={{ color: "#e8e0d0" }}
                     >
-                      {getPlantFullName(listing)}
+                      {getPlantLabel(listing)}
                     </div>
                     <span
                       className="font-mono text-[8px] tracking-[0.1em] uppercase px-1.5 py-0.5 rounded shrink-0"

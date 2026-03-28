@@ -18,8 +18,8 @@ export const monsteraDevilMonster: PlantListing = {
   rarity: "Ultra-Rare",
   priceRange: {
     currency: "USD",
-    min: 80,
-    max: 400,
+    min: 600,
+    max: 5000,
     lastObserved: new Date("2026-03-28"),
     note: "Still relatively new to the market. Prices are settling as TC supply ramps up, but demand remains strong for verified specimens.",
   },
