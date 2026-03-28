@@ -1,4 +1,4 @@
-import type { PlantPhoto, PlantPriceRange, PlantVariant } from "../types";
+import type { PlantPhoto, PlantPriceRange, PlantVariant, PlantToxicity, TcVsWildType, SourceReference } from "../types";
 import { PropagationMethodType } from "../types";
 import {
   lechuzaPonSubstrate3L,
@@ -85,6 +85,59 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
   tagline: "Dark velvet, blush fire.",
   heroDescription:
     "A compact jewel Alocasia with near-black, velvet foliage and pink-to-cream sectoral variegation. The species name reginula means \u2018little queen\u2019 in Latin \u2014 an apt title for a plant that dominates any shelf it occupies despite its compact size. High contrast and slow growth make each leaf feel earned.",
+
+  // -- SEO/GEO fields --
+  quickAnswer:
+    "Alocasia Black Velvet Variegated Pink is a compact jewel Alocasia with near-black velvet leaves and pink sectoral variegation. Native to Borneo (cultivated form). Requires 65%+ humidity, medium to bright indirect light, and well-draining substrate. Propagates via corms. Price: $50–$300 USD. Difficulty: intermediate. Toxic to pets.",
+  lastReviewed: new Date("2026-03-27"),
+  toxicity: {
+    toxic: true,
+    summary:
+      "Toxic to cats, dogs, and humans. Contains calcium oxalate crystals throughout all plant tissue.",
+    compounds: ["calcium oxalate crystals"],
+    symptoms: [
+      "oral pain and swelling",
+      "drooling",
+      "gastrointestinal distress",
+    ],
+  },
+  commonMistakes: [
+    "Overwatering in soil — the corm and fine roots rot quickly in waterlogged conditions. Semi-hydro setups largely eliminate this risk.",
+    "Panicking during dormancy — jewel Alocasias routinely drop all leaves and appear dead. The corm survives and reshoots with warmth and time.",
+    "Buying unsprouted corms to save money — sprouted corms ($50–$70) let you see variegation before committing, unsprouted ($30–$40) are a gamble.",
+    "Expecting consistent variegation on every leaf — pink expression is inherently unstable and varies leaf to leaf.",
+    "Placing in direct sunlight — as a natural underbrush plant, it burns in direct light.",
+  ],
+  relatedPlants: [
+    "anthurium-delta-force",
+    "philodendron-gloriosum-variegated-type-1",
+  ],
+  priceHistory:
+    "Variegated Black Velvet prices have compressed roughly 40% since 2023 as tissue culture production expanded in Thailand and Taiwan. Sprouted corms with visible variegation now start around $50–$70, down from $100+ in 2022. Mature specimens with strong pink expression still command $200–$300. Gold forms occasionally exceed the pink price range when saturation is strong.",
+  tcVsWildType: {
+    tcAvailable: true,
+    note: "The pink variegated form emerged from tissue culture labs in Thailand and Taiwan — it has never existed in the wild. All legitimate stock traces to TC origins. The straight species (Alocasia reginula) is endemic to Sabah, Malaysian Borneo, but wild collection is not the source of variegated plants in the collector market. TC plants are generally healthy and viable, making this a good entry point for new collectors.",
+  },
+  availabilityNotes:
+    "Widely available year-round from Southeast Asian TC suppliers and domestic corm propagators. Spring/summer see higher inventory as growers divide actively producing mother plants. Sprouted corms with visible variegation are the recommended purchase format — available from most Alocasia specialists.",
+  sourceReferences: [
+    {
+      label: "A. Hay — Alocasia reginula formal description (1998)",
+      url: "https://www.biodiversitylibrary.org/page/43639518",
+      description: "Original botanical description published in the Singapore Gardens' Bulletin, volume 50.",
+    },
+    {
+      label: "ASPCA Toxic Plant Database — Alocasia",
+      url: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/alocasia",
+      description: "Toxicity information for pets regarding Alocasia species.",
+    },
+    {
+      label: "Tabin Wildlife Reserve — Habitat confirmation (2021)",
+      url: "https://en.wikipedia.org/wiki/Tabin_Wildlife_Reserve",
+      description: "Location where researchers confirmed the species' natural habitat on limestone karst cliffs.",
+    },
+  ],
+
   origin: "Cultivated hybrid line (horticultural selection)",
   family: "Araceae",
   rarity: "Rare",
@@ -135,15 +188,15 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
       sub: "Near-black velvet blades cut by pink and cream sectors. Compact and dramatic.",
       image: heroPhoto.image,
     },
-    {
-      id: "variegation",
-      eyebrow: "Expression profile",
-      lines: ["Dark velvet", "with", "blush sectors."],
-      italicLine: 2,
-      sub: "Black Velvet variegation is usually grouped by color form: pink, white, or gold. Pattern intensity still shifts leaf-to-leaf by node expression and vigor.",
-      fact: "Care requirements are largely the same across color forms; differences are visual and market-driven more than horticultural.",
-      image: heavilyVariegatedLeafPhoto.image,
-    },
+    // {
+    //   id: "variegation",
+    //   eyebrow: "Expression profile",
+    //   lines: ["Dark velvet", "with", "blush sectors."],
+    //   italicLine: 2,
+    //   sub: "Black Velvet variegation is usually grouped by color form: pink, white, or gold. Pattern intensity still shifts leaf-to-leaf by node expression and vigor.",
+    //   fact: "Care requirements are largely the same across color forms; differences are visual and market-driven more than horticultural.",
+    //   image: heavilyVariegatedLeafPhoto.image,
+    // },
     // {
     //   id: "origin",
     //   eyebrow: "Modern collector line",

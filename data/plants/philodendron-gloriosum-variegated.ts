@@ -1,4 +1,4 @@
-import type { PlantPhoto, PlantPriceRange, PlantVariant } from "../types";
+import type { PlantPhoto, PlantPriceRange, PlantVariant, PlantToxicity, TcVsWildType, SourceReference } from "../types";
 import { PropagationMethodType } from "../types";
 import {
   lechuzaPlanterHorizontalSmall,
@@ -96,6 +96,65 @@ export const philodendronGloriosumVariegated: PlantVariant = {
   tagline: "Velvet meets light.",
   heroDescription:
     "A terrestrial creeper with heart-shaped leaves of deep emerald velvet, interrupted by strokes of cream and white variegation. Each leaf is a living canvas \u2014 no two patterns alike.",
+
+  // -- SEO/GEO fields --
+  quickAnswer:
+    "Variegated Philodendron gloriosum is an ultra-rare terrestrial creeper with heart-shaped velvet leaves featuring cream-white sectoral variegation. Type 1 (block) costs $600–$2,500+; Type 2 (splash) runs $300–$800. Requires 60%+ humidity, bright indirect light, and horizontal planter space. Difficulty: advanced. Toxic to pets.",
+  lastReviewed: new Date("2026-03-27"),
+  toxicity: {
+    toxic: true,
+    summary:
+      "Toxic to cats, dogs, and humans. Contains calcium oxalate crystals throughout all plant tissue.",
+    compounds: ["calcium oxalate crystals"],
+    symptoms: [
+      "oral irritation",
+      "excessive drooling",
+      "swelling",
+      "gastrointestinal distress",
+    ],
+  },
+  commonMistakes: [
+    "Using a tall pot instead of a wide, shallow planter — gloriosum is a terrestrial creeper that grows horizontally, not vertically.",
+    "Expecting every leaf to be variegated — Type 1 variegation is unstable and can produce several green leaves between variegated ones.",
+    "Overwatering the rhizome — the creeping stem rots quickly in waterlogged conditions.",
+    "Buying unverified Type 1 when it's actually Type 2 splash — always confirm the variegation type before purchasing at Type 1 prices.",
+    "Cutting rhizome sections too small — each division needs at least one node with healthy roots to survive.",
+  ],
+  relatedPlants: [
+    "anthurium-delta-force",
+    "alocasia-black-velvet-variegated-pink",
+  ],
+  priceHistory:
+    "Type 2 (splash) variegated gloriosum has dropped roughly 50% since 2022 as tissue culture production expanded — specimens that were $600–$800 now trade at $300–$500. Type 1 (block) remains expensive at $600–$2,500+ because it has not entered tissue culture. The original Type 1 lineage traces to Kaylee Ellen's plant, distributed through NSE Tropicals. Until TC becomes available for Type 1, prices are unlikely to compress significantly.",
+  tcVsWildType: {
+    tcAvailable: true,
+    note: "Type 2 (splash) variegation is widely tissue cultured and available at accessible prices. Type 1 (block) variegation has NOT entered tissue culture — all specimens are cutting-propagated from the original Kaylee Ellen lineage. This distinction is the primary driver of the price gap between the two forms. Wild-collected gloriosum exists but is legally restricted under Colombian export law; the variegated forms are exclusively cultivated mutations.",
+  },
+  availabilityNotes:
+    "Type 2 (splash) is available year-round from TC suppliers. Type 1 (block) is extremely limited — typically only available from NSE Tropicals (US) or directly from Kaylee Ellen (UK). Expect waitlists. New cuttings tend to appear in spring/summer when growers divide actively growing rhizomes.",
+  sourceReferences: [
+    {
+      label: "NSE Tropicals — Primary US distributor of Type 1",
+      url: "https://www.nsetropicals.com",
+      description: "Specialist nursery that holds original Type 1 variegated gloriosum stock from the Kaylee Ellen lineage.",
+    },
+    {
+      label: "Kew Plants of the World Online — Philodendron gloriosum",
+      url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:87796-1",
+      description: "Taxonomic reference and distribution data for the species.",
+    },
+    {
+      label: "ASPCA Toxic Plant Database — Philodendron",
+      url: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/philodendron",
+      description: "Toxicity information for pets regarding Philodendron species.",
+    },
+    {
+      label: "IUCN Red List — Philodendron gloriosum",
+      url: "https://www.iucnredlist.org/species/267953052/267953068",
+      description: "Conservation status assessment listing gloriosum as Vulnerable.",
+    },
+  ],
+
   origin: "Colombia",
   family: "Araceae",
   rarity: "Ultra-rare",
@@ -140,15 +199,15 @@ export const philodendronGloriosumVariegated: PlantVariant = {
       sub: "A terrestrial creeper with heart-shaped leaves of deep emerald velvet, interrupted by strokes of cream and white. Each leaf is a living canvas.",
       image: heroPhoto.image,
     },
-    {
-      id: "variegation",
-      eyebrow: "The variegation",
-      lines: ["Velvet", "meets", "light."],
-      italicLine: 2,
-      sub: "Block variegation against deep green velvet. The pattern never repeats. Each new leaf is a reveal \u2014 emerging yellow, hardening to cream.",
-      fact: "The original block-variegated plant traces back to Kaylee Ellen. It is not yet tissue cultured.",
-      image: type1ColorsCloseupPhoto.image,
-    },
+    // {
+    //   id: "variegation",
+    //   eyebrow: "The variegation",
+    //   lines: ["Velvet", "meets", "light."],
+    //   italicLine: 2,
+    //   sub: "Block variegation against deep green velvet. The pattern never repeats. Each new leaf is a reveal \u2014 emerging yellow, hardening to cream.",
+    //   fact: "The original block-variegated plant traces back to Kaylee Ellen. It is not yet tissue cultured.",
+    //   image: type1ColorsCloseupPhoto.image,
+    // },
     // {
     //   id: "origin",
     //   eyebrow: "Colombia \u00b7 Humid lowland forest",

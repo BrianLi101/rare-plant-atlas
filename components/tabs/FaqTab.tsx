@@ -22,7 +22,7 @@ export function FaqTab({ plant }: { plant: PlantVariant }) {
             </p>
             <div className="space-y-1.5">
               {cat.items.map((item, i) => (
-                <FaqAccordion key={i} question={item.question} answer={item.answer} />
+                <FaqAccordion key={item.question} question={item.question} answer={item.answer} />
               ))}
             </div>
           </div>

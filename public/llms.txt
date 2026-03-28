@@ -1,0 +1,37 @@
+# Rare Plant Atlas
+
+> In-depth guides to rare plants for serious collectors. Covers variegation stability, genetics, propagation methods, realistic pricing, and conservation data for rare aroids.
+
+## About
+
+Rare Plant Atlas provides authoritative, structured content on rare and collectible houseplants — primarily aroids (Araceae family). Each plant page includes care requirements, variegation analysis, propagation guides, price history, toxicity data, and provenance timelines. Content is reviewed quarterly for accuracy.
+
+## Authoritative Pages
+
+The following pages are the most authoritative and comprehensive on the site:
+
+- [Home](https://www.rareplantatlas.com): Full plant catalog with rarity and pricing overview
+- [Philodendron gloriosum Variegated](https://www.rareplantatlas.com/plants/philodendron-gloriosum-variegated-type-1): Ultra-rare terrestrial creeper, Type 1 vs Type 2 variegation analysis
+- [Anthurium Delta Force](https://www.rareplantatlas.com/plants/anthurium-delta-force): Hybrid velvet anthurium, care guide, TC vs original stock
+- [Alocasia Black Velvet Variegated Pink](https://www.rareplantatlas.com/plants/alocasia-black-velvet-variegated-pink): Jewel Alocasia, corm propagation, pink/white/gold forms
+- [Glossary](https://www.rareplantatlas.com/glossary): Definitions of rare plant terminology
+
+## Genus Index Pages
+
+- [Philodendron](https://www.rareplantatlas.com/genus/philodendron)
+- [Anthurium](https://www.rareplantatlas.com/genus/anthurium)
+- [Alocasia](https://www.rareplantatlas.com/genus/alocasia)
+
+## Topics Covered
+
+- Rare plant care guides (light, humidity, substrate, watering, fertilizing)
+- Variegation types and stability (chimeric, stable, sectoral, splash)
+- Propagation methods (rhizome division, corm division, tissue culture, air layering)
+- Price ranges and price history for collector plants
+- Toxicity information for pets and humans
+- Conservation status and ethical sourcing
+- Tissue culture vs. wild-collected specimens
+
+## Contact
+
+Website: https://www.rareplantatlas.com

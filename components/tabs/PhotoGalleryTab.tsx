@@ -80,7 +80,7 @@ export function PhotoGalleryTab({ plant }: { plant: PlantVariant }) {
               >
                 <Image
                   src={photo.image}
-                  alt={photo.caption}
+                  alt={photo.alt ?? photo.caption}
                   fill
                   sizes="(max-width: 600px) 50vw, (max-width: 1024px) 33vw, 300px"
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
@@ -159,7 +159,7 @@ export function PhotoGalleryTab({ plant }: { plant: PlantVariant }) {
             <div className="relative h-full w-full">
               <Image
                 src={selected.image}
-                alt={selected.caption}
+                alt={selected.alt ?? selected.caption}
                 fill
                 sizes="100vw"
                 className="object-cover md:object-contain rounded-none md:rounded-[10px]"

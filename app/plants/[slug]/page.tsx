@@ -14,30 +14,68 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 
   const previewImage =
     plant.images.hero ?? plant.photos[0]?.image ?? "/icon.png";
-  const title = `${getPlantLabel(plant)} — Rare Plant Atlas`;
+  const label = getPlantLabel(plant);
+
+  // SEO/GEO: Keyword-rich title with care guide + price + site name
+  const title = `${label}: Care Guide, Price & Info | Rare Plant Atlas`;
+
+  // SEO/GEO: Use quickAnswer for meta description when available (directly
+  // answers the primary query), fall back to heroDescription
+  const description = plant.quickAnswer ?? plant.heroDescription;
 
   return {
     title,
-    description: plant.heroDescription,
+    description,
     openGraph: {
       title,
-      description: plant.heroDescription,
+      description,
       images: [
         {
           url: previewImage,
-          alt: getPlantLabel(plant),
+          alt: `${label} — rare plant care guide and collector information`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
       title,
-      description: plant.heroDescription,
+      description,
       images: [previewImage],
     },
     alternates: {
       canonical: `https://www.rareplantatlas.com/plants/${params.slug}`,
     },
+  };
+}
+
+// SEO/GEO: Article schema — combined with Product + FAQPage for triple
+// JSON-LD stacking, which receives 1.8× more AI citations than single schema.
+function buildArticleJsonLd(plant: ReturnType<typeof getPlantBySlug>) {
+  if (!plant) return null;
+  const label = getPlantLabel(plant);
+  const url = `https://www.rareplantatlas.com/plants/${plant.identity.slug}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: `${label}: Care Guide, Price & Collector Info`,
+    description: plant.quickAnswer ?? plant.heroDescription,
+    url,
+    image: plant.images.hero ?? plant.photos[0]?.image,
+    author: {
+      "@type": "Organization",
+      name: "Rare Plant Atlas",
+      url: "https://www.rareplantatlas.com",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Rare Plant Atlas",
+      url: "https://www.rareplantatlas.com",
+    },
+    ...(plant.lastReviewed && {
+      dateModified: plant.lastReviewed.toISOString().split("T")[0],
+    }),
+    mainEntityOfPage: url,
   };
 }
 
@@ -120,11 +158,14 @@ export default function PlantPage({ params }: { params: { slug: string } }) {
 
   const label = getPlantLabel(plant);
   const scientificName = getPlantScientificName(plant);
+  const articleJsonLd = buildArticleJsonLd(plant);
   const productJsonLd = buildProductJsonLd(plant);
   const faqJsonLd = buildFaqJsonLd(plant);
 
   return (
     <>
+      {/* SEO/GEO: Triple JSON-LD stacking — Article + Product + FAQ */}
+      {articleJsonLd && <JsonLd data={articleJsonLd} />}
       {productJsonLd && <JsonLd data={productJsonLd} />}
       {faqJsonLd && <JsonLd data={faqJsonLd} />}
       <JsonLd
@@ -152,7 +193,19 @@ export default function PlantPage({ params }: { params: { slug: string } }) {
       <article className="sr-only" aria-hidden="false">
         <h1>{label}</h1>
         {scientificName !== label && <p>{scientificName}</p>}
+
+        {/* SEO/GEO: Quick-answer block in the first 200 words — this is the
+            primary content AI retrieval systems evaluate for relevance */}
+        {plant.quickAnswer && (
+          <p><strong>{plant.quickAnswer}</strong></p>
+        )}
+
         <p>{plant.heroDescription}</p>
+
+        {/* SEO/GEO: Freshness signal displayed visibly on page */}
+        {plant.lastReviewed && (
+          <p>Last reviewed: {plant.lastReviewed.toLocaleDateString("en-US", { month: "long", year: "numeric" })}</p>
+        )}
 
         <section>
           <h2>At a Glance</h2>
@@ -299,10 +352,93 @@ export default function PlantPage({ params }: { params: { slug: string } }) {
           </section>
         )}
 
+        {/* SEO/GEO: Toxicity section — very common AI query */}
+        {plant.toxicity && (
+          <section>
+            <h2>Toxicity</h2>
+            <p>{plant.toxicity.summary}</p>
+            {plant.toxicity.compounds && plant.toxicity.compounds.length > 0 && (
+              <p>Toxic compounds: {plant.toxicity.compounds.join(", ")}.</p>
+            )}
+            {plant.toxicity.symptoms && plant.toxicity.symptoms.length > 0 && (
+              <p>Symptoms if ingested: {plant.toxicity.symptoms.join(", ")}.</p>
+            )}
+          </section>
+        )}
+
+        {/* SEO/GEO: Common mistakes — powers "why is my X doing Y" queries */}
+        {plant.commonMistakes && plant.commonMistakes.length > 0 && (
+          <section>
+            <h2>Common Mistakes</h2>
+            <ul>
+              {plant.commonMistakes.map((mistake, i) => (
+                <li key={i}>{mistake}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {/* SEO/GEO: Price history — original data, highly citable */}
+        {plant.priceHistory && (
+          <section>
+            <h2>Price History</h2>
+            <p>{plant.priceHistory}</p>
+          </section>
+        )}
+
+        {/* SEO/GEO: TC vs wild type — collector differentiator */}
+        {plant.tcVsWildType && (
+          <section>
+            <h2>Tissue Culture vs. Wild Type</h2>
+            <p>{plant.tcVsWildType.note}</p>
+          </section>
+        )}
+
+        {/* SEO/GEO: Availability notes — time-sensitive content */}
+        {plant.availabilityNotes && (
+          <section>
+            <h2>Availability</h2>
+            <p>{plant.availabilityNotes}</p>
+          </section>
+        )}
+
         <section>
           <h2>Verdict</h2>
           <p>{plant.verdict}</p>
         </section>
+
+        {/* SEO/GEO: Related plants — internal linking for topical clusters */}
+        {plant.relatedPlants && plant.relatedPlants.length > 0 && (
+          <section>
+            <h2>Related Plants</h2>
+            <ul>
+              {plant.relatedPlants.map((slug) => {
+                const related = getPlantBySlug(slug);
+                if (!related) return null;
+                return (
+                  <li key={slug}>
+                    <a href={`/plants/${slug}`}>{getPlantLabel(related)}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        )}
+
+        {/* SEO/GEO: Source references — authority signals */}
+        {plant.sourceReferences && plant.sourceReferences.length > 0 && (
+          <section>
+            <h2>References</h2>
+            <ol>
+              {plant.sourceReferences.map((ref, i) => (
+                <li key={i}>
+                  <a href={ref.url} rel="noopener noreferrer">{ref.label}</a>
+                  {ref.description && <span> — {ref.description}</span>}
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
       </article>
 
       <PlantDetailClient plant={plant} />

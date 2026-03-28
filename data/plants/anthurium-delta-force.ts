@@ -1,5 +1,4 @@
-import type { PlantPhoto, PlantPriceRange, PlantVariant } from "../types";
-import { PropagationMethodType } from "../types";
+import type { PlantPhoto, PlantPriceRange, PlantVariant, PlantToxicity, TcVsWildType, SourceReference } from "../types";
 import {
   lechuzaPonSubstrate3L,
   ikeaOdlaLeca,
@@ -77,6 +76,59 @@ export const anthuriumDeltaForce: PlantVariant = {
   tagline: "Military precision. Botanical impact.",
   heroDescription:
     "A striking hybrid built for durability. Delta Force fuses the bold triangular architecture of its pedatoradiatum parent with clarinervium's legendary velvety texture \u2014 producing a plant that grows fast, tolerates ambience, and commands attention at every stage. Mature leaves reach 12\u201318 inches, with the characteristic triangular geometry becoming fully defined by the fourth or fifth leaf.",
+
+  // -- SEO/GEO fields --
+  quickAnswer:
+    "Anthurium Delta Force is a velvet-textured hybrid (clarinervium × pedatoradiatum) with distinctive triangular leaves reaching 12–18 inches. It requires 60–80% humidity, bright indirect light, and regular feeding. Difficulty: intermediate. Price: $40–$200 USD, with tissue culture bringing costs down significantly.",
+  lastReviewed: new Date("2026-03-27"),
+  toxicity: {
+    toxic: true,
+    summary:
+      "Toxic to cats, dogs, and humans. Contains calcium oxalate crystals throughout all plant tissue.",
+    compounds: ["calcium oxalate crystals"],
+    symptoms: [
+      "oral pain and swelling",
+      "excessive drooling",
+      "difficulty swallowing",
+      "GI distress",
+    ],
+  },
+  commonMistakes: [
+    "Running humidity below 60% — leaf tip browning is the most common issue and is almost always humidity-related.",
+    "Underfeeding — Delta Force is a heavier feeder than most velvet anthuriums; nutrient deficiency shows as progressively smaller leaves before any yellowing.",
+    "Buying unverified stock at very low prices — many plants sold as Delta Force are simply clarinervium × pedatoradiatum crosses without the specific phenotype.",
+    "Expecting triangular leaves from juvenile plants — true Delta Force geometry doesn't emerge until the 4th or 5th leaf.",
+  ],
+  relatedPlants: [
+    "philodendron-gloriosum-variegated",
+    "alocasia-black-velvet-variegated-pink",
+  ],
+  priceHistory:
+    "Delta Force prices have compressed roughly 60% since 2021 due to widespread tissue culture availability. Mature specimens from original stock or reputable TC lines still command $150–$200, but small TC plantlets now start around $40. Expect further compression as more labs bring this cultivar into production.",
+  tcVsWildType: {
+    tcAvailable: true,
+    note: "Delta Force is exclusively a cultivated hybrid — there is no wild type. All specimens trace back to Steve Nock's original clarinervium × pedatoradiatum cross at Ree Gardens in the 1990s. The specific phenotype has never been reliably recreated from seed, making tissue culture the only scalable propagation route. TC plants are true-to-type and genetically identical to the original clone.",
+  },
+  availabilityNotes:
+    "Widely available year-round from tissue culture suppliers. Spring and summer see the highest inventory as growers time stock to peak demand. Mature specimens (6+ leaves with full triangular geometry) are less common and typically only available from specialist collectors.",
+  sourceReferences: [
+    {
+      label: "Ree Gardens — Original breeder",
+      url: "https://reegardens.com",
+      description: "Steve Nock's nursery where the Delta Force cross was originally created in the 1990s.",
+    },
+    {
+      label: "International Aroid Society",
+      url: "https://www.aroid.org",
+      description: "Taxonomic and horticultural reference for Araceae family.",
+    },
+    {
+      label: "ASPCA Toxic Plant Database — Anthurium",
+      url: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/anthurium",
+      description: "Toxicity information for pets regarding Anthurium species.",
+    },
+  ],
+
   origin: "Ree Gardens, Miami, Florida",
   family: "Araceae",
   rarity: "Rare",
@@ -112,15 +164,15 @@ export const anthuriumDeltaForce: PlantVariant = {
       sub: "Triangular, architectural, and built to thrive where others wilt. Delta Force is a one of a kind anthurium hybrid.",
       image: heroPhoto.image,
     },
-    {
-      id: "form",
-      eyebrow: "The leaf",
-      lines: ["Triangular.", "Deliberate.", "Alive."],
-      italicLine: 0,
-      sub: "Each leaf tapers to a narrow point with military precision. Thick velvet surface, deep olive-green, sized to dominate. The sinus flattens as the plant matures — a sign you have the real thing.",
-      fact: "New growth pushes fast. A well-fed Delta Force sizes up a leaf in weeks, not months.",
-      image: multileafTopViewPhoto.image,
-    },
+    // {
+    //   id: "form",
+    //   eyebrow: "The leaf",
+    //   lines: ["Triangular.", "Deliberate.", "Alive."],
+    //   italicLine: 0,
+    //   sub: "Each leaf tapers to a narrow point with military precision. Thick velvet surface, deep olive-green, sized to dominate. The sinus flattens as the plant matures — a sign you have the real thing.",
+    //   fact: "New growth pushes fast. A well-fed Delta Force sizes up a leaf in weeks, not months.",
+    //   image: multileafTopViewPhoto.image,
+    // },
     // {
     //   id: "origin",
     //   eyebrow: "1990s · Miami, Florida",
