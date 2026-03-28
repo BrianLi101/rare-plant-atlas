@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { plants } from "@/data/plants";
+import { listings } from "@/data/listings";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.rareplantatlas.com";
@@ -20,6 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: plant.lastReviewed ?? new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+    // SEO/GEO: Price reference pages — standalone pricing for listings
+    ...listings.map((listing) => ({
+      url: `${baseUrl}/prices/${listing.identity.slug}`,
+      lastModified: listing.lastReviewed ?? new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
     })),
     // SEO/GEO: Genus index pages — "Top N" listicle format for AI citations
     ...genera.map((genus) => ({

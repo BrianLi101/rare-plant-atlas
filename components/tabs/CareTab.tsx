@@ -1,7 +1,7 @@
-import type { PlantVariant } from "@/data/types";
+import type { PlantFile } from "@/data/types";
 import { TabContainer, TabHeader, DataRow } from "./TabContainer";
 
-export function CareTab({ plant }: { plant: PlantVariant }) {
+export function CareTab({ plant }: { plant: PlantFile }) {
   return (
     <TabContainer>
       <TabHeader label="Care conditions" title="What it needs" />

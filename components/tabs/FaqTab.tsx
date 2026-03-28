@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import type { PlantVariant } from "@/data/types";
+import type { PlantFile } from "@/data/types";
 import { TabContainer, TabHeader } from "./TabContainer";
 
-export function FaqTab({ plant }: { plant: PlantVariant }) {
+export function FaqTab({ plant }: { plant: PlantFile }) {
   const faq = plant.faq;
   if (!faq) return null;
 

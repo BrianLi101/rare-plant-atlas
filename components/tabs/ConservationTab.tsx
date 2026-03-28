@@ -1,4 +1,4 @@
-import type { PlantVariant, IucnCode } from "@/data/types";
+import type { PlantFile, IucnCode } from "@/data/types";
 import { TabContainer, TabHeader } from "./TabContainer";
 
 const IUCN_SCALE: { code: IucnCode; label: string; color: string }[] = [
@@ -64,7 +64,7 @@ function IucnScaleBar({ current }: { current: IucnCode }) {
   );
 }
 
-export function ConservationTab({ plant }: { plant: PlantVariant }) {
+export function ConservationTab({ plant }: { plant: PlantFile }) {
   const conservation = plant.conservation;
   if (!conservation) return null;
 

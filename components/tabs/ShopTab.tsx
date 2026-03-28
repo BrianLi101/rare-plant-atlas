@@ -1,4 +1,4 @@
-import type { PlantVariant } from "@/data/types";
+import type { PlantFile } from "@/data/types";
 import { ProductCategory } from "@/data/types";
 import { track } from "@vercel/analytics";
 import { TabContainer, TabHeader } from "./TabContainer";
@@ -7,7 +7,7 @@ function formatUsd(amount: number): string {
   return `$${amount.toLocaleString("en-US")}`;
 }
 
-export function ShopTab({ plant }: { plant: PlantVariant }) {
+export function ShopTab({ plant }: { plant: PlantFile }) {
   return (
     <TabContainer>
       <TabHeader label="Recommended products" title="Shop" />

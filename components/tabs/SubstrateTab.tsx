@@ -1,7 +1,7 @@
-import type { PlantVariant } from "@/data/types";
+import type { PlantFile } from "@/data/types";
 import { TabContainer, TabHeader } from "./TabContainer";
 
-export function SubstrateTab({ plant }: { plant: PlantVariant }) {
+export function SubstrateTab({ plant }: { plant: PlantFile }) {
   const substrate = plant.substrate;
   if (!substrate) return null;
   return (

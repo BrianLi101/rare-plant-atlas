@@ -1,4 +1,4 @@
-import type { PlantPhoto, PlantPriceRange, PlantVariant, PlantToxicity, TcVsWildType, SourceReference } from "../types";
+import type { PlantPhoto, PlantPriceRange, PlantFile, PlantToxicity, SourceReference } from "../types";
 import { PropagationMethodType } from "../types";
 import {
   lechuzaPonSubstrate3L,
@@ -72,7 +72,7 @@ export const alocasiaBlackVelvetVariegatedPinkPlantPriceRange: PlantPriceRange =
   note: "Maturity and variegation drive price; exceptional pink expression can exceed this range.",
 };
 
-export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
+export const alocasiaBlackVelvetVariegatedPink: PlantFile = {
   identity: {
     id: "alocasia_reginula_black_velvet_variegated_pink",
     slug: "alocasia-black-velvet-variegated-pink",
@@ -114,10 +114,8 @@ export const alocasiaBlackVelvetVariegatedPink: PlantVariant = {
   ],
   priceHistory:
     "Variegated Black Velvet prices have compressed roughly 40% since 2023 as tissue culture production expanded in Thailand and Taiwan. Sprouted corms with visible variegation now start around $50–$70, down from $100+ in 2022. Mature specimens with strong pink expression still command $200–$300. Gold forms occasionally exceed the pink price range when saturation is strong.",
-  tcVsWildType: {
-    tcAvailable: true,
-    note: "The pink variegated form emerged from tissue culture labs in Thailand and Taiwan — it has never existed in the wild. All legitimate stock traces to TC origins. The straight species (Alocasia reginula) is endemic to Sabah, Malaysian Borneo, but wild collection is not the source of variegated plants in the collector market. TC plants are generally healthy and viable, making this a good entry point for new collectors.",
-  },
+  tissueCultureStatus: "widespread",
+  tissueCultureNote: "The pink variegated form emerged from tissue culture labs in Thailand and Taiwan — it has never existed in the wild. All legitimate stock traces to TC origins. The straight species (Alocasia reginula) is endemic to Sabah, Malaysian Borneo, but wild collection is not the source of variegated plants in the collector market. TC plants are generally healthy and viable, making this a good entry point for new collectors.",
   availabilityNotes:
     "Widely available year-round from Southeast Asian TC suppliers and domestic corm propagators. Spring/summer see higher inventory as growers divide actively producing mother plants. Sprouted corms with visible variegation are the recommended purchase format — available from most Alocasia specialists.",
   sourceReferences: [

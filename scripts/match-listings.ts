@@ -4,6 +4,8 @@
 // word-order-independent matching against plant identity data.
 
 import { plants } from "../data/plants";
+import { listings } from "../data/listings";
+import type { PlantIdentity } from "../data/types";
 import type { RawListing, NormalizedListing, GrowthStage } from "../data/prices/types";
 
 // ---------------------------------------------------------------------------
@@ -30,8 +32,20 @@ function tokenize(text: string): string[] {
 function buildMatchRules(): MatchRule[] {
   const rules: MatchRule[] = [];
 
-  for (const plant of plants) {
-    const id = plant.identity;
+  // Collect identities from both full profiles and price listings
+  const allIdentities: PlantIdentity[] = [
+    ...plants.map((p) => p.identity),
+    ...listings.map((l) => l.identity),
+  ];
+  // Deduplicate by slug (full profiles take precedence)
+  const seenSlugs = new Set<string>();
+  const identities = allIdentities.filter((id) => {
+    if (seenSlugs.has(id.slug)) return false;
+    seenSlugs.add(id.slug);
+    return true;
+  });
+
+  for (const id of identities) {
     const slug = id.slug;
     const hasVariant = !!id.variantLabel;
     const variantWords = hasVariant ? tokenize(id.variantLabel!) : [];

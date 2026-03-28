@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import type { PlantVariant } from "@/data/plants";
+import type { PlantFile } from "@/data/plants";
 import {
   getPlantFullName,
   getPlantVariantLabel,
@@ -24,7 +24,7 @@ function hexToRgba(hex: string, alpha: number): string {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
-export function PlantCard({ plant }: { plant: PlantVariant }) {
+export function PlantCard({ plant }: { plant: PlantFile }) {
   const variant = getPlantVariantLabel(plant);
   const heroImage = plant.panels[0]?.image;
   const accent = plant.colors.accent || "#85b98e";

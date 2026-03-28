@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import type { PlantVariant } from "@/data/types";
+import type { PlantFile } from "@/data/types";
 import { TabContainer, TabHeader } from "./TabContainer";
 
 const FIT_OPTIONS = {
@@ -41,7 +41,7 @@ function getFitVerdict(score: number) {
   return { label: "Challenging fit", color: "text-red-400/70", borderColor: "rgba(192,112,112,0.25)", bg: "rgba(192,112,112,0.04)" };
 }
 
-export function FitCheckTab({ plant }: { plant: PlantVariant }) {
+export function FitCheckTab({ plant }: { plant: PlantFile }) {
   const [sel, setSel] = useState<Record<string, number | null>>({
     light: null,
     humidity: null,

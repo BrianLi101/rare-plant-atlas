@@ -4,7 +4,7 @@ import { useState, useRef, useEffect, useCallback, useMemo, type CSSProperties }
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import type { PlantVariant, CinematicPanel as PanelData } from "@/data/types";
+import type { PlantFile, CinematicPanel as PanelData } from "@/data/types";
 import type { PriceSummary } from "@/data/prices/types";
 import priceAggregate from "@/data/prices/aggregate.json";
 import { track } from "@vercel/analytics";
@@ -64,7 +64,7 @@ function getPriceSummary(slug: string): PriceSummary | undefined {
   return aggregate[slug];
 }
 
-function buildTabs(plant: PlantVariant): TabDef[] {
+function buildTabs(plant: PlantFile): TabDef[] {
   const tabs: TabDef[] = [{ id: "overview", label: "Overview" }];
   if (plant.photos.length > 0) tabs.push({ id: "gallery", label: "Gallery" });
   if (plant.variegation) tabs.push({ id: "variegation", label: "Variegation" });
@@ -81,7 +81,7 @@ function buildTabs(plant: PlantVariant): TabDef[] {
   return tabs;
 }
 
-function buildTabContent(plant: PlantVariant): Record<string, React.ReactNode> {
+function buildTabContent(plant: PlantFile): Record<string, React.ReactNode> {
   const content: Record<string, React.ReactNode> = {
     overview: <OverviewTab plant={plant} />,
     gallery: <PhotoGalleryTab plant={plant} />,
@@ -162,7 +162,7 @@ function CinematicPanel({ panel, isHero, plantName }: { panel: PanelData; isHero
 // ---------------------------------------------------------------------------
 // At a Glance
 // ---------------------------------------------------------------------------
-function AtAGlance({ plant }: { plant: PlantVariant }) {
+function AtAGlance({ plant }: { plant: PlantFile }) {
   return (
     <section className="relative bg-deep border-t border-cream/[0.08] min-h-[100svh] snap-start snap-always flex flex-col justify-center">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_50%_50%,rgba(25,65,32,0.18)_0%,transparent_70%)]" />
@@ -203,7 +203,7 @@ function AtAGlance({ plant }: { plant: PlantVariant }) {
 // ---------------------------------------------------------------------------
 // Sidebar (desktop)
 // ---------------------------------------------------------------------------
-function Sidebar({ active, onSelect, plant, tabs }: { active: string; onSelect: (id: string) => void; plant: PlantVariant; tabs: TabDef[] }) {
+function Sidebar({ active, onSelect, plant, tabs }: { active: string; onSelect: (id: string) => void; plant: PlantFile; tabs: TabDef[] }) {
   const variant = getPlantVariantLabel(plant);
   const scientificName = getPlantScientificName(plant);
 
@@ -265,7 +265,7 @@ function PlantFileHeader({
   tabs,
   onHeightChange,
 }: {
-  plant: PlantVariant;
+  plant: PlantFile;
   active: string;
   onSelect: (id: string) => void;
   visible: boolean;
@@ -362,7 +362,7 @@ function DetailsSection({
   mobileHeaderHeight,
   inDetails,
 }: {
-  plant: PlantVariant;
+  plant: PlantFile;
   active: string;
   onSelect: (id: string) => void;
   detailsRef: React.RefObject<HTMLDivElement>;
@@ -412,7 +412,7 @@ function DetailsSection({
 // ---------------------------------------------------------------------------
 // Composition
 // ---------------------------------------------------------------------------
-export function PlantDetailClient({ plant }: { plant: PlantVariant }) {
+export function PlantDetailClient({ plant }: { plant: PlantFile }) {
   const mainRef = useRef<HTMLDivElement>(null);
   const detailsRef = useRef<HTMLDivElement>(null);
   const [inDetails, setInDetails] = useState(false);

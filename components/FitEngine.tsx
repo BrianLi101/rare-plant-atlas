@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import type { PlantVariant } from "@/data/plants";
+import type { PlantFile } from "@/data/plants";
 import {
   getPlantFullName,
   getPlantScientificName,
@@ -79,7 +79,7 @@ const experienceOptions = [
   },
 ];
 
-function computeScore(profile: UserProfile, plant: PlantVariant): number {
+function computeScore(profile: UserProfile, plant: PlantFile): number {
   const w = plant.fitWeights;
   const raw =
     profile.light * w.light +
@@ -157,7 +157,7 @@ function OptionGroup({
   );
 }
 
-export function FitEngine({ plant }: { plant: PlantVariant }) {
+export function FitEngine({ plant }: { plant: PlantFile }) {
   const [light, setLight] = useState<number | null>(null);
   const [humidity, setHumidity] = useState<number | null>(null);
   const [space, setSpace] = useState<number | null>(null);

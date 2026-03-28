@@ -22,7 +22,7 @@
       "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-albo-variegated-type-1-wk13-e",
       "price": 1500,
       "priceHigh": 1500,
-      "available": true,
+      "available": false,
       "growthStage": "plant",
       "confidence": "high"
     },

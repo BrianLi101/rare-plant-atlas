@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { PlantVariant } from "@/data/types";
+import type { PlantFile } from "@/data/types";
 import { plants } from "@/data/plants";
 import { getPlantFullName, getPlantVariantLabel } from "@/data/identity";
 import { formatPlantPriceRangeForGlance } from "@/data/price";
 import { TabContainer, TabHeader } from "./TabContainer";
 
 // ── Recommendation logic ──────────────────────────────────────────────────────
-function getRelatedPlants(current: PlantVariant, max = 3): PlantVariant[] {
+function getRelatedPlants(current: PlantFile, max = 3): PlantFile[] {
   const others = plants.filter((p) => p.identity.slug !== current.identity.slug);
   const sameGenus = others.filter((p) => p.identity.genus === current.identity.genus);
   const rest = others.filter((p) => p.identity.genus !== current.identity.genus);
@@ -15,7 +15,7 @@ function getRelatedPlants(current: PlantVariant, max = 3): PlantVariant[] {
 }
 
 // ── Related card ──────────────────────────────────────────────────────────────
-function RelatedCard({ plant }: { plant: PlantVariant }) {
+function RelatedCard({ plant }: { plant: PlantFile }) {
   const variant = getPlantVariantLabel(plant);
   const heroImage = plant.panels[0]?.image;
   const priceLabel = formatPlantPriceRangeForGlance(plant.priceRange);
@@ -75,7 +75,7 @@ function RelatedCard({ plant }: { plant: PlantVariant }) {
 }
 
 // ── Continue exploring section ────────────────────────────────────────────────
-function ContinueExploring({ plant }: { plant: PlantVariant }) {
+function ContinueExploring({ plant }: { plant: PlantFile }) {
   const related = getRelatedPlants(plant);
   if (related.length === 0) return null;
 
@@ -98,7 +98,7 @@ function ContinueExploring({ plant }: { plant: PlantVariant }) {
 }
 
 // ── Overview tab ──────────────────────────────────────────────────────────────
-export function OverviewTab({ plant }: { plant: PlantVariant }) {
+export function OverviewTab({ plant }: { plant: PlantFile }) {
   return (
     <TabContainer>
       <TabHeader label="Plant overview" title={getPlantFullName(plant)} />

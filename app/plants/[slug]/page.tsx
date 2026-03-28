@@ -386,11 +386,11 @@ export default function PlantPage({ params }: { params: { slug: string } }) {
           </section>
         )}
 
-        {/* SEO/GEO: TC vs wild type — collector differentiator */}
-        {plant.tcVsWildType && (
+        {/* SEO/GEO: Tissue culture status — collector differentiator */}
+        {plant.tissueCultureNote && (
           <section>
-            <h2>Tissue Culture vs. Wild Type</h2>
-            <p>{plant.tcVsWildType.note}</p>
+            <h2>Tissue Culture</h2>
+            <p>{plant.tissueCultureNote}</p>
           </section>
         )}
 

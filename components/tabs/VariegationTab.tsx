@@ -1,8 +1,8 @@
 import Image from "next/image";
-import type { PlantVariant } from "@/data/types";
+import type { PlantFile } from "@/data/types";
 import { TabContainer, TabHeader } from "./TabContainer";
 
-export function VariegationTab({ plant }: { plant: PlantVariant }) {
+export function VariegationTab({ plant }: { plant: PlantFile }) {
   const variegation = plant.variegation;
   if (!variegation) return null;
   return (

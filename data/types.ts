@@ -296,16 +296,14 @@ export interface SourceReference {
 }
 
 /**
- * SEO/GEO: Tissue culture vs. wild type distinction.
- * Huge collector differentiator and unique content that helps
- * establish authority on specific cultivar lineage.
+ * SEO/GEO: Tissue culture availability status.
+ * Huge collector differentiator — directly impacts pricing and sourcing.
+ * - unknown: no verified info (default for new listings)
+ * - none: confirmed no TC available
+ * - limited: TC exists but not widely available (few labs, sporadic restocks)
+ * - widespread: TC plugs readily available from multiple sellers
  */
-export interface TcVsWildType {
-  /** Whether tissue culture specimens exist for this plant */
-  tcAvailable: boolean;
-  /** Editorial note explaining TC vs wild-type differences */
-  note: string;
-}
+export type TissueCultureStatus = "unknown" | "none" | "limited" | "widespread";
 
 // ---------------------------------------------------------------------------
 // Conservation section
@@ -329,25 +327,49 @@ export interface ConservationSection {
 }
 
 // ---------------------------------------------------------------------------
-// PlantVariant — a specific cultivar or variant entry
-// Required base + optional sections (presence determines tab visibility)
+// PlantListing — lightweight pricing-focused entry for /prices/[slug] pages
+// Contains identity, pricing, and minimal editorial data only.
 // ---------------------------------------------------------------------------
-export interface PlantVariant {
+export interface PlantListing {
   identity: PlantIdentity;
   tagline: string;
-  heroDescription: string;
   origin: string;
   family: string;
   rarity: string;
-  // priceRange: string;
   priceRange: PlantPriceRange;
   images: PlantImages;
-  photos: PlantPhoto[];
+  /** Optional hero photo for the listing page */
+  heroPhoto?: PlantPhoto;
   colors: {
     primary: string;
     accent: string;
     gradient: [string, string];
   };
+
+  /** Short editorial context about this plant's market position */
+  marketNote?: string;
+  /** Whether a full profile exists or is planned */
+  fullProfileStatus?: "planned" | "in-progress" | "none";
+
+  // SEO fields relevant to pricing pages
+  quickAnswer?: string;
+  lastReviewed?: Date;
+  priceHistory?: string;
+  /** Tissue culture availability — defaults to "unknown" if omitted */
+  tissueCultureStatus?: TissueCultureStatus;
+  /** Editorial note on TC vs wild-type differences (growth speed, lineage, etc.) */
+  tissueCultureNote?: string;
+  availabilityNotes?: string;
+}
+
+// ---------------------------------------------------------------------------
+// PlantFile — a full cultivar/variant entry with care guides, panels, etc.
+// Extends PlantListing with all editorial content and growth data.
+// Required base + optional sections (presence determines tab visibility)
+// ---------------------------------------------------------------------------
+export interface PlantFile extends PlantListing {
+  heroDescription: string;
+  photos: PlantPhoto[];
   traits: string[];
   fitWeights: PlantFitWeights;
 
@@ -361,29 +383,8 @@ export interface PlantVariant {
   downsides: DownsideItem[];
 
   // ---------------------------------------------------------------------------
-  // SEO/GEO fields
-  // These fields power AI citations, schema markup, and search visibility.
-  // See /docs/seo-geo-strategy.md for full guidance on populating these.
+  // SEO/GEO fields (full profile only)
   // ---------------------------------------------------------------------------
-
-  /**
-   * SEO/GEO: 1–3 sentence summary placed in the first 200 words of the page.
-   * AI retrieval systems evaluate relevance primarily on opening content.
-   * This block is what gets cited when someone asks an AI about this plant.
-   * Should directly answer: what is it, key care needs, price, difficulty.
-   *
-   * Example: "Monstera Thai Constellation is a slow-growing tropical aroid
-   * with stable creamy-white variegation. Requires bright indirect light,
-   * high humidity (60–80%), and chunky substrate. $80–$300 USD. Intermediate."
-   */
-  quickAnswer?: string;
-
-  /**
-   * SEO/GEO: Date this plant page was last reviewed for accuracy.
-   * Freshness signal — pages not updated quarterly are 3× more likely to
-   * lose AI citations. Displayed visibly on the page as "Last reviewed: ...".
-   */
-  lastReviewed?: Date;
 
   /**
    * SEO/GEO: Toxicity information for pets and humans.
@@ -405,27 +406,6 @@ export interface PlantVariant {
    * topical clusters ("also in the Araceae family", "similar care needs").
    */
   relatedPlants?: string[];
-
-  /**
-   * SEO/GEO: Editorial price history note.
-   * Original data (e.g. "prices dropped ~40% since 2022 due to TC flooding")
-   * that no other site has — highly citable by AI systems.
-   */
-  priceHistory?: string;
-
-  /**
-   * SEO/GEO: Tissue culture vs. wild type information.
-   * Unique content that differentiates cultivated specimens from
-   * wild-collected plants — a key collector concern.
-   */
-  tcVsWildType?: TcVsWildType;
-
-  /**
-   * SEO/GEO: Seasonal or regional availability notes.
-   * Unique, time-sensitive content that provides value beyond
-   * static care guides. Update quarterly.
-   */
-  availabilityNotes?: string;
 
   /**
    * SEO/GEO: External authoritative source references.
@@ -458,6 +438,9 @@ export interface PlantVariant {
   alocasiaCormData?: AlocasiaCormData;
   conservation?: ConservationSection;
 }
+
+/** @deprecated Use PlantFile instead */
+export type PlantVariant = PlantFile;
 
 /**
  * Encompasses the seller type:

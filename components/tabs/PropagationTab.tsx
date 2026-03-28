@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import type { PlantVariant, PropagationMethod, SuccessRateLevel } from "@/data/types";
+import type { PlantFile, PropagationMethod, SuccessRateLevel } from "@/data/types";
 import { TabContainer, TabHeader } from "./TabContainer";
 
 /* ── Success-rate pip colors ─────────────────────────────────────────── */
@@ -171,7 +171,7 @@ function MethodDetail({ method }: { method: PropagationMethod }) {
 }
 
 /* ── Main tab ────────────────────────────────────────────────────────── */
-export function PropagationTab({ plant }: { plant: PlantVariant }) {
+export function PropagationTab({ plant }: { plant: PlantFile }) {
   const propagation = plant.propagation;
   const [activeIdx, setActiveIdx] = useState(0);
 

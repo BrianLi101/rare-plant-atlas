@@ -48,9 +48,9 @@ export const sellers: Seller[] = [
   {
     id: "rare-foliage-plant-co",
     name: "Rare Foliage Plant Co",
-    platform: "etsy",
-    etsyShopName: "RareFoliagePlantCo",
-    url: "https://www.etsy.com/shop/RareFoliagePlantCo",
+    platform: "shopify",
+    shopifyDomain: "rarefoliageplantco.com",
+    url: "https://rarefoliageplantco.com",
     tier: 1,
     notes:
       "Winter Garden, Florida. 11.8k sales, 4.9 rating. Aroids specialist " +

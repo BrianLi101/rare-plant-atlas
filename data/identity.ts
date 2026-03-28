@@ -1,4 +1,4 @@
-import type { PlantIdentity, PlantVariant } from "./types";
+import type { PlantIdentity, PlantListing } from "./types";
 
 export function formatScientificName(identity: PlantIdentity): string {
   const genus = identity.genus.trim();
@@ -11,7 +11,7 @@ export function formatScientificName(identity: PlantIdentity): string {
   return genus;
 }
 
-export function getPlantLabel(plant: PlantVariant): string {
+export function getPlantLabel(plant: PlantListing): string {
   const label = plant.identity.label?.trim();
   if (label) return label;
 
@@ -25,7 +25,7 @@ export function getPlantLabel(plant: PlantVariant): string {
   return scientific;
 }
 
-export function getPlantFullName(plant: PlantVariant): string {
+export function getPlantFullName(plant: PlantListing): string {
   return (
     plant.identity.tradeName?.trim() ??
     plant.identity.label?.trim() ??
@@ -33,10 +33,10 @@ export function getPlantFullName(plant: PlantVariant): string {
   );
 }
 
-export function getPlantScientificName(plant: PlantVariant): string {
+export function getPlantScientificName(plant: PlantListing): string {
   return formatScientificName(plant.identity);
 }
 
-export function getPlantVariantLabel(plant: PlantVariant): string | null {
+export function getPlantVariantLabel(plant: PlantListing): string | null {
   return plant.identity.variantLabel ?? null;
 }

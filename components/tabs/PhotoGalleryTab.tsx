@@ -2,10 +2,10 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import type { PlantVariant } from "@/data/types";
+import type { PlantFile } from "@/data/types";
 import { getPlantScientificName } from "@/data/identity";
 
-export function PhotoGalleryTab({ plant }: { plant: PlantVariant }) {
+export function PhotoGalleryTab({ plant }: { plant: PlantFile }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const touchStartX = useRef<number | null>(null);
   const selected = activeIndex !== null ? plant.photos[activeIndex] ?? null : null;

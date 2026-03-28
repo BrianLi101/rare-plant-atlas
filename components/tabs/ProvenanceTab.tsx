@@ -1,7 +1,7 @@
-import type { PlantVariant } from "@/data/types";
+import type { PlantFile } from "@/data/types";
 import { TabContainer, TabHeader } from "./TabContainer";
 
-export function ProvenanceTab({ plant }: { plant: PlantVariant }) {
+export function ProvenanceTab({ plant }: { plant: PlantFile }) {
   const provenance = plant.provenance;
   if (!provenance) return null;
   return (

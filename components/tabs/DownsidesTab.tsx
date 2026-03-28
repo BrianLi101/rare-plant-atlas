@@ -1,7 +1,7 @@
-import type { PlantVariant } from "@/data/types";
+import type { PlantFile } from "@/data/types";
 import { TabContainer, TabHeader } from "./TabContainer";
 
-export function DownsidesTab({ plant }: { plant: PlantVariant }) {
+export function DownsidesTab({ plant }: { plant: PlantFile }) {
   return (
     <TabContainer>
       <TabHeader label="Honest take" title="The downsides" />

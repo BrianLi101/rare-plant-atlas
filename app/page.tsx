@@ -3,8 +3,12 @@ import Link from "next/link";
 import { Navigation } from "@/components/Navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { plants } from "@/data/plants";
+import { listings } from "@/data/listings";
+import type { PlantListing } from "@/data/types";
+import type { PriceSummary, GrowthStage } from "@/data/prices/types";
+import priceAggregate from "@/data/prices/aggregate.json";
 import { getPlantLabel, getPlantFullName, getPlantVariantLabel } from "@/data/identity";
-import { formatPlantPriceRangeForGlance } from "@/data/price";
+import { formatPlantPriceRangeForGlance, formatUsd } from "@/data/price";
 
 // ─── Rarity pill colors ──────────────────────────────────────────────────────
 const RARITY_COLORS: Record<string, { bg: string; border: string; text: string }> = {
@@ -124,9 +128,152 @@ function PlantCard({ plant }: { plant: (typeof plants)[number] }) {
   );
 }
 
+// ─── Growth stage labels ─────────────────────────────────────────────────────
+const STAGE_LABELS: Record<GrowthStage, string> = {
+  tc: "TC",
+  cutting: "Cutting",
+  corm: "Corm",
+  plant: "Established",
+};
+
+function getPriceSummary(slug: string): PriceSummary | undefined {
+  const aggregate = priceAggregate as Record<string, PriceSummary>;
+  return aggregate[slug];
+}
+
+// ─── Listing card (price reference, shorter) ────────────────────────────────
+function ListingCard({ listing }: { listing: PlantListing }) {
+  const variant = getPlantVariantLabel(listing);
+  const summary = getPriceSummary(listing.identity.slug);
+  const accent = listing.colors.accent || "#85b98e";
+
+  // Group prices by stage for chips
+  const stageRanges: { stage: GrowthStage; min: number; max: number }[] = [];
+  if (summary) {
+    const map = new Map<GrowthStage, { min: number; max: number }>();
+    for (const l of summary.recentListings) {
+      const existing = map.get(l.growthStage);
+      if (existing) {
+        existing.min = Math.min(existing.min, l.price);
+        existing.max = Math.max(existing.max, l.priceHigh);
+      } else {
+        map.set(l.growthStage, { min: l.price, max: l.priceHigh });
+      }
+    }
+    const order: GrowthStage[] = ["tc", "cutting", "corm", "plant"];
+    for (const s of order) {
+      const r = map.get(s);
+      if (r) stageRanges.push({ stage: s, ...r });
+    }
+  }
+
+  return (
+    <Link
+      href={`/prices/${listing.identity.slug}`}
+      className="group relative block rounded-sm overflow-hidden"
+      style={{
+        background: listing.colors.primary,
+        border: "1px solid rgba(232,224,208,0.10)",
+      }}
+    >
+      {/* Short gradient header */}
+      <div
+        className="relative h-[120px] overflow-hidden"
+        style={{
+          background: `linear-gradient(160deg, ${listing.colors.gradient[0]}, ${listing.colors.gradient[1]})`,
+        }}
+      >
+        {listing.images.hero && (
+          <Image
+            src={listing.images.hero}
+            alt={getPlantFullName(listing)}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+            className="object-cover opacity-40"
+          />
+        )}
+        {/* Type badge */}
+        <span className="absolute top-3.5 left-3.5 font-mono text-[9px] tracking-[0.1em] uppercase bg-cream/[0.06] border border-cream/[0.12] rounded px-2.5 py-1 text-cream/30">
+          Price Reference
+        </span>
+        {/* Rarity badge */}
+        <span className="absolute bottom-3 right-3.5">
+          <RarityPill label={listing.rarity} />
+        </span>
+      </div>
+
+      {/* Body */}
+      <div className="px-5 pt-5 pb-4">
+        <div
+          className="font-mono text-[9px] tracking-[0.18em] uppercase mb-1.5"
+          style={{ color: accent }}
+        >
+          {listing.identity.genus}
+        </div>
+        <div className="font-serif text-[clamp(1.1rem,2.5vw,1.35rem)] font-bold leading-[1.1] tracking-[-0.01em] mb-2" style={{ color: "#e8e0d0" }}>
+          {getPlantFullName(listing)}
+          {variant && (
+            <span className="font-normal italic opacity-70">
+              {" "}{variant}
+            </span>
+          )}
+        </div>
+        <div className="font-body text-[0.78rem] leading-relaxed opacity-85 mb-4" style={{ color: "#c4b89a" }}>
+          {listing.tagline}
+        </div>
+
+        {/* Price chips per stage */}
+        {stageRanges.length > 0 && (
+          <div className="flex gap-2 flex-wrap">
+            {stageRanges.map(({ stage, min, max }) => (
+              <div
+                key={stage}
+                className="rounded-md px-3 py-2 flex-1 min-w-[80px]"
+                style={{
+                  background: "rgba(232,224,208,0.04)",
+                  border: "1px solid rgba(232,224,208,0.10)",
+                }}
+              >
+                <p className="font-mono text-[8px] tracking-[0.1em] uppercase mb-1 text-cream/30">
+                  {STAGE_LABELS[stage]}
+                </p>
+                <p className="font-mono text-[13px] text-cream/70">
+                  {formatUsd(min)}&ndash;{formatUsd(max)}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Footer */}
+      <div
+        className="flex items-center justify-between px-5 py-3"
+        style={{ borderTop: "1px solid rgba(232,224,208,0.07)" }}
+      >
+        <span className="font-mono text-[10px] text-cream/30">
+          <span
+            className="inline-block w-[5px] h-[5px] rounded-full mr-1.5 align-middle"
+            style={{ background: accent }}
+          />
+          Updated{" "}
+          {listing.lastReviewed
+            ? listing.lastReviewed.toLocaleDateString("en-US", {
+                month: "short",
+                year: "numeric",
+              })
+            : "Recently"}
+        </span>
+        <span className="text-[16px] text-cream/30 transition-transform duration-150 group-hover:translate-x-[3px] group-hover:text-cream/60">
+          &rarr;
+        </span>
+      </div>
+    </Link>
+  );
+}
+
 // ─── Coming soon plants ──────────────────────────────────────────────────────
 const COMING_SOON = [
-  "Monstera Thai Constellation",
   "Philodendron Melanochrysum Variegated",
   "Philodendron Spiritus Sancti",
   "Anthurium 'King of Spades'",
@@ -156,11 +303,18 @@ export default function Home() {
           url: "https://www.rareplantatlas.com",
           description:
             "In-depth profiles of rare aroids for serious plant collectors.",
-          hasPart: plants.map((plant) => ({
-            "@type": "CreativeWork",
-            name: getPlantLabel(plant),
-            url: `https://www.rareplantatlas.com/plants/${plant.identity.slug}`,
-          })),
+          hasPart: [
+            ...plants.map((plant) => ({
+              "@type": "CreativeWork",
+              name: getPlantLabel(plant),
+              url: `https://www.rareplantatlas.com/plants/${plant.identity.slug}`,
+            })),
+            ...listings.map((listing) => ({
+              "@type": "CreativeWork",
+              name: getPlantLabel(listing),
+              url: `https://www.rareplantatlas.com/prices/${listing.identity.slug}`,
+            })),
+          ],
         }}
       />
 
@@ -225,17 +379,20 @@ export default function Home() {
               Catalog
             </h2>
             <span className="font-mono text-[9px] tracking-[0.15em] uppercase opacity-50" style={{ color: "#c4b89a" }}>
-              {plants.length} plants
+              {plants.length + listings.length} plants
             </span>
           </div>
 
           {/* Thin rule */}
           <div className="h-px mb-8" style={{ background: "rgba(232,224,208,0.10)" }} />
 
-          {/* Grid */}
-          <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))" }}>
+          {/* Grid — full profiles + listing cards */}
+          <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))" }}>
             {plants.map((plant) => (
               <PlantCard key={plant.identity.slug} plant={plant} />
+            ))}
+            {listings.map((listing) => (
+              <ListingCard key={listing.identity.slug} listing={listing} />
             ))}
           </div>
 

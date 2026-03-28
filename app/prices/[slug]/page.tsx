@@ -1,0 +1,219 @@
+import { notFound } from "next/navigation";
+import { listings, getListingBySlug } from "@/data/listings";
+import { getPlantBySlug } from "@/data/plants";
+import { getPlantLabel, formatScientificName } from "@/data/identity";
+import { formatUsd } from "@/data/price";
+import { PriceListingClient } from "@/components/PriceListingClient";
+import { JsonLd } from "@/components/JsonLd";
+import type { PriceSummary } from "@/data/prices/types";
+import priceAggregate from "@/data/prices/aggregate.json";
+
+export function generateStaticParams() {
+  return listings.map((l) => ({ slug: l.identity.slug }));
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }) {
+  const listing = getListingBySlug(params.slug);
+  if (!listing) return { title: "Not Found" };
+
+  const label = getPlantLabel(listing);
+  const title = `${label} Price Guide — Current Prices & Availability | Rare Plant Atlas`;
+  const description =
+    listing.quickAnswer ??
+    `${label} pricing: ${formatUsd(listing.priceRange.min)}–${formatUsd(listing.priceRange.max)} USD. Live seller prices, availability, and market trends.`;
+  const previewImage = listing.images.hero ?? listing.heroPhoto?.image ?? "/icon.png";
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: previewImage,
+          alt: `${label} — pricing and availability`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [previewImage],
+    },
+    alternates: {
+      canonical: `https://www.rareplantatlas.com/prices/${params.slug}`,
+    },
+  };
+}
+
+function getPriceSummary(slug: string): PriceSummary | undefined {
+  const aggregate = priceAggregate as Record<string, PriceSummary>;
+  return aggregate[slug];
+}
+
+function buildProductJsonLd(listing: NonNullable<ReturnType<typeof getListingBySlug>>) {
+  const label = getPlantLabel(listing);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: label,
+    description: listing.tagline,
+    url: `https://www.rareplantatlas.com/prices/${listing.identity.slug}`,
+    category: "Rare Plants",
+    offers: {
+      "@type": "AggregateOffer",
+      lowPrice: listing.priceRange.min,
+      highPrice: listing.priceRange.max,
+      priceCurrency: listing.priceRange.currency,
+    },
+  };
+}
+
+function buildFaqJsonLd(listing: NonNullable<ReturnType<typeof getListingBySlug>>) {
+  const label = getPlantLabel(listing);
+  const questions: { q: string; a: string }[] = [];
+
+  questions.push({
+    q: `What is the price range for ${label}?`,
+    a: `${label} typically costs between ${formatUsd(listing.priceRange.min)} and ${formatUsd(listing.priceRange.max)} USD.${listing.priceRange.note ? ` ${listing.priceRange.note}` : ""}`,
+  });
+
+  if (listing.availabilityNotes) {
+    questions.push({
+      q: `Where can I buy ${label}?`,
+      a: listing.availabilityNotes,
+    });
+  }
+
+  if (listing.priceHistory) {
+    questions.push({
+      q: `Are ${label} prices going up or down?`,
+      a: listing.priceHistory,
+    });
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: questions.map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: a,
+      },
+    })),
+  };
+}
+
+export default function PriceListingPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const listing = getListingBySlug(params.slug);
+  if (!listing) notFound();
+
+  const label = getPlantLabel(listing);
+  const scientificName = formatScientificName(listing.identity);
+  const priceSummary = getPriceSummary(listing.identity.slug);
+  const hasFullProfile = !!getPlantBySlug(listing.identity.slug);
+  const productJsonLd = buildProductJsonLd(listing);
+  const faqJsonLd = buildFaqJsonLd(listing);
+
+  return (
+    <>
+      <JsonLd data={productJsonLd} />
+      <JsonLd data={faqJsonLd} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://www.rareplantatlas.com",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Prices",
+              item: "https://www.rareplantatlas.com/prices",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: label,
+              item: `https://www.rareplantatlas.com/prices/${listing.identity.slug}`,
+            },
+          ],
+        }}
+      />
+
+      {/* Server-rendered semantic content for AI crawlers */}
+      <article className="sr-only" aria-hidden="false">
+        <h1>{label} Price Guide</h1>
+        {scientificName !== label && <p>{scientificName}</p>}
+
+        {listing.quickAnswer && (
+          <p>
+            <strong>{listing.quickAnswer}</strong>
+          </p>
+        )}
+
+        <p>{listing.tagline}</p>
+
+        <section>
+          <h2>Price Range</h2>
+          <p>
+            {label} costs between {formatUsd(listing.priceRange.min)} and{" "}
+            {formatUsd(listing.priceRange.max)} USD.
+          </p>
+          {listing.priceRange.note && <p>{listing.priceRange.note}</p>}
+        </section>
+
+        {listing.priceHistory && (
+          <section>
+            <h2>Price History</h2>
+            <p>{listing.priceHistory}</p>
+          </section>
+        )}
+
+        {listing.availabilityNotes && (
+          <section>
+            <h2>Availability</h2>
+            <p>{listing.availabilityNotes}</p>
+          </section>
+        )}
+
+        {listing.marketNote && (
+          <section>
+            <h2>Market Context</h2>
+            <p>{listing.marketNote}</p>
+          </section>
+        )}
+
+        {listing.lastReviewed && (
+          <p>
+            Last reviewed:{" "}
+            {listing.lastReviewed.toLocaleDateString("en-US", {
+              month: "long",
+              year: "numeric",
+            })}
+          </p>
+        )}
+      </article>
+
+      <PriceListingClient
+        listing={listing}
+        priceSummary={priceSummary}
+        hasFullProfile={hasFullProfile}
+      />
+    </>
+  );
+}

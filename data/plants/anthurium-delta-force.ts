@@ -1,4 +1,4 @@
-import type { PlantPhoto, PlantPriceRange, PlantVariant, PlantToxicity, TcVsWildType, SourceReference } from "../types";
+import type { PlantPhoto, PlantPriceRange, PlantFile, PlantToxicity, SourceReference } from "../types";
 import {
   lechuzaPonSubstrate3L,
   ikeaOdlaLeca,
@@ -65,7 +65,7 @@ export const anthuriumDeltaForcePlantPriceRange: PlantPriceRange = {
   note: "Tissue culture has compressed pricing. Mature specimens with strong form command the upper range.",
 };
 
-export const anthuriumDeltaForce: PlantVariant = {
+export const anthuriumDeltaForce: PlantFile = {
   identity: {
     id: "anthurium_delta_force",
     slug: "anthurium-delta-force",
@@ -100,15 +100,13 @@ export const anthuriumDeltaForce: PlantVariant = {
     "Expecting triangular leaves from juvenile plants — true Delta Force geometry doesn't emerge until the 4th or 5th leaf.",
   ],
   relatedPlants: [
-    "philodendron-gloriosum-variegated",
+    "philodendron-gloriosum-variegated-type-1",
     "alocasia-black-velvet-variegated-pink",
   ],
   priceHistory:
     "Delta Force prices have compressed roughly 60% since 2021 due to widespread tissue culture availability. Mature specimens from original stock or reputable TC lines still command $150–$200, but small TC plantlets now start around $40. Expect further compression as more labs bring this cultivar into production.",
-  tcVsWildType: {
-    tcAvailable: true,
-    note: "Delta Force is exclusively a cultivated hybrid — there is no wild type. All specimens trace back to Steve Nock's original clarinervium × pedatoradiatum cross at Ree Gardens in the 1990s. The specific phenotype has never been reliably recreated from seed, making tissue culture the only scalable propagation route. TC plants are true-to-type and genetically identical to the original clone.",
-  },
+  tissueCultureStatus: "widespread",
+  tissueCultureNote: "Delta Force is exclusively a cultivated hybrid — there is no wild type. All specimens trace back to Steve Nock's original clarinervium × pedatoradiatum cross at Ree Gardens in the 1990s. The specific phenotype has never been reliably recreated from seed, making tissue culture the only scalable propagation route. TC plants are true-to-type and genetically identical to the original clone.",
   availabilityNotes:
     "Widely available year-round from tissue culture suppliers. Spring and summer see the highest inventory as growers time stock to peak demand. Mature specimens (6+ leaves with full triangular geometry) are less common and typically only available from specialist collectors.",
   sourceReferences: [
