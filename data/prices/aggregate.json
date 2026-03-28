@@ -61,6 +61,48 @@
       }
     ]
   },
+  "alocasia-chantrieri-variegated-pink": {
+    "slug": "alocasia-chantrieri-variegated-pink",
+    "currentMin": 650,
+    "currentMax": 2498,
+    "allTimeMin": 650,
+    "allTimeMax": 2498,
+    "lastSeen": "2026-03-28",
+    "sellerCount": 2,
+    "availableNow": true,
+    "recentListings": [
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 650,
+        "priceHigh": 650,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-chantrieri-pink-variegated-wk13-l",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 750,
+        "priceHigh": 750,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-chantrieri-pink-variegated-wk12-uf",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 2498,
+        "priceHigh": 2498,
+        "productUrl": "https://aroidmarket.com/products/alocasia-chantrieri-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      }
+    ]
+  },
   "anthurium-delta-force": {
     "slug": "anthurium-delta-force",
     "currentMin": 84.99,

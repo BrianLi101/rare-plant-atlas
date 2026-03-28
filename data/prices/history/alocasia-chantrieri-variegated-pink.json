@@ -1,0 +1,42 @@
+{
+  "slug": "alocasia-chantrieri-variegated-pink",
+  "lastUpdated": "2026-03-28",
+  "entries": [
+    {
+      "date": "2026-03-28",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "title": "Alocasia Chantrieri Pink Variegated (wk13-L)",
+      "productUrl": "https://www.rareplantfairy.com/products/alocasia-chantrieri-pink-variegated-wk13-l",
+      "price": 650,
+      "priceHigh": 650,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-03-28",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "title": "Alocasia Chantrieri Pink Variegated (wk12-UF)",
+      "productUrl": "https://www.rareplantfairy.com/products/alocasia-chantrieri-pink-variegated-wk12-uf",
+      "price": 750,
+      "priceHigh": 750,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-03-28",
+      "sellerId": "aroid-market",
+      "sellerName": "Aroid Market",
+      "title": "Alocasia chantrieri pink variegated",
+      "productUrl": "https://aroidmarket.com/products/alocasia-chantrieri-pink-variegated",
+      "price": 2498,
+      "priceHigh": 2498,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    }
+  ]
+}

@@ -281,7 +281,10 @@ const COMING_SOON = [
 
 // ─── Main page (fully SSR) ───────────────────────────────────────────────────
 export default function Home() {
-  const uniqueGenera = Array.from(new Set(plants.map((p) => p.identity.genus))).sort();
+  const uniqueGenera = Array.from(new Set([
+    ...plants.map((p) => p.identity.genus),
+    ...listings.map((l) => l.identity.genus),
+  ])).sort();
 
   return (
     <>
