@@ -6,10 +6,11 @@
       "date": "2026-03-28",
       "sellerId": "rare-plant-fairy",
       "sellerName": "Rare Plant Fairy",
+      "title": "Alocasia 'Black Velvet' pink variegated *Grower's Choice*",
       "productUrl": "https://www.rareplantfairy.com/products/alocasia-black-velvet-pink-variegated-growers-choice",
       "price": 75,
       "priceHigh": 75,
-      "available": true,
+      "available": false,
       "growthStage": "plant",
       "confidence": "high"
     }

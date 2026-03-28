@@ -46,6 +46,17 @@ export const sellers: Seller[] = [
       "Premium end of the market. Carries very rare stock. Pricing here signals the top of what serious collectors pay.",
   },
   {
+    id: "rare-foliage-plant-co",
+    name: "Rare Foliage Plant Co",
+    platform: "etsy",
+    etsyShopName: "RareFoliagePlantCo",
+    url: "https://www.etsy.com/shop/RareFoliagePlantCo",
+    tier: 1,
+    notes:
+      "Winter Garden, Florida. 11.8k sales, 4.9 rating. Aroids specialist " +
+      "with strong cultivar specificity in listing titles.",
+  },
+  {
     id: "aroid-market",
     name: "Aroid Market",
     platform: "shopify",

@@ -194,6 +194,7 @@ export function normalizeListings(
       slug: match.slug,
       sellerId: listing.sellerId,
       sellerName: listing.sellerName,
+      title: listing.title,
       productUrl: listing.productUrl,
       price: Math.min(...prices),
       priceHigh: Math.max(...prices),

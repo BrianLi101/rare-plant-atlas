@@ -1,5 +1,5 @@
 // scripts/snapshot-prices.ts
-// Fetches product data from curated sellers (Shopify + WooCommerce),
+// Fetches product data from curated sellers (Shopify + WooCommerce + Etsy),
 // matches to plant slugs via keyword matching, then prompts the user
 // to confirm before writing.
 // Run with: npx tsx scripts/snapshot-prices.ts
@@ -8,10 +8,13 @@ import fs from "fs";
 import path from "path";
 import readline from "readline";
 import { sellers } from "../data/prices/sellers";
+import { plants } from "../data/plants";
 import { normalizeListings } from "./match-listings";
 import { fetchWithRetry } from "./fetch-utils";
 import { fetchNSEProducts } from "./fetch-nse";
+import { fetchEtsyShop } from "./fetch-etsy";
 import type { RawListing, DailySnapshot, NormalizedListing } from "../data/prices/types";
+import { SNAPSHOT_VERSION } from "../data/prices/types";
 
 const TODAY = new Date().toISOString().split("T")[0];
 const SNAPSHOTS_DIR = path.join(process.cwd(), "data/prices/snapshots");
@@ -20,6 +23,23 @@ const AGGREGATE_PATH = path.join(process.cwd(), "data/prices/aggregate.json");
 
 fs.mkdirSync(SNAPSHOTS_DIR, { recursive: true });
 fs.mkdirSync(HISTORY_DIR, { recursive: true });
+
+// ---------------------------------------------------------------------------
+// Interactive prompts
+// ---------------------------------------------------------------------------
+
+function ask(question: string): Promise<string> {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+  return new Promise((resolve) => {
+    rl.question(question, (answer) => {
+      rl.close();
+      resolve(answer.trim().toLowerCase());
+    });
+  });
+}
 
 // ---------------------------------------------------------------------------
 // Shopify fetcher
@@ -82,21 +102,61 @@ function shopifyProductToRawListing(
 }
 
 // ---------------------------------------------------------------------------
-// Interactive confirmation
+// Fetch all sellers
 // ---------------------------------------------------------------------------
 
-function ask(question: string): Promise<string> {
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  });
-  return new Promise((resolve) => {
-    rl.question(question, (answer) => {
-      rl.close();
-      resolve(answer.trim().toLowerCase());
-    });
-  });
+async function fetchAllSellers(): Promise<RawListing[]> {
+  const allRawListings: RawListing[] = [];
+
+  for (const seller of sellers) {
+    if (seller.platform === "woocommerce" && seller.id === "nse-tropicals") {
+      console.log(`Fetching ${seller.name} (WooCommerce Store API)`);
+      try {
+        const listings = await fetchNSEProducts(TODAY);
+        console.log(`  ${listings.length} specimen listings\n`);
+        allRawListings.push(...listings);
+      } catch (e) {
+        console.error(`  Error fetching ${seller.name}:`, e);
+      }
+    } else if (seller.platform === "etsy" && seller.etsyShopName) {
+      if (!process.env.ETSY_API_KEY) {
+        console.log(`Skipping ${seller.name} (no ETSY_API_KEY set)\n`);
+      } else {
+        console.log(`Fetching ${seller.name} (Etsy API)`);
+        try {
+          const listings = await fetchEtsyShop(
+            seller.etsyShopName,
+            seller.id,
+            seller.name,
+            TODAY,
+          );
+          console.log(`  ${listings.length} listings\n`);
+          allRawListings.push(...listings);
+        } catch (e) {
+          console.error(`  Error fetching ${seller.name}:`, e);
+        }
+      }
+    } else if (seller.platform === "shopify" && seller.shopifyDomain) {
+      console.log(`Fetching ${seller.name} (${seller.shopifyDomain})`);
+      try {
+        const products = await fetchShopifyProducts(seller.shopifyDomain);
+        console.log(`  ${products.length} products\n`);
+        const listings = products.map((p) =>
+          shopifyProductToRawListing(p, seller),
+        );
+        allRawListings.push(...listings);
+      } catch (e) {
+        console.error(`  Error fetching ${seller.name}:`, e);
+      }
+    }
+  }
+
+  return allRawListings;
 }
+
+// ---------------------------------------------------------------------------
+// Display helpers
+// ---------------------------------------------------------------------------
 
 function formatPrice(n: number): string {
   return `$${n.toLocaleString("en-US", { maximumFractionDigits: 0 })}`;
@@ -113,8 +173,9 @@ function printProposedPrices(
         ? formatPrice(l.price)
         : `${formatPrice(l.price)}–${formatPrice(l.priceHigh)}`;
     const stock = l.available ? "In Stock" : "Sold Out";
+    const title = l.title.length > 40 ? l.title.substring(0, 37) + "..." : l.title;
     console.log(
-      `  │  ${l.sellerName.padEnd(20)} ${price.padEnd(14)} ${stock.padEnd(10)} ${l.growthStage}`,
+      `  │  ${l.sellerName.padEnd(20)} ${price.padEnd(14)} ${stock.padEnd(10)} ${title}`,
     );
   }
   console.log(`  └─`);
@@ -190,45 +251,45 @@ async function run() {
   console.log(`\nRare Plant Atlas — Price Snapshot`);
   console.log(`Date: ${TODAY}\n`);
 
-  const allRawListings: RawListing[] = [];
+  // ── Step 1: Check for existing snapshot ──────────────────────────────────
 
-  for (const seller of sellers) {
-    if (seller.platform === "woocommerce" && seller.id === "nse-tropicals") {
-      console.log(`Fetching ${seller.name} (WooCommerce Store API)`);
-      try {
-        const listings = await fetchNSEProducts(TODAY);
-        console.log(`  ${listings.length} specimen listings\n`);
-        allRawListings.push(...listings);
-      } catch (e) {
-        console.error(`  Error fetching ${seller.name}:`, e);
-      }
-    } else if (seller.platform === "shopify" && seller.shopifyDomain) {
-      console.log(`Fetching ${seller.name} (${seller.shopifyDomain})`);
-      try {
-        const products = await fetchShopifyProducts(seller.shopifyDomain);
-        console.log(`  ${products.length} products\n`);
-        const listings = products.map((p) =>
-          shopifyProductToRawListing(p, seller),
-        );
-        allRawListings.push(...listings);
-      } catch (e) {
-        console.error(`  Error fetching ${seller.name}:`, e);
-      }
+  const snapshotPath = path.join(SNAPSHOTS_DIR, `${TODAY}.json`);
+  let allRawListings: RawListing[];
+
+  if (fs.existsSync(snapshotPath)) {
+    const existing: DailySnapshot = JSON.parse(
+      fs.readFileSync(snapshotPath, "utf-8"),
+    );
+    console.log(`Snapshot for ${TODAY} already exists (${existing.listings.length} listings, v${existing.version ?? 1})`);
+    const refetch = await ask("Re-fetch fresh data? (y/n) ");
+
+    if (refetch === "y" || refetch === "yes") {
+      console.log("");
+      allRawListings = await fetchAllSellers();
+      const rawSnapshot: DailySnapshot = {
+        version: SNAPSHOT_VERSION,
+        date: TODAY,
+        listings: allRawListings,
+      };
+      fs.writeFileSync(snapshotPath, JSON.stringify(rawSnapshot, null, 2));
+      console.log(`Raw snapshot saved (${allRawListings.length} listings total)`);
+    } else {
+      console.log("Using existing snapshot data.\n");
+      allRawListings = existing.listings;
     }
+  } else {
+    allRawListings = await fetchAllSellers();
+    const rawSnapshot: DailySnapshot = {
+      version: SNAPSHOT_VERSION,
+      date: TODAY,
+      listings: allRawListings,
+    };
+    fs.writeFileSync(snapshotPath, JSON.stringify(rawSnapshot, null, 2));
+    console.log(`Raw snapshot saved (${allRawListings.length} listings total)`);
   }
 
-  // Write raw snapshot
-  const rawSnapshot: DailySnapshot = {
-    date: TODAY,
-    listings: allRawListings,
-  };
-  fs.writeFileSync(
-    path.join(SNAPSHOTS_DIR, `${TODAY}.json`),
-    JSON.stringify(rawSnapshot, null, 2),
-  );
-  console.log(`Raw snapshot saved (${allRawListings.length} listings total)`);
+  // ── Step 2: Match and group by slug ──────────────────────────────────────
 
-  // Match listings to plant slugs (keyword-based, no API)
   const normalized = normalizeListings(allRawListings);
   console.log(`\nMatched: ${normalized.length} listings to known plants`);
 
@@ -237,21 +298,61 @@ async function run() {
     return;
   }
 
-  // Group by slug
   const bySlug = new Map<string, NormalizedListing[]>();
   for (const listing of normalized) {
     if (!bySlug.has(listing.slug)) bySlug.set(listing.slug, []);
     bySlug.get(listing.slug)!.push(listing);
   }
 
-  // Show proposed prices and confirm per plant
+  // ── Step 3: Ask which plants to update ───────────────────────────────────
+
+  const matchedSlugs = Array.from(bySlug.keys());
+  console.log(`\nMatched plants:`);
+  matchedSlugs.forEach((slug, i) => {
+    const count = bySlug.get(slug)!.length;
+    console.log(`  ${i + 1}. ${slug} (${count} listing${count !== 1 ? "s" : ""})`);
+  });
+
+  const plantChoice = await ask(
+    `\nUpdate which plant? (all / number / slug / q to quit) `,
+  );
+
+  if (plantChoice === "q") {
+    console.log("Aborted.");
+    return;
+  }
+
+  let selectedSlugs: string[];
+
+  if (plantChoice === "all" || plantChoice === "" || plantChoice === "a") {
+    selectedSlugs = matchedSlugs;
+  } else {
+    // Try as a number first
+    const num = parseInt(plantChoice, 10);
+    if (!isNaN(num) && num >= 1 && num <= matchedSlugs.length) {
+      selectedSlugs = [matchedSlugs[num - 1]];
+    } else {
+      // Try as a slug (partial match)
+      const match = matchedSlugs.find((s) => s.includes(plantChoice));
+      if (match) {
+        selectedSlugs = [match];
+      } else {
+        console.log(`No plant matching "${plantChoice}" found.`);
+        return;
+      }
+    }
+  }
+
+  // ── Step 4: Show proposed prices and confirm per plant ───────────────────
+
   console.log(`\n${"=".repeat(60)}`);
   console.log(`  PROPOSED PRICE UPDATES`);
   console.log(`${"=".repeat(60)}`);
 
   let confirmedCount = 0;
 
-  for (const [slug, listings] of Array.from(bySlug.entries())) {
+  for (const slug of selectedSlugs) {
+    const listings = bySlug.get(slug)!;
     printProposedPrices(slug, listings);
 
     const answer = await ask(
@@ -259,8 +360,8 @@ async function run() {
     );
 
     if (answer === "q") {
-      console.log("\nAborted. No changes written.");
-      return;
+      console.log("\nAborted. No further changes written.");
+      break;
     }
 
     if (answer !== "y" && answer !== "yes") {
@@ -282,6 +383,7 @@ async function run() {
         date: l.snapshotDate,
         sellerId: l.sellerId,
         sellerName: l.sellerName,
+        title: l.title,
         productUrl: l.productUrl,
         price: l.price,
         priceHigh: l.priceHigh,

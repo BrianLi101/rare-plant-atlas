@@ -7,9 +7,10 @@ export type GrowthStage = "tc" | "cutting" | "corm" | "plant"
 export interface Seller {
   id: string
   name: string
-  platform: "shopify" | "woocommerce"
+  platform: "shopify" | "woocommerce" | "etsy"
   shopifyDomain?: string
   wooDomain?: string
+  etsyShopName?: string
   url: string
   tier: 1 | 2
   notes?: string
@@ -34,7 +35,10 @@ export interface RawVariant {
   available: boolean
 }
 
+export const SNAPSHOT_VERSION = 2
+
 export interface DailySnapshot {
+  version: number
   date: string
   listings: RawListing[]
 }
@@ -43,6 +47,7 @@ export interface NormalizedListing {
   slug: string
   sellerId: string
   sellerName: string
+  title: string
   productUrl: string
   price: number
   priceHigh: number
@@ -62,6 +67,7 @@ export interface PriceEntry {
   date: string
   sellerId: string
   sellerName: string
+  title: string
   productUrl: string
   price: number
   priceHigh: number

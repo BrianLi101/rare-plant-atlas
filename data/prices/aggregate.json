@@ -7,7 +7,7 @@
     "allTimeMax": 75,
     "lastSeen": "2026-03-28",
     "sellerCount": 1,
-    "availableNow": true,
+    "availableNow": false,
     "recentListings": [
       {
         "sellerId": "rare-plant-fairy",
@@ -17,7 +17,7 @@
         "productUrl": "https://www.rareplantfairy.com/products/alocasia-black-velvet-pink-variegated-growers-choice",
         "growthStage": "plant",
         "date": "2026-03-28",
-        "available": true
+        "available": false
       }
     ]
   },
