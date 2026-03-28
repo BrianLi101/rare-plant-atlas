@@ -4,7 +4,7 @@
 // word-order-independent matching against plant identity data.
 
 import { plants } from "../data/plants";
-import type { RawListing, NormalizedListing } from "../data/prices/types";
+import type { RawListing, NormalizedListing, GrowthStage } from "../data/prices/types";
 
 // ---------------------------------------------------------------------------
 // Build match rules from plant registry
@@ -142,6 +142,30 @@ export function matchListingToSlug(listing: RawListing): MatchResult {
 }
 
 // ---------------------------------------------------------------------------
+// Growth stage normalizer
+// ---------------------------------------------------------------------------
+
+const TC_PATTERNS = [
+  "tissue culture", "tc ", "tc,", "t.c.", "flask", "plug", "plantlet",
+  "tissue-culture",
+];
+const CUTTING_PATTERNS = [
+  "cutting", "cut ", "unrooted", "rooted", "node", "chonk", "wet stick",
+  "wetstick",
+];
+const CORM_PATTERNS = ["corm", "bulb"];
+
+function normalizeGrowthStage(variantTitle: string, listingTitle: string): GrowthStage {
+  const text = `${variantTitle} ${listingTitle}`.toLowerCase();
+
+  if (TC_PATTERNS.some((p) => text.includes(p))) return "tc";
+  if (CUTTING_PATTERNS.some((p) => text.includes(p))) return "cutting";
+  if (CORM_PATTERNS.some((p) => text.includes(p))) return "corm";
+
+  return "plant";
+}
+
+// ---------------------------------------------------------------------------
 // Normalize listings
 // ---------------------------------------------------------------------------
 
@@ -162,11 +186,9 @@ export function normalizeListings(
       .filter((p) => p > 0);
     if (prices.length === 0) continue;
 
-    const variantLabels = allVariants
-      .filter((v) => parseFloat(v.price) > 0)
-      .map((v) => v.variantTitle)
-      .filter((t) => t !== "Default Title")
-      .join(" / ");
+    // Determine growth stage from variant titles and listing title
+    const firstVariantTitle = allVariants[0]?.variantTitle ?? "";
+    const growthStage = normalizeGrowthStage(firstVariantTitle, listing.title);
 
     results.push({
       slug: match.slug,
@@ -176,7 +198,7 @@ export function normalizeListings(
       price: Math.min(...prices),
       priceHigh: Math.max(...prices),
       available: availableVariants.length > 0,
-      variantSummary: variantLabels || "",
+      growthStage,
       snapshotDate: listing.snapshotDate,
       confidence: match.confidence,
     });

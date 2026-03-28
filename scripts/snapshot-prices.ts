@@ -113,9 +113,8 @@ function printProposedPrices(
         ? formatPrice(l.price)
         : `${formatPrice(l.price)}–${formatPrice(l.priceHigh)}`;
     const stock = l.available ? "In Stock" : "Sold Out";
-    const variant = l.variantSummary ? ` ${l.variantSummary}` : "";
     console.log(
-      `  │  ${l.sellerName.padEnd(20)} ${price.padEnd(14)} ${stock.padEnd(10)}${variant}`,
+      `  │  ${l.sellerName.padEnd(20)} ${price.padEnd(14)} ${stock.padEnd(10)} ${l.growthStage}`,
     );
   }
   console.log(`  └─`);
@@ -172,7 +171,7 @@ function runAggregation(): void {
         price: e.price,
         priceHigh: e.priceHigh,
         productUrl: e.productUrl,
-        variantSummary: e.variantSummary,
+        growthStage: e.growthStage,
         date: e.date,
         available: e.available,
       })),
@@ -287,7 +286,7 @@ async function run() {
         price: l.price,
         priceHigh: l.priceHigh,
         available: l.available,
-        variantSummary: l.variantSummary,
+        growthStage: l.growthStage,
         confidence: l.confidence,
       })),
     );

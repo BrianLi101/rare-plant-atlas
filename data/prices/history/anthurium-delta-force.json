@@ -10,7 +10,7 @@
       "price": 195,
       "priceHigh": 195,
       "available": true,
-      "variantSummary": "",
+      "growthStage": "plant",
       "confidence": "high"
     },
     {
@@ -21,7 +21,7 @@
       "price": 99.99,
       "priceHigh": 99.99,
       "available": false,
-      "variantSummary": "Small / random selection / potted",
+      "growthStage": "plant",
       "confidence": "high"
     }
   ]

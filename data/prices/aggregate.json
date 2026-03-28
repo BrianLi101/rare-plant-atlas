@@ -15,7 +15,7 @@
         "price": 75,
         "priceHigh": 75,
         "productUrl": "https://www.rareplantfairy.com/products/alocasia-black-velvet-pink-variegated-growers-choice",
-        "variantSummary": "",
+        "growthStage": "plant",
         "date": "2026-03-28",
         "available": true
       }
@@ -37,7 +37,7 @@
         "price": 195,
         "priceHigh": 195,
         "productUrl": "https://www.rareplantfairy.com/products/anthurium-crystallinum-variegated-wk13-a",
-        "variantSummary": "",
+        "growthStage": "plant",
         "date": "2026-03-28",
         "available": true
       },
@@ -47,7 +47,7 @@
         "price": 99.99,
         "priceHigh": 99.99,
         "productUrl": "https://www.carnivero.com/products/anthurium-delta-force",
-        "variantSummary": "Small / random selection / potted",
+        "growthStage": "plant",
         "date": "2026-03-28",
         "available": false
       }
@@ -69,7 +69,7 @@
         "price": 595,
         "priceHigh": 595,
         "productUrl": "https://www.nsetropicals.com/product/1494-variegated-philodendron-gloriosum-og-type-1/",
-        "variantSummary": "Single specimen",
+        "growthStage": "plant",
         "date": "2026-03-28",
         "available": false
       },
@@ -79,7 +79,7 @@
         "price": 1500,
         "priceHigh": 1500,
         "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-albo-variegated-type-1-wk13-e",
-        "variantSummary": "",
+        "growthStage": "plant",
         "date": "2026-03-28",
         "available": true
       },
@@ -89,7 +89,7 @@
         "price": 1500,
         "priceHigh": 1500,
         "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-albo-variegated-type-1-wk8-b",
-        "variantSummary": "",
+        "growthStage": "plant",
         "date": "2026-03-28",
         "available": true
       }

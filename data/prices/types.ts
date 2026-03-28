@@ -1,6 +1,8 @@
 // ---------------------------------------------------------------------------
-// Price tracking types — Shopify snapshot pipeline
+// Price tracking types — snapshot pipeline
 // ---------------------------------------------------------------------------
+
+export type GrowthStage = "tc" | "cutting" | "corm" | "plant"
 
 export interface Seller {
   id: string
@@ -45,7 +47,7 @@ export interface NormalizedListing {
   price: number
   priceHigh: number
   available: boolean
-  variantSummary: string
+  growthStage: GrowthStage
   snapshotDate: string
   confidence: "high" | "medium" | "low"
 }
@@ -64,7 +66,7 @@ export interface PriceEntry {
   price: number
   priceHigh: number
   available: boolean
-  variantSummary: string
+  growthStage: GrowthStage
   confidence: "high" | "medium" | "low"
 }
 
@@ -83,7 +85,7 @@ export interface PriceSummary {
     price: number
     priceHigh: number
     productUrl: string
-    variantSummary: string
+    growthStage: GrowthStage
     date: string
     available: boolean
   }[]

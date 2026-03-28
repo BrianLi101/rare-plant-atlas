@@ -10,7 +10,7 @@
       "price": 595,
       "priceHigh": 595,
       "available": false,
-      "variantSummary": "Single specimen",
+      "growthStage": "plant",
       "confidence": "high"
     },
     {
@@ -21,7 +21,7 @@
       "price": 1500,
       "priceHigh": 1500,
       "available": true,
-      "variantSummary": "",
+      "growthStage": "plant",
       "confidence": "high"
     },
     {
@@ -32,7 +32,7 @@
       "price": 1500,
       "priceHigh": 1500,
       "available": true,
-      "variantSummary": "",
+      "growthStage": "plant",
       "confidence": "high"
     }
   ]

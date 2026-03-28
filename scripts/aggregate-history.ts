@@ -46,7 +46,7 @@ function summarizeHistory(history: PlantPriceHistory): PriceSummary {
       price: e.price,
       priceHigh: e.priceHigh,
       productUrl: e.productUrl,
-      variantSummary: e.variantSummary,
+      growthStage: e.growthStage,
       date: e.date,
       available: e.available,
     })),

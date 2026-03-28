@@ -12,9 +12,16 @@ import {
   type ChartOptions,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import type { PriceSummary } from "@/data/prices/types";
+import type { PriceSummary, GrowthStage } from "@/data/prices/types";
 import { TabContainer, TabHeader } from "./TabContainer";
 import { formatUsd } from "@/data/price";
+
+const GROWTH_STAGE_LABELS: Record<GrowthStage, string> = {
+  tc: "Tissue Culture",
+  cutting: "Cutting",
+  corm: "Corm",
+  plant: "Plant",
+};
 
 ChartJS.register(
   CategoryScale,
@@ -58,7 +65,7 @@ function SellerRow({
         {priceDisplay}
       </td>
       <td className="py-3 pr-4 text-[11px] text-cream/30">
-        {listing.variantSummary}
+        {GROWTH_STAGE_LABELS[listing.growthStage] ?? listing.growthStage}
       </td>
       <td className="py-3 pr-4">
         {listing.available ? (
@@ -278,7 +285,7 @@ export function PricingTab({
                       Price
                     </th>
                     <th className="text-[11px] font-medium tracking-wider text-cream/30 text-left pb-3">
-                      Variant
+                      Stage
                     </th>
                     <th className="text-[11px] font-medium tracking-wider text-cream/30 text-left pb-3">
                       Status
