@@ -67,10 +67,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.rareplantatlas.com",
   },
-  verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE",
-    // other: { "msvalidate.01": "YOUR_BING_VERIFICATION_CODE" },
-  },
 };
 
 export default function RootLayout({

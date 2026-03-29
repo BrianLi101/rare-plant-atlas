@@ -50,7 +50,17 @@ export function generateMetadata() {
   return {
     title,
     description,
-    openGraph: { title, description },
+    openGraph: {
+      title,
+      description,
+      images: [{ url: "/icon.png", alt: "Rare Plant Prices — Rare Plant Atlas" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/icon.png"],
+    },
     alternates: {
       canonical: "https://www.rareplantatlas.com/prices",
     },

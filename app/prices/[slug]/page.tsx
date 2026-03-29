@@ -62,6 +62,7 @@ function buildProductJsonLd(listing: NonNullable<ReturnType<typeof getListingByS
     name: label,
     description: listing.tagline,
     url: `https://www.rareplantatlas.com/prices/${listing.identity.slug}`,
+    image: listing.images.hero ?? listing.heroPhoto?.image ?? "/icon.png",
     category: "Rare Plants",
     offers: {
       "@type": "AggregateOffer",
