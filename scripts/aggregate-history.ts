@@ -22,16 +22,20 @@ function summarizeHistory(history: PlantPriceHistory): PriceSummary {
   const recent = history.entries.filter((e) => e.date >= cutoff);
   const all = history.entries;
 
-  const recentPrices = recent.map((e) => e.price);
+  // Prefer available listings for current price range; fall back to all recent
+  // if nothing is in stock so the page still shows a reference price.
+  const available = recent.filter((e) => e.available);
+  const currentBasis = available.length > 0 ? available : recent;
+  const currentPrices = currentBasis.map((e) => e.price);
   const allPrices = all.map((e) => e.price);
 
   const sellersSeen = new Set(recent.map((e) => e.sellerId));
 
   return {
     slug: history.slug,
-    currentMin: recentPrices.length ? Math.min(...recentPrices) : null,
-    currentMax: recentPrices.length
-      ? Math.max(...recent.map((e) => e.priceHigh))
+    currentMin: currentPrices.length ? Math.min(...currentPrices) : null,
+    currentMax: currentPrices.length
+      ? Math.max(...currentBasis.map((e) => e.priceHigh))
       : null,
     allTimeMin: allPrices.length ? Math.min(...allPrices) : null,
     allTimeMax: allPrices.length

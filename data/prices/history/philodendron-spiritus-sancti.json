@@ -1,0 +1,66 @@
+{
+  "slug": "philodendron-spiritus-sancti",
+  "lastUpdated": "2026-03-29",
+  "entries": [
+    {
+      "date": "2026-03-28",
+      "sellerId": "nse-tropicals",
+      "sellerName": "NSE Tropicals",
+      "title": "Small size Philodendron spiritus sancti",
+      "productUrl": "https://www.nsetropicals.com/product/small-size-philodendron-spiritus-sancti/",
+      "price": 250,
+      "priceHigh": 250,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-03-28",
+      "sellerId": "carnivero",
+      "sellerName": "Carnivero",
+      "title": "Philodendron spiritus sancti",
+      "productUrl": "https://www.carnivero.com/products/philodendron-spiritus-sancti",
+      "price": 59.99,
+      "priceHigh": 59.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-03-28",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Philodendron Spiritus Sancti 4\"",
+      "productUrl": "https://rarefoliageplantco.com/products/philodendron-spiritus-sancti-4",
+      "price": 39.99,
+      "priceHigh": 39.99,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-03-28",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Philodendron Spiritus Sancti Mature 6” Hanging Basket",
+      "productUrl": "https://rarefoliageplantco.com/products/philodendron-spiritus-sancti-mature-6-hanging-basket",
+      "price": 299.99,
+      "priceHigh": 299.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-03-28",
+      "sellerId": "aroid-market",
+      "sellerName": "Aroid Market",
+      "title": "Philodendron spiritus sancti",
+      "productUrl": "https://aroidmarket.com/products/philodendron-spiritus-sancti",
+      "price": 129,
+      "priceHigh": 129,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    }
+  ]
+}

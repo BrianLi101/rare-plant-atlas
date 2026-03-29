@@ -209,15 +209,19 @@ function runAggregation(): void {
     const recent = history.entries.filter((e: any) => e.date >= cutoffStr);
     const all = history.entries;
 
-    const recentPrices = recent.map((e: any) => e.price);
+    // Prefer available listings for current price range; fall back to all recent
+    // if nothing is in stock so the page still shows a reference price.
+    const available = recent.filter((e: any) => e.available);
+    const currentBasis = available.length > 0 ? available : recent;
+    const currentPrices = currentBasis.map((e: any) => e.price);
     const allPrices = all.map((e: any) => e.price);
     const sellersSeen = new Set(recent.map((e: any) => e.sellerId));
 
     summaries[history.slug] = {
       slug: history.slug,
-      currentMin: recentPrices.length ? Math.min(...recentPrices) : null,
-      currentMax: recentPrices.length
-        ? Math.max(...recent.map((e: any) => e.priceHigh))
+      currentMin: currentPrices.length ? Math.min(...currentPrices) : null,
+      currentMax: currentPrices.length
+        ? Math.max(...currentBasis.map((e: any) => e.priceHigh))
         : null,
       allTimeMin: allPrices.length ? Math.min(...allPrices) : null,
       allTimeMax: allPrices.length
@@ -251,20 +255,81 @@ async function run() {
   console.log(`\nRare Plant Atlas — Price Snapshot`);
   console.log(`Date: ${TODAY}\n`);
 
-  // ── Step 1: Check for existing snapshot ──────────────────────────────────
+  // ── Step 0: Offer to load a previous snapshot ────────────────────────────
 
-  const snapshotPath = path.join(SNAPSHOTS_DIR, `${TODAY}.json`);
-  let allRawListings: RawListing[];
+  const previousSnapshots = fs
+    .readdirSync(SNAPSHOTS_DIR)
+    .filter((f) => f.endsWith(".json") && f !== `${TODAY}.json`)
+    .map((f) => f.replace(".json", ""))
+    .sort()
+    .reverse();
 
-  if (fs.existsSync(snapshotPath)) {
-    const existing: DailySnapshot = JSON.parse(
-      fs.readFileSync(snapshotPath, "utf-8"),
+  let snapshotDate = TODAY;
+  let allRawListings: RawListing[] | null = null;
+
+  if (previousSnapshots.length > 0) {
+    console.log(`Previous snapshots available:`);
+    previousSnapshots.forEach((date, i) => {
+      console.log(`  ${i + 1}. ${date}`);
+    });
+    const choice = await ask(
+      `\nUse a previous snapshot? (enter number/date, or press Enter for today) `,
     );
-    console.log(`Snapshot for ${TODAY} already exists (${existing.listings.length} listings, v${existing.version ?? 1})`);
-    const refetch = await ask("Re-fetch fresh data? (y/n) ");
 
-    if (refetch === "y" || refetch === "yes") {
-      console.log("");
+    if (choice !== "") {
+      // Try as a number first
+      const num = parseInt(choice, 10);
+      let pickedDate: string | undefined;
+      if (!isNaN(num) && num >= 1 && num <= previousSnapshots.length) {
+        pickedDate = previousSnapshots[num - 1];
+      } else {
+        // Try as a date string (exact or partial match)
+        pickedDate = previousSnapshots.find((d) => d.includes(choice));
+      }
+
+      if (pickedDate) {
+        const prevPath = path.join(SNAPSHOTS_DIR, `${pickedDate}.json`);
+        const prevSnapshot: DailySnapshot = JSON.parse(
+          fs.readFileSync(prevPath, "utf-8"),
+        );
+        console.log(
+          `\nLoaded snapshot from ${pickedDate} (${prevSnapshot.listings.length} listings, v${prevSnapshot.version ?? 1})`,
+        );
+        snapshotDate = pickedDate;
+        allRawListings = prevSnapshot.listings;
+      } else {
+        console.log(`No snapshot matching "${choice}" found. Using today.\n`);
+      }
+    }
+  }
+
+  // ── Step 1: Check for existing snapshot (today) ─────────────────────────
+
+  if (allRawListings === null) {
+    const snapshotPath = path.join(SNAPSHOTS_DIR, `${TODAY}.json`);
+
+    if (fs.existsSync(snapshotPath)) {
+      const existing: DailySnapshot = JSON.parse(
+        fs.readFileSync(snapshotPath, "utf-8"),
+      );
+      console.log(`Snapshot for ${TODAY} already exists (${existing.listings.length} listings, v${existing.version ?? 1})`);
+      const refetch = await ask("Re-fetch fresh data? (y/n) ");
+
+      if (refetch === "y" || refetch === "yes") {
+        console.log("");
+        allRawListings = await fetchAllSellers();
+        const rawSnapshot: DailySnapshot = {
+          version: SNAPSHOT_VERSION,
+          date: TODAY,
+          listings: allRawListings,
+        };
+        fs.writeFileSync(snapshotPath, JSON.stringify(rawSnapshot, null, 2));
+        console.log(`Raw snapshot saved (${allRawListings.length} listings total)`);
+      } else {
+        console.log("Using existing snapshot data.\n");
+        allRawListings = existing.listings;
+      }
+    } else {
       allRawListings = await fetchAllSellers();
       const rawSnapshot: DailySnapshot = {
         version: SNAPSHOT_VERSION,
@@ -273,19 +338,7 @@ async function run() {
       };
       fs.writeFileSync(snapshotPath, JSON.stringify(rawSnapshot, null, 2));
       console.log(`Raw snapshot saved (${allRawListings.length} listings total)`);
-    } else {
-      console.log("Using existing snapshot data.\n");
-      allRawListings = existing.listings;
     }
-  } else {
-    allRawListings = await fetchAllSellers();
-    const rawSnapshot: DailySnapshot = {
-      version: SNAPSHOT_VERSION,
-      date: TODAY,
-      listings: allRawListings,
-    };
-    fs.writeFileSync(snapshotPath, JSON.stringify(rawSnapshot, null, 2));
-    console.log(`Raw snapshot saved (${allRawListings.length} listings total)`);
   }
 
   // ── Step 2: Match and group by slug ──────────────────────────────────────
@@ -377,7 +430,7 @@ async function run() {
       history = JSON.parse(fs.readFileSync(historyPath, "utf-8"));
     }
 
-    history.entries = history.entries.filter((e: any) => e.date !== TODAY);
+    history.entries = history.entries.filter((e: any) => e.date !== snapshotDate);
     history.entries.push(
       ...listings.map((l) => ({
         date: l.snapshotDate,

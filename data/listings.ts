@@ -6,6 +6,7 @@ import { monsteraDevilMonster } from "./listings/monstera-devil-monster";
 import { alocasiaChantrierVariegatedPink } from "./listings/alocasia-chantrieri-variegated-pink";
 import { monsteraWhiteLava } from "./listings/monstera-white-lava";
 import { monsteraWhiteMonster } from "./listings/monstera-white-monster";
+import { philodendronSpiritusSancti } from "./listings/philodendron-spiritus-sancti";
 
 export const listings: PlantListing[] = [
   monsteraThaiConstellation,
@@ -13,6 +14,7 @@ export const listings: PlantListing[] = [
   alocasiaChantrierVariegatedPink,
   monsteraWhiteLava,
   monsteraWhiteMonster,
+  philodendronSpiritusSancti,
 ];
 
 export function getListingBySlug(slug: string): PlantListing | undefined {

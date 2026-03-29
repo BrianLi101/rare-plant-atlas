@@ -437,6 +437,9 @@ export default function Home() {
                 <Link href="/glossary" className="font-mono text-[10px] tracking-[0.12em] uppercase opacity-50 hover:opacity-80 transition-opacity" style={{ color: "#c4b89a" }}>
                   Glossary
                 </Link>
+                <Link href="/prices" className="font-mono text-[10px] tracking-[0.12em] uppercase opacity-50 hover:opacity-80 transition-opacity" style={{ color: "#c4b89a" }}>
+                  Price Index
+                </Link>
                 {uniqueGenera.map((genus) => (
                   <Link
                     key={genus}
