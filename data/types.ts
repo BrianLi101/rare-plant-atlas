@@ -360,6 +360,13 @@ export interface PlantListing {
   /** Editorial note on TC vs wild-type differences (growth speed, lineage, etc.) */
   tissueCultureNote?: string;
   availabilityNotes?: string;
+
+  /**
+   * SEO/GEO: FAQ section for listing pages.
+   * Structured Q&A pairs rendered with FAQPage JSON-LD schema.
+   * See data/listings/README.md for content guidance.
+   */
+  faq?: FaqSection;
 }
 
 // ---------------------------------------------------------------------------

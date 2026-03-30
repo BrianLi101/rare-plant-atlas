@@ -77,23 +77,35 @@ function buildFaqJsonLd(listing: NonNullable<ReturnType<typeof getListingBySlug>
   const label = getPlantLabel(listing);
   const questions: { q: string; a: string }[] = [];
 
-  questions.push({
-    q: `What is the price range for ${label}?`,
-    a: `${label} typically costs between ${formatUsd(listing.priceRange.min)} and ${formatUsd(listing.priceRange.max)} USD.${listing.priceRange.note ? ` ${listing.priceRange.note}` : ""}`,
-  });
-
-  if (listing.availabilityNotes) {
-    questions.push({
-      q: `Where can I buy ${label}?`,
-      a: listing.availabilityNotes,
-    });
+  // Use hand-written FAQ data when available
+  if (listing.faq) {
+    for (const category of listing.faq.categories) {
+      for (const item of category.items) {
+        questions.push({ q: item.question, a: item.answer });
+      }
+    }
   }
 
-  if (listing.priceHistory) {
+  // Fall back to auto-generated FAQs from structured data
+  if (questions.length === 0) {
     questions.push({
-      q: `Are ${label} prices going up or down?`,
-      a: listing.priceHistory,
+      q: `What is the price range for ${label}?`,
+      a: `${label} typically costs between ${formatUsd(listing.priceRange.min)} and ${formatUsd(listing.priceRange.max)} USD.${listing.priceRange.note ? ` ${listing.priceRange.note}` : ""}`,
     });
+
+    if (listing.availabilityNotes) {
+      questions.push({
+        q: `Where can I buy ${label}?`,
+        a: listing.availabilityNotes,
+      });
+    }
+
+    if (listing.priceHistory) {
+      questions.push({
+        q: `Are ${label} prices going up or down?`,
+        a: listing.priceHistory,
+      });
+    }
   }
 
   return {
@@ -196,6 +208,25 @@ export default function PriceListingPage({
           <section>
             <h2>Market Context</h2>
             <p>{listing.marketNote}</p>
+          </section>
+        )}
+
+        {listing.faq && (
+          <section>
+            <h2>Frequently Asked Questions</h2>
+            {listing.faq.categories.map((cat) => (
+              <div key={cat.category}>
+                <h3>{cat.category}</h3>
+                <dl>
+                  {cat.items.map((item) => (
+                    <div key={item.question}>
+                      <dt>{item.question}</dt>
+                      <dd>{item.answer}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            ))}
           </section>
         )}
 

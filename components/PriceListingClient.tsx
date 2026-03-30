@@ -363,6 +363,46 @@ export function PriceListingClient({
           </div>
         )}
 
+        {/* FAQ section */}
+        {listing.faq && listing.faq.categories.length > 0 && (
+          <div className="mb-12">
+            <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-cream/30 mb-6">
+              Frequently Asked Questions
+            </p>
+            <div className="space-y-6">
+              {listing.faq.categories.map((cat) => (
+                <div key={cat.category}>
+                  <p className="font-mono text-[10px] tracking-[0.1em] uppercase text-forest-400 mb-3">
+                    {cat.category}
+                  </p>
+                  <div className="space-y-0 rounded-[10px] border border-cream/[0.07] overflow-hidden">
+                    {cat.items.map((item, i) => (
+                      <details
+                        key={item.question}
+                        className={`group ${i > 0 ? "border-t border-cream/[0.07]" : ""}`}
+                      >
+                        <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden hover:bg-cream/[0.02] transition-colors">
+                          <span className="text-[13px] text-cream/70 leading-snug">
+                            {item.question}
+                          </span>
+                          <span className="text-cream/20 text-xs shrink-0 transition-transform group-open:rotate-45">
+                            +
+                          </span>
+                        </summary>
+                        <div className="px-5 pb-4 -mt-1">
+                          <p className="text-[13px] text-cream/40 leading-relaxed">
+                            {item.answer}
+                          </p>
+                        </div>
+                      </details>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Full profile link — only shown when a full profile exists */}
         {hasFullProfile && (
           <div className="rounded-xl border border-cream/[0.07] p-7 flex items-center justify-between gap-5 flex-wrap bg-gradient-to-br from-cream/[0.02] to-cream/[0.04]">
