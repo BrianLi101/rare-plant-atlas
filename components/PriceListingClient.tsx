@@ -1,7 +1,19 @@
 "use client";
 
+import { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  LineElement,
+  PointElement,
+  Filler,
+  Tooltip,
+  type ChartOptions,
+} from "chart.js";
+import { Line } from "react-chartjs-2";
 import type { PlantListing } from "@/data/types";
 import type { PriceSummary, GrowthStage } from "@/data/prices/types";
 import { formatUsd } from "@/data/price";
@@ -12,6 +24,15 @@ import {
   formatScientificName,
 } from "@/data/identity";
 import { Navigation } from "@/components/Navigation";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  LineElement,
+  PointElement,
+  Filler,
+  Tooltip,
+);
 
 // ---------------------------------------------------------------------------
 // Growth stage labels
@@ -152,6 +173,115 @@ function SellerRow({
         )}
       </td>
     </tr>
+  );
+}
+
+const CHART_COLORS = ["#85b98e", "#cdab79"];
+
+function PriceTrendChart({ summary }: { summary: PriceSummary }) {
+  const byDate = useMemo(() => {
+    const map = new Map<string, { min: number; max: number }>();
+    for (const item of summary.recentListings) {
+      const existing = map.get(item.date);
+      if (existing) {
+        existing.min = Math.min(existing.min, item.price);
+        existing.max = Math.max(existing.max, item.priceHigh);
+      } else {
+        map.set(item.date, { min: item.price, max: item.priceHigh });
+      }
+    }
+
+    return Array.from(map.entries())
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([date, range]) => ({ date, ...range }));
+  }, [summary]);
+
+  if (byDate.length < 2) return null;
+
+  const data = {
+    labels: byDate.map((d) =>
+      new Date(d.date).toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+      }),
+    ),
+    datasets: [
+      {
+        label: "Low",
+        data: byDate.map((d) => d.min),
+        borderColor: CHART_COLORS[0],
+        backgroundColor: "rgba(133,185,142,0.1)",
+        borderWidth: 1.5,
+        pointRadius: 2,
+        fill: "+1" as const,
+        tension: 0.4,
+      },
+      {
+        label: "High",
+        data: byDate.map((d) => d.max),
+        borderColor: CHART_COLORS[1],
+        backgroundColor: "transparent",
+        borderWidth: 1.5,
+        pointRadius: 2,
+        fill: false,
+        tension: 0.4,
+        borderDash: [4, 3] as number[],
+      },
+    ],
+  };
+
+  const options: ChartOptions<"line"> = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: (ctx) => `${ctx.dataset.label}: ${formatUsd(ctx.raw as number)}`,
+        },
+      },
+    },
+    scales: {
+      x: {
+        grid: { display: false },
+        ticks: { color: "rgba(250,247,242,0.2)", font: { size: 11 } },
+      },
+      y: {
+        grid: { color: "rgba(250,247,242,0.04)" },
+        ticks: {
+          color: "rgba(250,247,242,0.2)",
+          font: { size: 11 },
+          callback: (value) => `$${value}`,
+        },
+      },
+    },
+  };
+
+  return (
+    <div className="rounded-[10px] bg-cream/[0.02] border border-cream/[0.07] px-5 py-4 mb-10">
+      <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-cream/30 mb-3">
+        Price Trend
+      </p>
+      <div className="flex gap-4 mb-3">
+        <div className="flex items-center gap-1.5 text-[11px] text-cream/40">
+          <span
+            className="inline-block w-5 h-0.5 rounded"
+            style={{ background: CHART_COLORS[0] }}
+          />
+          Low
+        </div>
+        <div className="flex items-center gap-1.5 text-[11px] text-cream/40">
+          <span
+            className="inline-block w-5 h-0.5 rounded"
+            style={{ background: CHART_COLORS[1] }}
+          />
+          High
+        </div>
+      </div>
+      <div className="relative h-52">
+        <Line data={data} options={options} />
+      </div>
+    </div>
   );
 }
 
@@ -298,6 +428,8 @@ export function PriceListingClient({
             </div>
           </>
         )}
+
+        {priceSummary && <PriceTrendChart summary={priceSummary} />}
 
         {/* Market note / trend note */}
         {(listing.marketNote || listing.priceHistory) && (

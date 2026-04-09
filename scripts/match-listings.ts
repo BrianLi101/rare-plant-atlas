@@ -18,6 +18,8 @@ interface MatchRule {
   words: string[];
   /** Substrings that must appear verbatim in the lowercased title */
   phrases: string[];
+  /** Substrings that disqualify this rule when present in the lowercased title */
+  excludedPhrases: string[];
 }
 
 function tokenize(text: string): string[] {
@@ -51,6 +53,7 @@ function buildMatchRules(): MatchRule[] {
     const variantWords = hasVariant ? tokenize(id.variantLabel!) : [];
     // matchPhrases from the plant identity — author-controlled specificity
     const requiredPhrases = (id.matchPhrases ?? []).map((p) => p.toLowerCase());
+    const excludedPhrases = (id.mustExcludePhrases ?? []).map((p) => p.toLowerCase());
 
     // Trade name + variant words + required phrases
     if (id.tradeName) {
@@ -61,9 +64,10 @@ function buildMatchRules(): MatchRule[] {
             slug,
             words: [...words, ...variantWords],
             phrases: requiredPhrases,
+            excludedPhrases,
           });
         } else {
-          rules.push({ slug, words, phrases: requiredPhrases });
+          rules.push({ slug, words, phrases: requiredPhrases, excludedPhrases });
         }
       }
     }
@@ -73,7 +77,12 @@ function buildMatchRules(): MatchRule[] {
       for (const alias of id.aliases) {
         const phrase = alias.toLowerCase().trim();
         if (phrase.length >= 4) {
-          rules.push({ slug, words: [], phrases: [phrase, ...requiredPhrases] });
+          rules.push({
+            slug,
+            words: [],
+            phrases: [phrase, ...requiredPhrases],
+            excludedPhrases,
+          });
         }
       }
     }
@@ -85,13 +94,14 @@ function buildMatchRules(): MatchRule[] {
         slug,
         words: [...words, ...variantWords],
         phrases: requiredPhrases,
+        excludedPhrases,
       });
     }
 
     // Genus + cultivar — specific enough on its own
     if (id.genus && id.cultivar) {
       const words = tokenize(`${id.genus} ${id.cultivar}`);
-      rules.push({ slug, words, phrases: requiredPhrases });
+      rules.push({ slug, words, phrases: requiredPhrases, excludedPhrases });
     }
   }
 
@@ -104,7 +114,7 @@ function buildMatchRules(): MatchRule[] {
   // Deduplicate
   const seen = new Set<string>();
   return rules.filter((r) => {
-    const key = `${r.slug}:${r.words.slice().sort().join(",")}|${r.phrases.slice().sort().join(",")}`;
+    const key = `${r.slug}:${r.words.slice().sort().join(",")}|${r.phrases.slice().sort().join(",")}|${r.excludedPhrases.slice().sort().join(",")}`;
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
@@ -141,6 +151,11 @@ export function matchListingToSlug(listing: RawListing): MatchResult {
   const titleLower = listing.title.toLowerCase().replace(/[''""*]/g, "");
 
   for (const rule of matchRules) {
+    const hasExcludedPhrase =
+      rule.excludedPhrases.length > 0 &&
+      rule.excludedPhrases.some((p) => titleLower.includes(p));
+    if (hasExcludedPhrase) continue;
+
     const wordsMatch =
       rule.words.length === 0 || rule.words.every((w) => titleWords.has(w));
     const phrasesMatch =

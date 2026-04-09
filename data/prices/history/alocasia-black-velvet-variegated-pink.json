@@ -1,6 +1,6 @@
 {
   "slug": "alocasia-black-velvet-variegated-pink",
-  "lastUpdated": "2026-03-28",
+  "lastUpdated": "2026-04-09",
   "entries": [
     {
       "date": "2026-03-28",
@@ -52,6 +52,66 @@
     },
     {
       "date": "2026-03-28",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Alocasia Black Velvet Pink Variegated 3”",
+      "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant-us-seller",
+      "price": 124.99,
+      "priceHigh": 124.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-09",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "title": "Alocasia 'Black Velvet' pink variegated *Grower's Choice*",
+      "productUrl": "https://www.rareplantfairy.com/products/alocasia-black-velvet-pink-variegated-growers-choice",
+      "price": 75,
+      "priceHigh": 75,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-09",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Alocasia Black Velvet Pink Variegated 3” Full Plant",
+      "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant-1",
+      "price": 119.99,
+      "priceHigh": 119.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-09",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Alocasia Black Velvet Pink Variegated 3” Full Plant",
+      "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant",
+      "price": 164.99,
+      "priceHigh": 164.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-09",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Alocasia Black Velvet Pink Variegated 4” Full Plant",
+      "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-4-full-plant-us-seller",
+      "price": 374.99,
+      "priceHigh": 374.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-09",
       "sellerId": "rare-foliage-plant-co",
       "sellerName": "Rare Foliage Plant Co",
       "title": "Alocasia Black Velvet Pink Variegated 3”",

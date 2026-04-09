@@ -1,6 +1,6 @@
 {
   "slug": "anthurium-delta-force",
-  "lastUpdated": "2026-03-28",
+  "lastUpdated": "2026-04-09",
   "entries": [
     {
       "date": "2026-03-28",
@@ -52,6 +52,78 @@
     },
     {
       "date": "2026-03-28",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Anthurium Delta Force 4\"",
+      "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-4-flowering-exact-plant",
+      "price": 99.99,
+      "priceHigh": 99.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-09",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "title": "Anthurium 'Delta Force' *Grower's Choice*",
+      "productUrl": "https://www.rareplantfairy.com/products/anthurium-delta-force-growers-choice",
+      "price": 195,
+      "priceHigh": 195,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-09",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "title": "Anthurium 'Delta Force'  (wk13-A)",
+      "productUrl": "https://www.rareplantfairy.com/products/anthurium-crystallinum-variegated-wk13-a",
+      "price": 195,
+      "priceHigh": 195,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-09",
+      "sellerId": "carnivero",
+      "sellerName": "Carnivero",
+      "title": "Anthurium 'Delta Force'",
+      "productUrl": "https://www.carnivero.com/products/anthurium-delta-force",
+      "price": 99.99,
+      "priceHigh": 99.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-09",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Anthurium Delta Force 6”",
+      "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-6",
+      "price": 249.99,
+      "priceHigh": 249.99,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-09",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Anthurium Delta Force 3\"",
+      "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-3",
+      "price": 84.99,
+      "priceHigh": 84.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-09",
       "sellerId": "rare-foliage-plant-co",
       "sellerName": "Rare Foliage Plant Co",
       "title": "Anthurium Delta Force 4\"",

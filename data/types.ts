@@ -228,6 +228,12 @@ export interface PlantIdentity {
    * to avoid matching "Type 2" or "Type 3".
    */
   matchPhrases?: string[];
+  /**
+   * Substrings that disqualify a listing title from matching this plant.
+   * Use for filtering out more specific variants that would otherwise skew
+   * broader market pricing for the base plant.
+   */
+  mustExcludePhrases?: string[];
 }
 
 export type Level = "Low" | "Medium" | "High";
