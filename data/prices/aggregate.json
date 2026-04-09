@@ -753,9 +753,9 @@
   },
   "monstera-white-monster": {
     "slug": "monstera-white-monster",
-    "currentMin": 29.99,
+    "currentMin": 49.99,
     "currentMax": 1950,
-    "allTimeMin": 29.99,
+    "allTimeMin": 49.99,
     "allTimeMax": 1950,
     "lastSeen": "2026-04-09",
     "sellerCount": 3,
@@ -804,42 +804,12 @@
       {
         "sellerId": "rare-foliage-plant-co",
         "sellerName": "Rare Foliage Plant Co",
-        "price": 59.99,
-        "priceHigh": 59.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-3",
-        "growthStage": "plant",
-        "date": "2026-03-28",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 149.99,
-        "priceHigh": 149.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-4",
-        "growthStage": "plant",
-        "date": "2026-03-28",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
         "price": 549.99,
         "priceHigh": 549.99,
         "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-5-exact-plant",
         "growthStage": "plant",
         "date": "2026-03-28",
         "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 29.99,
-        "priceHigh": 29.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-2",
-        "growthStage": "plant",
-        "date": "2026-03-28",
-        "available": true
       },
       {
         "sellerId": "rare-foliage-plant-co",
@@ -884,39 +854,9 @@
       {
         "sellerId": "rare-foliage-plant-co",
         "sellerName": "Rare Foliage Plant Co",
-        "price": 59.99,
-        "priceHigh": 59.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-3",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 149.99,
-        "priceHigh": 149.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-4",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
         "price": 549.99,
         "priceHigh": 549.99,
         "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-5-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 29.99,
-        "priceHigh": 29.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-2",
         "growthStage": "plant",
         "date": "2026-04-09",
         "available": false

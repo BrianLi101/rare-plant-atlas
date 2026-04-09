@@ -10,6 +10,7 @@ export const monsteraWhiteMonster: PlantListing = {
     tradeName: "Monstera White Monster",
     aliases: ["white monster monstera"],
     matchPhrases: ["white monster"],
+    mustExcludePhrases: ["mint", "mint large form", "siam"],
   },
   tagline:
     "A high-contrast albo sport with dramatic white variegation and bold fenestration.",
