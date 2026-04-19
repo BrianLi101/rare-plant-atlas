@@ -1,5 +1,7 @@
 import type { PlantListing } from "../types";
 
+const IMG = "/plants/alocasia-chantrieri-variegated-pink";
+
 export const alocasiaChantrierVariegatedPink: PlantListing = {
   identity: {
     id: "alocasia-chantrieri-variegated-pink",
@@ -24,7 +26,7 @@ export const alocasiaChantrierVariegatedPink: PlantListing = {
     note: "TC availability is increasing but still limited to specialty sellers. Prices vary significantly by variegation quality.",
   },
   images: {
-    hero: undefined,
+    hero: `${IMG}/hero.jpg`,
   },
   colors: {
     primary: "#0e110e",

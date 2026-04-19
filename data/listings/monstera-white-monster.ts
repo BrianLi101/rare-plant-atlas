@@ -1,5 +1,7 @@
 import type { PlantListing } from "../types";
 
+const IMG = "/plants/monstera-white-monster";
+
 export const monsteraWhiteMonster: PlantListing = {
   identity: {
     id: "monstera-white-monster",
@@ -25,7 +27,7 @@ export const monsteraWhiteMonster: PlantListing = {
     note: "Prices depend heavily on variegation coverage and stability. Half-moon and full-white leaves command premiums, though full-white sections lack chlorophyll and may brown over time.",
   },
   images: {
-    hero: undefined,
+    hero: `${IMG}/hero.jpg`,
   },
   colors: {
     primary: "#141a14",

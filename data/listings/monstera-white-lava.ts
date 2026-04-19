@@ -1,5 +1,7 @@
 import type { PlantListing } from "../types";
 
+const IMG = "/plants/monstera-white-lava";
+
 export const monsteraWhiteLava: PlantListing = {
   identity: {
     id: "monstera-white-lava",
@@ -24,7 +26,7 @@ export const monsteraWhiteLava: PlantListing = {
     note: "Prices vary widely based on variegation stability and leaf count. High-contrast specimens with stable sectoral patterning command the top of the range.",
   },
   images: {
-    hero: undefined,
+    hero: `${IMG}/hero.jpg`,
   },
   colors: {
     primary: "#1a1f1a",

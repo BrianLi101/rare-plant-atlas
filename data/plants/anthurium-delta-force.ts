@@ -11,7 +11,7 @@ const IMG = "/plants/anthurium-delta-force";
 
 const heroPhoto: PlantPhoto = {
   id: "anthurium-delta-force-hero",
-  image: `${IMG}/hero.jpeg`,
+  image: `${IMG}/hero.jpg`,
   caption: "Anthurium Delta Force leaf",
   description:
     "Mature deltoid leaf with bright white venation and a narrow arrow-point tip.",

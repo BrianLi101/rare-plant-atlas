@@ -1,5 +1,7 @@
 import type { PlantListing } from "../types";
 
+const IMG = "/plants/monstera-thai-constellation";
+
 export const monsteraThaiConstellation: PlantListing = {
   identity: {
     id: "monstera-thai-constellation",
@@ -25,7 +27,7 @@ export const monsteraThaiConstellation: PlantListing = {
     note: "Mass TC production has driven prices down dramatically since 2023. Big-box retail availability has compressed the floor to under $50 for small plants.",
   },
   images: {
-    hero: undefined,
+    hero: `${IMG}/hero.jpg`,
   },
   colors: {
     primary: "#0e110e",

@@ -76,6 +76,8 @@ From `components/PlantDetailClient.tsx`:
 ## Important behavior and conventions
 
 - Plant page route uses `identity.slug` (`/plants/<slug>`).
+- Standard hero image path is `public/plants/<slug>/hero.jpg`.
+- If you do not have the final plant photo yet, create a temporary `hero.jpg` placeholder first and replace that file later.
 - SEO preview image fallback order is:
   1. `images.hero`
   2. first `photos[0].image`
@@ -97,7 +99,7 @@ From `components/PlantDetailClient.tsx`:
 ### Atlas-complete (recommended quality bar)
 
 - [ ] `panels` includes at least a hero panel with image.
-- [ ] `images.hero` points to a real file under `public/plants/<slug>/`.
+- [ ] `images.hero` points to `"/plants/<slug>/hero.jpg"` and that file exists under `public/plants/<slug>/`.
 - [ ] `photos` has multiple useful references (hero + detail/variegation/stage shots).
 - [ ] `glance` has clear facts (commonly around 6 entries).
 - [ ] `care` and `downsides` are substantive, not placeholders.
@@ -202,4 +204,3 @@ Update `data/plants.ts`:
 1. Import the new plant constant.
 2. Add it to the exported `plants` array.
 3. Keep desired sort/order.
-

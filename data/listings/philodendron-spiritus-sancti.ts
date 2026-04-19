@@ -1,5 +1,7 @@
 import type { PlantListing } from "../types";
 
+const IMG = "/plants/philodendron-spiritus-sancti";
+
 export const philodendronSpiritusSancti: PlantListing = {
   identity: {
     id: "philodendron-spiritus-sancti",
@@ -27,7 +29,7 @@ export const philodendronSpiritusSancti: PlantListing = {
     note: "Tissue culture has dramatically reduced prices from the $10,000+ era. Small TC plants now start around $50.",
   },
   images: {
-    hero: undefined,
+    hero: `${IMG}/hero.jpg`,
   },
   colors: {
     primary: "#0f1a0e",

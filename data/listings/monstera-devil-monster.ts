@@ -1,5 +1,7 @@
 import type { PlantListing } from "../types";
 
+const IMG = "/plants/monstera-devil-monster";
+
 export const monsteraDevilMonster: PlantListing = {
   identity: {
     id: "monstera-devil-monster",
@@ -24,7 +26,7 @@ export const monsteraDevilMonster: PlantListing = {
     note: "Still relatively new to the market. Prices are settling as TC supply ramps up, but demand remains strong for verified specimens.",
   },
   images: {
-    hero: undefined,
+    hero: `${IMG}/hero.jpg`,
   },
   colors: {
     primary: "#0e110e",
