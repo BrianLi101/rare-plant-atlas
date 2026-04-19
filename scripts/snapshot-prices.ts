@@ -263,9 +263,20 @@ async function run() {
     .map((f) => f.replace(".json", ""))
     .sort()
     .reverse();
+  const todaySnapshotPath = path.join(SNAPSHOTS_DIR, `${TODAY}.json`);
+  const hasTodaySnapshot = fs.existsSync(todaySnapshotPath);
 
   let snapshotDate = TODAY;
   let allRawListings: RawListing[] | null = null;
+
+  if (hasTodaySnapshot) {
+    const currentSnapshot: DailySnapshot = JSON.parse(
+      fs.readFileSync(todaySnapshotPath, "utf-8"),
+    );
+    console.log(
+      `Current snapshot available: ${TODAY} (${currentSnapshot.listings.length} listings, v${currentSnapshot.version ?? 1})\n`,
+    );
+  }
 
   if (previousSnapshots.length > 0) {
     console.log(`Previous snapshots available:`);
@@ -306,11 +317,9 @@ async function run() {
   // ── Step 1: Check for existing snapshot (today) ─────────────────────────
 
   if (allRawListings === null) {
-    const snapshotPath = path.join(SNAPSHOTS_DIR, `${TODAY}.json`);
-
-    if (fs.existsSync(snapshotPath)) {
+    if (hasTodaySnapshot) {
       const existing: DailySnapshot = JSON.parse(
-        fs.readFileSync(snapshotPath, "utf-8"),
+        fs.readFileSync(todaySnapshotPath, "utf-8"),
       );
       console.log(`Snapshot for ${TODAY} already exists (${existing.listings.length} listings, v${existing.version ?? 1})`);
       const refetch = await ask("Re-fetch fresh data? (y/n) ");
@@ -323,7 +332,7 @@ async function run() {
           date: TODAY,
           listings: allRawListings,
         };
-        fs.writeFileSync(snapshotPath, JSON.stringify(rawSnapshot, null, 2));
+        fs.writeFileSync(todaySnapshotPath, JSON.stringify(rawSnapshot, null, 2));
         console.log(`Raw snapshot saved (${allRawListings.length} listings total)`);
       } else {
         console.log("Using existing snapshot data.\n");
@@ -336,7 +345,7 @@ async function run() {
         date: TODAY,
         listings: allRawListings,
       };
-      fs.writeFileSync(snapshotPath, JSON.stringify(rawSnapshot, null, 2));
+      fs.writeFileSync(todaySnapshotPath, JSON.stringify(rawSnapshot, null, 2));
       console.log(`Raw snapshot saved (${allRawListings.length} listings total)`);
     }
   }

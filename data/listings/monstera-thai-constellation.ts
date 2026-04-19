@@ -10,7 +10,7 @@ export const monsteraThaiConstellation: PlantListing = {
     tradeName: "Monstera Thai Constellation",
     aliases: ["monstera thai constellation"],
     matchPhrases: ["thai constellation", "monstera"],
-    mustExcludePhrases: ["starlight", "tricolor"],
+    mustExcludePhrases: ["starlight", "tricolor", "legacy"],
   },
   tagline:
     "Stable creamy-white variegation on a plant that actually grows. The gateway grail.",
