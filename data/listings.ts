@@ -17,6 +17,15 @@ export const listings: PlantListing[] = [
   philodendronSpiritusSancti,
 ];
 
+export const listingSourceFiles: Record<string, string> = {
+  "monstera-thai-constellation": "data/listings/monstera-thai-constellation.ts",
+  "monstera-devil-monster": "data/listings/monstera-devil-monster.ts",
+  "alocasia-chantrieri-variegated-pink": "data/listings/alocasia-chantrieri-variegated-pink.ts",
+  "monstera-white-lava": "data/listings/monstera-white-lava.ts",
+  "monstera-white-monster": "data/listings/monstera-white-monster.ts",
+  "philodendron-spiritus-sancti": "data/listings/philodendron-spiritus-sancti.ts",
+};
+
 export function getListingBySlug(slug: string): PlantListing | undefined {
   return listings.find((l) => l.identity.slug === slug);
 }

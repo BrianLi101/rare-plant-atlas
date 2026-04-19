@@ -1,45 +1,75 @@
 import { MetadataRoute } from "next";
-import { plants } from "@/data/plants";
-import { listings } from "@/data/listings";
+import { plantSourceFiles, plants } from "@/data/plants";
+import { listingSourceFiles, listings } from "@/data/listings";
+import { getLatestLastModified } from "@/lib/contentTimestamps";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.rareplantatlas.com";
 
-  // SEO/GEO: Collect unique genera for genus index pages
-  const genera = Array.from(new Set(plants.map((p) => p.identity.genus.toLowerCase())));
+  // Keep sitemap coverage aligned with the actual route generators.
+  const genera = Array.from(
+    new Set([
+      ...plants.map((plant) => plant.identity.genus.toLowerCase()),
+      ...listings.map((listing) => listing.identity.genus.toLowerCase()),
+    ])
+  );
 
   return [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: getLatestLastModified([
+        "app/page.tsx",
+        ...Object.values(plantSourceFiles),
+        ...Object.values(listingSourceFiles),
+      ]),
       changeFrequency: "weekly",
       priority: 1,
     },
-    // SEO/GEO: Use plant.lastReviewed when available for accurate freshness signals
+    {
+      url: `${baseUrl}/prices`,
+      lastModified: getLatestLastModified([
+        "app/prices/page.tsx",
+        ...Object.values(plantSourceFiles),
+        ...Object.values(listingSourceFiles),
+      ]),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
     ...plants.map((plant) => ({
       url: `${baseUrl}/plants/${plant.identity.slug}`,
-      lastModified: plant.lastReviewed ?? new Date(),
+      lastModified: getLatestLastModified([
+        "app/plants/[slug]/page.tsx",
+        plantSourceFiles[plant.identity.slug],
+      ]),
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
-    // SEO/GEO: Price reference pages — standalone pricing for listings
     ...listings.map((listing) => ({
       url: `${baseUrl}/prices/${listing.identity.slug}`,
-      lastModified: listing.lastReviewed ?? new Date(),
+      lastModified: getLatestLastModified([
+        "app/prices/[slug]/page.tsx",
+        listingSourceFiles[listing.identity.slug],
+      ]),
       changeFrequency: "weekly" as const,
       priority: 0.7,
     })),
-    // SEO/GEO: Genus index pages — "Top N" listicle format for AI citations
     ...genera.map((genus) => ({
       url: `${baseUrl}/genus/${genus}`,
-      lastModified: new Date(),
+      lastModified: getLatestLastModified([
+        "app/genus/[genus]/page.tsx",
+        ...plants
+          .filter((plant) => plant.identity.genus.toLowerCase() === genus)
+          .map((plant) => plantSourceFiles[plant.identity.slug]),
+        ...listings
+          .filter((listing) => listing.identity.genus.toLowerCase() === genus)
+          .map((listing) => listingSourceFiles[listing.identity.slug]),
+      ]),
       changeFrequency: "weekly" as const,
       priority: 0.7,
     })),
-    // SEO/GEO: Glossary page — definitional content gets cited constantly
     {
       url: `${baseUrl}/glossary`,
-      lastModified: new Date(),
+      lastModified: getLatestLastModified(["app/glossary/page.tsx"]),
       changeFrequency: "monthly",
       priority: 0.6,
     },

@@ -30,6 +30,12 @@ export const plants: PlantFile[] = [
   alocasiaBlackVelvetVariegatedPink,
 ];
 
+export const plantSourceFiles: Record<string, string> = {
+  "philodendron-gloriosum-variegated-type-1": "data/plants/philodendron-gloriosum-variegated-type-1.ts",
+  "anthurium-delta-force": "data/plants/anthurium-delta-force.ts",
+  "alocasia-black-velvet-variegated-pink": "data/plants/alocasia-black-velvet-variegated-pink.ts",
+};
+
 export function getPlantBySlug(slug: string): PlantFile | undefined {
   return plants.find((p) => p.identity.slug === slug);
 }
