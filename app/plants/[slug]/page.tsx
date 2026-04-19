@@ -4,6 +4,15 @@ import { getPlantLabel, getPlantScientificName } from "@/data/identity";
 import { PlantDetailClient } from "@/components/PlantDetailClient";
 import { JsonLd } from "@/components/JsonLd";
 
+function getSeoDescription(plant: NonNullable<ReturnType<typeof getPlantBySlug>>) {
+  const candidate = plant.seoDescription ?? plant.quickAnswer ?? plant.heroDescription;
+
+  if (candidate.length <= 160) return candidate;
+
+  const truncated = candidate.slice(0, 157).trimEnd();
+  return `${truncated}...`;
+}
+
 export function generateStaticParams() {
   return plants.map((p) => ({ slug: p.identity.slug }));
 }
@@ -21,7 +30,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 
   // SEO/GEO: Use quickAnswer for meta description when available (directly
   // answers the primary query), fall back to heroDescription
-  const description = plant.quickAnswer ?? plant.heroDescription;
+  const description = getSeoDescription(plant);
 
   return {
     title,
@@ -191,7 +200,7 @@ export default function PlantPage({ params }: { params: { slug: string } }) {
 
       {/* Server-rendered semantic content for AI crawlers */}
       <article className="sr-only" aria-hidden="false">
-        <h1>{label}</h1>
+        <h2>{label}</h2>
         {scientificName !== label && <p>{scientificName}</p>}
 
         {/* SEO/GEO: Quick-answer block in the first 200 words — this is the

@@ -358,6 +358,7 @@ export interface PlantListing {
   fullProfileStatus?: "planned" | "in-progress" | "none";
 
   // SEO fields relevant to pricing pages
+  seoDescription?: string;
   quickAnswer?: string;
   lastReviewed?: Date;
   priceHistory?: string;

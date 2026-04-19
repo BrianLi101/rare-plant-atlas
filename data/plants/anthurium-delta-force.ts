@@ -78,6 +78,8 @@ export const anthuriumDeltaForce: PlantFile = {
     "A striking hybrid built for durability. Delta Force fuses the bold triangular architecture of its pedatoradiatum parent with clarinervium's legendary velvety texture \u2014 producing a plant that grows fast, tolerates ambience, and commands attention at every stage. Mature leaves reach 12\u201318 inches, with the characteristic triangular geometry becoming fully defined by the fourth or fifth leaf.",
 
   // -- SEO/GEO fields --
+  seoDescription:
+    "Anthurium Delta Force is a fast-growing velvet hybrid with triangular leaves, bright indirect light needs, and a typical price range of $40-$200.",
   quickAnswer:
     "Anthurium Delta Force is a velvet-textured hybrid (clarinervium × pedatoradiatum) with distinctive triangular leaves reaching 12–18 inches. It requires 60–80% humidity, bright indirect light, and regular feeding. Difficulty: intermediate. Price: $40–$200 USD, with tissue culture bringing costs down significantly.",
   lastReviewed: new Date("2026-03-27"),

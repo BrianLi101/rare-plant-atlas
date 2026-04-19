@@ -99,6 +99,8 @@ export const philodendronGloriosumVariegated: PlantFile = {
     "A terrestrial creeper with heart-shaped leaves of deep emerald velvet, interrupted by strokes of cream and white variegation. Each leaf is a living canvas \u2014 no two patterns alike.",
 
   // -- SEO/GEO fields --
+  seoDescription:
+    "Philodendron gloriosum Variegated Type 1 is an ultra-rare velvet crawler with cream variegation, advanced care needs, and a typical price range of $300-$2,500.",
   quickAnswer:
     "Variegated Philodendron gloriosum is an ultra-rare terrestrial creeper with heart-shaped velvet leaves featuring cream-white sectoral variegation. Type 1 (block) costs $600–$2,500+; Type 2 (splash) runs $300–$800. Requires 60%+ humidity, bright indirect light, and horizontal planter space. Difficulty: advanced. Toxic to pets.",
   lastReviewed: new Date("2026-03-27"),

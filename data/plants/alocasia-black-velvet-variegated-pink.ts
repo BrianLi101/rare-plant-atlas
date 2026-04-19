@@ -87,6 +87,8 @@ export const alocasiaBlackVelvetVariegatedPink: PlantFile = {
     "A compact jewel Alocasia with near-black, velvet foliage and pink-to-cream sectoral variegation. The species name reginula means \u2018little queen\u2019 in Latin \u2014 an apt title for a plant that dominates any shelf it occupies despite its compact size. High contrast and slow growth make each leaf feel earned.",
 
   // -- SEO/GEO fields --
+  seoDescription:
+    "Alocasia Black Velvet Variegated Pink is a compact jewel alocasia with pink variegation, medium-bright indirect light needs, and a typical price range of $50-$300.",
   quickAnswer:
     "Alocasia Black Velvet Variegated Pink is a compact jewel Alocasia with near-black velvet leaves and pink sectoral variegation. Native to Borneo (cultivated form). Requires 65%+ humidity, medium to bright indirect light, and well-draining substrate. Propagates via corms. Price: $50–$300 USD. Difficulty: intermediate. Toxic to pets.",
   lastReviewed: new Date("2026-03-27"),
