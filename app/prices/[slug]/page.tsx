@@ -8,6 +8,16 @@ import { JsonLd } from "@/components/JsonLd";
 import type { PriceSummary } from "@/data/prices/types";
 import priceAggregate from "@/data/prices/aggregate.json";
 
+function getSeoDescription(listing: NonNullable<ReturnType<typeof getListingBySlug>>) {
+  const fallback = `${getPlantLabel(listing)} pricing: ${formatUsd(listing.priceRange.min)}-${formatUsd(listing.priceRange.max)} USD. Live seller prices, availability, and market trends.`;
+  const candidate = listing.seoDescription ?? listing.quickAnswer ?? fallback;
+
+  if (candidate.length <= 160) return candidate;
+
+  const truncated = candidate.slice(0, 157).trimEnd();
+  return `${truncated}...`;
+}
+
 export function generateStaticParams() {
   return listings.map((l) => ({ slug: l.identity.slug }));
 }
@@ -18,9 +28,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 
   const label = getPlantLabel(listing);
   const title = `${label} Price Guide — Current Prices & Availability | Rare Plant Atlas`;
-  const description =
-    listing.quickAnswer ??
-    `${label} pricing: ${formatUsd(listing.priceRange.min)}–${formatUsd(listing.priceRange.max)} USD. Live seller prices, availability, and market trends.`;
+  const description = getSeoDescription(listing);
   const previewImage = listing.images.hero ?? listing.heroPhoto?.image ?? "/icon.png";
 
   return {
@@ -170,7 +178,7 @@ export default function PriceListingPage({
 
       {/* Server-rendered semantic content for AI crawlers */}
       <article className="sr-only" aria-hidden="false">
-        <h1>{label} Price Guide</h1>
+        <h2>{label} Price Guide</h2>
         {scientificName !== label && <p>{scientificName}</p>}
 
         {listing.quickAnswer && (

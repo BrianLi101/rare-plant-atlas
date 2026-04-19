@@ -76,6 +76,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${cormorant.variable} ${dmMono.variable}`}>
+      <head>
+        <meta httpEquiv="content-language" content="en-us" />
+      </head>
       <body className="font-sans">
         {children}
         <Analytics />
