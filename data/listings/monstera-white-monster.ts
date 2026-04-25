@@ -37,9 +37,12 @@ export const monsteraWhiteMonster: PlantListing = {
   marketNote:
     "A Monstera deliciosa sport prized for its large, dramatic white sectors — often more extensive than standard Albo Borsigiana. Originating from Thai TC labs, White Monster tends to produce bolder variegation but with less predictability. Half-moon leaves are highly sought after. Closely related to other albo-type sports but distinguished by its larger growth habit and more aggressive white coverage.",
   fullProfileStatus: "planned",
-  tissueCultureStatus: "limited",
-  tissueCultureNote:
-    "Produced via tissue culture in Thailand. Supply has increased but remains limited relative to demand. Reversion to all-green growth is a known risk — buyers should look for specimens with consistent variegation across multiple leaves.",
+  tissueCultureInfo: {
+    status: "limited",
+    note:
+      "Produced via tissue culture in Thailand. Supply has increased but remains limited relative to demand. Reversion to all-green growth is a known risk — buyers should look for specimens with consistent variegation across multiple leaves.",
+    priceRange: null,
+  },
   priceHistory:
     "Gained traction in the Western collector market around 2023–2024. Prices initially exceeded $500 for small plants. As TC supply has expanded, prices have settled into the $150–$1,200 range depending on quality.",
   availabilityNotes:

@@ -36,6 +36,16 @@ export const sellers: Seller[] = [
       "Collector-trusted Texas grower. Strong in begonias, hoyas, and unusual aroids.",
   },
   {
+    id: "orange-lake-nursery",
+    name: "Orange Lake Nursery",
+    platform: "shopify",
+    shopifyDomain: "orangelakenursery.com",
+    url: "https://orangelakenursery.com",
+    tier: 1,
+    notes:
+      "US-based reputable tissue culture seller with consistent aroid availability and strong market relevance.",
+  },
+  {
     id: "carnivero",
     name: "Carnivero",
     platform: "shopify",

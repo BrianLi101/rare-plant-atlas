@@ -8,6 +8,12 @@ export function middleware(request: NextRequest) {
   const forwardedProto = request.headers.get("x-forwarded-proto");
   const url = request.nextUrl.clone();
 
+  const isLocalDevHost =
+    host?.startsWith("localhost") || host?.startsWith("127.0.0.1");
+  if (isLocalDevHost) {
+    return NextResponse.next();
+  }
+
   let shouldRedirect = false;
 
   if (host === APEX_HOST) {

@@ -311,6 +311,15 @@ export interface SourceReference {
  */
 export type TissueCultureStatus = "unknown" | "none" | "limited" | "widespread";
 
+export interface TissueCultureInfo {
+  /** Tissue culture availability — defaults to "unknown" if omitted */
+  status?: TissueCultureStatus;
+  /** Editorial note on TC vs wild-type differences (growth speed, lineage, etc.) */
+  note?: string;
+  /** Current TC price range in USD from the latest snapshot; null if unclear */
+  priceRange: PlantPriceRange | null;
+}
+
 // ---------------------------------------------------------------------------
 // Conservation section
 // ---------------------------------------------------------------------------
@@ -362,10 +371,8 @@ export interface PlantListing {
   quickAnswer?: string;
   lastReviewed?: Date;
   priceHistory?: string;
-  /** Tissue culture availability — defaults to "unknown" if omitted */
-  tissueCultureStatus?: TissueCultureStatus;
-  /** Editorial note on TC vs wild-type differences (growth speed, lineage, etc.) */
-  tissueCultureNote?: string;
+  /** Tissue culture context (status, note, and current TC price estimate). */
+  tissueCultureInfo?: TissueCultureInfo;
   availabilityNotes?: string;
 
   /**

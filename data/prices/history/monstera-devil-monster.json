@@ -1,6 +1,6 @@
 {
   "slug": "monstera-devil-monster",
-  "lastUpdated": "2026-04-19",
+  "lastUpdated": "2026-04-25",
   "entries": [
     {
       "date": "2026-03-28",
@@ -184,6 +184,54 @@
     },
     {
       "date": "2026-04-19",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Monstera Devil Monster 6” Exact Plant",
+      "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant",
+      "price": 3499.99,
+      "priceHigh": 3499.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-25",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Monstera Devil Monster 6” XL Exact Plant",
+      "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-xl-exact-plant",
+      "price": 2799.99,
+      "priceHigh": 2799.99,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-25",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Monstera Devil Monster (Tissue Culture) *Preorder* Ship Date Mid March 2026",
+      "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-tissue-culture-preorder-ship-date-mid-march-2026",
+      "price": 799.99,
+      "priceHigh": 799.99,
+      "available": false,
+      "growthStage": "tc",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-25",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Monstera Devil Monster 6” Exact Plant",
+      "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant-1",
+      "price": 5999.99,
+      "priceHigh": 5999.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-04-25",
       "sellerId": "rare-foliage-plant-co",
       "sellerName": "Rare Foliage Plant Co",
       "title": "Monstera Devil Monster 6” Exact Plant",

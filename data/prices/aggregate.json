@@ -1,12 +1,12 @@
 {
   "alocasia-black-velvet-variegated-pink": {
     "slug": "alocasia-black-velvet-variegated-pink",
-    "currentMin": 50,
+    "currentMin": 19.99,
     "currentMax": 1250,
-    "allTimeMin": 50,
+    "allTimeMin": 19.99,
     "allTimeMax": 1250,
-    "lastSeen": "2026-04-19",
-    "sellerCount": 2,
+    "lastSeen": "2026-04-25",
+    "sellerCount": 3,
     "availableNow": true,
     "recentListings": [
       {
@@ -458,16 +458,166 @@
         "growthStage": "plant",
         "date": "2026-04-19",
         "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2392-alocasia-black-velvet-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2393-alocasia-black-velvet-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2390-alocasia-black-velvet-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2391-alocasia-black-velvet-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2371-alocasia-black-velvet-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2368-alocasia-black-velvet-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2386-alocasia-black-velvet-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1250,
+        "priceHigh": 1250,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-black-velvet-ninja-pink-variegated-wk15-uw",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 75,
+        "priceHigh": 75,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-black-velvet-pink-variegated-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 19.99,
+        "priceHigh": 19.99,
+        "productUrl": "https://orangelakenursery.com/products/alocasia-variegated-black-velvet-pink-plantlet",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 79.99,
+        "priceHigh": 79.99,
+        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-2",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 119.99,
+        "priceHigh": 119.99,
+        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant-1",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 164.99,
+        "priceHigh": 164.99,
+        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 374.99,
+        "priceHigh": 374.99,
+        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-4-full-plant-us-seller",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 124.99,
+        "priceHigh": 124.99,
+        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant-us-seller",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
       }
     ]
   },
   "alocasia-chantrieri-variegated-pink": {
     "slug": "alocasia-chantrieri-variegated-pink",
-    "currentMin": 650,
+    "currentMin": 499,
     "currentMax": 2498,
-    "allTimeMin": 650,
+    "allTimeMin": 499,
     "allTimeMax": 2498,
-    "lastSeen": "2026-04-19",
+    "lastSeen": "2026-04-25",
     "sellerCount": 2,
     "availableNow": true,
     "recentListings": [
@@ -540,16 +690,46 @@
         "growthStage": "plant",
         "date": "2026-04-19",
         "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1500,
+        "priceHigh": 1500,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-chantrieri-pink-variegated-wk17-f",
+        "growthStage": "corm",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 950,
+        "priceHigh": 950,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-chantrieri-pink-variegated-wk15-b",
+        "growthStage": "corm",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 499,
+        "priceHigh": 499,
+        "productUrl": "https://aroidmarket.com/products/alocasia-chantrieri-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
       }
     ]
   },
   "anthurium-delta-force": {
     "slug": "anthurium-delta-force",
-    "currentMin": 195,
+    "currentMin": 100,
     "currentMax": 249.99,
     "allTimeMin": 84.99,
     "allTimeMax": 249.99,
-    "lastSeen": "2026-04-19",
+    "lastSeen": "2026-04-25",
     "sellerCount": 3,
     "availableNow": true,
     "recentListings": [
@@ -722,6 +902,66 @@
         "growthStage": "plant",
         "date": "2026-04-19",
         "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/anthurium-delta-force-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 100,
+        "priceHigh": 100,
+        "productUrl": "https://www.carnivero.com/products/wh0033-anthurium-delta-force-m",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://www.carnivero.com/products/anthurium-delta-force",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 219.99,
+        "priceHigh": 219.99,
+        "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-6",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 84.99,
+        "priceHigh": 84.99,
+        "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-3",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-4-flowering-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
       }
     ]
   },
@@ -731,7 +971,7 @@
     "currentMax": 2799.99,
     "allTimeMin": 799.99,
     "allTimeMax": 5999.99,
-    "lastSeen": "2026-04-19",
+    "lastSeen": "2026-04-25",
     "sellerCount": 2,
     "availableNow": true,
     "recentListings": [
@@ -894,17 +1134,57 @@
         "growthStage": "plant",
         "date": "2026-04-19",
         "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 2799.99,
+        "priceHigh": 2799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-xl-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 799.99,
+        "priceHigh": 799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-tissue-culture-preorder-ship-date-mid-march-2026",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 5999.99,
+        "priceHigh": 5999.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 3499.99,
+        "priceHigh": 3499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
       }
     ]
   },
   "monstera-thai-constellation": {
     "slug": "monstera-thai-constellation",
-    "currentMin": 24.99,
+    "currentMin": 7.99,
     "currentMax": 450,
-    "allTimeMin": 10,
+    "allTimeMin": 7.99,
     "allTimeMax": 450,
-    "lastSeen": "2026-04-19",
-    "sellerCount": 5,
+    "lastSeen": "2026-04-25",
+    "sellerCount": 6,
     "availableNow": true,
     "recentListings": [
       {
@@ -1226,16 +1506,166 @@
         "growthStage": "plant",
         "date": "2026-04-19",
         "available": true
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 149,
+        "priceHigh": 149,
+        "productUrl": "https://www.nsetropicals.com/product/2-monstera-thai-constellation/",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 450,
+        "priceHigh": 450,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-thai-constellation-creme-brulee-wk16-uf",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 28,
+        "priceHigh": 28,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-thai-constellation-large-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 7.99,
+        "priceHigh": 7.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-thai-constellation-tissue-culture-single",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 29.99,
+        "priceHigh": 29.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-thai-constellation-tissue-culture-5-pack-copy",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 17.99,
+        "priceHigh": 17.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-thai-constellation-3in-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 8.99,
+        "priceHigh": 8.99,
+        "productUrl": "https://orangelakenursery.com/products/low-var-monstera-thai-constellation",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 34.99,
+        "priceHigh": 34.99,
+        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-thai-constellation",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 74.99,
+        "priceHigh": 74.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-thai-constellation-6-high-variegation",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 24.99,
+        "priceHigh": 24.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-thai-constellation-3",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 24.99,
+        "priceHigh": 24.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-thai-constellation-4-quot-us-seller",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 79,
+        "priceHigh": 79,
+        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation-mutation",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 51,
+        "priceHigh": 51,
+        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation-mature-size",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 32,
+        "priceHigh": 32,
+        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation-little",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 36,
+        "priceHigh": 36,
+        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
       }
     ]
   },
   "monstera-white-lava": {
     "slug": "monstera-white-lava",
-    "currentMin": 850,
+    "currentMin": 592,
     "currentMax": 10975,
-    "allTimeMin": 850,
+    "allTimeMin": 592,
     "allTimeMax": 10975,
-    "lastSeen": "2026-04-19",
+    "lastSeen": "2026-04-25",
     "sellerCount": 2,
     "availableNow": true,
     "recentListings": [
@@ -1418,6 +1848,56 @@
         "growthStage": "plant",
         "date": "2026-04-19",
         "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1500,
+        "priceHigh": 1500,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk16-uk",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1200,
+        "priceHigh": 1200,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk14-ul",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1500,
+        "priceHigh": 1500,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk14-uk",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 850,
+        "priceHigh": 850,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk11-um",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 592,
+        "priceHigh": 592,
+        "productUrl": "https://aroidmarket.com/products/monstera-white-lava",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
       }
     ]
   },
@@ -1427,7 +1907,7 @@
     "currentMax": 1950,
     "allTimeMin": 49.99,
     "allTimeMax": 1950,
-    "lastSeen": "2026-04-19",
+    "lastSeen": "2026-04-25",
     "sellerCount": 3,
     "availableNow": true,
     "recentListings": [
@@ -1590,6 +2070,56 @@
         "growthStage": "plant",
         "date": "2026-04-19",
         "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-white-monster",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-mutation-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-6",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 549.99,
+        "priceHigh": 549.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-5-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 54.99,
+        "priceHigh": 54.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-3-us-seller",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
       }
     ]
   },
@@ -1599,7 +2129,7 @@
     "currentMax": 1500,
     "allTimeMin": 595,
     "allTimeMax": 1500,
-    "lastSeen": "2026-04-19",
+    "lastSeen": "2026-04-25",
     "sellerCount": 2,
     "availableNow": true,
     "recentListings": [
@@ -1652,17 +2182,27 @@
         "growthStage": "plant",
         "date": "2026-04-19",
         "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 595,
+        "priceHigh": 595,
+        "productUrl": "https://www.nsetropicals.com/product/1494-variegated-philodendron-gloriosum-og-type-1/",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
       }
     ]
   },
   "philodendron-spiritus-sancti": {
     "slug": "philodendron-spiritus-sancti",
-    "currentMin": 39.99,
+    "currentMin": 9.99,
     "currentMax": 249.99,
-    "allTimeMin": 39.99,
+    "allTimeMin": 9.99,
     "allTimeMax": 299.99,
-    "lastSeen": "2026-04-19",
-    "sellerCount": 5,
+    "lastSeen": "2026-04-25",
+    "sellerCount": 6,
     "availableNow": true,
     "recentListings": [
       {
@@ -1823,6 +2363,166 @@
         "productUrl": "https://aroidmarket.com/products/philodendron-spiritus-sancti",
         "growthStage": "plant",
         "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 250,
+        "priceHigh": 250,
+        "productUrl": "https://www.nsetropicals.com/product/small-size-philodendron-spiritus-sancti/",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 35,
+        "priceHigh": 35,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-spiritus-sancti-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 9.99,
+        "priceHigh": 9.99,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-spiritus-sancti-tissue-culture",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 25,
+        "priceHigh": 25,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-spiritus-sancti-3in-174",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 25,
+        "priceHigh": 25,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-spiritus-sancti-3in-175",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 25,
+        "priceHigh": 25,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-spiritus-sancti-3in-176",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 25,
+        "priceHigh": 25,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-spiritus-sancti-3in-177",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 25,
+        "priceHigh": 25,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-spiritus-sancti-3in-178",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 25,
+        "priceHigh": 25,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-spiritus-sancti-3in-179",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 25,
+        "priceHigh": 25,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-spiritus-sancti-3in-180",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 25,
+        "priceHigh": 25,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-spiritus-sancti-3in-181",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 19.99,
+        "priceHigh": 19.99,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-spiritus-sancti-3in-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 59.99,
+        "priceHigh": 59.99,
+        "productUrl": "https://www.carnivero.com/products/philodendron-spiritus-sancti",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 39.99,
+        "priceHigh": 39.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-spiritus-sancti-4",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-spiritus-sancti-mature-6-hanging-basket",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 102,
+        "priceHigh": 102,
+        "productUrl": "https://aroidmarket.com/products/philodendron-spiritus-sancti",
+        "growthStage": "plant",
+        "date": "2026-04-25",
         "available": true
       }
     ]

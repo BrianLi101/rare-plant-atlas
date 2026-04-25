@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { plants, getPlantBySlug } from "@/data/plants";
 import { getPlantLabel, getPlantScientificName } from "@/data/identity";
+import { formatUsd } from "@/data/price";
 import { PlantDetailClient } from "@/components/PlantDetailClient";
 import { JsonLd } from "@/components/JsonLd";
 
@@ -396,10 +397,25 @@ export default function PlantPage({ params }: { params: { slug: string } }) {
         )}
 
         {/* SEO/GEO: Tissue culture status — collector differentiator */}
-        {plant.tissueCultureNote && (
+        {(plant.tissueCultureInfo?.note ||
+          plant.tissueCultureInfo?.priceRange !== null) && (
           <section>
             <h2>Tissue Culture</h2>
-            <p>{plant.tissueCultureNote}</p>
+            {plant.tissueCultureInfo?.note && <p>{plant.tissueCultureInfo.note}</p>}
+            {plant.tissueCultureInfo &&
+              plant.tissueCultureInfo.priceRange !== null && (
+              <p>
+                Current TC price range:{" "}
+                {formatUsd(plant.tissueCultureInfo.priceRange.min)} -{" "}
+                {formatUsd(plant.tissueCultureInfo.priceRange.max)} USD (as of{" "}
+                {plant.tissueCultureInfo.priceRange.lastObserved.toLocaleDateString("en-US", {
+                  month: "long",
+                  day: "numeric",
+                  year: "numeric",
+                })}
+                ).
+              </p>
+            )}
           </section>
         )}
 

@@ -107,8 +107,11 @@ export const anthuriumDeltaForce: PlantFile = {
   ],
   priceHistory:
     "Delta Force prices have compressed roughly 60% since 2021 due to widespread tissue culture availability. Mature specimens from original stock or reputable TC lines still command $150–$200, but small TC plantlets now start around $40. Expect further compression as more labs bring this cultivar into production.",
-  tissueCultureStatus: "widespread",
-  tissueCultureNote: "Delta Force is exclusively a cultivated hybrid — there is no wild type. All specimens trace back to Steve Nock's original clarinervium × pedatoradiatum cross at Ree Gardens in the 1990s. The specific phenotype has never been reliably recreated from seed, making tissue culture the only scalable propagation route. TC plants are true-to-type and genetically identical to the original clone.",
+  tissueCultureInfo: {
+    status: "widespread",
+    note: "Delta Force is exclusively a cultivated hybrid — there is no wild type. All specimens trace back to Steve Nock's original clarinervium × pedatoradiatum cross at Ree Gardens in the 1990s. The specific phenotype has never been reliably recreated from seed, making tissue culture the only scalable propagation route. TC plants are true-to-type and genetically identical to the original clone.",
+    priceRange: null,
+  },
   availabilityNotes:
     "Widely available year-round from tissue culture suppliers. Spring and summer see the highest inventory as growers time stock to peak demand. Mature specimens (6+ leaves with full triangular geometry) are less common and typically only available from specialist collectors.",
   sourceReferences: [

@@ -37,9 +37,17 @@ export const monsteraThaiConstellation: PlantListing = {
   marketNote:
     "The plant that broke the rare aroid market. Once $300+ for a cutting, Thai Constellation is now available at Costa Farms retail for under $50. TC supply from Thai labs flooded the market in 2023–2024. Still a beautiful plant, but no longer a collector flex. Mature specimens with high variegation coverage hold some premium.",
   fullProfileStatus: "in-progress",
-  tissueCultureStatus: "widespread",
-  tissueCultureNote:
-    "All Thai Constellation are tissue culture — the cultivar originated in a Thai lab and has never existed in the wild. TC is the only propagation method. Growth rate is moderate, significantly faster than Albo variegated deliciosa.",
+  tissueCultureInfo: {
+    status: "widespread",
+    note:
+      "All Thai Constellation are tissue culture — the cultivar originated in a Thai lab and has never existed in the wild. TC is the only propagation method. Growth rate is moderate, significantly faster than Albo variegated deliciosa.",
+    priceRange: {
+      currency: "USD",
+      min: 7.99,
+      max: 29.99,
+      lastObserved: new Date("2026-04-25"),
+    },
+  },
   priceHistory:
     "Prices collapsed ~80% between 2022 and 2025 due to mass TC production and Costa Farms retail distribution. The $300 cutting is now a $40 retail plant.",
   availabilityNotes:

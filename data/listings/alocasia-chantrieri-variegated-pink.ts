@@ -36,9 +36,12 @@ export const alocasiaChantrierVariegatedPink: PlantListing = {
   marketNote:
     "A pink variegated form of Alocasia chantrieri that emerged from tissue culture labs in Southeast Asia. The compact, deeply veined foliage takes on pink and cream sectors. Still relatively uncommon in the US market, with most stock coming through Thai importers.",
   fullProfileStatus: "planned",
-  tissueCultureStatus: "limited",
-  tissueCultureNote:
-    "Originated as a TC sport. Supply is growing but not yet widespread — most availability comes from Thai and Indonesian labs. Plants can be slow to establish after import.",
+  tissueCultureInfo: {
+    status: "limited",
+    note:
+      "Originated as a TC sport. Supply is growing but not yet widespread — most availability comes from Thai and Indonesian labs. Plants can be slow to establish after import.",
+    priceRange: null,
+  },
   priceHistory:
     "Entered the collector market around 2023–2024. Prices have softened slightly as more TC stock arrives, but high-variegation specimens still command premiums.",
   availabilityNotes:

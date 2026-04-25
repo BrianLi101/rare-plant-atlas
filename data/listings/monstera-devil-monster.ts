@@ -36,9 +36,12 @@ export const monsteraDevilMonster: PlantListing = {
   marketNote:
     "A compact, deeply textured Monstera deliciosa sport that emerged from Thai tissue culture labs. Characterized by darker coloration, pronounced ridging, and aggressive fenestration at a smaller size than standard deliciosa. Still establishing itself in the collector market — authentic specimens command a premium over the growing number of mislabeled lookalikes.",
   fullProfileStatus: "planned",
-  tissueCultureStatus: "limited",
-  tissueCultureNote:
-    "Originated as a TC sport in Thai labs. Supply is increasing but not yet widespread — most availability comes from a handful of Thai exporters and US resellers. Growth rate is comparable to standard deliciosa.",
+  tissueCultureInfo: {
+    status: "limited",
+    note:
+      "Originated as a TC sport in Thai labs. Supply is increasing but not yet widespread — most availability comes from a handful of Thai exporters and US resellers. Growth rate is comparable to standard deliciosa.",
+    priceRange: null,
+  },
   priceHistory:
     "Entered the US market around 2024. Initial prices were $500+ for small plants. Now settling into the $80–$400 range as more TC stock arrives.",
   availabilityNotes:

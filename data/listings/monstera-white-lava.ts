@@ -36,9 +36,12 @@ export const monsteraWhiteLava: PlantListing = {
   marketNote:
     "A striking Monstera deliciosa sport featuring bold white to cream sectoral variegation. Emerged from Thai tissue culture labs and quickly gained collector attention for its high-contrast patterning. Variegation stability varies between specimens — plants with consistent sectoral patterns are most sought after. Sometimes confused with Monstera Albo, but White Lava typically displays broader, more irregular white sectors.",
   fullProfileStatus: "planned",
-  tissueCultureStatus: "limited",
-  tissueCultureNote:
-    "Produced via tissue culture in Thai labs. Supply is growing but still limited compared to demand. Reverted or low-variegation specimens are more affordable but less desirable.",
+  tissueCultureInfo: {
+    status: "limited",
+    note:
+      "Produced via tissue culture in Thai labs. Supply is growing but still limited compared to demand. Reverted or low-variegation specimens are more affordable but less desirable.",
+    priceRange: null,
+  },
   priceHistory:
     "Entered the collector market around 2024–2025. Early specimens sold for $500+. Prices have begun to soften as TC supply increases, but high-quality variegated plants still hold value.",
   availabilityNotes:

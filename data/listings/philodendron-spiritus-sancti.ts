@@ -39,9 +39,17 @@ export const philodendronSpiritusSancti: PlantListing = {
   marketNote:
     "Once the most expensive houseplant in the world, with mature specimens selling for $10,000–$30,000+. Tissue culture labs (primarily in Thailand and Indonesia) have flooded the market since 2024, making small TC plants available for under $100. Mature specimens still command a premium, but the days of five-figure price tags are over for most buyers.",
   fullProfileStatus: "in-progress",
-  tissueCultureStatus: "widespread",
-  tissueCultureNote:
-    "TC propagation has been the primary driver of accessibility. Wild populations in Espírito Santo, Brazil are critically endangered with fewer than a few hundred plants remaining. Nearly all plants in cultivation are TC-derived.",
+  tissueCultureInfo: {
+    status: "widespread",
+    note:
+      "TC propagation has been the primary driver of accessibility. Wild populations in Espírito Santo, Brazil are critically endangered with fewer than a few hundred plants remaining. Nearly all plants in cultivation are TC-derived.",
+    priceRange: {
+      currency: "USD",
+      min: 9.99,
+      max: 9.99,
+      lastObserved: new Date("2026-04-25"),
+    },
+  },
   priceHistory:
     "Prices dropped ~95% between 2022 and 2026 as TC supply scaled up. A plant that once cost $10,000+ as a cutting is now $50–$300 for TC specimens.",
   availabilityNotes:

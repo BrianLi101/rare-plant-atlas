@@ -116,8 +116,16 @@ export const alocasiaBlackVelvetVariegatedPink: PlantFile = {
   ],
   priceHistory:
     "Variegated Black Velvet prices have compressed roughly 40% since 2023 as tissue culture production expanded in Thailand and Taiwan. Sprouted corms with visible variegation now start around $50–$70, down from $100+ in 2022. Mature specimens with strong pink expression still command $200–$300. Gold forms occasionally exceed the pink price range when saturation is strong.",
-  tissueCultureStatus: "widespread",
-  tissueCultureNote: "The pink variegated form emerged from tissue culture labs in Thailand and Taiwan — it has never existed in the wild. All legitimate stock traces to TC origins. The straight species (Alocasia reginula) is endemic to Sabah, Malaysian Borneo, but wild collection is not the source of variegated plants in the collector market. TC plants are generally healthy and viable, making this a good entry point for new collectors.",
+  tissueCultureInfo: {
+    status: "widespread",
+    note: "The pink variegated form emerged from tissue culture labs in Thailand and Taiwan — it has never existed in the wild. All legitimate stock traces to TC origins. The straight species (Alocasia reginula) is endemic to Sabah, Malaysian Borneo, but wild collection is not the source of variegated plants in the collector market. TC plants are generally healthy and viable, making this a good entry point for new collectors.",
+    priceRange: {
+      currency: "USD",
+      min: 19.99,
+      max: 19.99,
+      lastObserved: new Date("2026-04-25"),
+    },
+  },
   availabilityNotes:
     "Widely available year-round from Southeast Asian TC suppliers and domestic corm propagators. Spring/summer see higher inventory as growers divide actively producing mother plants. Sprouted corms with visible variegation are the recommended purchase format — available from most Alocasia specialists.",
   sourceReferences: [

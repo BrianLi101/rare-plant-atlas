@@ -129,8 +129,11 @@ export const philodendronGloriosumVariegated: PlantFile = {
   ],
   priceHistory:
     "Type 2 (splash) variegated gloriosum has dropped roughly 50% since 2022 as tissue culture production expanded — specimens that were $600–$800 now trade at $300–$500. Type 1 (block) remains expensive at $600–$2,500+ because it has not entered tissue culture. The original Type 1 lineage traces to Kaylee Ellen's plant, distributed through NSE Tropicals. Until TC becomes available for Type 1, prices are unlikely to compress significantly.",
-  tissueCultureStatus: 'none',
-  tissueCultureNote: "Type 2 (splash) variegation is widely tissue cultured and available at accessible prices. Type 1 (block) variegation has NOT entered tissue culture — all specimens are cutting-propagated from the original Kaylee Ellen lineage. This distinction is the primary driver of the price gap between the two forms. Wild-collected gloriosum exists but is legally restricted under Colombian export law; the variegated forms are exclusively cultivated mutations.",
+  tissueCultureInfo: {
+    status: 'none',
+    note: "Type 2 (splash) variegation is widely tissue cultured and available at accessible prices. Type 1 (block) variegation has NOT entered tissue culture — all specimens are cutting-propagated from the original Kaylee Ellen lineage. This distinction is the primary driver of the price gap between the two forms. Wild-collected gloriosum exists but is legally restricted under Colombian export law; the variegated forms are exclusively cultivated mutations.",
+    priceRange: null,
+  },
   availabilityNotes:
     "Type 2 (splash) is available year-round from TC suppliers. Type 1 (block) is extremely limited — typically only available from NSE Tropicals (US) or directly from Kaylee Ellen (UK). Expect waitlists. New cuttings tend to appear in spring/summer when growers divide actively growing rhizomes.",
   sourceReferences: [
