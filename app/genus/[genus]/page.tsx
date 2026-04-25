@@ -8,6 +8,10 @@ import { getPlantLabel } from "@/data/identity";
 import { formatPlantPriceRangeForGlance } from "@/data/price";
 import { Navigation } from "@/components/Navigation";
 import { JsonLd } from "@/components/JsonLd";
+import {
+  getPlantPlaceholderVariant,
+  PlantPlaceholder,
+} from "@/components/PlantPlaceholder";
 
 // SEO/GEO: Genus index pages function as "Top N" listicle pages that account
 // for 74% of all AI citations. They provide a summary table above the fold
@@ -313,8 +317,8 @@ export default function GenusPage({ params }: { params: { genus: string } }) {
                   }}
                 >
                   <div className="flex gap-4 items-start">
-                    {heroImage && (
-                      <div className="w-16 h-16 rounded-sm overflow-hidden shrink-0 relative">
+                    <div className="w-16 h-16 rounded-sm overflow-hidden shrink-0 relative">
+                      {heroImage ? (
                         <Image
                           src={heroImage}
                           alt={getPlantLabel(plant)}
@@ -322,8 +326,14 @@ export default function GenusPage({ params }: { params: { genus: string } }) {
                           sizes="64px"
                           className="object-cover"
                         />
-                      </div>
-                    )}
+                      ) : (
+                        <PlantPlaceholder
+                          accent={plant.colors.accent}
+                          variant={getPlantPlaceholderVariant(plant.identity.genus)}
+                          label={`${getPlantLabel(plant)} placeholder image`}
+                        />
+                      )}
+                    </div>
                     <div className="min-w-0">
                       <div
                         className="font-serif text-[1rem] font-bold leading-tight mb-1 group-hover:opacity-80 transition-opacity"

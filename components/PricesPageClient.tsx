@@ -8,6 +8,10 @@ import type {
   PricesPagePlant,
   PricesPageMarket,
 } from "@/lib/pricesPageData";
+import {
+  getPlantPlaceholderVariant,
+  PlantPlaceholder,
+} from "@/components/PlantPlaceholder";
 
 const fmtUsd = (n: number) =>
   "$" + Math.round(n).toLocaleString("en-US");
@@ -118,27 +122,6 @@ function MiniSpark({
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-    </svg>
-  );
-}
-
-function LeafGlyph({ accent }: { accent: string }) {
-  return (
-    <svg
-      viewBox="0 0 100 100"
-      fill="none"
-      stroke={accent}
-      strokeWidth="1"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M50 12 C30 22 20 42 22 62 C24 80 36 88 50 88 C64 88 76 80 78 62 C80 42 70 22 50 12 Z" />
-      <path d="M50 14 L50 88" opacity="0.6" />
-      <path d="M50 30 C42 32 36 38 33 46" opacity="0.5" />
-      <path d="M50 40 C58 42 64 48 67 56" opacity="0.5" />
-      <path d="M50 52 C44 54 40 58 38 64" opacity="0.4" />
-      <path d="M50 62 C56 64 60 68 62 74" opacity="0.4" />
     </svg>
   );
 }
@@ -321,14 +304,12 @@ export function PricesPageClient({ plants, market }: PricesPageClientProps) {
                       className="object-cover"
                     />
                   ) : (
-                    <div
+                    <PlantPlaceholder
+                      accent={p.accent}
+                      variant={getPlantPlaceholderVariant(p.genus)}
+                      label={`${p.label} placeholder image`}
                       className="pp-card-placeholder"
-                      style={{
-                        background: `radial-gradient(circle at 32% 38%, ${p.accent}33, ${p.accent}0d 55%, var(--deep) 100%)`,
-                      }}
-                    >
-                      <LeafGlyph accent={p.accent} />
-                    </div>
+                    />
                   )}
                   <span className={`pp-card-rarity ${p.rarityClass}`}>
                     {p.rarity}

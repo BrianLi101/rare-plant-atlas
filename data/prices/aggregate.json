@@ -1177,6 +1177,258 @@
       }
     ]
   },
+  "monstera-bulbasaur": {
+    "slug": "monstera-bulbasaur",
+    "currentMin": 29.99,
+    "currentMax": 2799.99,
+    "allTimeMin": 29.99,
+    "allTimeMax": 2799.99,
+    "lastSeen": "2026-04-25",
+    "sellerCount": 3,
+    "availableNow": true,
+    "recentListings": [
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 950,
+        "priceHigh": 950,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-bulbasaur-wk8-b",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-bulbasaur",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 2799.99,
+        "priceHigh": 2799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6-xl-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 749.99,
+        "priceHigh": 749.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 549.99,
+        "priceHigh": 549.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-3-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 74.99,
+        "priceHigh": 74.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-tissue-culture-pre-order",
+        "growthStage": "tc",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 500,
+        "priceHigh": 500,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-bulbasaur-wk14-a",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-bulbasaur",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 2799.99,
+        "priceHigh": 2799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6-xl-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 749.99,
+        "priceHigh": 749.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 549.99,
+        "priceHigh": 549.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-3-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 74.99,
+        "priceHigh": 74.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-tissue-culture-pre-order",
+        "growthStage": "tc",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 500,
+        "priceHigh": 500,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-bulbasaur-wk14-a",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-bulbasaur",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 2799.99,
+        "priceHigh": 2799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6-xl-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 749.99,
+        "priceHigh": 749.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 549.99,
+        "priceHigh": 549.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-3-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 74.99,
+        "priceHigh": 74.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-tissue-culture-pre-order",
+        "growthStage": "tc",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-bulbasaur",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 29.99,
+        "priceHigh": 29.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-bulbasur-tissue-culture",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 2799.99,
+        "priceHigh": 2799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6-xl-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 749.99,
+        "priceHigh": 749.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 549.99,
+        "priceHigh": 549.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-3-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 74.99,
+        "priceHigh": 74.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-tissue-culture-pre-order",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": false
+      }
+    ]
+  },
   "monstera-thai-constellation": {
     "slug": "monstera-thai-constellation",
     "currentMin": 7.99,

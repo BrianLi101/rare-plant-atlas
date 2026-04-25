@@ -9,6 +9,10 @@ import type { PriceSummary, GrowthStage } from "@/data/prices/types";
 import priceAggregate from "@/data/prices/aggregate.json";
 import { getPlantLabel, getPlantFullName, getPlantVariantLabel } from "@/data/identity";
 import { formatPlantPriceRangeForGlance, formatUsd } from "@/data/price";
+import {
+  getPlantPlaceholderVariant,
+  PlantPlaceholder,
+} from "@/components/PlantPlaceholder";
 
 // ─── Rarity pill colors ──────────────────────────────────────────────────────
 const RARITY_COLORS: Record<string, { bg: string; border: string; text: string }> = {
@@ -62,11 +66,11 @@ function PlantCard({ plant }: { plant: (typeof plants)[number] }) {
             className="object-cover opacity-65"
           />
         ) : (
-          <div
-            className="absolute inset-0 opacity-65"
-            style={{
-              background: `linear-gradient(145deg, ${plant.colors.gradient[0]}, ${plant.colors.gradient[1]})`,
-            }}
+          <PlantPlaceholder
+            accent={accent}
+            variant={getPlantPlaceholderVariant(plant.identity.genus)}
+            glyphOpacity={0.48}
+            label={`${getPlantFullName(plant)} placeholder image`}
           />
         )}
       </div>
@@ -183,13 +187,20 @@ function ListingCard({ listing }: { listing: PlantListing }) {
           background: `linear-gradient(160deg, ${listing.colors.gradient[0]}, ${listing.colors.gradient[1]})`,
         }}
       >
-        {listing.images.hero && (
+        {listing.images.hero ? (
           <Image
             src={listing.images.hero}
             alt={getPlantFullName(listing)}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
             className="object-cover opacity-40"
+          />
+        ) : (
+          <PlantPlaceholder
+            accent={accent}
+            variant={getPlantPlaceholderVariant(listing.identity.genus)}
+            glyphOpacity={0.42}
+            label={`${getPlantFullName(listing)} placeholder image`}
           />
         )}
         {/* Type badge */}
@@ -332,7 +343,7 @@ export default function Home() {
               className="absolute inset-0"
               style={{ background: "radial-gradient(ellipse at 60% 40%, #1a2e1a 0%, #0a0a08 70%)" }}
             />
-            {plants[0]?.images.hero && (
+            {plants[0]?.images.hero ? (
               <Image
                 src={plants[0].images.hero}
                 alt=""
@@ -342,7 +353,13 @@ export default function Home() {
                 style={{ objectPosition: "center 30%" }}
                 sizes="100vw"
               />
-            )}
+            ) : plants[0] ? (
+              <PlantPlaceholder
+                accent={plants[0].colors.accent}
+                variant={getPlantPlaceholderVariant(plants[0].identity.genus)}
+                glyphOpacity={0.22}
+              />
+            ) : null}
             <div
               className="absolute inset-0"
               style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(10,10,8,0.45) 50%, #0a0a08 100%)" }}

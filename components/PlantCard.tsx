@@ -8,6 +8,10 @@ import {
   getPlantFullName,
   getPlantVariantLabel,
 } from "@/data/identity";
+import {
+  getPlantPlaceholderVariant,
+  PlantPlaceholder,
+} from "@/components/PlantPlaceholder";
 
 function hexToRgba(hex: string, alpha: number): string {
   const cleaned = hex.replace("#", "");
@@ -27,6 +31,7 @@ function hexToRgba(hex: string, alpha: number): string {
 export function PlantCard({ plant }: { plant: PlantFile }) {
   const variant = getPlantVariantLabel(plant);
   const heroImage = plant.panels[0]?.image;
+  const hasHeroImage = Boolean(heroImage);
   const accent = plant.colors.accent || "#85b98e";
   const accentSoft = hexToRgba(accent, 0.5);
   const accentMid = hexToRgba(accent, 0.3);
@@ -53,99 +58,102 @@ export function PlantCard({ plant }: { plant: PlantFile }) {
               className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
             />
           ) : (
-            <div
-              className="absolute inset-0"
-              style={{
-                background: `linear-gradient(145deg, ${plant.colors.gradient[0]}, ${plant.colors.gradient[1]})`,
-              }}
+            <PlantPlaceholder
+              accent={accent}
+              variant={getPlantPlaceholderVariant(plant.identity.genus)}
+              label={`${getPlantFullName(plant)} placeholder image`}
             />
           )}
 
-          <svg
-            viewBox="0 0 400 533"
-            className="absolute inset-0 w-full h-full opacity-[0.07] pointer-events-none"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            <ellipse
-              cx="200"
-              cy="160"
-              rx="120"
-              ry="200"
-              fill="none"
-              stroke={accent}
-              strokeWidth="1"
-            />
-            <line
-              x1="200"
-              y1="0"
-              x2="200"
-              y2="360"
-              stroke={accent}
-              strokeWidth="0.6"
-            />
-            <line
-              x1="200"
-              y1="80"
-              x2="110"
-              y2="120"
-              stroke={accent}
-              strokeWidth="0.5"
-            />
-            <line
-              x1="200"
-              y1="110"
-              x2="290"
-              y2="150"
-              stroke={accent}
-              strokeWidth="0.5"
-            />
-            <line
-              x1="200"
-              y1="140"
-              x2="100"
-              y2="190"
-              stroke={accent}
-              strokeWidth="0.5"
-            />
-            <line
-              x1="200"
-              y1="175"
-              x2="300"
-              y2="215"
-              stroke={accent}
-              strokeWidth="0.5"
-            />
-            <line
-              x1="200"
-              y1="210"
-              x2="105"
-              y2="260"
-              stroke={accent}
-              strokeWidth="0.5"
-            />
-            <line
-              x1="200"
-              y1="250"
-              x2="295"
-              y2="290"
-              stroke={accent}
-              strokeWidth="0.5"
-            />
-            <ellipse
-              cx="200"
-              cy="120"
-              rx="55"
-              ry="85"
-              fill={accentSoft}
-            />
-          </svg>
+          {hasHeroImage && (
+            <>
+              <svg
+                viewBox="0 0 400 533"
+                className="absolute inset-0 w-full h-full opacity-[0.07] pointer-events-none"
+                preserveAspectRatio="xMidYMid slice"
+              >
+                <ellipse
+                  cx="200"
+                  cy="160"
+                  rx="120"
+                  ry="200"
+                  fill="none"
+                  stroke={accent}
+                  strokeWidth="1"
+                />
+                <line
+                  x1="200"
+                  y1="0"
+                  x2="200"
+                  y2="360"
+                  stroke={accent}
+                  strokeWidth="0.6"
+                />
+                <line
+                  x1="200"
+                  y1="80"
+                  x2="110"
+                  y2="120"
+                  stroke={accent}
+                  strokeWidth="0.5"
+                />
+                <line
+                  x1="200"
+                  y1="110"
+                  x2="290"
+                  y2="150"
+                  stroke={accent}
+                  strokeWidth="0.5"
+                />
+                <line
+                  x1="200"
+                  y1="140"
+                  x2="100"
+                  y2="190"
+                  stroke={accent}
+                  strokeWidth="0.5"
+                />
+                <line
+                  x1="200"
+                  y1="175"
+                  x2="300"
+                  y2="215"
+                  stroke={accent}
+                  strokeWidth="0.5"
+                />
+                <line
+                  x1="200"
+                  y1="210"
+                  x2="105"
+                  y2="260"
+                  stroke={accent}
+                  strokeWidth="0.5"
+                />
+                <line
+                  x1="200"
+                  y1="250"
+                  x2="295"
+                  y2="290"
+                  stroke={accent}
+                  strokeWidth="0.5"
+                />
+                <ellipse
+                  cx="200"
+                  cy="120"
+                  rx="55"
+                  ry="85"
+                  fill={accentSoft}
+                />
+              </svg>
 
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background: `radial-gradient(ellipse 70% 50% at 40% 30%, ${accentMid} 0%, transparent 65%)`,
-            }}
-          />
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background: `radial-gradient(ellipse 70% 50% at 40% 30%, ${accentMid} 0%, transparent 65%)`,
+                }}
+              />
+            </>
+          )}
 
           <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
           <div

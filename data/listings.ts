@@ -6,6 +6,7 @@ import { monsteraDevilMonster } from "./listings/monstera-devil-monster";
 import { alocasiaChantrierVariegatedPink } from "./listings/alocasia-chantrieri-variegated-pink";
 import { monsteraWhiteLava } from "./listings/monstera-white-lava";
 import { monsteraWhiteMonster } from "./listings/monstera-white-monster";
+import { monsteraBulbasaur } from "./listings/monstera-bulbasaur";
 import { philodendronSpiritusSancti } from "./listings/philodendron-spiritus-sancti";
 
 export const listings: PlantListing[] = [
@@ -14,6 +15,7 @@ export const listings: PlantListing[] = [
   alocasiaChantrierVariegatedPink,
   monsteraWhiteLava,
   monsteraWhiteMonster,
+  monsteraBulbasaur,
   philodendronSpiritusSancti,
 ];
 
@@ -23,6 +25,7 @@ export const listingSourceFiles: Record<string, string> = {
   "alocasia-chantrieri-variegated-pink": "data/listings/alocasia-chantrieri-variegated-pink.ts",
   "monstera-white-lava": "data/listings/monstera-white-lava.ts",
   "monstera-white-monster": "data/listings/monstera-white-monster.ts",
+  "monstera-bulbasaur": "data/listings/monstera-bulbasaur.ts",
   "philodendron-spiritus-sancti": "data/listings/philodendron-spiritus-sancti.ts",
 };
 

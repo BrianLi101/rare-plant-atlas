@@ -25,6 +25,10 @@ import {
   formatScientificName,
 } from "@/data/identity";
 import { Navigation } from "@/components/Navigation";
+import {
+  getPlantPlaceholderVariant,
+  PlantPlaceholder,
+} from "@/components/PlantPlaceholder";
 
 ChartJS.register(
   CategoryScale,
@@ -367,13 +371,20 @@ export function PriceListingClient({
         }}
       >
         {/* Hero image if available */}
-        {listing.images.hero && (
+        {listing.images.hero ? (
           <Image
             src={listing.images.hero}
             alt={label}
             fill
             className="object-cover opacity-40"
             priority
+          />
+        ) : (
+          <PlantPlaceholder
+            accent={listing.colors.accent}
+            variant={getPlantPlaceholderVariant(listing.identity.genus)}
+            glyphOpacity={0.42}
+            label={`${label} placeholder image`}
           />
         )}
 

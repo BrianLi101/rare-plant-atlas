@@ -4,6 +4,10 @@ import type { PlantFile } from "@/data/types";
 import { plants } from "@/data/plants";
 import { getPlantFullName, getPlantVariantLabel } from "@/data/identity";
 import { formatPlantPriceRangeForGlance } from "@/data/price";
+import {
+  getPlantPlaceholderVariant,
+  PlantPlaceholder,
+} from "@/components/PlantPlaceholder";
 import { TabContainer, TabHeader } from "./TabContainer";
 
 // ── Recommendation logic ──────────────────────────────────────────────────────
@@ -36,11 +40,10 @@ function RelatedCard({ plant }: { plant: PlantFile }) {
             className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
           />
         ) : (
-          <div
-            className="absolute inset-0"
-            style={{
-              background: `linear-gradient(145deg, ${plant.colors.gradient[0]}, ${plant.colors.gradient[1]})`,
-            }}
+          <PlantPlaceholder
+            accent={plant.colors.accent}
+            variant={getPlantPlaceholderVariant(plant.identity.genus)}
+            label={`${getPlantFullName(plant)} placeholder image`}
           />
         )}
         {/* Bottom fade */}

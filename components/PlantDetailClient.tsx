@@ -29,6 +29,10 @@ import {
   ConservationTab,
   PricingTab,
 } from "./tabs";
+import {
+  getPlantPlaceholderVariant,
+  PlantPlaceholder,
+} from "@/components/PlantPlaceholder";
 
 // ---------------------------------------------------------------------------
 // Background compositions per panel id
@@ -104,7 +108,19 @@ function buildTabContent(plant: PlantFile): Record<string, React.ReactNode> {
 // ---------------------------------------------------------------------------
 // Cinematic Panel
 // ---------------------------------------------------------------------------
-function CinematicPanel({ panel, isHero, plantName }: { panel: PanelData; isHero?: boolean; plantName: string }) {
+function CinematicPanel({
+  panel,
+  isHero,
+  plantName,
+  accent,
+  genus,
+}: {
+  panel: PanelData;
+  isHero?: boolean;
+  plantName: string;
+  accent: string;
+  genus: string;
+}) {
   const bg = BGSRC[panel.id] ?? BGSRC.hero;
 
   return (
@@ -114,6 +130,16 @@ function CinematicPanel({ panel, isHero, plantName }: { panel: PanelData; isHero
           <>
             <Image src={panel.image} alt={plantName} fill priority={isHero} className="object-cover" sizes="100vw" />
             <div className="absolute inset-0 bg-black/45" />
+          </>
+        ) : isHero ? (
+          <>
+            <PlantPlaceholder
+              accent={accent}
+              variant={getPlantPlaceholderVariant(genus)}
+              glyphOpacity={0.42}
+              label={`${plantName} placeholder image`}
+            />
+            <div className="absolute inset-0 bg-black/38" />
           </>
         ) : (
           <>
@@ -457,7 +483,14 @@ export function PlantDetailClient({ plant }: { plant: PlantFile }) {
       />
       <main ref={mainRef} className="h-[100svh] overflow-y-auto snap-y snap-mandatory hide-scrollbar">
         {plant.panels.map((panel, i) => (
-          <CinematicPanel key={panel.id} panel={panel} isHero={i === 0} plantName={getPlantFullName(plant)} />
+          <CinematicPanel
+            key={panel.id}
+            panel={panel}
+            isHero={i === 0}
+            plantName={getPlantFullName(plant)}
+            accent={plant.colors.accent}
+            genus={plant.identity.genus}
+          />
         ))}
         <AtAGlance plant={plant} />
         <DetailsSection
