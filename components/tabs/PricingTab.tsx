@@ -9,6 +9,7 @@ import {
   PointElement,
   Filler,
   Tooltip,
+  type ChartData,
   type ChartOptions,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
@@ -21,6 +22,13 @@ const GROWTH_STAGE_LABELS: Record<GrowthStage, string> = {
   cutting: "Cutting",
   corm: "Corm",
   plant: "Plant",
+};
+const GROWTH_STAGE_ORDER: GrowthStage[] = ["tc", "cutting", "corm", "plant"];
+const GROWTH_STAGE_COLORS: Record<GrowthStage, string> = {
+  tc: "#85b98e",
+  cutting: "#cdab79",
+  corm: "#7F77DD",
+  plant: "#D4537E",
 };
 
 ChartJS.register(
@@ -41,6 +49,14 @@ function fmtDate(iso: string) {
     year: "numeric",
   });
 }
+
+type InStockChartPoint = {
+  x: string;
+  y: number;
+  sellerName: string;
+  date: string;
+  priceHigh: number;
+};
 
 // ─── Seller Row ───────────────────────────────────────────────────────────
 
@@ -96,62 +112,64 @@ function SellerRow({
 
 // ─── Price Trend Chart ────────────────────────────────────────────────────
 
-const CHART_COLORS = ["#85b98e", "#cdab79", "#7F77DD", "#D4537E", "#5DA5B8", "#C4A03C"];
-
 function PriceTrendChart({
   summary,
 }: {
   summary: PriceSummary;
 }) {
-  // Group recent listings by date to build a time series
-  const byDate = useMemo(() => {
-    const map = new Map<string, { min: number; max: number }>();
-    for (const l of summary.recentListings) {
-      const existing = map.get(l.date);
-      if (existing) {
-        existing.min = Math.min(existing.min, l.price);
-        existing.max = Math.max(existing.max, l.priceHigh);
-      } else {
-        map.set(l.date, { min: l.price, max: l.priceHigh });
-      }
-    }
-    return Array.from(map.entries())
-      .sort(([a], [b]) => a.localeCompare(b))
-      .map(([date, range]) => ({ date, ...range }));
+  const inStockListings = useMemo(() => {
+    return [...summary.recentListings]
+      .filter((listing) => listing.available)
+      .sort((a, b) => {
+        if (a.date !== b.date) return a.date.localeCompare(b.date);
+        return a.price - b.price;
+      });
   }, [summary]);
 
-  if (byDate.length < 2) return null;
+  const labels = useMemo(() => {
+    return Array.from(new Set(inStockListings.map((listing) => listing.date))).map(
+      (date) =>
+        new Date(date).toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+        }),
+    );
+  }, [inStockListings]);
 
-  const labels = byDate.map((d) => {
-    const date = new Date(d.date);
-    return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
-  });
+  const datasets = useMemo<ChartData<"line", InStockChartPoint[], string>["datasets"]>(() => {
+    return GROWTH_STAGE_ORDER.flatMap((stage) => {
+      const listings = inStockListings.filter(
+        (listing) => listing.growthStage === stage,
+      );
+      if (listings.length === 0) return [];
 
-  const data = {
+      return [{
+        label: GROWTH_STAGE_LABELS[stage],
+        data: listings.map((listing) => ({
+          x: new Date(listing.date).toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+          }),
+          y: listing.price,
+          sellerName: listing.sellerName,
+          date: listing.date,
+          priceHigh: listing.priceHigh,
+        })),
+        borderColor: GROWTH_STAGE_COLORS[stage],
+        backgroundColor: GROWTH_STAGE_COLORS[stage],
+        showLine: false,
+        pointRadius: 4,
+        pointHoverRadius: 5,
+        pointHitRadius: 12,
+      }];
+    });
+  }, [inStockListings]);
+
+  if (datasets.length === 0) return null;
+
+  const data: ChartData<"line", InStockChartPoint[], string> = {
     labels,
-    datasets: [
-      {
-        label: "Low",
-        data: byDate.map((d) => d.min),
-        borderColor: CHART_COLORS[0],
-        backgroundColor: "rgba(133,185,142,0.1)",
-        borderWidth: 1.5,
-        pointRadius: 2,
-        fill: "+1",
-        tension: 0.4,
-      },
-      {
-        label: "High",
-        data: byDate.map((d) => d.max),
-        borderColor: CHART_COLORS[1],
-        backgroundColor: "transparent",
-        borderWidth: 1.5,
-        pointRadius: 2,
-        fill: false,
-        tension: 0.4,
-        borderDash: [4, 3] as number[],
-      },
-    ],
+    datasets,
   };
 
   const options: ChartOptions<"line"> = {
@@ -161,8 +179,25 @@ function PriceTrendChart({
       legend: { display: false },
       tooltip: {
         callbacks: {
-          label: (ctx) =>
-            `${ctx.dataset.label}: ${formatUsd(ctx.raw as number)}`,
+          title: (items) => {
+            const first = items[0]?.raw as { date?: string } | undefined;
+            return first?.date ? fmtDate(first.date) : "";
+          },
+          label: (ctx) => {
+            const point = ctx.raw as
+              | {
+                  y: number;
+                  sellerName: string;
+                  priceHigh: number;
+                }
+              | undefined;
+            if (!point) return ctx.dataset.label ?? "";
+            const priceDisplay =
+              point.y === point.priceHigh
+                ? formatUsd(point.y)
+                : `${formatUsd(point.y)}–${formatUsd(point.priceHigh)}`;
+            return `${point.sellerName} (${ctx.dataset.label}): ${priceDisplay}`;
+          },
         },
       },
     },
@@ -185,20 +220,20 @@ function PriceTrendChart({
   return (
     <div>
       <div className="flex gap-4 mb-3">
-        <div className="flex items-center gap-1.5 text-[11px] text-cream/40">
-          <span
-            className="inline-block w-5 h-0.5 rounded"
-            style={{ background: CHART_COLORS[0] }}
-          />
-          Low
-        </div>
-        <div className="flex items-center gap-1.5 text-[11px] text-cream/40">
-          <span
-            className="inline-block w-5 h-0.5 rounded"
-            style={{ background: CHART_COLORS[1] }}
-          />
-          High
-        </div>
+        {GROWTH_STAGE_ORDER.filter((stage) =>
+          inStockListings.some((listing) => listing.growthStage === stage),
+        ).map((stage) => (
+          <div
+            key={stage}
+            className="flex items-center gap-1.5 text-[11px] text-cream/40"
+          >
+            <span
+              className="inline-block h-2.5 w-2.5 rounded-full"
+              style={{ background: GROWTH_STAGE_COLORS[stage] }}
+            />
+            {GROWTH_STAGE_LABELS[stage]}
+          </div>
+        ))}
       </div>
       <div className="relative h-52">
         <Line data={data} options={options} />
@@ -309,7 +344,7 @@ export function PricingTab({
         )}
 
         {/* Price trend chart */}
-        {summary.recentListings.length >= 2 && (
+        {summary.recentListings.some((listing) => listing.available) && (
           <div className="bg-cream/[0.02] border border-cream/[0.08] rounded-xl p-5">
             <h3 className="text-sm font-medium text-cream/60 mb-5">
               Price trend
