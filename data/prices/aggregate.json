@@ -965,218 +965,6 @@
       }
     ]
   },
-  "monstera-devil-monster": {
-    "slug": "monstera-devil-monster",
-    "currentMin": 799.99,
-    "currentMax": 2799.99,
-    "allTimeMin": 799.99,
-    "allTimeMax": 5999.99,
-    "lastSeen": "2026-04-25",
-    "sellerCount": 2,
-    "availableNow": true,
-    "recentListings": [
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1000,
-        "priceHigh": 1000,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-devil-monster-wk13-uk",
-        "growthStage": "plant",
-        "date": "2026-03-28",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1000,
-        "priceHigh": 1000,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-devil-monster-wk12-ug",
-        "growthStage": "plant",
-        "date": "2026-03-28",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 2799.99,
-        "priceHigh": 2799.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-xl-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-03-28",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 799.99,
-        "priceHigh": 799.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-tissue-culture-preorder-ship-date-mid-march-2026",
-        "growthStage": "tc",
-        "date": "2026-03-28",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 5999.99,
-        "priceHigh": 5999.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant-1",
-        "growthStage": "plant",
-        "date": "2026-03-28",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 3499.99,
-        "priceHigh": 3499.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-03-28",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1000,
-        "priceHigh": 1000,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-devil-monster-wk13-uk",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 2799.99,
-        "priceHigh": 2799.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-xl-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 799.99,
-        "priceHigh": 799.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-tissue-culture-preorder-ship-date-mid-march-2026",
-        "growthStage": "tc",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 5999.99,
-        "priceHigh": 5999.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant-1",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 3499.99,
-        "priceHigh": 3499.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1000,
-        "priceHigh": 1000,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-devil-monster-wk13-uk",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 2799.99,
-        "priceHigh": 2799.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-xl-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 799.99,
-        "priceHigh": 799.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-tissue-culture-preorder-ship-date-mid-march-2026",
-        "growthStage": "tc",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 5999.99,
-        "priceHigh": 5999.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant-1",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 3499.99,
-        "priceHigh": 3499.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 2799.99,
-        "priceHigh": 2799.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-xl-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-25",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 799.99,
-        "priceHigh": 799.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-tissue-culture-preorder-ship-date-mid-march-2026",
-        "growthStage": "tc",
-        "date": "2026-04-25",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 5999.99,
-        "priceHigh": 5999.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant-1",
-        "growthStage": "plant",
-        "date": "2026-04-25",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 3499.99,
-        "priceHigh": 3499.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-25",
-        "available": false
-      }
-    ]
-  },
   "monstera-bulbasaur": {
     "slug": "monstera-bulbasaur",
     "currentMin": 29.99,
@@ -1424,6 +1212,640 @@
         "priceHigh": 74.99,
         "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-tissue-culture-pre-order",
         "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": false
+      }
+    ]
+  },
+  "monstera-devil-monster": {
+    "slug": "monstera-devil-monster",
+    "currentMin": 799.99,
+    "currentMax": 2799.99,
+    "allTimeMin": 799.99,
+    "allTimeMax": 5999.99,
+    "lastSeen": "2026-04-25",
+    "sellerCount": 2,
+    "availableNow": true,
+    "recentListings": [
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1000,
+        "priceHigh": 1000,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-devil-monster-wk13-uk",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1000,
+        "priceHigh": 1000,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-devil-monster-wk12-ug",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 2799.99,
+        "priceHigh": 2799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-xl-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 799.99,
+        "priceHigh": 799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-tissue-culture-preorder-ship-date-mid-march-2026",
+        "growthStage": "tc",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 5999.99,
+        "priceHigh": 5999.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 3499.99,
+        "priceHigh": 3499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1000,
+        "priceHigh": 1000,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-devil-monster-wk13-uk",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 2799.99,
+        "priceHigh": 2799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-xl-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 799.99,
+        "priceHigh": 799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-tissue-culture-preorder-ship-date-mid-march-2026",
+        "growthStage": "tc",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 5999.99,
+        "priceHigh": 5999.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 3499.99,
+        "priceHigh": 3499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1000,
+        "priceHigh": 1000,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-devil-monster-wk13-uk",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 2799.99,
+        "priceHigh": 2799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-xl-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 799.99,
+        "priceHigh": 799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-tissue-culture-preorder-ship-date-mid-march-2026",
+        "growthStage": "tc",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 5999.99,
+        "priceHigh": 5999.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 3499.99,
+        "priceHigh": 3499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 2799.99,
+        "priceHigh": 2799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-xl-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 799.99,
+        "priceHigh": 799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-tissue-culture-preorder-ship-date-mid-march-2026",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 5999.99,
+        "priceHigh": 5999.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 3499.99,
+        "priceHigh": 3499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      }
+    ]
+  },
+  "monstera-electrolyte": {
+    "slug": "monstera-electrolyte",
+    "currentMin": 49.99,
+    "currentMax": 950,
+    "allTimeMin": 49.99,
+    "allTimeMax": 1049.99,
+    "lastSeen": "2026-04-25",
+    "sellerCount": 3,
+    "availableNow": true,
+    "recentListings": [
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 450,
+        "priceHigh": 450,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk13-uo",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 450,
+        "priceHigh": 450,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk11-up",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 750,
+        "priceHigh": 750,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk7-un",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-2",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 649.99,
+        "priceHigh": 649.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 1049.99,
+        "priceHigh": 1049.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-2-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 450,
+        "priceHigh": 450,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk13-uo",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 450,
+        "priceHigh": 450,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk11-up",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-2",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 649.99,
+        "priceHigh": 649.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 1049.99,
+        "priceHigh": 1049.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-2-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 250,
+        "priceHigh": 250,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk16-un",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 450,
+        "priceHigh": 450,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk13-uo",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 450,
+        "priceHigh": 450,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk11-up",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 699.99,
+        "priceHigh": 699.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-2",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 649.99,
+        "priceHigh": 649.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 1049.99,
+        "priceHigh": 1049.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-2-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 950,
+        "priceHigh": 950,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk17-uc",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 250,
+        "priceHigh": 250,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk16-un",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 450,
+        "priceHigh": 450,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk13-uo",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 450,
+        "priceHigh": 450,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk11-up",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-166",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-167",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-168",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-169",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-170",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-171",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-172",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-173",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 89.99,
+        "priceHigh": 89.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-812",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-4-tissue-culture",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 699.99,
+        "priceHigh": 699.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-2",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 649.99,
+        "priceHigh": 649.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 1049.99,
+        "priceHigh": 1049.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-2-exact-plant",
+        "growthStage": "plant",
         "date": "2026-04-25",
         "available": false
       }
