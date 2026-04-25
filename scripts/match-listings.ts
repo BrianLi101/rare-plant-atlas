@@ -182,14 +182,31 @@ const CUTTING_PATTERNS = [
   "cutting", "cut ", "unrooted", "rooted", "node", "chonk", "wet stick",
   "wetstick",
 ];
-const CORM_PATTERNS = ["corm", "bulb"];
+const CORM_REGEXES = [/\bcorms?\b/, /\bbulbs?\b/];
+const NON_CORM_PLANT_REGEXES = [
+  /\bcorming\b/,
+  /\bcorm[-\s]grown\b/,
+  /\bgrown\s+from\s+corms?\b/,
+  /\bfrom\s+corms?\b/,
+];
 
-function normalizeGrowthStage(variantTitle: string, listingTitle: string): GrowthStage {
+function hasStandaloneCormReference(text: string): boolean {
+  if (NON_CORM_PLANT_REGEXES.some((pattern) => pattern.test(text))) {
+    return false;
+  }
+
+  return CORM_REGEXES.some((pattern) => pattern.test(text));
+}
+
+export function normalizeGrowthStage(
+  variantTitle: string,
+  listingTitle: string,
+): GrowthStage {
   const text = `${variantTitle} ${listingTitle}`.toLowerCase();
 
   if (TC_PATTERNS.some((p) => text.includes(p))) return "tc";
   if (CUTTING_PATTERNS.some((p) => text.includes(p))) return "cutting";
-  if (CORM_PATTERNS.some((p) => text.includes(p))) return "corm";
+  if (hasStandaloneCormReference(text)) return "corm";
 
   return "plant";
 }

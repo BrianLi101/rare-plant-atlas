@@ -71,7 +71,7 @@
       "price": 950,
       "priceHigh": 950,
       "available": true,
-      "growthStage": "corm",
+      "growthStage": "plant",
       "confidence": "high"
     },
     {
@@ -95,7 +95,7 @@
       "price": 1500,
       "priceHigh": 1500,
       "available": true,
-      "growthStage": "corm",
+      "growthStage": "plant",
       "confidence": "high"
     },
     {
@@ -107,7 +107,7 @@
       "price": 950,
       "priceHigh": 950,
       "available": true,
-      "growthStage": "corm",
+      "growthStage": "plant",
       "confidence": "high"
     },
     {
