@@ -11,7 +11,8 @@
     "lint": "next lint",
     "heroes:audit": "tsx scripts/audit-plant-heroes.ts",
     "prices:snapshot": "npx tsx scripts/snapshot-prices.ts",
-    "prices:aggregate": "npx tsx scripts/aggregate-history.ts"
+    "prices:aggregate": "npx tsx scripts/aggregate-history.ts",
+    "prices:backfill": "npx tsx scripts/backfill-price-history.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

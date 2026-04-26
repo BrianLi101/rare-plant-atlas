@@ -4,6 +4,7 @@
 
 import fs from "fs";
 import path from "path";
+import { pathToFileURL } from "url";
 import type { PlantPriceHistory, PriceSummary } from "../data/prices/types";
 
 const HISTORY_DIR = path.join(process.cwd(), "data/prices/history");
@@ -57,18 +58,28 @@ function summarizeHistory(history: PlantPriceHistory): PriceSummary {
   };
 }
 
-function run() {
-  if (!fs.existsSync(HISTORY_DIR)) {
+export function runAggregation({
+  historyDir = HISTORY_DIR,
+  outputPath = OUTPUT_PATH,
+  log = true,
+}: {
+  historyDir?: string;
+  outputPath?: string;
+  log?: boolean;
+} = {}) {
+  if (!fs.existsSync(historyDir)) {
     console.error("No history directory found. Run prices:snapshot first.");
     process.exit(1);
   }
 
-  const files = fs.readdirSync(HISTORY_DIR).filter((f) => f.endsWith(".json"));
+  const files = fs.readdirSync(historyDir).filter((f) => f.endsWith(".json"));
 
   if (files.length === 0) {
-    console.log("No history files found. Run prices:snapshot first.");
+    if (log) {
+      console.log("No history files found. Run prices:snapshot first.");
+    }
     // Write empty aggregate so the build doesn't break
-    fs.writeFileSync(OUTPUT_PATH, JSON.stringify({}, null, 2));
+    fs.writeFileSync(outputPath, JSON.stringify({}, null, 2));
     return;
   }
 
@@ -76,14 +87,18 @@ function run() {
 
   for (const file of files) {
     const history: PlantPriceHistory = JSON.parse(
-      fs.readFileSync(path.join(HISTORY_DIR, file), "utf-8"),
+      fs.readFileSync(path.join(historyDir, file), "utf-8"),
     );
     summaries[history.slug] = summarizeHistory(history);
   }
 
-  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(summaries, null, 2));
-  console.log(`Aggregate written to ${OUTPUT_PATH}`);
-  console.log(`Summarized ${files.length} plants`);
+  fs.writeFileSync(outputPath, JSON.stringify(summaries, null, 2));
+  if (log) {
+    console.log(`Aggregate written to ${outputPath}`);
+    console.log(`Summarized ${files.length} plants`);
+  }
 }
 
-run();
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  runAggregation();
+}
