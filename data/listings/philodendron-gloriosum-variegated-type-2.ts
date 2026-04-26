@@ -1,7 +1,5 @@
 import type { PlantListing } from "../types";
 
-const IMG = "/plants/philodendron-gloriosum-variegated-type-1";
-
 export const philodendronGloriosumVariegatedType2: PlantListing = {
   identity: {
     id: "philodendron-gloriosum-variegated-type-2",
@@ -40,7 +38,7 @@ export const philodendronGloriosumVariegatedType2: PlantListing = {
     note: "Type 2 pricing has a much lower floor than Type 1 because tissue culture now exists, but exact plants and larger specimens still command meaningful premiums.",
   },
   images: {
-    hero: `${IMG}/type-2-splash.jpg`,
+    hero: "/plants/philodendron-gloriosum-variegated-type-2/hero.jpg",
   },
   colors: {
     primary: "#152018",

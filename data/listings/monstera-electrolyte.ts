@@ -27,7 +27,9 @@ export const monsteraElectrolyte: PlantListing = {
     note:
       "Acclimated stock now starts around $89.99-$99.99 for 3-inch plants, while exact plants and premium releases still stretch from roughly $450 to $1,049.99. Tissue culture forms a separate lower tier.",
   },
-  images: {},
+  images: {
+    hero: "/plants/monstera-electrolyte/hero.jpg",
+  },
   colors: {
     primary: "#0f1a16",
     accent: "#9fe3b8",

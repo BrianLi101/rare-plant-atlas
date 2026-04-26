@@ -35,7 +35,9 @@ export const philodendronBillietiaeVariegated: PlantListing = {
     lastObserved: new Date("2026-04-25"),
     note: "Tissue culture now exists, but premium exact plants and larger specimens still command steep prices compared with starter material.",
   },
-  images: {},
+  images: {
+    hero: "/plants/philodendron-billietiae-variegated/hero.jpg",
+  },
   colors: {
     primary: "#101612",
     accent: "#d9bf7f",

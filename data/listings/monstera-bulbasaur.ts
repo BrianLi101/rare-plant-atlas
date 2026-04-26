@@ -27,7 +27,9 @@ export const monsteraBulbasaur: PlantListing = {
     note:
       "Established plants currently start around $195 for grower's-choice stock, while exact or XL plants still run $550-$2,800. Tissue culture now forms a separate lower tier.",
   },
-  images: {},
+  images: {
+    hero: "/plants/monstera-bulbasaur/hero.jpg",
+  },
   colors: {
     primary: "#101711",
     accent: "#88bc6c",
