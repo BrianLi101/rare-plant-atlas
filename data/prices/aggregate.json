@@ -1217,6 +1217,528 @@
       }
     ]
   },
+  "monstera-burle-marx-flame": {
+    "slug": "monstera-burle-marx-flame",
+    "currentMin": 9.99,
+    "currentMax": 250,
+    "allTimeMin": 9.99,
+    "allTimeMax": 649.99,
+    "lastSeen": "2026-04-25",
+    "sellerCount": 6,
+    "availableNow": true,
+    "recentListings": [
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 550,
+        "priceHigh": 550,
+        "productUrl": "https://www.carnivero.com/products/a886-monstera-burle-marx-flame",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 34.99,
+        "priceHigh": 34.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-3",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 649.99,
+        "priceHigh": 649.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 399.99,
+        "priceHigh": 399.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant-2",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 34.99,
+        "priceHigh": 34.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-us-seller",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 35.99,
+        "priceHigh": 35.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-5",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 84.99,
+        "priceHigh": 84.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-6",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 250,
+        "priceHigh": 250,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-burle-marx-flame-wk9-a",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 550,
+        "priceHigh": 550,
+        "productUrl": "https://www.carnivero.com/products/a886-monstera-burle-marx-flame",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 34.99,
+        "priceHigh": 34.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-3",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 649.99,
+        "priceHigh": 649.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 399.99,
+        "priceHigh": 399.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant-2",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 34.99,
+        "priceHigh": 34.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-us-seller",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 29.99,
+        "priceHigh": 29.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-5",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 84.99,
+        "priceHigh": 84.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-6",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 45,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-burle-marx-flame-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 550,
+        "priceHigh": 550,
+        "productUrl": "https://www.carnivero.com/products/a886-monstera-burle-marx-flame",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 34.99,
+        "priceHigh": 34.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-3",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 649.99,
+        "priceHigh": 649.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 399.99,
+        "priceHigh": 399.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant-2",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 34.99,
+        "priceHigh": 34.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-us-seller",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 29.99,
+        "priceHigh": 29.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-5",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 84.99,
+        "priceHigh": 84.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-6",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-burle-marx-flame-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 550,
+        "priceHigh": 550,
+        "productUrl": "https://www.carnivero.com/products/a886-monstera-burle-marx-flame",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "costa-farms",
+        "sellerName": "Costa Farms",
+        "price": 49,
+        "priceHigh": 49,
+        "productUrl": "https://costafarms.com/products/medium-monstera-burle-marx-flame-parent",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 9.99,
+        "priceHigh": 9.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-burl-marx-flame-plantlets-1",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 24.99,
+        "priceHigh": 24.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-burle-marx-flame-3in-706",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 24.99,
+        "priceHigh": 24.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-burle-marx-flame-3in-711",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 19.99,
+        "priceHigh": 19.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-burle-marx-flame-3in-940",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 19.99,
+        "priceHigh": 19.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-burle-marx-flame-3in-943",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 19.99,
+        "priceHigh": 19.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-burle-marx-flame-3in-944",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 19.99,
+        "priceHigh": 19.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-burle-marx-flame-3in-945",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 19.99,
+        "priceHigh": 19.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-burle-marx-flame-3in-946",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 19.99,
+        "priceHigh": 19.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-burle-marx-flame-3in-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 34.99,
+        "priceHigh": 34.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-3",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 649.99,
+        "priceHigh": 649.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 399.99,
+        "priceHigh": 399.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant-2",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 34.99,
+        "priceHigh": 34.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-us-seller",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 29.99,
+        "priceHigh": 29.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-5",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 84.99,
+        "priceHigh": 84.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-6",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-burle-marx-flame-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "variegata-labs",
+        "sellerName": "Variegata Labs",
+        "price": 29.99,
+        "priceHigh": 29.99,
+        "productUrl": "https://www.variegatalabs.com/shop/p/monstera-burle-marx-flame",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": true
+      }
+    ]
+  },
   "monstera-devil-monster": {
     "slug": "monstera-devil-monster",
     "currentMin": 799.99,

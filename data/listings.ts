@@ -8,6 +8,7 @@ import { alocasiaChantrierVariegatedPink } from "./listings/alocasia-chantrieri-
 import { monsteraWhiteLava } from "./listings/monstera-white-lava";
 import { monsteraWhiteMonster } from "./listings/monstera-white-monster";
 import { monsteraBulbasaur } from "./listings/monstera-bulbasaur";
+import { monsteraBurleMarxFlame } from "./listings/monstera-burle-marx-flame";
 import { monsteraElectrolyte } from "./listings/monstera-electrolyte";
 import { philodendronSpiritusSancti } from "./listings/philodendron-spiritus-sancti";
 import { philodendronGloriosumVariegatedType1 } from "./listings/philodendron-gloriosum-variegated-type-1";
@@ -24,6 +25,7 @@ export const listings: PlantListing[] = [
   monsteraWhiteLava,
   monsteraWhiteMonster,
   monsteraBulbasaur,
+  monsteraBurleMarxFlame,
   monsteraElectrolyte,
   philodendronSpiritusSancti,
 ];
@@ -42,6 +44,7 @@ export const listingSourceFiles: Record<string, string> = {
   "monstera-white-lava": "data/listings/monstera-white-lava.ts",
   "monstera-white-monster": "data/listings/monstera-white-monster.ts",
   "monstera-bulbasaur": "data/listings/monstera-bulbasaur.ts",
+  "monstera-burle-marx-flame": "data/listings/monstera-burle-marx-flame.ts",
   "monstera-electrolyte": "data/listings/monstera-electrolyte.ts",
   "philodendron-spiritus-sancti": "data/listings/philodendron-spiritus-sancti.ts",
 };
