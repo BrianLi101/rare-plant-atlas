@@ -1,17 +1,20 @@
 import { plants } from "@/data/plants";
 import { listings } from "@/data/listings";
-import { getPlantLabel } from "@/data/identity";
-import { formatPlantPriceRangeForGlance } from "@/data/price";
+import { formatUsd } from "@/data/price";
 import { JsonLd } from "@/components/JsonLd";
 import { Navigation } from "@/components/Navigation";
 import { PricesPageClient } from "@/components/PricesPageClient";
 import {
   getPricesPagePlants,
   getPricesPageMarket,
+  type PricesPagePlant,
 } from "@/lib/pricesPageData";
 import "./prices-page.css";
 
-const totalCount = plants.length + listings.length;
+const totalCount = new Set([
+  ...plants.map((plant) => plant.identity.slug),
+  ...listings.map((listing) => listing.identity.slug),
+]).size;
 
 export function generateMetadata() {
   const title =
@@ -44,23 +47,15 @@ function capitalize(s: string): string {
 
 type GenusGroup = {
   genus: string;
-  plants: typeof plants;
-  listings: typeof listings;
+  items: PricesPagePlant[];
 };
 
-function groupByGenus(): GenusGroup[] {
+function groupByGenus(items: PricesPagePlant[]): GenusGroup[] {
   const map = new Map<string, GenusGroup>();
-  for (const plant of plants) {
-    const g = plant.identity.genus.toLowerCase();
-    if (!map.has(g))
-      map.set(g, { genus: g, plants: [], listings: [] });
-    map.get(g)!.plants.push(plant);
-  }
-  for (const listing of listings) {
-    const g = listing.identity.genus.toLowerCase();
-    if (!map.has(g))
-      map.set(g, { genus: g, plants: [], listings: [] });
-    map.get(g)!.listings.push(listing);
+  for (const item of items) {
+    const g = item.genus.toLowerCase();
+    if (!map.has(g)) map.set(g, { genus: g, items: [] });
+    map.get(g)!.items.push(item);
   }
   return Array.from(map.values()).sort((a, b) =>
     a.genus.localeCompare(b.genus),
@@ -70,12 +65,7 @@ function groupByGenus(): GenusGroup[] {
 export default function PricesIndexPage() {
   const items = getPricesPagePlants();
   const market = getPricesPageMarket(items);
-  const groups = groupByGenus();
-
-  const allEntries = [
-    ...plants.map((p) => ({ entry: p, type: "plant" as const })),
-    ...listings.map((l) => ({ entry: l, type: "listing" as const })),
-  ];
+  const groups = groupByGenus(items);
 
   return (
     <>
@@ -86,13 +76,11 @@ export default function PricesIndexPage() {
           name: "Rare Plant Prices — Rare Plant Atlas",
           description: `Price reference for ${totalCount} rare and collectible plants.`,
           numberOfItems: totalCount,
-          itemListElement: allEntries.map(({ entry, type }, i) => ({
+          itemListElement: items.map((item, i) => ({
             "@type": "ListItem",
             position: i + 1,
-            name: getPlantLabel(entry),
-            url: `https://www.rareplantatlas.com/${
-              type === "plant" ? "plants" : "prices"
-            }/${entry.identity.slug}`,
+            name: item.label,
+            url: `https://www.rareplantatlas.com/prices/${item.slug}`,
           })),
         }}
       />
@@ -145,29 +133,16 @@ export default function PricesIndexPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {group.plants.map((plant) => (
-                    <tr key={plant.identity.slug}>
+                  {group.items.map((item) => (
+                    <tr key={item.slug}>
                       <td>
-                        <a href={`/plants/${plant.identity.slug}`}>
-                          {getPlantLabel(plant)}
+                        <a href={`/prices/${item.slug}`}>
+                          {item.label}
                         </a>
                       </td>
-                      <td>{plant.rarity}</td>
+                      <td>{item.rarity}</td>
                       <td>
-                        {formatPlantPriceRangeForGlance(plant.priceRange)}
-                      </td>
-                    </tr>
-                  ))}
-                  {group.listings.map((listing) => (
-                    <tr key={listing.identity.slug}>
-                      <td>
-                        <a href={`/prices/${listing.identity.slug}`}>
-                          {getPlantLabel(listing)} (Price Reference)
-                        </a>
-                      </td>
-                      <td>{listing.rarity}</td>
-                      <td>
-                        {formatPlantPriceRangeForGlance(listing.priceRange)}
+                        {formatUsd(item.current.min)} - {formatUsd(item.current.max)}
                       </td>
                     </tr>
                   ))}

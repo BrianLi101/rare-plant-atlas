@@ -1,6 +1,7 @@
 export type { PlantListing } from "./types";
 
 import type { PlantListing } from "./types";
+import { getPlantBySlug } from "./plants";
 import { monsteraThaiConstellation } from "./listings/monstera-thai-constellation";
 import { monsteraDevilMonster } from "./listings/monstera-devil-monster";
 import { alocasiaChantrierVariegatedPink } from "./listings/alocasia-chantrieri-variegated-pink";
@@ -9,8 +10,14 @@ import { monsteraWhiteMonster } from "./listings/monstera-white-monster";
 import { monsteraBulbasaur } from "./listings/monstera-bulbasaur";
 import { monsteraElectrolyte } from "./listings/monstera-electrolyte";
 import { philodendronSpiritusSancti } from "./listings/philodendron-spiritus-sancti";
+import { philodendronGloriosumVariegatedType1 } from "./listings/philodendron-gloriosum-variegated-type-1";
+import { anthuriumDeltaForceListing } from "./listings/anthurium-delta-force";
+import { alocasiaBlackVelvetVariegatedPinkListing } from "./listings/alocasia-black-velvet-variegated-pink";
 
 export const listings: PlantListing[] = [
+  philodendronGloriosumVariegatedType1,
+  anthuriumDeltaForceListing,
+  alocasiaBlackVelvetVariegatedPinkListing,
   monsteraThaiConstellation,
   monsteraDevilMonster,
   alocasiaChantrierVariegatedPink,
@@ -21,7 +28,14 @@ export const listings: PlantListing[] = [
   philodendronSpiritusSancti,
 ];
 
+export const standaloneListings = listings.filter(
+  (listing) => !getPlantBySlug(listing.identity.slug),
+);
+
 export const listingSourceFiles: Record<string, string> = {
+  "philodendron-gloriosum-variegated-type-1": "data/listings/philodendron-gloriosum-variegated-type-1.ts",
+  "anthurium-delta-force": "data/listings/anthurium-delta-force.ts",
+  "alocasia-black-velvet-variegated-pink": "data/listings/alocasia-black-velvet-variegated-pink.ts",
   "monstera-thai-constellation": "data/listings/monstera-thai-constellation.ts",
   "monstera-devil-monster": "data/listings/monstera-devil-monster.ts",
   "alocasia-chantrieri-variegated-pink": "data/listings/alocasia-chantrieri-variegated-pink.ts",

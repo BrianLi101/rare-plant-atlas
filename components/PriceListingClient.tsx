@@ -69,7 +69,7 @@ function fmtDate(iso: string) {
   });
 }
 
-type InStockChartPoint = {
+type ChartPoint = {
   x: string;
   y: number;
   sellerName: string;
@@ -196,9 +196,8 @@ function SellerRow({
 }
 
 function PriceTrendChart({ summary }: { summary: PriceSummary }) {
-  const inStockListings = useMemo(() => {
+  const chartListings = useMemo(() => {
     return [...summary.recentListings]
-      .filter((listing) => listing.available)
       .sort((a, b) => {
         if (a.date !== b.date) return a.date.localeCompare(b.date);
         return a.price - b.price;
@@ -206,18 +205,18 @@ function PriceTrendChart({ summary }: { summary: PriceSummary }) {
   }, [summary]);
 
   const labels = useMemo(() => {
-    return Array.from(new Set(inStockListings.map((listing) => listing.date))).map(
+    return Array.from(new Set(chartListings.map((listing) => listing.date))).map(
       (date) =>
         new Date(date).toLocaleDateString("en-US", {
           month: "short",
           day: "numeric",
         }),
     );
-  }, [inStockListings]);
+  }, [chartListings]);
 
-  const datasets = useMemo<ChartData<"line", InStockChartPoint[], string>["datasets"]>(() => {
+  const datasets = useMemo<ChartData<"line", ChartPoint[], string>["datasets"]>(() => {
     return GROWTH_STAGE_ORDER.flatMap((stage) => {
-      const listings = inStockListings.filter(
+      const listings = chartListings.filter(
         (listing) => listing.growthStage === stage,
       );
       if (listings.length === 0) return [];
@@ -242,11 +241,11 @@ function PriceTrendChart({ summary }: { summary: PriceSummary }) {
         pointHitRadius: 12,
       }];
     });
-  }, [inStockListings]);
+  }, [chartListings]);
 
   if (datasets.length === 0) return null;
 
-  const data: ChartData<"line", InStockChartPoint[], string> = {
+  const data: ChartData<"line", ChartPoint[], string> = {
     labels,
     datasets,
   };
@@ -303,7 +302,7 @@ function PriceTrendChart({ summary }: { summary: PriceSummary }) {
       </p>
       <div className="flex gap-4 mb-3">
         {GROWTH_STAGE_ORDER.filter((stage) =>
-          inStockListings.some((listing) => listing.growthStage === stage),
+          chartListings.some((listing) => listing.growthStage === stage),
         ).map((stage) => (
           <div
             key={stage}
@@ -319,6 +318,56 @@ function PriceTrendChart({ summary }: { summary: PriceSummary }) {
       </div>
       <div className="relative h-52">
         <Line data={data} options={options} />
+      </div>
+    </div>
+  );
+}
+
+function FullProfileBanner({
+  slug,
+  accent,
+}: {
+  slug: string;
+  accent: string;
+}) {
+  return (
+    <div
+      className="relative overflow-hidden rounded-[18px] border mb-10"
+      style={{
+        borderColor: "rgba(250,247,242,0.10)",
+        background:
+          "linear-gradient(135deg, rgba(250,247,242,0.05) 0%, rgba(250,247,242,0.02) 38%, rgba(13,13,13,0.86) 100%)",
+      }}
+    >
+      <div
+        className="absolute inset-0 opacity-90"
+        style={{
+          background: `radial-gradient(circle at top right, ${accent}40 0%, transparent 42%), radial-gradient(circle at bottom left, rgba(250,247,242,0.08) 0%, transparent 34%)`,
+        }}
+      />
+      <div className="relative flex items-center justify-between gap-6 px-6 py-6 md:px-8 md:py-7 max-md:flex-col max-md:items-start">
+        <div className="max-w-[560px]">
+          <p className="font-mono text-[10px] tracking-[0.16em] uppercase text-forest-300 mb-2">
+            Full Plant File Available
+          </p>
+          <h2 className="font-serif text-[28px] leading-[1.02] text-cream mb-2">
+            Open the full plant file before you buy.
+          </h2>
+          <p className="text-[13px] text-cream/55 leading-relaxed">
+            See the long-form profile with care, variegation analysis,
+            substrate, provenance, propagation, and fit check.
+          </p>
+        </div>
+        <Link
+          href={`/plants/${slug}`}
+          className="inline-flex items-center justify-center rounded-[12px] px-6 py-3.5 font-mono text-[11px] tracking-[0.12em] uppercase text-deep transition-transform hover:-translate-y-0.5"
+          style={{
+            background: "#f6f0e6",
+            boxShadow: `0 0 0 1px ${accent}55, 0 18px 40px rgba(0,0,0,0.28)`,
+          }}
+        >
+          View Full Plant File
+        </Link>
       </div>
     </div>
   );
@@ -456,6 +505,13 @@ export function PriceListingClient({
             )}
         </div>
 
+        {hasFullProfile && (
+          <FullProfileBanner
+            slug={listing.identity.slug}
+            accent={listing.colors.accent}
+          />
+        )}
+
         {/* Variant price cards */}
         {stageGroups.length > 0 && (
           <>
@@ -475,7 +531,9 @@ export function PriceListingClient({
           </>
         )}
 
-        {priceSummary && <PriceTrendChart summary={priceSummary} />}
+        {priceSummary?.recentListings.length ? (
+          <PriceTrendChart summary={priceSummary} />
+        ) : null}
 
         {/* Market note / trend note */}
         {(listing.marketNote || listing.priceHistory) && (
@@ -581,28 +639,6 @@ export function PriceListingClient({
           </div>
         )}
 
-        {/* Full profile link — only shown when a full profile exists */}
-        {hasFullProfile && (
-          <div className="rounded-xl border border-cream/[0.07] p-7 flex items-center justify-between gap-5 flex-wrap bg-gradient-to-br from-cream/[0.02] to-cream/[0.04]">
-            <div>
-              <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-cream/30 mb-2">
-                Full Profile Available
-              </p>
-              <h3 className="font-serif text-[22px] text-cream">
-                Full Care Profile
-              </h3>
-              <p className="text-xs text-cream/30 mt-1">
-                Variegation, substrate, propagation, provenance, and fit check.
-              </p>
-            </div>
-            <Link
-              href={`/plants/${listing.identity.slug}`}
-              className="bg-forest-800 hover:bg-forest-700 text-cream border-none px-6 py-3 rounded-md font-sans text-[11px] tracking-[0.08em] uppercase whitespace-nowrap transition-colors"
-            >
-              View Full Profile
-            </Link>
-          </div>
-        )}
       </div>
     </div>
   );

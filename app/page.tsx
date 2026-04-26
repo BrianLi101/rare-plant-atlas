@@ -390,35 +390,62 @@ export default function Home() {
 
         {/* ── Catalog section ── */}
         <div id="catalog" style={{ padding: "56px clamp(20px,5vw,80px) 100px" }}>
-          {/* Section header */}
-          <div className="flex items-baseline gap-5 flex-wrap mb-8">
-            <h2
-              className="font-serif font-bold m-0 tracking-[-0.02em]"
-              style={{ fontSize: "clamp(1.4rem,3vw,2rem)", color: "#e8e0d0" }}
-            >
-              Catalog
-            </h2>
-            <span className="font-mono text-[9px] tracking-[0.15em] uppercase opacity-50" style={{ color: "#c4b89a" }}>
-              {plants.length + listings.length} plants
-            </span>
-          </div>
-
-          {/* Thin rule */}
           <div className="h-px mb-8" style={{ background: "rgba(232,224,208,0.10)" }} />
 
-          {/* Grid — full profiles + listing cards */}
-          <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))" }}>
-            {plants.map((plant) => (
-              <PlantCard key={plant.identity.slug} plant={plant} />
-            ))}
-            {listings.map((listing) => (
-              <ListingCard key={listing.identity.slug} listing={listing} />
-            ))}
-          </div>
+          <section className="mb-14">
+            <div className="flex items-baseline gap-4 flex-wrap mb-6">
+              <h3
+                className="font-serif font-bold m-0 tracking-[-0.02em]"
+                style={{ fontSize: "clamp(1.15rem,2.2vw,1.6rem)", color: "#e8e0d0" }}
+              >
+                In-depth Guides
+              </h3>
+              <span className="font-mono text-[9px] tracking-[0.15em] uppercase opacity-50" style={{ color: "#c4b89a" }}>
+                {plants.length} files
+              </span>
+            </div>
+            <p
+              className="font-body leading-relaxed m-0 max-w-[620px] mb-6 opacity-75"
+              style={{ fontSize: "0.95rem", color: "#c4b89a" }}
+            >
+              Full plant files with care, provenance, propagation, variegation analysis, and buying context.
+            </p>
+            <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))" }}>
+              {plants.map((plant) => (
+                <PlantCard key={plant.identity.slug} plant={plant} />
+              ))}
+            </div>
+          </section>
 
-          {/* Coming soon strip */}
+          <section>
+            <div className="flex items-baseline gap-4 flex-wrap mb-6">
+              <h3
+                className="font-serif font-bold m-0 tracking-[-0.02em]"
+                style={{ fontSize: "clamp(1.15rem,2.2vw,1.6rem)", color: "#e8e0d0" }}
+              >
+                Price Index
+              </h3>
+              <span className="font-mono text-[9px] tracking-[0.15em] uppercase opacity-50" style={{ color: "#c4b89a" }}>
+                {listings.length} pages
+              </span>
+            </div>
+            <p
+              className="font-body leading-relaxed m-0 max-w-[620px] mb-6 opacity-75"
+              style={{ fontSize: "0.95rem", color: "#c4b89a" }}
+            >
+              Pricing-focused pages with current market ranges, seller snapshots, and trend charts.
+            </p>
+            <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))" }}>
+              {listings.map((listing) => (
+                <ListingCard key={listing.identity.slug} listing={listing} />
+              ))}
+            </div>
+          </section>
+
+          <div className="h-px mt-12 mb-12" style={{ background: "rgba(232,224,208,0.10)" }} />
+
           <div
-            className="mt-12 flex items-center gap-4 rounded-sm"
+            className="flex items-center gap-4 rounded-sm"
             style={{
               padding: "20px 24px",
               border: "1px solid rgba(232,224,208,0.10)",

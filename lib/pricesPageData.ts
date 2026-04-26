@@ -178,8 +178,7 @@ function rarityToClass(rarity: string): string {
 }
 
 function pickHref(slug: string): string {
-  const hasFullProfile = plants.some((p) => p.identity.slug === slug);
-  return hasFullProfile ? `/plants/${slug}` : `/prices/${slug}`;
+  return `/prices/${slug}`;
 }
 
 
@@ -251,8 +250,8 @@ function buildEntry(
 
 export function getPricesPagePlants(): PricesPagePlant[] {
   const all: PlantListing[] = [
-    ...plants.map((p) => p as PlantListing),
     ...listings,
+    ...plants.map((p) => p as PlantListing),
   ];
   // De-duplicate by slug (a listing slug may also appear as a full plant)
   const seen = new Set<string>();

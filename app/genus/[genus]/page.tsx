@@ -2,8 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { plants } from "@/data/plants";
-import { listings } from "@/data/listings";
-import type { PlantListing } from "@/data/types";
+import { standaloneListings } from "@/data/listings";
 import { getPlantLabel } from "@/data/identity";
 import { formatPlantPriceRangeForGlance } from "@/data/price";
 import { Navigation } from "@/components/Navigation";
@@ -20,7 +19,7 @@ import {
 function getGenera(): string[] {
   const genera = new Set([
     ...plants.map((p) => p.identity.genus.toLowerCase()),
-    ...listings.map((l) => l.identity.genus.toLowerCase()),
+    ...standaloneListings.map((l) => l.identity.genus.toLowerCase()),
   ]);
   return Array.from(genera);
 }
@@ -32,13 +31,9 @@ function getPlantsForGenus(genus: string) {
 }
 
 function getListingsForGenus(genus: string) {
-  return listings.filter(
+  return standaloneListings.filter(
     (l) => l.identity.genus.toLowerCase() === genus.toLowerCase()
   );
-}
-
-function isFullProfile(entry: PlantListing): boolean {
-  return plants.some((p) => p.identity.slug === entry.identity.slug);
 }
 
 function capitalize(s: string): string {

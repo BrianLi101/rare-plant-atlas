@@ -364,7 +364,7 @@ export interface PlantListing {
   /** Short editorial context about this plant's market position */
   marketNote?: string;
   /** Whether a full profile exists or is planned */
-  fullProfileStatus?: "planned" | "in-progress" | "none";
+  fullProfileStatus?: "available" | "planned" | "in-progress" | "none";
 
   // SEO fields relevant to pricing pages
   seoDescription?: string;

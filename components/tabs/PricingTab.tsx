@@ -50,7 +50,7 @@ function fmtDate(iso: string) {
   });
 }
 
-type InStockChartPoint = {
+type ChartPoint = {
   x: string;
   y: number;
   sellerName: string;
@@ -117,9 +117,8 @@ function PriceTrendChart({
 }: {
   summary: PriceSummary;
 }) {
-  const inStockListings = useMemo(() => {
+  const chartListings = useMemo(() => {
     return [...summary.recentListings]
-      .filter((listing) => listing.available)
       .sort((a, b) => {
         if (a.date !== b.date) return a.date.localeCompare(b.date);
         return a.price - b.price;
@@ -127,18 +126,18 @@ function PriceTrendChart({
   }, [summary]);
 
   const labels = useMemo(() => {
-    return Array.from(new Set(inStockListings.map((listing) => listing.date))).map(
+    return Array.from(new Set(chartListings.map((listing) => listing.date))).map(
       (date) =>
         new Date(date).toLocaleDateString("en-US", {
           month: "short",
           day: "numeric",
         }),
     );
-  }, [inStockListings]);
+  }, [chartListings]);
 
-  const datasets = useMemo<ChartData<"line", InStockChartPoint[], string>["datasets"]>(() => {
+  const datasets = useMemo<ChartData<"line", ChartPoint[], string>["datasets"]>(() => {
     return GROWTH_STAGE_ORDER.flatMap((stage) => {
-      const listings = inStockListings.filter(
+      const listings = chartListings.filter(
         (listing) => listing.growthStage === stage,
       );
       if (listings.length === 0) return [];
@@ -163,11 +162,11 @@ function PriceTrendChart({
         pointHitRadius: 12,
       }];
     });
-  }, [inStockListings]);
+  }, [chartListings]);
 
   if (datasets.length === 0) return null;
 
-  const data: ChartData<"line", InStockChartPoint[], string> = {
+  const data: ChartData<"line", ChartPoint[], string> = {
     labels,
     datasets,
   };
@@ -221,7 +220,7 @@ function PriceTrendChart({
     <div>
       <div className="flex gap-4 mb-3">
         {GROWTH_STAGE_ORDER.filter((stage) =>
-          inStockListings.some((listing) => listing.growthStage === stage),
+          chartListings.some((listing) => listing.growthStage === stage),
         ).map((stage) => (
           <div
             key={stage}
@@ -344,7 +343,7 @@ export function PricingTab({
         )}
 
         {/* Price trend chart */}
-        {summary.recentListings.some((listing) => listing.available) && (
+        {summary.recentListings.length > 0 && (
           <div className="bg-cream/[0.02] border border-cream/[0.08] rounded-xl p-5">
             <h3 className="text-sm font-medium text-cream/60 mb-5">
               Price trend
