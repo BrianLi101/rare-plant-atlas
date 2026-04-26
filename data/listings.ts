@@ -13,11 +13,13 @@ import { monsteraElectrolyte } from "./listings/monstera-electrolyte";
 import { philodendronBillietiaeVariegated } from "./listings/philodendron-billietiae-variegated";
 import { philodendronSpiritusSancti } from "./listings/philodendron-spiritus-sancti";
 import { philodendronGloriosumVariegatedType1 } from "./listings/philodendron-gloriosum-variegated-type-1";
+import { philodendronGloriosumVariegatedType2 } from "./listings/philodendron-gloriosum-variegated-type-2";
 import { anthuriumDeltaForceListing } from "./listings/anthurium-delta-force";
 import { alocasiaBlackVelvetVariegatedPinkListing } from "./listings/alocasia-black-velvet-variegated-pink";
 
 export const listings: PlantListing[] = [
   philodendronGloriosumVariegatedType1,
+  philodendronGloriosumVariegatedType2,
   anthuriumDeltaForceListing,
   alocasiaBlackVelvetVariegatedPinkListing,
   monsteraThaiConstellation,
@@ -38,6 +40,7 @@ export const standaloneListings = listings.filter(
 
 export const listingSourceFiles: Record<string, string> = {
   "philodendron-gloriosum-variegated-type-1": "data/listings/philodendron-gloriosum-variegated-type-1.ts",
+  "philodendron-gloriosum-variegated-type-2": "data/listings/philodendron-gloriosum-variegated-type-2.ts",
   "anthurium-delta-force": "data/listings/anthurium-delta-force.ts",
   "alocasia-black-velvet-variegated-pink": "data/listings/alocasia-black-velvet-variegated-pink.ts",
   "monstera-thai-constellation": "data/listings/monstera-thai-constellation.ts",

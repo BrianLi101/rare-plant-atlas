@@ -3973,6 +3973,378 @@
       }
     ]
   },
+  "philodendron-gloriosum-variegated-type-2": {
+    "slug": "philodendron-gloriosum-variegated-type-2",
+    "currentMin": 175,
+    "currentMax": 350,
+    "allTimeMin": 49.99,
+    "allTimeMax": 499.99,
+    "lastSeen": "2026-04-25",
+    "sellerCount": 4,
+    "availableNow": true,
+    "recentListings": [
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 95,
+        "priceHigh": 95,
+        "productUrl": "https://www.nsetropicals.com/product/1818-variegated-philodendron-gloriosum-type-2/",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 249,
+        "priceHigh": 249,
+        "productUrl": "https://www.nsetropicals.com/product/variegated-philodendron-gloriosum/",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-3-quot-us-seller",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 399.99,
+        "priceHigh": 399.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 284.99,
+        "priceHigh": 284.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 184.99,
+        "priceHigh": 184.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-large-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 350,
+        "priceHigh": 350,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-albo-variegated-type-2-wk12-c",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 95,
+        "priceHigh": 95,
+        "productUrl": "https://www.nsetropicals.com/product/1818-variegated-philodendron-gloriosum-type-2/",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 249,
+        "priceHigh": 249,
+        "productUrl": "https://www.nsetropicals.com/product/variegated-philodendron-gloriosum/",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-3-quot-us-seller",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 399.99,
+        "priceHigh": 399.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 284.99,
+        "priceHigh": 284.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 184.99,
+        "priceHigh": 184.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-large-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 350,
+        "priceHigh": 350,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-albo-variegated-type-2-wk12-c",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 175,
+        "priceHigh": 175,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-variegated-type-2-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 95,
+        "priceHigh": 95,
+        "productUrl": "https://www.nsetropicals.com/product/1818-variegated-philodendron-gloriosum-type-2/",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 249,
+        "priceHigh": 249,
+        "productUrl": "https://www.nsetropicals.com/product/variegated-philodendron-gloriosum/",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-3-quot-us-seller",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 399.99,
+        "priceHigh": 399.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 249.99,
+        "priceHigh": 249.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 184.99,
+        "priceHigh": 184.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-large-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 175,
+        "priceHigh": 175,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-variegated-type-2-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-variegated-type-2-wk16-a",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 95,
+        "priceHigh": 95,
+        "productUrl": "https://www.nsetropicals.com/product/1818-variegated-philodendron-gloriosum-type-2/",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 249,
+        "priceHigh": 249,
+        "productUrl": "https://www.nsetropicals.com/product/variegated-philodendron-gloriosum/",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-variegated-gloriosum-plantlets-1",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-3-quot-us-seller",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 399.99,
+        "priceHigh": 399.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 249.99,
+        "priceHigh": 249.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 184.99,
+        "priceHigh": 184.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-large-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 175,
+        "priceHigh": 175,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-variegated-type-2-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-variegated-type-2-wk16-a",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      }
+    ]
+  },
   "philodendron-spiritus-sancti": {
     "slug": "philodendron-spiritus-sancti",
     "currentMin": 9.99,
