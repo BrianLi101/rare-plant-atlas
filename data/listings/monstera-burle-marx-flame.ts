@@ -19,7 +19,7 @@ export const monsteraBurleMarxFlame: PlantListing = {
     "Flame-cut foliage with real collector appeal, now finally accessible through broad tissue culture supply.",
   origin: "Brazil collection origin; now mass tissue cultured",
   family: "Araceae",
-  rarity: "Scarce",
+  rarity: "Rare",
   priceRange: {
     currency: "USD",
     min: 9.99,

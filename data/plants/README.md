@@ -30,7 +30,7 @@ Most plant files follow this pattern:
 - `heroDescription: string`
 - `origin: string`
 - `family: string`
-- `rarity: string`
+- `rarity: "Common" | "Rare" | "Ultra-Rare"`
 - `priceRange: PlantPriceRange`
   - `currency` (currently `"USD"`), `min`, `max`, `lastObserved`, optional `note`
 - `images: PlantImages`

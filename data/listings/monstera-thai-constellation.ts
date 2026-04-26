@@ -18,7 +18,7 @@ export const monsteraThaiConstellation: PlantListing = {
     "Stable creamy-white variegation on a plant that actually grows. The gateway grail.",
   origin: "Thailand (tissue culture origin)",
   family: "Araceae",
-  rarity: "Rare",
+  rarity: "Common",
   priceRange: {
     currency: "USD",
     min: 30,

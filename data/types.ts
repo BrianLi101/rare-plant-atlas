@@ -196,6 +196,8 @@ export interface PlantRecommendedProduct {
   reason: string;
 }
 
+export type PlantRarity = "Common" | "Rare" | "Ultra-Rare";
+
 export interface PlantIdentity {
   id: string;
   slug: string;
@@ -350,7 +352,7 @@ export interface PlantListing {
   tagline: string;
   origin: string;
   family: string;
-  rarity: string;
+  rarity: PlantRarity;
   priceRange: PlantPriceRange;
   images: PlantImages;
   /** Optional hero photo for the listing page */

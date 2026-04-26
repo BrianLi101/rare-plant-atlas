@@ -161,7 +161,7 @@ export const philodendronGloriosumVariegated: PlantFile = {
 
   origin: "Colombia",
   family: "Araceae",
-  rarity: "Ultra-rare",
+  rarity: "Ultra-Rare",
   priceRange: philodendronGloriosumVariegatedPlantPriceRange,
   images: {
     hero: heroPhoto.image,

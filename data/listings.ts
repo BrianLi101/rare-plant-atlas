@@ -11,6 +11,7 @@ import { monsteraBulbasaur } from "./listings/monstera-bulbasaur";
 import { monsteraBurleMarxFlame } from "./listings/monstera-burle-marx-flame";
 import { monsteraElectrolyte } from "./listings/monstera-electrolyte";
 import { philodendronBillietiaeVariegated } from "./listings/philodendron-billietiae-variegated";
+import { philodendronIlsemaniiVariegated } from "./listings/philodendron-ilsemanii-variegated";
 import { philodendronSpiritusSancti } from "./listings/philodendron-spiritus-sancti";
 import { philodendronGloriosumVariegatedType1 } from "./listings/philodendron-gloriosum-variegated-type-1";
 import { philodendronGloriosumVariegatedType2 } from "./listings/philodendron-gloriosum-variegated-type-2";
@@ -31,6 +32,7 @@ export const listings: PlantListing[] = [
   monsteraBurleMarxFlame,
   monsteraElectrolyte,
   philodendronBillietiaeVariegated,
+  philodendronIlsemaniiVariegated,
   philodendronSpiritusSancti,
 ];
 
@@ -52,6 +54,7 @@ export const listingSourceFiles: Record<string, string> = {
   "monstera-burle-marx-flame": "data/listings/monstera-burle-marx-flame.ts",
   "monstera-electrolyte": "data/listings/monstera-electrolyte.ts",
   "philodendron-billietiae-variegated": "data/listings/philodendron-billietiae-variegated.ts",
+  "philodendron-ilsemanii-variegated": "data/listings/philodendron-ilsemanii-variegated.ts",
   "philodendron-spiritus-sancti": "data/listings/philodendron-spiritus-sancti.ts",
 };
 
