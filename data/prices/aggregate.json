@@ -3319,6 +3319,588 @@
       }
     ]
   },
+  "philodendron-billietiae-variegated": {
+    "slug": "philodendron-billietiae-variegated",
+    "currentMin": 24.99,
+    "currentMax": 599.99,
+    "allTimeMin": 24.99,
+    "allTimeMax": 5000,
+    "lastSeen": "2026-04-25",
+    "sellerCount": 6,
+    "availableNow": true,
+    "recentListings": [
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 244,
+        "priceHigh": 244,
+        "productUrl": "https://aroidmarket.com/products/philodendron-billietiae-variegated",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 309,
+        "priceHigh": 309,
+        "productUrl": "https://aroidmarket.com/products/philodendron-billietiae-variegated-mature-size",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 5000,
+        "priceHigh": 5000,
+        "productUrl": "https://www.carnivero.com/products/philodendron-billietiae-variegated",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 295,
+        "priceHigh": 295,
+        "productUrl": "https://www.nsetropicals.com/product/variegated-philodendron-billietiae/",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-3",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 599.99,
+        "priceHigh": 599.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 549.99,
+        "priceHigh": 549.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 249.99,
+        "priceHigh": 249.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant-2",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 599.99,
+        "priceHigh": 599.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-8-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-tissue-culture-pre-order",
+        "growthStage": "tc",
+        "date": "2026-03-28",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 300,
+        "priceHigh": 300,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk12-f",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 495,
+        "priceHigh": 495,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk9-g",
+        "growthStage": "plant",
+        "date": "2026-03-28",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 244,
+        "priceHigh": 244,
+        "productUrl": "https://aroidmarket.com/products/philodendron-billietiae-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 309,
+        "priceHigh": 309,
+        "productUrl": "https://aroidmarket.com/products/philodendron-billietiae-variegated-mature-size",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 5000,
+        "priceHigh": 5000,
+        "productUrl": "https://www.carnivero.com/products/philodendron-billietiae-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 295,
+        "priceHigh": 295,
+        "productUrl": "https://www.nsetropicals.com/product/variegated-philodendron-billietiae/",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-3",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 599.99,
+        "priceHigh": 599.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 549.99,
+        "priceHigh": 549.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 249.99,
+        "priceHigh": 249.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant-2",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 599.99,
+        "priceHigh": 599.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-8-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-tissue-culture-pre-order",
+        "growthStage": "tc",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 300,
+        "priceHigh": 300,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk12-f",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 495,
+        "priceHigh": 495,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk9-g",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 244,
+        "priceHigh": 244,
+        "productUrl": "https://aroidmarket.com/products/philodendron-billietiae-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 309,
+        "priceHigh": 309,
+        "productUrl": "https://aroidmarket.com/products/philodendron-billietiae-variegated-mature-size",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 5000,
+        "priceHigh": 5000,
+        "productUrl": "https://www.carnivero.com/products/philodendron-billietiae-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 295,
+        "priceHigh": 295,
+        "productUrl": "https://www.nsetropicals.com/product/variegated-philodendron-billietiae/",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-3",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 599.99,
+        "priceHigh": 599.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 549.99,
+        "priceHigh": 549.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 249.99,
+        "priceHigh": 249.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant-2",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 599.99,
+        "priceHigh": 599.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-8-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-tissue-culture-pre-order",
+        "growthStage": "tc",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 300,
+        "priceHigh": 300,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk12-f",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 450,
+        "priceHigh": 450,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk15-o",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 275,
+        "priceHigh": 275,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk15-p",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk16-g",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 244,
+        "priceHigh": 244,
+        "productUrl": "https://aroidmarket.com/products/philodendron-billietiae-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 309,
+        "priceHigh": 309,
+        "productUrl": "https://aroidmarket.com/products/philodendron-billietiae-variegated-mature-size",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 5000,
+        "priceHigh": 5000,
+        "productUrl": "https://www.carnivero.com/products/philodendron-billietiae-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 295,
+        "priceHigh": 295,
+        "productUrl": "https://www.nsetropicals.com/product/variegated-philodendron-billietiae/",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 24.99,
+        "priceHigh": 24.99,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-variegated-billietiae-tissue-culture",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-3",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 599.99,
+        "priceHigh": 599.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 549.99,
+        "priceHigh": 549.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 249.99,
+        "priceHigh": 249.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant-2",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 599.99,
+        "priceHigh": 599.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-8-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-tissue-culture-pre-order",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 300,
+        "priceHigh": 300,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk12-f",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 450,
+        "priceHigh": 450,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk15-o",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 275,
+        "priceHigh": 275,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk15-p",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk16-g",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      }
+    ]
+  },
   "philodendron-gloriosum-variegated-type-1": {
     "slug": "philodendron-gloriosum-variegated-type-1",
     "currentMin": 1500,
