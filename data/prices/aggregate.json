@@ -965,6 +965,828 @@
       }
     ]
   },
+  "monstera-albo": {
+    "slug": "monstera-albo",
+    "currentMin": 19.99,
+    "currentMax": 3500,
+    "allTimeMin": 19.99,
+    "allTimeMax": 3500,
+    "lastSeen": "2026-04-25",
+    "sellerCount": 7,
+    "availableNow": true,
+    "recentListings": [
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 66,
+        "priceHigh": 66,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-half-moon-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 41,
+        "priceHigh": 41,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-halfmoon-cutting-1-leaf",
+        "growthStage": "cutting",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 34,
+        "priceHigh": 34,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-variegated-cutting-1-leaf",
+        "growthStage": "cutting",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 62,
+        "priceHigh": 62,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-variegated-lush",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 83,
+        "priceHigh": 83,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-white-tiger",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 61,
+        "priceHigh": 61,
+        "productUrl": "https://aroidmarket.com/products/monstera-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 40,
+        "priceHigh": 230,
+        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-var-borsigiana-albo-variegata",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 495,
+        "priceHigh": 495,
+        "productUrl": "https://www.nsetropicals.com/product/2-monstera-albo-variegated/",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 495,
+        "priceHigh": 495,
+        "productUrl": "https://www.nsetropicals.com/product/monstera-albo-variegated/",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 79.99,
+        "priceHigh": 79.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-4",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 164.99,
+        "priceHigh": 164.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-full-plant-4",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-high-variegation-6-us-seller",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-one-leaf-rooted-cutting-4",
+        "growthStage": "cutting",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 149.99,
+        "priceHigh": 149.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-deliciosa-albo-large-form-variegated-4",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 3500,
+        "priceHigh": 3500,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-variegated-brazilian-form-wk10-ud",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "steves-leaves",
+        "sellerName": "Steve's Leaves",
+        "price": 115.99,
+        "priceHigh": 115.99,
+        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "steves-leaves",
+        "sellerName": "Steve's Leaves",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata-1259",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": false
+      },
+      {
+        "sellerId": "steves-leaves",
+        "sellerName": "Steve's Leaves",
+        "price": 64.99,
+        "priceHigh": 64.99,
+        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata-low-color-1",
+        "growthStage": "plant",
+        "date": "2026-04-09",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 66,
+        "priceHigh": 66,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-half-moon-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 41,
+        "priceHigh": 41,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-halfmoon-cutting-1-leaf",
+        "growthStage": "cutting",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 34,
+        "priceHigh": 34,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-variegated-cutting-1-leaf",
+        "growthStage": "cutting",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 62,
+        "priceHigh": 62,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-variegated-lush",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 83,
+        "priceHigh": 83,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-white-tiger",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 61,
+        "priceHigh": 61,
+        "productUrl": "https://aroidmarket.com/products/monstera-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 40,
+        "priceHigh": 230,
+        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-var-borsigiana-albo-variegata",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 495,
+        "priceHigh": 495,
+        "productUrl": "https://www.nsetropicals.com/product/2-monstera-albo-variegated/",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 495,
+        "priceHigh": 495,
+        "productUrl": "https://www.nsetropicals.com/product/monstera-albo-variegated/",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 79.99,
+        "priceHigh": 79.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-4",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 164.99,
+        "priceHigh": 164.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-full-plant-4",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-high-variegation-6-us-seller",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-one-leaf-rooted-cutting-4",
+        "growthStage": "cutting",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 149.99,
+        "priceHigh": 149.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-deliciosa-albo-large-form-variegated-4",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 3500,
+        "priceHigh": 3500,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-variegated-brazilian-form-wk10-ud",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-variegated-small-form-borsigiana-wk16-a",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2486-monstera-deliciosa-albo-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2487-monstera-deliciosa-albo-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2488-monstera-deliciosa-albo-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2489-monstera-deliciosa-albo-variegated-copy",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2491-monstera-deliciosa-albo-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2492-monstera-deliciosa-albo-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2493-monstera-deliciosa-albo-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2494-monstera-deliciosa-albo-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2494-monstera-deliciosa-albo-variegated-1",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2496-monstera-deliciosa-albo-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2497-monstera-deliciosa-albo-variegated-1",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "steves-leaves",
+        "sellerName": "Steve's Leaves",
+        "price": 115.99,
+        "priceHigh": 115.99,
+        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "steves-leaves",
+        "sellerName": "Steve's Leaves",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata-1259",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": false
+      },
+      {
+        "sellerId": "steves-leaves",
+        "sellerName": "Steve's Leaves",
+        "price": 64.99,
+        "priceHigh": 64.99,
+        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata-low-color-1",
+        "growthStage": "plant",
+        "date": "2026-04-19",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 51,
+        "priceHigh": 51,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-half-moon-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 41,
+        "priceHigh": 41,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-halfmoon-cutting-1-leaf",
+        "growthStage": "cutting",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 34,
+        "priceHigh": 34,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-variegated-cutting-1-leaf",
+        "growthStage": "cutting",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 51,
+        "priceHigh": 51,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-variegated-lush",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 85,
+        "priceHigh": 85,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-white-tiger",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 46,
+        "priceHigh": 46,
+        "productUrl": "https://aroidmarket.com/products/monstera-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 40,
+        "priceHigh": 230,
+        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-var-borsigiana-albo-variegata",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 495,
+        "priceHigh": 495,
+        "productUrl": "https://www.nsetropicals.com/product/2-monstera-albo-variegated/",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 495,
+        "priceHigh": 495,
+        "productUrl": "https://www.nsetropicals.com/product/monstera-albo-variegated/",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-albo-3in-100",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-albo-3in-101",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-albo-3in-102",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-albo-3in-103",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-albo-3in-104",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 19.99,
+        "priceHigh": 19.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-albo-tissue-culture",
+        "growthStage": "tc",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 79.99,
+        "priceHigh": 79.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-4",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 164.99,
+        "priceHigh": 164.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-full-plant-4",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-high-variegation-6-us-seller",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 699.99,
+        "priceHigh": 699.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-large-form-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-one-leaf-rooted-cutting-4",
+        "growthStage": "cutting",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 149.99,
+        "priceHigh": 149.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-deliciosa-albo-large-form-variegated-4",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1950,
+        "priceHigh": 1950,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-variegated-large-form-wk17-ub",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-variegated-small-form-borsigiana-wk17-a",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-variegated-small-form-borsigiana-wk17-b",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2487-monstera-deliciosa-albo-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2488-monstera-deliciosa-albo-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2492-monstera-deliciosa-albo-variegated",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "steves-leaves",
+        "sellerName": "Steve's Leaves",
+        "price": 115.99,
+        "priceHigh": 115.99,
+        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      },
+      {
+        "sellerId": "steves-leaves",
+        "sellerName": "Steve's Leaves",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata-1259",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": false
+      },
+      {
+        "sellerId": "steves-leaves",
+        "sellerName": "Steve's Leaves",
+        "price": 64.99,
+        "priceHigh": 64.99,
+        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata-low-color-1",
+        "growthStage": "plant",
+        "date": "2026-04-25",
+        "available": true
+      }
+    ]
+  },
   "monstera-bulbasaur": {
     "slug": "monstera-bulbasaur",
     "currentMin": 29.99,

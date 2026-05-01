@@ -2,6 +2,7 @@ export type { PlantListing } from "./types";
 
 import type { PlantListing } from "./types";
 import { getPlantBySlug } from "./plants";
+import { monsteraAlbo } from "./listings/monstera-albo";
 import { monsteraThaiConstellation } from "./listings/monstera-thai-constellation";
 import { monsteraDevilMonster } from "./listings/monstera-devil-monster";
 import { alocasiaChantrierVariegatedPink } from "./listings/alocasia-chantrieri-variegated-pink";
@@ -18,11 +19,40 @@ import { philodendronGloriosumVariegatedType2 } from "./listings/philodendron-gl
 import { anthuriumDeltaForceListing } from "./listings/anthurium-delta-force";
 import { alocasiaBlackVelvetVariegatedPinkListing } from "./listings/alocasia-black-velvet-variegated-pink";
 
-export const listings: PlantListing[] = [
+const editorialListingOrder = [
+  "monstera-albo",
+  "monstera-devil-monster",
+  "monstera-bulbasaur",
+  "anthurium-delta-force",
+  "monstera-electrolyte",
+  "philodendron-gloriosum-variegated-type-1",
+  "alocasia-chantrieri-variegated-pink",
+] as const;
+
+const editorialListingRank: Map<string, number> = new Map(
+  editorialListingOrder.map((slug, index) => [slug, index]),
+);
+
+export function sortListingsByEditorialPriority<T extends PlantListing>(
+  items: T[],
+): T[] {
+  return [...items].sort((a, b) => {
+    const aRank = editorialListingRank.get(a.identity.slug);
+    const bRank = editorialListingRank.get(b.identity.slug);
+
+    if (aRank !== undefined && bRank !== undefined) return aRank - bRank;
+    if (aRank !== undefined) return -1;
+    if (bRank !== undefined) return 1;
+    return 0;
+  });
+}
+
+const rawListings: PlantListing[] = [
   philodendronGloriosumVariegatedType1,
   philodendronGloriosumVariegatedType2,
   anthuriumDeltaForceListing,
   alocasiaBlackVelvetVariegatedPinkListing,
+  monsteraAlbo,
   monsteraThaiConstellation,
   monsteraDevilMonster,
   alocasiaChantrierVariegatedPink,
@@ -36,6 +66,9 @@ export const listings: PlantListing[] = [
   philodendronSpiritusSancti,
 ];
 
+export const listings: PlantListing[] =
+  sortListingsByEditorialPriority(rawListings);
+
 export const standaloneListings = listings.filter(
   (listing) => !getPlantBySlug(listing.identity.slug),
 );
@@ -45,6 +78,7 @@ export const listingSourceFiles: Record<string, string> = {
   "philodendron-gloriosum-variegated-type-2": "data/listings/philodendron-gloriosum-variegated-type-2.ts",
   "anthurium-delta-force": "data/listings/anthurium-delta-force.ts",
   "alocasia-black-velvet-variegated-pink": "data/listings/alocasia-black-velvet-variegated-pink.ts",
+  "monstera-albo": "data/listings/monstera-albo.ts",
   "monstera-thai-constellation": "data/listings/monstera-thai-constellation.ts",
   "monstera-devil-monster": "data/listings/monstera-devil-monster.ts",
   "alocasia-chantrieri-variegated-pink": "data/listings/alocasia-chantrieri-variegated-pink.ts",
