@@ -95,3 +95,35 @@ export const listingSourceFiles: Record<string, string> = {
 export function getListingBySlug(slug: string): PlantListing | undefined {
   return listings.find((l) => l.identity.slug === slug);
 }
+
+export function getRelatedListings(
+  slug: string,
+  { limit = 5 }: { limit?: number } = {},
+): PlantListing[] {
+  const source = getListingBySlug(slug);
+  if (!source) return [];
+
+  const curated = source.relatedSlugs ?? [];
+  if (curated.length > 0) {
+    const resolved: PlantListing[] = [];
+    const seen = new Set<string>([slug]);
+    for (const s of curated) {
+      if (seen.has(s)) continue;
+      const entry = getListingBySlug(s);
+      if (!entry) continue;
+      seen.add(s);
+      resolved.push(entry);
+      if (resolved.length >= limit) break;
+    }
+    return resolved;
+  }
+
+  return listings
+    .filter(
+      (l) =>
+        l.identity.slug !== slug &&
+        l.identity.genus === source.identity.genus,
+    )
+    .sort((a, b) => a.priceRange.min - b.priceRange.min)
+    .slice(0, limit);
+}

@@ -79,6 +79,13 @@ export const monsteraAlbo: PlantListing = {
   availabilityNotes:
     "Available from specialty online sellers, Etsy-style marketplaces, and especially Facebook Marketplace. Marketplace is often where the best-value mature cuttings show up: one-leaf cuts can land around $20-$30, while nicely rooted sprouted cuttings or top cuts can often be found around $50-$60. Those larger exact plants are usually a better buy than tissue culture because they establish faster and let you verify the variegation before you pay.",
   lastReviewed: new Date("2026-04-30"),
+  relatedSlugs: [
+    "monstera-thai-constellation",
+    "monstera-bulbasaur",
+    "monstera-burle-marx-flame",
+    "monstera-electrolyte",
+    "monstera-white-lava",
+  ],
 
   faq: {
     categories: [

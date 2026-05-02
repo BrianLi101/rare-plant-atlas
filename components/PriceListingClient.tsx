@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -15,14 +15,13 @@ import {
   type ChartOptions,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import type { PlantListing } from "@/data/types";
+import type { PlantListing, TissueCultureStatus } from "@/data/types";
 import type { PriceSummary, GrowthStage } from "@/data/prices/types";
 import { formatUsd } from "@/data/price";
 import {
   getPlantLabel,
   getPlantFullName,
   getPlantVariantLabel,
-  formatScientificName,
 } from "@/data/identity";
 import { Navigation } from "@/components/Navigation";
 import {
@@ -40,8 +39,31 @@ ChartJS.register(
 );
 
 // ---------------------------------------------------------------------------
-// Growth stage labels
+// Public types
 // ---------------------------------------------------------------------------
+
+export type RelatedCard = {
+  slug: string;
+  href: string;
+  label: string;
+  displayName: {
+    primary: string;
+    italic: string | null;
+    cultivar: string | null;
+  };
+  image: string | null;
+  rarity: string;
+  tagline: string;
+  typical: number;
+  change30d: number;
+  accent: string;
+  genus: string;
+};
+
+// ---------------------------------------------------------------------------
+// Tokens
+// ---------------------------------------------------------------------------
+
 const GROWTH_STAGE_LABELS: Record<GrowthStage, string> = {
   tc: "Tissue Culture",
   cutting: "Rooted Cutting",
@@ -57,32 +79,41 @@ const GROWTH_STAGE_COLORS: Record<GrowthStage, string> = {
   plant: "#D4537E",
 };
 
+const TC_LABEL: Record<TissueCultureStatus, string> = {
+  unknown: "Unknown",
+  none: "Not in TC",
+  limited: "Limited TC",
+  widespread: "Widespread TC",
+};
+
 // ---------------------------------------------------------------------------
-// Helpers
+// Format helpers
 // ---------------------------------------------------------------------------
 
-function fmtDate(iso: string) {
-  return new Date(iso).toLocaleDateString("en-US", {
+function fmtRange(lo: number, hi: number) {
+  return `${formatUsd(lo)} – ${formatUsd(hi)}`;
+}
+
+function fmtDelta(n: number) {
+  const arrow = n > 0 ? "▲" : n < 0 ? "▼" : "◆";
+  return `${arrow} ${Math.abs(n).toFixed(1)}%`;
+}
+
+function fmtShortDate(date: Date) {
+  return date.toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
     year: "numeric",
   });
 }
 
-type ChartPoint = {
-  x: string;
-  y: number;
-  sellerName: string;
-  date: string;
-  priceHigh: number;
-};
-
-function fmtMonthYear(date: Date) {
-  return date.toLocaleDateString("en-US", {
-    month: "long",
-    year: "numeric",
-  });
+function pluralizeGenus(genus: string) {
+  return genus.endsWith("s") ? genus : `${genus}s`;
 }
+
+// ---------------------------------------------------------------------------
+// Stage grouping (existing behavior — kept identical)
+// ---------------------------------------------------------------------------
 
 interface StageGroup {
   stage: GrowthStage;
@@ -109,146 +140,130 @@ function groupByStage(summary: PriceSummary): StageGroup[] {
       listings,
       min: Math.min(...prices),
       max: Math.max(...prices),
-      typical: Math.round(
-        prices.reduce((a, b) => a + b, 0) / prices.length,
-      ),
+      typical: Math.round(prices.reduce((a, b) => a + b, 0) / prices.length),
       count: listings.length,
     };
   });
 }
 
 // ---------------------------------------------------------------------------
-// Sub-components
+// Display name (italic species)
 // ---------------------------------------------------------------------------
 
-function VariantCard({ group }: { group: StageGroup }) {
+function DisplayName({
+  name,
+}: {
+  name: { primary: string; italic: string | null; cultivar: string | null };
+}) {
   return (
-    <div className="relative overflow-hidden rounded-[10px] bg-cream/[0.02] border border-cream/[0.07] p-5 transition-colors hover:border-cream/[0.12]">
-      {/* Top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-cream/[0.15] to-transparent" />
-
-      <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-cream/30 mb-3">
-        {GROWTH_STAGE_LABELS[group.stage]}
-      </p>
-      <p className="font-mono text-[28px] text-cream leading-none mb-1">
-        {formatUsd(group.typical)}
-      </p>
-      <p className="font-mono text-[10px] text-cream/30 mb-3.5">
-        typical &middot; {group.count} sale{group.count !== 1 ? "s" : ""}{" "}
-        tracked
-      </p>
-      <p className="font-mono text-[11px] text-cream/50">
-        <span className="text-cream/30 text-[9px]">Range </span>
-        {formatUsd(group.min)} &ndash; {formatUsd(group.max)}
-      </p>
-    </div>
+    <>
+      {name.primary}
+      {name.italic ? (
+        <>
+          {" "}
+          <em className="font-serif italic font-normal">{name.italic}</em>
+        </>
+      ) : null}
+      {name.cultivar ? ` ${name.cultivar}` : ""}
+    </>
   );
 }
 
-function SellerRow({
-  listing,
-}: {
-  listing: PriceSummary["recentListings"][number];
-}) {
-  const priceDisplay =
-    listing.price === listing.priceHigh
-      ? formatUsd(listing.price)
-      : `${formatUsd(listing.price)}–${formatUsd(listing.priceHigh)}`;
+// ---------------------------------------------------------------------------
+// Sub-components
+// ---------------------------------------------------------------------------
 
+type ChartPoint = {
+  x: string;
+  y: number;
+  sellerName: string;
+  date: string;
+  priceHigh: number;
+};
+
+function StageCard({ group }: { group: StageGroup }) {
+  const dot = GROWTH_STAGE_COLORS[group.stage];
   return (
-    <tr className="group border-b border-cream/[0.05] last:border-b-0 transition-colors hover:bg-cream/[0.02]">
-      <td className="py-3.5 pr-4 text-[13px] text-cream font-normal">
-        {listing.sellerName}
-      </td>
-      <td className="py-3.5 pr-4">
-        <span className="font-mono text-[9px] tracking-[0.06em] bg-cream/[0.04] border border-cream/[0.07] rounded px-2 py-0.5 text-cream/30">
-          {GROWTH_STAGE_LABELS[listing.growthStage] ?? listing.growthStage}
-        </span>
-      </td>
-      <td className="py-3.5 pr-4 font-mono text-sm text-cream">
-        {priceDisplay}
-      </td>
-      <td className="py-3.5 pr-4">
-        {listing.available ? (
-          <span className="font-mono text-[9px] tracking-[0.06em] text-forest-400">
-            In Stock
-          </span>
-        ) : (
-          <span className="font-mono text-[9px] tracking-[0.06em] text-cream/25">
-            Out of Stock
-          </span>
-        )}
-      </td>
-      <td className="py-3.5 text-right">
-        {listing.productUrl && (
-          <a
-            href={listing.productUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[11px] text-forest-400 hover:text-forest-300 transition-colors opacity-0 group-hover:opacity-100"
-          >
-            &#x2197;
-          </a>
-        )}
-      </td>
-    </tr>
+    <div
+      className={
+        // Desktop: bordered card with vertical layout
+        "rounded-xl border border-cream/[0.07] bg-cream/[0.02] p-5 transition-colors hover:border-cream/[0.12] " +
+        // Mobile: flat row inside the wrapper, horizontal layout
+        "max-sm:rounded-none max-sm:border-0 max-sm:border-b max-sm:border-b-cream/[0.07] max-sm:bg-transparent max-sm:p-4 max-sm:grid max-sm:grid-cols-[1fr_auto_auto] max-sm:gap-3.5 max-sm:items-center max-sm:hover:border-cream/[0.07] max-sm:[&:last-child]:border-b-0"
+      }
+    >
+      <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.12em] uppercase text-cream/50 mb-4 max-sm:mb-0 max-sm:text-[9px] max-sm:tracking-[0.10em] max-sm:gap-1.5">
+        <span
+          className="inline-block h-2 w-2 rounded-full max-sm:h-[7px] max-sm:w-[7px]"
+          style={{ background: dot }}
+        />
+        {GROWTH_STAGE_LABELS[group.stage]}
+      </div>
+      <div className="font-mono text-[36px] leading-none text-cream tracking-tight mb-1.5 max-sm:text-[20px] max-sm:mb-0 max-sm:text-right">
+        {formatUsd(group.typical)}
+      </div>
+      <div className="font-mono text-[11px] text-cream/40 mb-3.5 max-sm:hidden">
+        typical · {group.count} sale{group.count !== 1 ? "s" : ""} tracked
+      </div>
+      <div className="font-mono text-[11px] text-cream/50 pt-3.5 border-t border-cream/[0.07] max-sm:pt-0 max-sm:border-t-0 max-sm:text-[10px] max-sm:text-cream/40 max-sm:whitespace-nowrap">
+        <span className="text-cream/30 mr-1.5 max-sm:hidden">Range</span>
+        {fmtRange(group.min, group.max)}
+      </div>
+    </div>
   );
 }
 
 function PriceTrendChart({ summary }: { summary: PriceSummary }) {
   const chartListings = useMemo(() => {
-    return [...summary.recentListings]
-      .sort((a, b) => {
-        if (a.date !== b.date) return a.date.localeCompare(b.date);
-        return a.price - b.price;
-      });
+    return [...summary.recentListings].sort((a, b) => {
+      if (a.date !== b.date) return a.date.localeCompare(b.date);
+      return a.price - b.price;
+    });
   }, [summary]);
 
   const labels = useMemo(() => {
-    return Array.from(new Set(chartListings.map((listing) => listing.date))).map(
-      (date) =>
-        new Date(date).toLocaleDateString("en-US", {
-          month: "short",
-          day: "numeric",
-        }),
+    return Array.from(new Set(chartListings.map((l) => l.date))).map((date) =>
+      new Date(date).toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+      }),
     );
   }, [chartListings]);
 
-  const datasets = useMemo<ChartData<"line", ChartPoint[], string>["datasets"]>(() => {
-    return GROWTH_STAGE_ORDER.flatMap((stage) => {
-      const listings = chartListings.filter(
-        (listing) => listing.growthStage === stage,
-      );
-      if (listings.length === 0) return [];
-
-      return [{
-        label: GROWTH_STAGE_LABELS[stage],
-        data: listings.map((listing) => ({
-          x: new Date(listing.date).toLocaleDateString("en-US", {
-            month: "short",
-            day: "numeric",
-          }),
-          y: listing.price,
-          sellerName: listing.sellerName,
-          date: listing.date,
-          priceHigh: listing.priceHigh,
-        })),
-        borderColor: GROWTH_STAGE_COLORS[stage],
-        backgroundColor: GROWTH_STAGE_COLORS[stage],
-        showLine: false,
-        pointRadius: 4,
-        pointHoverRadius: 5,
-        pointHitRadius: 12,
-      }];
-    });
-  }, [chartListings]);
+  const datasets = useMemo<ChartData<"line", ChartPoint[], string>["datasets"]>(
+    () => {
+      return GROWTH_STAGE_ORDER.flatMap((stage) => {
+        const ls = chartListings.filter((l) => l.growthStage === stage);
+        if (ls.length === 0) return [];
+        return [
+          {
+            label: GROWTH_STAGE_LABELS[stage],
+            data: ls.map((l) => ({
+              x: new Date(l.date).toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+              }),
+              y: l.price,
+              sellerName: l.sellerName,
+              date: l.date,
+              priceHigh: l.priceHigh,
+            })),
+            borderColor: GROWTH_STAGE_COLORS[stage],
+            backgroundColor: GROWTH_STAGE_COLORS[stage],
+            showLine: false,
+            pointRadius: stage === "plant" ? 5 : stage === "cutting" ? 4.5 : 4,
+            pointHoverRadius: 6,
+            pointHitRadius: 12,
+          },
+        ];
+      });
+    },
+    [chartListings],
+  );
 
   if (datasets.length === 0) return null;
 
-  const data: ChartData<"line", ChartPoint[], string> = {
-    labels,
-    datasets,
-  };
+  const data: ChartData<"line", ChartPoint[], string> = { labels, datasets };
 
   const options: ChartOptions<"line"> = {
     responsive: true,
@@ -259,15 +274,17 @@ function PriceTrendChart({ summary }: { summary: PriceSummary }) {
         callbacks: {
           title: (items) => {
             const first = items[0]?.raw as { date?: string } | undefined;
-            return first?.date ? fmtDate(first.date) : "";
+            return first?.date
+              ? new Date(first.date).toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
+                })
+              : "";
           },
           label: (ctx) => {
             const point = ctx.raw as
-              | {
-                  y: number;
-                  sellerName: string;
-                  priceHigh: number;
-                }
+              | { y: number; sellerName: string; priceHigh: number }
               | undefined;
             if (!point) return ctx.dataset.label ?? "";
             const priceDisplay =
@@ -285,9 +302,9 @@ function PriceTrendChart({ summary }: { summary: PriceSummary }) {
         ticks: { color: "rgba(250,247,242,0.2)", font: { size: 11 } },
       },
       y: {
-        grid: { color: "rgba(250,247,242,0.04)" },
+        grid: { color: "rgba(250,247,242,0.07)" },
         ticks: {
-          color: "rgba(250,247,242,0.2)",
+          color: "rgba(250,247,242,0.3)",
           font: { size: 11 },
           callback: (value) => `$${value}`,
         },
@@ -295,81 +312,207 @@ function PriceTrendChart({ summary }: { summary: PriceSummary }) {
     },
   };
 
+  const stagesPresent = GROWTH_STAGE_ORDER.filter((s) =>
+    chartListings.some((l) => l.growthStage === s),
+  );
+
   return (
-    <div className="rounded-[10px] bg-cream/[0.02] border border-cream/[0.07] px-5 py-4 mb-10">
-      <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-cream/30 mb-3">
-        Price Trend
-      </p>
-      <div className="flex gap-4 mb-3">
-        {GROWTH_STAGE_ORDER.filter((stage) =>
-          chartListings.some((listing) => listing.growthStage === stage),
-        ).map((stage) => (
-          <div
-            key={stage}
-            className="flex items-center gap-1.5 text-[11px] text-cream/40"
-          >
-            <span
-              className="inline-block h-2.5 w-2.5 rounded-full"
-              style={{ background: GROWTH_STAGE_COLORS[stage] }}
-            />
-            {GROWTH_STAGE_LABELS[stage]}
+    <div className="rounded-xl border border-cream/[0.07] bg-cream/[0.02] px-6 py-5">
+      <div className="flex items-end justify-between gap-6 flex-wrap mb-4">
+        <div>
+          <div className="font-mono text-[10px] tracking-[0.18em] uppercase text-cream/30 mb-1">
+            90-day price observations
           </div>
-        ))}
+          <div className="font-mono text-xs text-cream/50">
+            Each dot is one tracked listing — sized by stage.
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-4">
+          {stagesPresent.map((stage) => (
+            <div
+              key={stage}
+              className="flex items-center gap-2 font-mono text-[11px] text-cream/50"
+            >
+              <span
+                className="inline-block h-2.5 w-2.5 rounded-full"
+                style={{ background: GROWTH_STAGE_COLORS[stage] }}
+              />
+              {GROWTH_STAGE_LABELS[stage]}
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="relative h-52">
+      <div className="relative h-56">
         <Line data={data} options={options} />
       </div>
     </div>
   );
 }
 
-function FullProfileBanner({
-  slug,
-  accent,
+function SellerCard({
+  listing,
 }: {
-  slug: string;
-  accent: string;
+  listing: PriceSummary["recentListings"][number];
 }) {
+  const priceDisplay =
+    listing.price === listing.priceHigh
+      ? formatUsd(listing.price)
+      : fmtRange(listing.price, listing.priceHigh);
+
   return (
-    <div
-      className="relative overflow-hidden rounded-[18px] border mb-10"
-      style={{
-        borderColor: "rgba(250,247,242,0.10)",
-        background:
-          "linear-gradient(135deg, rgba(250,247,242,0.05) 0%, rgba(250,247,242,0.02) 38%, rgba(13,13,13,0.86) 100%)",
-      }}
-    >
-      <div
-        className="absolute inset-0 opacity-90"
-        style={{
-          background: `radial-gradient(circle at top right, ${accent}40 0%, transparent 42%), radial-gradient(circle at bottom left, rgba(250,247,242,0.08) 0%, transparent 34%)`,
-        }}
-      />
-      <div className="relative flex items-center justify-between gap-6 px-6 py-6 md:px-8 md:py-7 max-md:flex-col max-md:items-start">
-        <div className="max-w-[560px]">
-          <p className="font-mono text-[10px] tracking-[0.16em] uppercase text-forest-300 mb-2">
-            Full Plant File Available
-          </p>
-          <h2 className="font-serif text-[28px] leading-[1.02] text-cream mb-2">
-            Open the full plant file before you buy.
-          </h2>
-          <p className="text-[13px] text-cream/55 leading-relaxed">
-            See the long-form profile with care, variegation analysis,
-            substrate, provenance, propagation, and fit check.
-          </p>
+    <div className="rounded-[10px] border border-cream/[0.07] bg-cream/[0.02] px-[18px] py-4 flex flex-col gap-2.5 transition-all hover:border-cream/[0.12] hover:-translate-y-px">
+      <div className="flex justify-between items-start gap-3">
+        <div className="text-sm font-medium text-cream leading-tight">
+          {listing.sellerName}
         </div>
-        <Link
-          href={`/plants/${slug}`}
-          className="inline-flex items-center justify-center rounded-[12px] px-6 py-3.5 font-mono text-[11px] tracking-[0.12em] uppercase text-deep transition-transform hover:-translate-y-0.5"
-          style={{
-            background: "#f6f0e6",
-            boxShadow: `0 0 0 1px ${accent}55, 0 18px 40px rgba(0,0,0,0.28)`,
-          }}
+        <span className="font-mono text-[9px] tracking-[0.10em] uppercase text-cream/40 px-2 py-0.5 border border-cream/[0.12] rounded whitespace-nowrap">
+          {GROWTH_STAGE_LABELS[listing.growthStage] ?? listing.growthStage}
+        </span>
+      </div>
+      <div className="font-mono text-[17px] text-cream tracking-tight">
+        {priceDisplay}
+      </div>
+      <div className="flex justify-between items-center pt-2.5 border-t border-cream/[0.07]">
+        <span
+          className={
+            "font-mono text-[10px] tracking-[0.10em] whitespace-nowrap " +
+            (listing.available ? "text-forest-300" : "text-cream/30")
+          }
         >
-          View Full Plant File
-        </Link>
+          {listing.available ? "● In Stock" : "○ Out of Stock"}
+        </span>
+        {listing.available && listing.productUrl && (
+          <a
+            href={listing.productUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[11px] text-cream/50 hover:text-cream transition-colors"
+          >
+            Visit ↗
+          </a>
+        )}
       </div>
     </div>
+  );
+}
+
+function FAQ({
+  faq,
+}: {
+  faq: NonNullable<PlantListing["faq"]>;
+}) {
+  const [activeCat, setActiveCat] = useState(0);
+  const categories = faq.categories;
+
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-7 lg:gap-14 items-start">
+      <aside>
+        <h2 className="font-serif font-normal text-[22px] leading-tight text-cream tracking-tight mb-4">
+          Common Questions
+        </h2>
+        <p className="font-serif italic text-[14px] text-cream/50 mb-3.5 max-w-[200px] max-lg:max-w-none">
+          Browse by topic.
+        </p>
+        <div className="flex flex-col gap-1 max-lg:flex-row max-lg:overflow-x-auto max-lg:gap-2 max-lg:pb-1 max-lg:[&::-webkit-scrollbar]:hidden">
+          {categories.map((c, i) => (
+            <button
+              key={c.category}
+              onClick={() => setActiveCat(i)}
+              className={
+                "text-left font-mono text-[11px] tracking-[0.08em] uppercase py-2 transition-colors " +
+                "max-lg:flex-shrink-0 max-lg:px-3.5 max-lg:py-2 max-lg:rounded-full max-lg:border max-lg:border-cream/[0.12] max-lg:whitespace-nowrap " +
+                "lg:border-l-2 lg:pl-3 " +
+                (i === activeCat
+                  ? "text-cream lg:border-l-earth-300 max-lg:bg-cream max-lg:text-deep max-lg:border-cream"
+                  : "text-cream/40 hover:text-cream/60 lg:border-l-transparent")
+              }
+            >
+              {c.category}
+            </button>
+          ))}
+        </div>
+      </aside>
+      <div>
+        {categories.map((c, i) =>
+          i === activeCat ? (
+            <div key={c.category}>
+              {c.items.map((item, j) => (
+                <details
+                  key={item.question}
+                  className="group border-b border-cream/[0.07] first:border-t first:border-t-cream/[0.07] py-4"
+                  open={j === 0}
+                >
+                  <summary className="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden text-[15px] text-cream font-normal leading-snug">
+                    <span>{item.question}</span>
+                    <span className="font-mono text-lg text-cream/30 transition-transform group-open:rotate-45 shrink-0">
+                      +
+                    </span>
+                  </summary>
+                  <div className="mt-3 text-[14px] text-cream/50 leading-relaxed max-w-[720px]">
+                    {item.answer}
+                  </div>
+                </details>
+              ))}
+            </div>
+          ) : null,
+        )}
+      </div>
+    </div>
+  );
+}
+
+function RelatedCardItem({ r }: { r: RelatedCard }) {
+  const deltaClass =
+    r.change30d > 0
+      ? "text-forest-300"
+      : r.change30d < -0.1
+      ? "text-earth-300"
+      : "text-cream/30";
+
+  return (
+    <Link
+      href={r.href}
+      className="block rounded-xl border border-cream/[0.07] bg-cream/[0.02] overflow-hidden transition-all hover:border-cream/[0.12] hover:-translate-y-0.5"
+    >
+      <div className="relative aspect-[16/10] border-b border-cream/[0.07] overflow-hidden">
+        {r.image ? (
+          <Image
+            src={r.image}
+            alt={r.label}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover"
+          />
+        ) : (
+          <PlantPlaceholder
+            accent={r.accent}
+            variant={getPlantPlaceholderVariant(r.genus)}
+            glyphOpacity={0.42}
+            label={`${r.label} placeholder image`}
+          />
+        )}
+        <span className="absolute top-3 left-3 font-mono text-[9px] tracking-[0.10em] uppercase text-cream bg-deep/65 backdrop-blur-sm border border-cream/[0.12] rounded px-2 py-0.5">
+          {r.rarity}
+        </span>
+      </div>
+      <div className="px-[18px] pt-4 pb-[18px]">
+        <div className="font-serif font-normal text-[19px] text-cream leading-tight mb-1">
+          <DisplayName name={r.displayName} />
+        </div>
+        <div className="font-mono text-[11px] text-cream/40 leading-snug mb-3.5 line-clamp-2">
+          {r.tagline}
+        </div>
+        <div className="flex justify-between items-center pt-3 border-t border-cream/[0.07]">
+          <div className="font-mono text-[13px] text-cream">
+            {formatUsd(r.typical)}{" "}
+            <small className="text-cream/30">typical</small>
+          </div>
+          <div className={`font-mono text-[11px] ${deltaClass}`}>
+            {fmtDelta(r.change30d)} 30d
+          </div>
+        </div>
+      </div>
+    </Link>
   );
 }
 
@@ -381,17 +524,19 @@ export function PriceListingClient({
   listing,
   priceSummary,
   hasFullProfile,
+  related,
 }: {
   listing: PlantListing;
   priceSummary?: PriceSummary;
   hasFullProfile: boolean;
+  related: RelatedCard[];
 }) {
   const label = getPlantLabel(listing);
   const fullName = getPlantFullName(listing);
   const variantLabel = getPlantVariantLabel(listing);
   const stageGroups = priceSummary ? groupByStage(priceSummary) : [];
 
-  // Deduplicate sellers (most recent per seller)
+  // Deduplicate sellers (most recent per seller, in-stock first)
   const uniqueListings: PriceSummary["recentListings"] = [];
   if (priceSummary) {
     const available = priceSummary.recentListings.filter((l) => l.available);
@@ -400,246 +545,390 @@ export function PriceListingClient({
     const bySeller = new Map<string, (typeof all)[number]>();
     for (const l of all) {
       const existing = bySeller.get(l.sellerId);
-      if (!existing || l.date > existing.date) {
-        bySeller.set(l.sellerId, l);
-      }
+      if (!existing || l.date > existing.date) bySeller.set(l.sellerId, l);
     }
     uniqueListings.push(...Array.from(bySeller.values()));
   }
+
+  // Hero stats
+  const tcInfo = listing.tissueCultureInfo;
+  const tcStatus: TissueCultureStatus = tcInfo?.status ?? "unknown";
+  const tcFloor = tcInfo?.priceRange?.min ?? null;
+  const listingsCount =
+    priceSummary?.recentListings.length ?? priceSummary?.sellerCount ?? 0;
+  const sellerCount = priceSummary?.sellerCount ?? uniqueListings.length;
+  const lastSeenDate = priceSummary?.lastSeen
+    ? new Date(priceSummary.lastSeen)
+    : listing.priceRange.lastObserved;
+
+  // Typical from summary if available, else mid-point
+  const typical =
+    stageGroups.find((g) => g.stage === "plant")?.typical ??
+    Math.round(
+      listing.priceRange.min * 0.55 + listing.priceRange.max * 0.45,
+    );
+
+  // 30-day change derived from priceSummary listings (early-half vs late-half median)
+  const change30d = useMemo(() => {
+    if (!priceSummary) return 0;
+    const mature = priceSummary.recentListings.filter(
+      (l) => l.growthStage === "plant",
+    );
+    const entries = mature.length > 0 ? mature : priceSummary.recentListings;
+    if (entries.length < 4) return 0;
+    const sorted = [...entries].sort((a, b) => a.date.localeCompare(b.date));
+    const mid = Math.floor(sorted.length / 2);
+    const med = (xs: number[]) => {
+      const s = [...xs].sort((a, b) => a - b);
+      const m = Math.floor(s.length / 2);
+      return s.length % 2 === 0 ? (s[m - 1] + s[m]) / 2 : s[m];
+    };
+    const earlyMed = med(sorted.slice(0, mid).map((e) => e.price));
+    const lateMed = med(sorted.slice(mid).map((e) => e.price));
+    if (earlyMed === 0) return 0;
+    return +(((lateMed - earlyMed) / earlyMed) * 100).toFixed(1);
+  }, [priceSummary]);
+
+  const heroDisplayName = (() => {
+    const id = listing.identity;
+    let cultivar: string | null = id.cultivar ?? id.variantLabel ?? null;
+    if (!cultivar && id.tradeName) {
+      const stripped = id.tradeName
+        .replace(new RegExp(`^${id.genus}\\s+`), "")
+        .trim();
+      if (stripped && stripped !== id.tradeName) cultivar = stripped;
+    }
+    return { primary: id.genus, italic: id.species ?? null, cultivar };
+  })();
+
+  const shell = "max-w-[1240px] mx-auto px-10 max-lg:px-7 max-sm:px-5";
 
   return (
     <div className="min-h-screen bg-deep">
       <Navigation fixed={false} />
 
-      {/* ── Hero ── */}
-      <div
-        className="relative overflow-hidden flex items-end"
-        style={{
-          height: 340,
-          background: `linear-gradient(160deg, ${listing.colors.gradient[0]} 0%, ${listing.colors.primary}80 50%, ${listing.colors.primary} 100%)`,
-        }}
-      >
-        {/* Hero image if available */}
-        {listing.images.hero ? (
-          <Image
-            src={listing.images.hero}
-            alt={label}
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
-        ) : (
-          <PlantPlaceholder
-            accent={listing.colors.accent}
-            variant={getPlantPlaceholderVariant(listing.identity.genus)}
-            glyphOpacity={0.42}
-            label={`${label} placeholder image`}
-          />
-        )}
+      {/* ─────────────── Hero — Variant B (Split) ─────────────── */}
+      <section className="border-b border-cream/[0.07] py-14 max-sm:pt-20 max-sm:pb-8">
+        <div className={shell}>
+          <nav className="hidden sm:flex items-center gap-1.5 font-mono text-[10px] tracking-[0.10em] uppercase text-cream/30 mb-6">
+            <Link href="/" className="hover:text-cream transition-colors">
+              Atlas
+            </Link>
+            <span className="text-cream/20">/</span>
+            <Link
+              href="/prices"
+              className="hover:text-cream transition-colors"
+            >
+              Prices
+            </Link>
+            <span className="text-cream/20">/</span>
+            <span className="text-cream">{label}</span>
+          </nav>
 
-        {/* Gradient overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to bottom, transparent 30%, rgba(13,13,13,0.85) 80%, #0d0d0d 100%)",
-          }}
-        />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+            {/* Photo */}
+            <div className="relative h-[480px] max-lg:h-80 max-sm:h-60 rounded-xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
+              {listing.images.hero ? (
+                <Image
+                  src={listing.images.hero}
+                  alt={label}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                  priority
+                />
+              ) : (
+                <PlantPlaceholder
+                  accent={listing.colors.accent}
+                  variant={getPlantPlaceholderVariant(listing.identity.genus)}
+                  glyphOpacity={0.42}
+                  label={`${label} placeholder image`}
+                />
+              )}
+            </div>
 
-        <div className="relative z-10 w-full px-10 pb-9 max-lg:px-5 max-lg:pb-7">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.1em] uppercase text-cream/30 hover:text-cream transition-colors mb-5"
-          >
-            &larr; All Plants
-          </Link>
+            {/* Data */}
+            <div>
+              <div className="flex items-center gap-2.5 font-mono text-[10px] tracking-[0.14em] uppercase text-forest-300 mb-3.5 flex-wrap">
+                <span>
+                  {listing.identity.genus} · {listing.family}
+                </span>
+                <span className="text-cream/30">·</span>
+                <span className="text-earth-300">{listing.rarity}</span>
+                {tcStatus !== "unknown" && (
+                  <>
+                    <span className="text-cream/30">·</span>
+                    <span className="text-forest-300">
+                      {TC_LABEL[tcStatus]}
+                    </span>
+                  </>
+                )}
+              </div>
 
-          <div className="flex items-center gap-2.5 font-mono text-[10px] tracking-[0.14em] uppercase text-forest-400 mb-2.5">
-            {listing.identity.genus} &middot; {listing.family}
-            <span className="bg-cream/[0.07] border border-cream/[0.12] rounded px-2.5 py-0.5 text-[8px] tracking-[0.12em] text-cream/30">
-              Price Reference
-            </span>
+              <h1
+                className="font-serif font-light text-cream leading-none tracking-tight mb-4"
+                style={{ fontSize: "clamp(38px, 5vw, 56px)" }}
+              >
+                <DisplayName name={heroDisplayName} />
+                {variantLabel &&
+                  variantLabel !== heroDisplayName.cultivar &&
+                  !fullName.includes(variantLabel) && (
+                    <>
+                      <br />
+                      {variantLabel}
+                    </>
+                  )}
+              </h1>
+
+              <p className="font-serif italic text-lg text-cream/50 leading-snug max-w-[480px] mb-7">
+                {listing.tagline}
+              </p>
+
+              {hasFullProfile && (
+                <Link
+                  href={`/plants/${listing.identity.slug}`}
+                  className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-forest-300 border-b border-forest-300/30 pb-0.5 -mt-4 mb-7 hover:text-cream hover:border-cream/50 transition-colors"
+                >
+                  View full plant profile <span aria-hidden>→</span>
+                </Link>
+              )}
+
+              <div className="grid grid-cols-2 gap-4 border-t border-cream/[0.12] pt-6">
+                <div>
+                  <div className="font-mono text-[9px] tracking-[0.14em] uppercase text-cream/30 mb-1.5">
+                    Typical · this week
+                  </div>
+                  <div className="font-mono text-[22px] text-cream leading-tight">
+                    {formatUsd(typical)}
+                  </div>
+                </div>
+                <div>
+                  <div className="font-mono text-[9px] tracking-[0.14em] uppercase text-cream/30 mb-1.5">
+                    Range
+                  </div>
+                  <div className="font-serif text-[22px] font-normal text-cream leading-tight">
+                    {fmtRange(listing.priceRange.min, listing.priceRange.max)}
+                  </div>
+                </div>
+                <div>
+                  <div className="font-mono text-[9px] tracking-[0.14em] uppercase text-cream/30 mb-1.5">
+                    30-day movement
+                  </div>
+                  <div
+                    className={
+                      "font-mono text-[22px] leading-tight " +
+                      (change30d > 0
+                        ? "text-forest-300"
+                        : change30d < 0
+                        ? "text-earth-300"
+                        : "text-cream/50")
+                    }
+                  >
+                    {fmtDelta(change30d)}
+                  </div>
+                </div>
+                <div>
+                  <div className="font-mono text-[9px] tracking-[0.14em] uppercase text-cream/30 mb-1.5">
+                    Listings tracked
+                  </div>
+                  <div className="font-mono text-[22px] text-cream leading-tight">
+                    {listingsCount}
+                    {sellerCount > 0 && (
+                      <small className="block font-mono text-[11px] text-cream/50 mt-1">
+                        across {sellerCount} seller
+                        {sellerCount !== 1 ? "s" : ""}
+                      </small>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <h1 className="font-serif text-cream font-light leading-[1.05] mb-2" style={{ fontSize: "clamp(32px, 5vw, 52px)" }}>
-            {fullName}
-            {variantLabel && !fullName.includes(variantLabel) && (
-              <>
-                <br />
-                {variantLabel}
-              </>
-            )}
-          </h1>
-
-          <p className="text-sm text-cream/50 max-w-[520px] leading-relaxed">
-            {listing.tagline}
-          </p>
+      {/* ─────────────── QuickStrip ─────────────── */}
+      <div className="border-b border-cream/[0.07] bg-white/[0.015]">
+        <div className={shell}>
+          <div className="grid grid-cols-5 max-lg:grid-cols-3 max-sm:grid-cols-2">
+            {[
+              {
+                k: "Typical Price",
+                v: formatUsd(typical),
+                small: "plant",
+                vClass: "text-cream",
+              },
+              {
+                k: "Tissue Culture",
+                v: TC_LABEL[tcStatus],
+                small: tcFloor != null ? `from ${formatUsd(tcFloor)}` : null,
+                vClass:
+                  tcStatus === "widespread"
+                    ? "text-forest-300"
+                    : tcStatus === "limited"
+                    ? "text-earth-300"
+                    : "text-cream/50",
+              },
+              {
+                k: "Rarity",
+                v: listing.rarity,
+                small: "collector tier",
+                vClass: "text-cream",
+              },
+              {
+                k: "Listings Tracked",
+                v: String(listingsCount),
+                small: sellerCount > 0 ? `${sellerCount} sellers` : null,
+                vClass: "text-cream",
+              },
+              {
+                k: "Last Updated",
+                v: fmtShortDate(lastSeenDate),
+                small: null,
+                vClass: "text-cream/50",
+              },
+            ].map((cell, i, arr) => (
+              <div
+                key={cell.k}
+                className={
+                  "px-5 py-4 border-r border-cream/[0.07] last:border-r-0 " +
+                  // wrap-row borders
+                  "max-lg:[&:nth-child(3n)]:border-r-0 max-lg:[&:nth-child(n+4)]:border-t max-lg:[&:nth-child(n+4)]:border-t-cream/[0.07] " +
+                  "max-sm:[&:nth-child(3n)]:border-r " +
+                  "max-sm:[&:nth-child(2n)]:border-r-0 " +
+                  "max-sm:[&:nth-child(n+3)]:border-t max-sm:[&:nth-child(n+3)]:border-t-cream/[0.07] " +
+                  (i === arr.length - 1
+                    ? " max-sm:col-span-2 max-sm:border-t max-sm:border-t-cream/[0.07]"
+                    : "")
+                }
+              >
+                <div className="font-mono text-[9px] tracking-[0.14em] uppercase text-cream/30 mb-1.5">
+                  {cell.k}
+                </div>
+                <div
+                  className={`font-mono text-sm leading-snug ${cell.vClass}`}
+                >
+                  {cell.v}
+                  {cell.small && (
+                    <small className="block font-mono text-[10px] text-cream/40 mt-0.5">
+                      {cell.small}
+                    </small>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* ── Body ── */}
-      <div className="max-w-[860px] mx-auto px-10 pt-12 pb-20 max-lg:px-5 max-lg:pt-8 max-lg:pb-16">
-        {/* Meta bar */}
-        <div className="flex items-center justify-between flex-wrap gap-2 px-4.5 py-3 rounded-lg bg-cream/[0.02] border border-cream/[0.07] mb-10">
-          <div className="flex items-center gap-4">
-            <span className="font-mono text-[10px] tracking-[0.08em] text-cream/50 font-normal">
-              {listing.rarity}
-            </span>
-            <span className="font-mono text-[10px] tracking-[0.08em] text-cream/30">
-              Origin: <span className="text-cream/50">{listing.origin}</span>
-            </span>
-            {listing.lastReviewed && (
-              <span className="font-mono text-[10px] tracking-[0.08em] text-cream/30">
-                Updated:{" "}
-                <span className="text-cream/50">
-                  {fmtMonthYear(listing.lastReviewed)}
-                </span>
-              </span>
-            )}
-          </div>
-          {listing.fullProfileStatus &&
-            listing.fullProfileStatus !== "none" && (
-              <span className="font-mono text-[9px] tracking-[0.1em] uppercase text-cream/30 border border-cream/[0.12] rounded px-2.5 py-0.5">
-                Full profile {listing.fullProfileStatus}
-              </span>
-            )}
-        </div>
-
-        {hasFullProfile && (
-          <FullProfileBanner
-            slug={listing.identity.slug}
-            accent={listing.colors.accent}
-          />
-        )}
-
-        {/* Variant price cards */}
-        {stageGroups.length > 0 && (
-          <>
-            <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-cream/30 mb-4">
-              Current Prices by Stage
-            </p>
+      {/* ─────────────── Stage cards ─────────────── */}
+      {stageGroups.length > 0 && (
+        <section className="border-b border-cream/[0.07] py-16 max-sm:py-10">
+          <div className={shell}>
+            <h2 className="font-serif font-normal text-[28px] text-cream tracking-tight mb-6">
+              Current Prices
+            </h2>
             <div
-              className="grid gap-3 mb-10"
-              style={{
-                gridTemplateColumns: `repeat(${Math.min(stageGroups.length, 3)}, 1fr)`,
-              }}
+              className={
+                "grid gap-4 " +
+                "max-sm:grid-cols-1 max-sm:gap-0 max-sm:rounded-[10px] max-sm:overflow-hidden max-sm:border max-sm:border-cream/[0.07] " +
+                (stageGroups.length === 1
+                  ? "grid-cols-1"
+                  : stageGroups.length === 2
+                  ? "grid-cols-2 max-md:grid-cols-1"
+                  : "grid-cols-3 max-md:grid-cols-2")
+              }
             >
               {stageGroups.map((g) => (
-                <VariantCard key={g.stage} group={g} />
+                <StageCard key={g.stage} group={g} />
               ))}
             </div>
-          </>
-        )}
-
-        {priceSummary?.recentListings.length ? (
-          <PriceTrendChart summary={priceSummary} />
-        ) : null}
-
-        {/* Market note / trend note */}
-        {(listing.marketNote || listing.priceHistory) && (
-          <div className="bg-cream/[0.02] border-l-2 border-l-earth-400 rounded-r-lg px-4.5 py-3.5 mb-10">
-            <p className="font-mono text-[8px] tracking-[0.14em] uppercase text-earth-400 mb-1.5">
-              Market Note
-            </p>
-            <p className="text-[13px] text-cream/50 leading-relaxed italic">
-              {listing.priceRange.note ?? listing.priceHistory ?? listing.marketNote}
-            </p>
           </div>
-        )}
+        </section>
+      )}
 
-        {/* Seller availability table */}
-        {uniqueListings.length > 0 && (
-          <>
-            <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-cream/30 mb-4">
-              Current Availability
-            </p>
-            <div className="overflow-x-auto mb-10">
-              <table className="w-full">
-                <thead>
-                  <tr>
-                    <th className="font-mono text-[9px] tracking-[0.1em] uppercase text-cream/30 font-normal text-left pb-2.5 border-b border-cream/[0.07]">
-                      Seller
-                    </th>
-                    <th className="font-mono text-[9px] tracking-[0.1em] uppercase text-cream/30 font-normal text-left pb-2.5 border-b border-cream/[0.07]">
-                      Stage
-                    </th>
-                    <th className="font-mono text-[9px] tracking-[0.1em] uppercase text-cream/30 font-normal text-left pb-2.5 border-b border-cream/[0.07]">
-                      Price
-                    </th>
-                    <th className="font-mono text-[9px] tracking-[0.1em] uppercase text-cream/30 font-normal text-left pb-2.5 border-b border-cream/[0.07]">
-                      Stock
-                    </th>
-                    <th className="pb-2.5 border-b border-cream/[0.07] w-8" />
-                  </tr>
-                </thead>
-                <tbody>
-                  {uniqueListings.map((l) => (
-                    <SellerRow key={l.sellerId} listing={l} />
-                  ))}
-                </tbody>
-              </table>
+      {/* ─────────────── Trend chart ─────────────── */}
+      {priceSummary?.recentListings.length ? (
+        <section className="border-b border-cream/[0.07] py-12 max-sm:py-8">
+          <div className={shell}>
+            <h2 className="font-serif font-normal text-[28px] text-cream tracking-tight mb-6">
+              Price Trend
+            </h2>
+            <PriceTrendChart summary={priceSummary} />
+          </div>
+        </section>
+      ) : null}
+
+      {/* ─────────────── Sellers ─────────────── */}
+      {uniqueListings.length > 0 && (
+        <section className="border-b border-cream/[0.07] py-16 max-sm:py-10">
+          <div className={shell}>
+            <div className="flex items-end justify-between gap-6 flex-wrap mb-7">
+              <h2 className="font-serif font-normal text-[28px] text-cream tracking-tight">
+                Availability
+              </h2>
               {priceSummary?.lastSeen && (
-                <p className="mt-3 pt-3 border-t border-cream/[0.05] text-[11px] text-cream/[0.15]">
-                  Last checked {fmtDate(priceSummary.lastSeen)}
+                <p className="font-mono text-[11px] tracking-[0.10em] uppercase text-cream/30">
+                  Last checked {fmtShortDate(new Date(priceSummary.lastSeen))}
                 </p>
               )}
             </div>
-          </>
-        )}
-
-        {/* Divider */}
-        <div className="h-px bg-cream/[0.07] my-8" />
-
-        {/* Context / editorial quote */}
-        {listing.marketNote && (
-          <div className="mb-12">
-            <p className="font-serif text-lg font-light leading-relaxed text-cream/50 italic">
-              &ldquo;{listing.marketNote}&rdquo;
-            </p>
-          </div>
-        )}
-
-        {/* FAQ section */}
-        {listing.faq && listing.faq.categories.length > 0 && (
-          <div className="mb-12">
-            <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-cream/30 mb-6">
-              Frequently Asked Questions
-            </p>
-            <div className="space-y-6">
-              {listing.faq.categories.map((cat) => (
-                <div key={cat.category}>
-                  <p className="font-mono text-[10px] tracking-[0.1em] uppercase text-forest-400 mb-3">
-                    {cat.category}
-                  </p>
-                  <div className="space-y-0 rounded-[10px] border border-cream/[0.07] overflow-hidden">
-                    {cat.items.map((item, i) => (
-                      <details
-                        key={item.question}
-                        className={`group ${i > 0 ? "border-t border-cream/[0.07]" : ""}`}
-                      >
-                        <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden hover:bg-cream/[0.02] transition-colors">
-                          <span className="text-[13px] text-cream/70 leading-snug">
-                            {item.question}
-                          </span>
-                          <span className="text-cream/20 text-xs shrink-0 transition-transform group-open:rotate-45">
-                            +
-                          </span>
-                        </summary>
-                        <div className="px-5 pb-4 -mt-1">
-                          <p className="text-[13px] text-cream/40 leading-relaxed">
-                            {item.answer}
-                          </p>
-                        </div>
-                      </details>
-                    ))}
-                  </div>
-                </div>
+            <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-3">
+              {uniqueListings.map((l) => (
+                <SellerCard key={l.sellerId} listing={l} />
               ))}
             </div>
           </div>
-        )}
+        </section>
+      )}
 
-      </div>
+      {/* ─────────────── FAQ ─────────────── */}
+      {listing.faq && listing.faq.categories.length > 0 && (
+        <section className="border-b border-cream/[0.07] py-16 max-sm:py-10">
+          <div className={shell}>
+            <FAQ faq={listing.faq} />
+          </div>
+        </section>
+      )}
+
+      {/* ─────────────── Related plants — Variant A (Card grid) ─────────────── */}
+      {related.length > 0 && (
+        <section className="border-b border-cream/[0.07] py-16 max-sm:py-10">
+          <div className={shell}>
+            <div className="flex items-end justify-between gap-6 flex-wrap mb-7">
+              <h2 className="font-serif font-normal text-[28px] text-cream tracking-tight">
+                Other {pluralizeGenus(listing.identity.genus)}
+              </h2>
+            </div>
+            <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-[18px]">
+              {related.map((r) => (
+                <RelatedCardItem key={r.slug} r={r} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ─────────────── Footer ─────────────── */}
+      <footer className="py-10 pb-14 text-center">
+        <div className="font-serif text-[18px] text-cream mb-2">
+          Rare Plant <em className="font-serif italic text-earth-300">Atlas</em>
+        </div>
+        <div className="flex justify-center gap-6 max-sm:gap-3.5 max-sm:flex-wrap font-mono text-[10px] tracking-[0.12em] uppercase text-cream/40">
+          <Link href="/" className="hover:text-cream transition-colors">
+            Plants
+          </Link>
+          <Link href="/prices" className="hover:text-cream transition-colors">
+            Prices
+          </Link>
+        </div>
+        {sellerCount > 0 && (
+          <div className="font-mono text-[10px] text-cream/30 mt-6">
+            Tracked across {sellerCount} sellers · Updated{" "}
+            {fmtShortDate(lastSeenDate)}
+          </div>
+        )}
+      </footer>
     </div>
   );
 }

@@ -378,6 +378,12 @@ export interface PlantListing {
   availabilityNotes?: string;
 
   /**
+   * Curated related-plant slugs surfaced in the prices detail page's
+   * Related Plants section. Falls back to same-genus auto-pick if omitted.
+   */
+  relatedSlugs?: string[];
+
+  /**
    * SEO/GEO: FAQ section for listing pages.
    * Structured Q&A pairs rendered with FAQPage JSON-LD schema.
    * See data/listings/README.md for content guidance.

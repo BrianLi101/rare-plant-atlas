@@ -1,12 +1,14 @@
 import { notFound } from "next/navigation";
-import { listings, getListingBySlug } from "@/data/listings";
+import { listings, getListingBySlug, getRelatedListings } from "@/data/listings";
 import { getPlantBySlug } from "@/data/plants";
 import { getPlantLabel, formatScientificName } from "@/data/identity";
 import { formatUsd } from "@/data/price";
-import { PriceListingClient } from "@/components/PriceListingClient";
+import { PriceListingClient, type RelatedCard } from "@/components/PriceListingClient";
 import { JsonLd } from "@/components/JsonLd";
 import type { PriceSummary } from "@/data/prices/types";
 import priceAggregate from "@/data/prices/aggregate.json";
+import { getPricesPagePlants } from "@/lib/pricesPageData";
+import type { PlantListing } from "@/data/types";
 
 function getSeoDescription(listing: NonNullable<ReturnType<typeof getListingBySlug>>) {
   const fallback = `${getPlantLabel(listing)} pricing: ${formatUsd(listing.priceRange.min)}-${formatUsd(listing.priceRange.max)} USD. Live seller prices, availability, and market trends.`;
@@ -59,6 +61,48 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 function getPriceSummary(slug: string): PriceSummary | undefined {
   const aggregate = priceAggregate as Record<string, PriceSummary>;
   return aggregate[slug];
+}
+
+function buildDisplayName(listing: PlantListing) {
+  const id = listing.identity;
+  let cultivar: string | null = id.cultivar ?? id.variantLabel ?? null;
+  if (!cultivar && id.tradeName) {
+    const stripped = id.tradeName.replace(new RegExp(`^${id.genus}\\s+`), "").trim();
+    if (stripped && stripped !== id.tradeName) cultivar = stripped;
+  }
+  return {
+    primary: id.genus,
+    italic: id.species ?? null,
+    cultivar,
+  };
+}
+
+function buildRelatedCards(sourceSlug: string): RelatedCard[] {
+  const related = getRelatedListings(sourceSlug);
+  if (related.length === 0) return [];
+
+  const pageData = getPricesPagePlants();
+  const bySlug = new Map(pageData.map((p) => [p.slug, p]));
+
+  return related.map((r) => {
+    const data = bySlug.get(r.identity.slug);
+    const typical =
+      data?.current.typical ??
+      Math.round(r.priceRange.min * 0.55 + r.priceRange.max * 0.45);
+    return {
+      slug: r.identity.slug,
+      href: `/prices/${r.identity.slug}`,
+      label: getPlantLabel(r),
+      displayName: buildDisplayName(r),
+      image: r.images.hero ?? null,
+      rarity: r.rarity,
+      tagline: r.tagline,
+      typical,
+      change30d: data?.change30d ?? 0,
+      accent: r.colors.accent,
+      genus: r.identity.genus,
+    };
+  });
 }
 
 function buildProductJsonLd(listing: NonNullable<ReturnType<typeof getListingBySlug>>) {
@@ -144,6 +188,7 @@ export default function PriceListingPage({
   const hasFullProfile = !!getPlantBySlug(listing.identity.slug);
   const productJsonLd = buildProductJsonLd(listing);
   const faqJsonLd = buildFaqJsonLd(listing);
+  const related = buildRelatedCards(listing.identity.slug);
 
   return (
     <>
@@ -253,6 +298,7 @@ export default function PriceListingPage({
         listing={listing}
         priceSummary={priceSummary}
         hasFullProfile={hasFullProfile}
+        related={related}
       />
     </>
   );
