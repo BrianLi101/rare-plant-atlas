@@ -17,6 +17,7 @@ import { philodendronSpiritusSancti } from "./listings/philodendron-spiritus-san
 import { philodendronGloriosumVariegatedType1 } from "./listings/philodendron-gloriosum-variegated-type-1";
 import { philodendronGloriosumVariegatedType2 } from "./listings/philodendron-gloriosum-variegated-type-2";
 import { anthuriumDeltaForceListing } from "./listings/anthurium-delta-force";
+import { anthuriumCarlablackiae } from "./listings/anthurium-carlablackiae";
 import { alocasiaBlackVelvetVariegatedPinkListing } from "./listings/alocasia-black-velvet-variegated-pink";
 
 const editorialListingOrder = [
@@ -24,6 +25,7 @@ const editorialListingOrder = [
   "monstera-devil-monster",
   "monstera-bulbasaur",
   "anthurium-delta-force",
+  "anthurium-carlablackiae",
   "monstera-electrolyte",
   "philodendron-gloriosum-variegated-type-1",
   "alocasia-chantrieri-variegated-pink",
@@ -51,6 +53,7 @@ const rawListings: PlantListing[] = [
   philodendronGloriosumVariegatedType1,
   philodendronGloriosumVariegatedType2,
   anthuriumDeltaForceListing,
+  anthuriumCarlablackiae,
   alocasiaBlackVelvetVariegatedPinkListing,
   monsteraAlbo,
   monsteraThaiConstellation,
@@ -77,6 +80,7 @@ export const listingSourceFiles: Record<string, string> = {
   "philodendron-gloriosum-variegated-type-1": "data/listings/philodendron-gloriosum-variegated-type-1.ts",
   "philodendron-gloriosum-variegated-type-2": "data/listings/philodendron-gloriosum-variegated-type-2.ts",
   "anthurium-delta-force": "data/listings/anthurium-delta-force.ts",
+  "anthurium-carlablackiae": "data/listings/anthurium-carlablackiae.ts",
   "alocasia-black-velvet-variegated-pink": "data/listings/alocasia-black-velvet-variegated-pink.ts",
   "monstera-albo": "data/listings/monstera-albo.ts",
   "monstera-thai-constellation": "data/listings/monstera-thai-constellation.ts",

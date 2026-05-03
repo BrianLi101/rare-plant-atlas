@@ -459,11 +459,17 @@
 .pp-card-tc.none .pp-card-tc-dot {
   background: rgba(250, 247, 242, 0.3);
 }
+.pp-card-tc.unknown .pp-card-tc-dot {
+  background: rgba(250, 247, 242, 0.5);
+}
 .pp-card-tc.widespread {
   color: var(--forest-300);
 }
 .pp-card-tc.limited {
   color: var(--earth-300);
+}
+.pp-card-tc.unknown {
+  color: rgba(250, 247, 242, 0.72);
 }
 
 .pp-spark {

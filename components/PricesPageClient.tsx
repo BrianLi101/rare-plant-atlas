@@ -22,6 +22,7 @@ const fmtPct = (n: number) =>
 const TC_LABELS: Record<string, string> = {
   widespread: "TC · Widespread",
   limited: "TC · Limited",
+  unknown: "TC unclear",
   none: "Not in TC",
 };
 
@@ -148,7 +149,9 @@ export function PricesPageClient({ plants, market }: PricesPageClientProps) {
   const visible = useMemo(() => {
     let xs = plants.slice();
     if (genus !== "All") xs = xs.filter((p) => p.genus === genus);
-    if (tcFilter === "in-tc") xs = xs.filter((p) => p.tc !== "none");
+    if (tcFilter === "in-tc") {
+      xs = xs.filter((p) => p.tc === "limited" || p.tc === "widespread");
+    }
     if (tcFilter === "not-in-tc") xs = xs.filter((p) => p.tc === "none");
     switch (sort) {
       case "price-desc":
@@ -365,7 +368,7 @@ export function PricesPageClient({ plants, market }: PricesPageClientProps) {
                       <div className="pp-price-row tc unknown">
                         <span className="pp-price-label">TC</span>
                         <span className="pp-price-typ">
-                          Price not yet tracked
+                          Tissue culture unclear
                         </span>
                         <span className="pp-price-range">—</span>
                       </div>

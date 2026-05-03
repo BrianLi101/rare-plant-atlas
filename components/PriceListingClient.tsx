@@ -80,7 +80,7 @@ const GROWTH_STAGE_COLORS: Record<GrowthStage, string> = {
 };
 
 const TC_LABEL: Record<TissueCultureStatus, string> = {
-  unknown: "Unknown",
+  unknown: "Unclear",
   none: "Not in TC",
   limited: "Limited TC",
   widespread: "Widespread TC",
@@ -105,10 +105,6 @@ function fmtShortDate(date: Date) {
     day: "numeric",
     year: "numeric",
   });
-}
-
-function pluralizeGenus(genus: string) {
-  return genus.endsWith("s") ? genus : `${genus}s`;
 }
 
 // ---------------------------------------------------------------------------
@@ -596,7 +592,11 @@ export function PriceListingClient({
       const stripped = id.tradeName
         .replace(new RegExp(`^${id.genus}\\s+`), "")
         .trim();
-      if (stripped && stripped !== id.tradeName) cultivar = stripped;
+      const strippedKey = stripped.toLowerCase().replace(/[^a-z0-9]+/g, "");
+      const speciesKey = id.species?.toLowerCase().replace(/[^a-z0-9]+/g, "");
+      if (stripped && stripped !== id.tradeName && strippedKey !== speciesKey) {
+        cultivar = stripped;
+      }
     }
     return { primary: id.genus, italic: id.species ?? null, cultivar };
   })();
@@ -897,7 +897,7 @@ export function PriceListingClient({
           <div className={shell}>
             <div className="flex items-end justify-between gap-6 flex-wrap mb-7">
               <h2 className="font-serif font-normal text-[28px] text-cream tracking-tight">
-                Other {pluralizeGenus(listing.identity.genus)}
+                Keep Exploring
               </h2>
             </div>
             <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-[18px]">

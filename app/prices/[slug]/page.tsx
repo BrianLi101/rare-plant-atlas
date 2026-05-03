@@ -68,7 +68,11 @@ function buildDisplayName(listing: PlantListing) {
   let cultivar: string | null = id.cultivar ?? id.variantLabel ?? null;
   if (!cultivar && id.tradeName) {
     const stripped = id.tradeName.replace(new RegExp(`^${id.genus}\\s+`), "").trim();
-    if (stripped && stripped !== id.tradeName) cultivar = stripped;
+    const strippedKey = stripped.toLowerCase().replace(/[^a-z0-9]+/g, "");
+    const speciesKey = id.species?.toLowerCase().replace(/[^a-z0-9]+/g, "");
+    if (stripped && stripped !== id.tradeName && strippedKey !== speciesKey) {
+      cultivar = stripped;
+    }
   }
   return {
     primary: id.genus,

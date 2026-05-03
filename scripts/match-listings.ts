@@ -25,10 +25,33 @@ interface MatchRule {
 function tokenize(text: string): string[] {
   return text
     .toLowerCase()
+    .replace(/\u00d7/g, " x ")
     .replace(/[''""]/g, "")
     .split(/[\s\-_/|,·]+/)
     .map((w) => w.replace(/[^a-z0-9]/g, ""))
     .filter((w) => w.length > 1);
+}
+
+function normalizeForStandaloneWordMatching(text: string): string {
+  return ` ${text
+    .toLowerCase()
+    .replace(/\u00d7/g, " x ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()} `;
+}
+
+function hasExcludedPhrase(titleLower: string, phrase: string): boolean {
+  const normalizedPhrase = phrase.toLowerCase();
+  const standaloneWord = normalizedPhrase.trim();
+
+  if (standaloneWord === "x" || standaloneWord === "by") {
+    return normalizeForStandaloneWordMatching(titleLower).includes(
+      ` ${standaloneWord} `,
+    );
+  }
+
+  return titleLower.includes(normalizedPhrase);
 }
 
 function buildMatchRules(): MatchRule[] {
@@ -148,13 +171,16 @@ export function matchListingToSlug(listing: RawListing): MatchResult {
   }
 
   const titleWords = new Set(titleTokens);
-  const titleLower = listing.title.toLowerCase().replace(/[''""*]/g, "");
+  const titleLower = listing.title
+    .toLowerCase()
+    .replace(/\u00d7/g, " x ")
+    .replace(/[''""*]/g, "");
 
   for (const rule of matchRules) {
-    const hasExcludedPhrase =
+    const hasExcluded =
       rule.excludedPhrases.length > 0 &&
-      rule.excludedPhrases.some((p) => titleLower.includes(p));
-    if (hasExcludedPhrase) continue;
+      rule.excludedPhrases.some((p) => hasExcludedPhrase(titleLower, p));
+    if (hasExcluded) continue;
 
     const wordsMatch =
       rule.words.length === 0 || rule.words.every((w) => titleWords.has(w));

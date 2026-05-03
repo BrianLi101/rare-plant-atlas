@@ -241,7 +241,7 @@ function buildEntry(
       max: listing.priceRange.max,
     },
     stages,
-    tc: tcStatus === "unknown" ? "none" : tcStatus,
+    tc: tcStatus,
     listingsCount,
     change30d: +change30d.toFixed(1),
     history: series,
@@ -275,7 +275,9 @@ export type PricesPageMarket = {
 export function getPricesPageMarket(items: PricesPagePlant[]): PricesPageMarket {
   const total = items.length;
   const totalListings = items.reduce((s, p) => s + p.listingsCount, 0);
-  const inTcCount = items.filter((p) => p.tc !== "none").length;
+  const inTcCount = items.filter(
+    (p) => p.tc === "limited" || p.tc === "widespread",
+  ).length;
   const avg30 =
     total > 0 ? items.reduce((s, p) => s + p.change30d, 0) / total : 0;
   return {
