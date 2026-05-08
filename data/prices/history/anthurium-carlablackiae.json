@@ -1,6 +1,6 @@
 {
   "slug": "anthurium-carlablackiae",
-  "lastUpdated": "2026-04-25",
+  "lastUpdated": "2026-05-08",
   "entries": [
     {
       "date": "2026-03-28",
@@ -160,6 +160,78 @@
     },
     {
       "date": "2026-04-25",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Anthurium Carlablackiae 4”",
+      "productUrl": "https://rarefoliageplantco.com/products/anthurium-carlablackiae-4-exact-plant",
+      "price": 254.99,
+      "priceHigh": 254.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-05-08",
+      "sellerId": "nse-tropicals",
+      "sellerName": "NSE Tropicals",
+      "title": "Anthurium carlablackiae",
+      "productUrl": "https://www.nsetropicals.com/product/anthurium-carlablackiae/",
+      "price": 239,
+      "priceHigh": 239,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-05-08",
+      "sellerId": "carnivero",
+      "sellerName": "Carnivero",
+      "title": "WH0085\tAnthurium carlablackiae  (M)",
+      "productUrl": "https://www.carnivero.com/products/wh0085-anthurium-carlablackiae-m",
+      "price": 75,
+      "priceHigh": 75,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-05-08",
+      "sellerId": "carnivero",
+      "sellerName": "Carnivero",
+      "title": "WH0065\tAnthurium carlablackiae (M)",
+      "productUrl": "https://www.carnivero.com/products/wh0065-anthurium-carlablackiae-m",
+      "price": 75,
+      "priceHigh": 75,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-05-08",
+      "sellerId": "carnivero",
+      "sellerName": "Carnivero",
+      "title": "WH0020 Anthurium carlablackiae (S) (HJ376)",
+      "productUrl": "https://www.carnivero.com/products/wh0020-anthurium-carlablackiae-s-hj376",
+      "price": 75,
+      "priceHigh": 75,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-05-08",
+      "sellerId": "carnivero",
+      "sellerName": "Carnivero",
+      "title": "Anthurium carlablackiae",
+      "productUrl": "https://www.carnivero.com/products/anthurium-carlablackiae",
+      "price": 74.99,
+      "priceHigh": 74.99,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-05-08",
       "sellerId": "rare-foliage-plant-co",
       "sellerName": "Rare Foliage Plant Co",
       "title": "Anthurium Carlablackiae 4”",
