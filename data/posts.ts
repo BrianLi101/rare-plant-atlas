@@ -50,6 +50,16 @@ export const fieldNotesPosts: FieldNotesPost[] = [
   plantPricingMethodology,
 ].sort((a, b) => b.publishedISO.localeCompare(a.publishedISO));
 
+// Source-file map for sitemap lastModified — same pattern as plants/listings.
+export const postSourceFiles: Record<string, string> = {
+  "the-plants-no-one-was-writing-about":
+    "data/posts/the-plants-no-one-was-writing-about.ts",
+  "introducing-plant-price-index":
+    "data/posts/introducing-plant-price-index.ts",
+  "plant-pricing-methodology":
+    "data/posts/plant-pricing-methodology.ts",
+};
+
 export function getPostBySlug(slug: string): FieldNotesPost | undefined {
   return fieldNotesPosts.find((p) => p.slug === slug);
 }

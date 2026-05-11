@@ -18,6 +18,18 @@ export function generateStaticParams() {
   return fieldNotesPosts.map((p) => ({ slug: p.slug }));
 }
 
+// Slugify a heading into an anchor id. Lowercase, replace runs of
+// non-alphanumeric with a single dash, strip leading/trailing dashes.
+// Deterministic and stable across renders.
+function headingId(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 export function generateMetadata({
   params,
 }: {
@@ -74,7 +86,7 @@ function renderBlock(block: PostBodyBlock, idx: number) {
 
     case "heading":
       return (
-        <h2 key={idx} className="fn-h2">
+        <h2 key={idx} id={headingId(block.text)} className="fn-h2">
           {block.text}
         </h2>
       );
@@ -263,11 +275,41 @@ export default function FieldNotesPost({
           headline: post.title,
           description: post.subtitle,
           datePublished: post.publishedISO,
-          author: { "@type": "Organization", name: post.author.name },
-          publisher: { "@type": "Organization", name: "Rare Plant Atlas" },
-          image: post.hero.src,
+          author: { "@type": "Person", name: post.author.name },
+          publisher: {
+            "@type": "Organization",
+            name: "Rare Plant Atlas",
+            url: "https://www.rareplantatlas.com",
+          },
+          image: `https://www.rareplantatlas.com${post.hero.src}`,
           mainEntityOfPage: `https://www.rareplantatlas.com/field-notes/${post.slug}`,
           keywords: post.tags.join(", "),
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://www.rareplantatlas.com",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Field Notes",
+              item: "https://www.rareplantatlas.com/field-notes",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: post.title,
+              item: `https://www.rareplantatlas.com/field-notes/${post.slug}`,
+            },
+          ],
         }}
       />
       <div className="fn">

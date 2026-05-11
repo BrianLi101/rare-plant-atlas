@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { plantSourceFiles, plants } from "@/data/plants";
 import { listingSourceFiles, listings } from "@/data/listings";
+import { fieldNotesPosts, postSourceFiles } from "@/data/posts";
 import { getLatestLastModified } from "@/lib/contentTimestamps";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -73,5 +74,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      url: `${baseUrl}/field-notes`,
+      lastModified: getLatestLastModified([
+        "app/field-notes/page.tsx",
+        ...Object.values(postSourceFiles),
+      ]),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    ...fieldNotesPosts.map((post) => ({
+      url: `${baseUrl}/field-notes/${post.slug}`,
+      lastModified: getLatestLastModified([
+        "app/field-notes/[slug]/page.tsx",
+        postSourceFiles[post.slug],
+      ]),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
   ];
 }
