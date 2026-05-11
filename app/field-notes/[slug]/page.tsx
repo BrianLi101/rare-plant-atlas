@@ -218,15 +218,17 @@ function PostFooter({ post }: { post: FieldNotesPost }) {
           ))}
         </div>
       </div>
-      <div className="fn-foot-row">
-        <div className="k">Methodology</div>
-        <div className="fn-meth">
-          {post.methodology}{" "}
-          <Link href="/prices" className="fn-meth-link">
-            See live price index →
-          </Link>
+      {post.methodology && (
+        <div className="fn-foot-row">
+          <div className="k">Methodology</div>
+          <div className="fn-meth">
+            {post.methodology}{" "}
+            <Link href="/prices" className="fn-meth-link">
+              See live price index →
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
     </footer>
   );
 }

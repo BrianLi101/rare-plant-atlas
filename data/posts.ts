@@ -29,13 +29,17 @@ export type FieldNotesPost = {
   readingMinutes: number;
   tags: string[];
   plantsMentioned: PlantMention[];
-  methodology: string;
+  methodology?: string;
   body: PostBodyBlock[];
 };
 
 import { tissueCultureVsRooted } from "./posts/tissue-culture-vs-rooted";
+import { thePlantsNoOneWasWritingAbout } from "./posts/the-plants-no-one-was-writing-about";
 
-export const fieldNotesPosts: FieldNotesPost[] = [tissueCultureVsRooted];
+export const fieldNotesPosts: FieldNotesPost[] = [
+  thePlantsNoOneWasWritingAbout,
+  tissueCultureVsRooted,
+];
 
 export function getPostBySlug(slug: string): FieldNotesPost | undefined {
   return fieldNotesPosts.find((p) => p.slug === slug);
