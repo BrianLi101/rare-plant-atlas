@@ -922,12 +922,20 @@ export function PriceListingClient({
             Prices
           </Link>
         </div>
-        {sellerCount > 0 && (
-          <div className="font-mono text-[10px] text-cream/30 mt-6">
-            Tracked across {sellerCount} sellers · Updated{" "}
-            {fmtShortDate(lastSeenDate)}
-          </div>
-        )}
+        <div className="font-mono text-[10px] text-cream/30 mt-6">
+          {sellerCount > 0 && (
+            <>
+              Tracked across {sellerCount} sellers · Updated{" "}
+              {fmtShortDate(lastSeenDate)} ·{" "}
+            </>
+          )}
+          <Link
+            href="/field-notes/plant-pricing-methodology"
+            className="hover:text-cream transition-colors border-b border-cream/20"
+          >
+            See methodology
+          </Link>
+        </div>
       </footer>
     </div>
   );
