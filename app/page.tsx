@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navigation } from "@/components/Navigation";
 import { SiteFooter } from "@/components/SiteFooter";
+import { FieldNotesCard } from "@/components/FieldNotesCard";
 import { JsonLd } from "@/components/JsonLd";
+import { fieldNotesPosts } from "@/data/posts";
 import { plants } from "@/data/plants";
 import { listings } from "@/data/listings";
 import type { PlantListing } from "@/data/types";
@@ -434,6 +436,40 @@ export default function Home() {
             <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))" }}>
               {listings.map((listing) => (
                 <ListingCard key={listing.identity.slug} listing={listing} />
+              ))}
+            </div>
+          </section>
+
+          <div className="h-px mt-14 mb-14" style={{ background: "rgba(232,224,208,0.10)" }} />
+
+          <section>
+            <div className="flex items-baseline gap-4 flex-wrap mb-6">
+              <h3
+                className="font-serif font-bold m-0 tracking-[-0.02em]"
+                style={{ fontSize: "clamp(1.15rem,2.2vw,1.6rem)", color: "#e8e0d0" }}
+              >
+                Field Notes
+              </h3>
+              <span className="font-mono text-[9px] tracking-[0.15em] uppercase opacity-50" style={{ color: "#c4b89a" }}>
+                {fieldNotesPosts.length} {fieldNotesPosts.length === 1 ? "post" : "posts"}
+              </span>
+              <Link
+                href="/field-notes"
+                className="ml-auto font-mono text-[10px] tracking-[0.12em] uppercase opacity-50 hover:opacity-90 transition-opacity"
+                style={{ color: "#cdab79" }}
+              >
+                Read all →
+              </Link>
+            </div>
+            <p
+              className="font-body leading-relaxed m-0 max-w-[620px] mb-6 opacity-75"
+              style={{ fontSize: "0.95rem", color: "#c4b89a" }}
+            >
+              Editorial notes on rare-plant pricing, propagation, and the questions collectors actually face.
+            </p>
+            <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))" }}>
+              {fieldNotesPosts.map((post) => (
+                <FieldNotesCard key={post.slug} post={post} />
               ))}
             </div>
           </section>

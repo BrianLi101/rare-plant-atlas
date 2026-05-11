@@ -30,13 +30,6 @@ export function SiteFooter() {
           </div>
           <div className="flex flex-wrap gap-x-5 gap-y-1">
             <Link
-              href="/glossary"
-              className="font-mono text-[10px] tracking-[0.12em] uppercase opacity-50 hover:opacity-80 transition-opacity"
-              style={{ color: "#c4b89a" }}
-            >
-              Glossary
-            </Link>
-            <Link
               href="/prices"
               className="font-mono text-[10px] tracking-[0.12em] uppercase opacity-50 hover:opacity-80 transition-opacity"
               style={{ color: "#c4b89a" }}
@@ -49,6 +42,13 @@ export function SiteFooter() {
               style={{ color: "#c4b89a" }}
             >
               Field Notes
+            </Link>
+            <Link
+              href="/glossary"
+              className="font-mono text-[10px] tracking-[0.12em] uppercase opacity-50 hover:opacity-80 transition-opacity"
+              style={{ color: "#c4b89a" }}
+            >
+              Glossary
             </Link>
             {uniqueGenera.map((genus) => (
               <Link
