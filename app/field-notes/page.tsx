@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { Navigation } from "@/components/Navigation";
+import { SiteFooter } from "@/components/SiteFooter";
 import { fieldNotesPosts } from "@/data/posts";
 
 export const metadata: Metadata = {
@@ -37,13 +38,6 @@ export default function FieldNotesIndex() {
         >
           Field <em className="font-normal" style={{ color: "#c4b89a" }}>Notes.</em>
         </h1>
-        <p
-          className="font-body leading-relaxed m-0 max-w-[520px] opacity-80"
-          style={{ fontSize: "clamp(0.95rem,1.8vw,1.15rem)", color: "#c4b89a" }}
-        >
-          Editorial guides on rare-plant pricing, propagation, and provenance —
-          longer reads to pair with the price index.
-        </p>
       </div>
 
       <div
@@ -108,6 +102,8 @@ export default function FieldNotesIndex() {
           </Link>
         ))}
       </div>
+
+      <SiteFooter />
     </div>
   );
 }

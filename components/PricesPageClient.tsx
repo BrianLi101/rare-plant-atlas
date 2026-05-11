@@ -189,8 +189,7 @@ export function PricesPageClient({ plants, market }: PricesPageClientProps) {
             Reference pricing for {market.total} rare and collectible plants,
             observed from a short list of reputable specialty sellers. Both{" "}
             <em className="mature">mature plants</em> and{" "}
-            <em className="tc">tissue culture</em> where available — the gap
-            between them is often the whole story.
+            <em className="tc">tissue culture</em>.
           </p>
 
           <div className="pp-hero-meta">

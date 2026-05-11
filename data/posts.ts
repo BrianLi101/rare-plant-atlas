@@ -7,7 +7,12 @@ export type PostBodyBlock =
       type: "compare";
       rows: { label: string; range: string; what: string; tradeoff: string }[];
     }
-  | { type: "note"; text: string; cta?: { label: string; href: string } };
+  | {
+      type: "note";
+      text: string;
+      cta?: { label: string; href: string };
+      secondaryCta?: { label: string; href: string };
+    };
 
 export type PlantMention = {
   slug: string;
@@ -33,13 +38,17 @@ export type FieldNotesPost = {
   body: PostBodyBlock[];
 };
 
-import { tissueCultureVsRooted } from "./posts/tissue-culture-vs-rooted";
 import { thePlantsNoOneWasWritingAbout } from "./posts/the-plants-no-one-was-writing-about";
+import { introducingPlantPriceIndex } from "./posts/introducing-plant-price-index";
+import { plantPricingMethodology } from "./posts/plant-pricing-methodology";
 
+// Sorted newest-first by publishedISO so the index and any other consumer
+// gets chronological ordering automatically when new posts are added.
 export const fieldNotesPosts: FieldNotesPost[] = [
   thePlantsNoOneWasWritingAbout,
-  tissueCultureVsRooted,
-];
+  introducingPlantPriceIndex,
+  plantPricingMethodology,
+].sort((a, b) => b.publishedISO.localeCompare(a.publishedISO));
 
 export function getPostBySlug(slug: string): FieldNotesPost | undefined {
   return fieldNotesPosts.find((p) => p.slug === slug);

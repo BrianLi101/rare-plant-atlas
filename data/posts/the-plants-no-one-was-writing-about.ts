@@ -40,12 +40,6 @@ export const thePlantsNoOneWasWritingAbout: FieldNotesPost = {
       typical: 195,
       href: "/prices/monstera-albo",
     },
-    {
-      slug: "anthurium-delta-force",
-      name: "Anthurium Delta Force",
-      typical: 350,
-      href: "/plants/anthurium-delta-force",
-    },
   ],
   body: [
     {

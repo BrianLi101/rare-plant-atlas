@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Navigation } from "@/components/Navigation";
+import { SiteFooter } from "@/components/SiteFooter";
 import { JsonLd } from "@/components/JsonLd";
 import {
   fieldNotesPosts,
@@ -127,10 +128,22 @@ function renderBlock(block: PostBodyBlock, idx: number) {
       return (
         <div key={idx} className="fn-note">
           <p>{block.text}</p>
-          {block.cta && (
-            <Link href={block.cta.href} className="fn-note-cta">
-              {block.cta.label}
-            </Link>
+          {(block.cta || block.secondaryCta) && (
+            <div className="fn-note-ctas">
+              {block.cta && (
+                <Link href={block.cta.href} className="fn-note-cta">
+                  {block.cta.label}
+                </Link>
+              )}
+              {block.secondaryCta && (
+                <Link
+                  href={block.secondaryCta.href}
+                  className="fn-note-cta fn-note-cta-secondary"
+                >
+                  {block.secondaryCta.label}
+                </Link>
+              )}
+            </div>
           )}
         </div>
       );
@@ -264,6 +277,7 @@ export default function FieldNotesPost({
           {post.body.map((block, i) => renderBlock(block, i))}
         </article>
         <PostFooter post={post} />
+        <SiteFooter />
       </div>
     </>
   );
