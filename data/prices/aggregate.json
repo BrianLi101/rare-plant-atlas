@@ -5,410 +5,10 @@
     "currentMax": 1250,
     "allTimeMin": 19.99,
     "allTimeMax": 1250,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 3,
     "availableNow": true,
     "recentListings": [
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 75,
-        "priceHigh": 75,
-        "productUrl": "https://www.rareplantfairy.com/products/alocasia-black-velvet-pink-variegated-growers-choice",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 119.99,
-        "priceHigh": 119.99,
-        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant-1",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 164.99,
-        "priceHigh": 164.99,
-        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 374.99,
-        "priceHigh": 374.99,
-        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-4-full-plant-us-seller",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 124.99,
-        "priceHigh": 124.99,
-        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant-us-seller",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2392-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2393-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2394-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2365-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2367-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2380-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2387-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2388-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2389-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2390-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2391-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2371-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc-alocasia-black-velvet-pink-variegated-1",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2369-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2388-alocasia-black-velvet-pink-variegated-1",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2375-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2374-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2373-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2372-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2387-alocasia-black-velvet-pink-variegated-1",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2385-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2368-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2377-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2376-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2378-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2386-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2383-alocasia-black-velvet-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2385-alocasia-black-velvet-pink-variegated-copy",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1250,
-        "priceHigh": 1250,
-        "productUrl": "https://www.rareplantfairy.com/products/alocasia-black-velvet-ninja-pink-variegated-wk15-uw",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 75,
-        "priceHigh": 75,
-        "productUrl": "https://www.rareplantfairy.com/products/alocasia-black-velvet-pink-variegated-growers-choice",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 119.99,
-        "priceHigh": 119.99,
-        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant-1",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 164.99,
-        "priceHigh": 164.99,
-        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 374.99,
-        "priceHigh": 374.99,
-        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-4-full-plant-us-seller",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 124.99,
-        "priceHigh": 124.99,
-        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant-us-seller",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
       {
         "sellerId": "rare-plant-fairy",
         "sellerName": "Rare Plant Fairy",
@@ -718,59 +318,149 @@
         "growthStage": "plant",
         "date": "2026-05-08",
         "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/4122-alocasia-black-velvet-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 75,
+        "priceHigh": 75,
+        "productUrl": "https://www.rareplantfairy.com/products/4121-alocasia-black-velvet-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/4120-alocasia-black-velvet-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/4118-alocasia-black-velvet-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/4117-alocasia-bambino-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1250,
+        "priceHigh": 1250,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-black-velvet-ninja-pink-variegated-wk15-uw",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 75,
+        "priceHigh": 75,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-black-velvet-pink-variegated-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 19.99,
+        "priceHigh": 19.99,
+        "productUrl": "https://orangelakenursery.com/products/alocasia-variegated-black-velvet-pink-plantlet",
+        "growthStage": "tc",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 79.99,
+        "priceHigh": 79.99,
+        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-2",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 119.99,
+        "priceHigh": 119.99,
+        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant-1",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 164.99,
+        "priceHigh": 164.99,
+        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 374.99,
+        "priceHigh": 374.99,
+        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-4-full-plant-us-seller",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 124.99,
+        "priceHigh": 124.99,
+        "productUrl": "https://rarefoliageplantco.com/products/alocasia-black-velvet-pink-variegated-3-full-plant-us-seller",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
       }
     ]
   },
   "alocasia-chantrieri-variegated-pink": {
     "slug": "alocasia-chantrieri-variegated-pink",
     "currentMin": 252,
-    "currentMax": 2498,
+    "currentMax": 1500,
     "allTimeMin": 252,
     "allTimeMax": 2498,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 2,
     "availableNow": true,
     "recentListings": [
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 650,
-        "priceHigh": 650,
-        "productUrl": "https://www.rareplantfairy.com/products/alocasia-chantrieri-pink-variegated-wk14-i",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 2498,
-        "priceHigh": 2498,
-        "productUrl": "https://aroidmarket.com/products/alocasia-chantrieri-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 950,
-        "priceHigh": 950,
-        "productUrl": "https://www.rareplantfairy.com/products/alocasia-chantrieri-pink-variegated-wk15-b",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 2498,
-        "priceHigh": 2498,
-        "productUrl": "https://aroidmarket.com/products/alocasia-chantrieri-pink-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
       {
         "sellerId": "rare-plant-fairy",
         "sellerName": "Rare Plant Fairy",
@@ -840,6 +530,76 @@
         "growthStage": "plant",
         "date": "2026-05-08",
         "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 650,
+        "priceHigh": 650,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-chantrieri-pink-variegated-wk21-f",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 650,
+        "priceHigh": 650,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-chantrieri-pink-variegated-wk19-uo",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 650,
+        "priceHigh": 650,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-chantrieri-pink-variegated-wk19-un",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 650,
+        "priceHigh": 650,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-chantrieri-pink-variegated-wk18-m",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1500,
+        "priceHigh": 1500,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-chantrieri-pink-variegated-wk17-f",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 950,
+        "priceHigh": 950,
+        "productUrl": "https://www.rareplantfairy.com/products/alocasia-chantrieri-pink-variegated-wk15-b",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 252,
+        "priceHigh": 252,
+        "productUrl": "https://aroidmarket.com/products/alocasia-chantrieri-pink-variegated",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
       }
     ]
   },
@@ -849,80 +609,10 @@
     "currentMax": 84.99,
     "allTimeMin": 74.99,
     "allTimeMax": 254.99,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 3,
     "availableNow": true,
     "recentListings": [
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 239,
-        "priceHigh": 239,
-        "productUrl": "https://www.nsetropicals.com/product/anthurium-carlablackiae/",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 84.99,
-        "priceHigh": 84.99,
-        "productUrl": "https://www.carnivero.com/products/anthurium-carlablackiae",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 254.99,
-        "priceHigh": 254.99,
-        "productUrl": "https://rarefoliageplantco.com/products/anthurium-carlablackiae-4-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 239,
-        "priceHigh": 239,
-        "productUrl": "https://www.nsetropicals.com/product/anthurium-carlablackiae/",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 75,
-        "priceHigh": 75,
-        "productUrl": "https://www.carnivero.com/products/wh0020-anthurium-carlablackiae-s-hj376",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 84.99,
-        "priceHigh": 84.99,
-        "productUrl": "https://www.carnivero.com/products/anthurium-carlablackiae",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 254.99,
-        "priceHigh": 254.99,
-        "productUrl": "https://rarefoliageplantco.com/products/anthurium-carlablackiae-4-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
       {
         "sellerId": "nse-tropicals",
         "sellerName": "NSE Tropicals",
@@ -1022,139 +712,59 @@
         "growthStage": "plant",
         "date": "2026-05-08",
         "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 239,
+        "priceHigh": 239,
+        "productUrl": "https://www.nsetropicals.com/product/anthurium-carlablackiae/",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 75,
+        "priceHigh": 75,
+        "productUrl": "https://www.carnivero.com/products/wh0065-anthurium-carlablackiae-m",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 74.99,
+        "priceHigh": 74.99,
+        "productUrl": "https://www.carnivero.com/products/anthurium-carlablackiae",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 254.99,
+        "priceHigh": 254.99,
+        "productUrl": "https://rarefoliageplantco.com/products/anthurium-carlablackiae-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
       }
     ]
   },
   "anthurium-delta-force": {
     "slug": "anthurium-delta-force",
-    "currentMin": 100,
-    "currentMax": 249.99,
+    "currentMin": 84.99,
+    "currentMax": 219.99,
     "allTimeMin": 84.99,
     "allTimeMax": 249.99,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 3,
     "availableNow": true,
     "recentListings": [
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/anthurium-delta-force-growers-choice",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/anthurium-crystallinum-variegated-wk13-a",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 99.99,
-        "priceHigh": 99.99,
-        "productUrl": "https://www.carnivero.com/products/anthurium-delta-force",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 249.99,
-        "priceHigh": 249.99,
-        "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-6",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 84.99,
-        "priceHigh": 84.99,
-        "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-3",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 99.99,
-        "priceHigh": 99.99,
-        "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-4-flowering-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/anthurium-delta-force-growers-choice",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/anthurium-crystallinum-variegated-wk13-a",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 99.99,
-        "priceHigh": 99.99,
-        "productUrl": "https://www.carnivero.com/products/anthurium-delta-force",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 219.99,
-        "priceHigh": 219.99,
-        "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-6",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 84.99,
-        "priceHigh": 84.99,
-        "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-3",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 99.99,
-        "priceHigh": 99.99,
-        "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-4-flowering-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
       {
         "sellerId": "rare-plant-fairy",
         "sellerName": "Rare Plant Fairy",
@@ -1274,519 +884,79 @@
         "growthStage": "plant",
         "date": "2026-05-08",
         "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 150,
+        "priceHigh": 150,
+        "productUrl": "https://www.rareplantfairy.com/products/4178-anthurium-delta-force",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/anthurium-delta-force-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 109.99,
+        "priceHigh": 109.99,
+        "productUrl": "https://www.carnivero.com/products/anthurium-delta-force",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 219.99,
+        "priceHigh": 219.99,
+        "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-6",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 84.99,
+        "priceHigh": 84.99,
+        "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-3",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/anthurium-delta-force-4-flowering-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
       }
     ]
   },
   "monstera-albo": {
     "slug": "monstera-albo",
     "currentMin": 19.99,
-    "currentMax": 3500,
+    "currentMax": 1950,
     "allTimeMin": 19.99,
     "allTimeMax": 3500,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 7,
     "availableNow": true,
     "recentListings": [
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 66,
-        "priceHigh": 66,
-        "productUrl": "https://aroidmarket.com/products/monstera-albo-half-moon-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 41,
-        "priceHigh": 41,
-        "productUrl": "https://aroidmarket.com/products/monstera-albo-halfmoon-cutting-1-leaf",
-        "growthStage": "cutting",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 34,
-        "priceHigh": 34,
-        "productUrl": "https://aroidmarket.com/products/monstera-albo-variegated-cutting-1-leaf",
-        "growthStage": "cutting",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 62,
-        "priceHigh": 62,
-        "productUrl": "https://aroidmarket.com/products/monstera-albo-variegated-lush",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 83,
-        "priceHigh": 83,
-        "productUrl": "https://aroidmarket.com/products/monstera-albo-white-tiger",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 61,
-        "priceHigh": 61,
-        "productUrl": "https://aroidmarket.com/products/monstera-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 40,
-        "priceHigh": 230,
-        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-var-borsigiana-albo-variegata",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 495,
-        "priceHigh": 495,
-        "productUrl": "https://www.nsetropicals.com/product/2-monstera-albo-variegated/",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 495,
-        "priceHigh": 495,
-        "productUrl": "https://www.nsetropicals.com/product/monstera-albo-variegated/",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 79.99,
-        "priceHigh": 79.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-4",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 164.99,
-        "priceHigh": 164.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-full-plant-4",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 199.99,
-        "priceHigh": 199.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-high-variegation-6-us-seller",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 99.99,
-        "priceHigh": 99.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-one-leaf-rooted-cutting-4",
-        "growthStage": "cutting",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 149.99,
-        "priceHigh": 149.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-deliciosa-albo-large-form-variegated-4",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-growers-choice",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 3500,
-        "priceHigh": 3500,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-variegated-brazilian-form-wk10-ud",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "steves-leaves",
-        "sellerName": "Steve's Leaves",
-        "price": 115.99,
-        "priceHigh": 115.99,
-        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "steves-leaves",
-        "sellerName": "Steve's Leaves",
-        "price": 199.99,
-        "priceHigh": 199.99,
-        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata-1259",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "steves-leaves",
-        "sellerName": "Steve's Leaves",
-        "price": 64.99,
-        "priceHigh": 64.99,
-        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata-low-color-1",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 66,
-        "priceHigh": 66,
-        "productUrl": "https://aroidmarket.com/products/monstera-albo-half-moon-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 41,
-        "priceHigh": 41,
-        "productUrl": "https://aroidmarket.com/products/monstera-albo-halfmoon-cutting-1-leaf",
-        "growthStage": "cutting",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 34,
-        "priceHigh": 34,
-        "productUrl": "https://aroidmarket.com/products/monstera-albo-variegated-cutting-1-leaf",
-        "growthStage": "cutting",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 62,
-        "priceHigh": 62,
-        "productUrl": "https://aroidmarket.com/products/monstera-albo-variegated-lush",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 83,
-        "priceHigh": 83,
-        "productUrl": "https://aroidmarket.com/products/monstera-albo-white-tiger",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 61,
-        "priceHigh": 61,
-        "productUrl": "https://aroidmarket.com/products/monstera-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 40,
-        "priceHigh": 230,
-        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-var-borsigiana-albo-variegata",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 495,
-        "priceHigh": 495,
-        "productUrl": "https://www.nsetropicals.com/product/2-monstera-albo-variegated/",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 495,
-        "priceHigh": 495,
-        "productUrl": "https://www.nsetropicals.com/product/monstera-albo-variegated/",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 79.99,
-        "priceHigh": 79.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-4",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 164.99,
-        "priceHigh": 164.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-full-plant-4",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 199.99,
-        "priceHigh": 199.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-high-variegation-6-us-seller",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 99.99,
-        "priceHigh": 99.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-one-leaf-rooted-cutting-4",
-        "growthStage": "cutting",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 149.99,
-        "priceHigh": 149.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-deliciosa-albo-large-form-variegated-4",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-growers-choice",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 3500,
-        "priceHigh": 3500,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-variegated-brazilian-form-wk10-ud",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-variegated-small-form-borsigiana-wk16-a",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2486-monstera-deliciosa-albo-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2487-monstera-deliciosa-albo-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2488-monstera-deliciosa-albo-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2489-monstera-deliciosa-albo-variegated-copy",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2491-monstera-deliciosa-albo-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2492-monstera-deliciosa-albo-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2493-monstera-deliciosa-albo-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2494-monstera-deliciosa-albo-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2494-monstera-deliciosa-albo-variegated-1",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2496-monstera-deliciosa-albo-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 50,
-        "priceHigh": 50,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2497-monstera-deliciosa-albo-variegated-1",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "steves-leaves",
-        "sellerName": "Steve's Leaves",
-        "price": 115.99,
-        "priceHigh": 115.99,
-        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "steves-leaves",
-        "sellerName": "Steve's Leaves",
-        "price": 199.99,
-        "priceHigh": 199.99,
-        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata-1259",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "steves-leaves",
-        "sellerName": "Steve's Leaves",
-        "price": 64.99,
-        "priceHigh": 64.99,
-        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata-low-color-1",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
       {
         "sellerId": "aroid-market",
         "sellerName": "Aroid Market",
@@ -2376,139 +1546,329 @@
         "growthStage": "plant",
         "date": "2026-05-08",
         "available": true
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 495,
+        "priceHigh": 495,
+        "productUrl": "https://www.nsetropicals.com/product/monstera-albo-variegated/",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/4125-monstera-deliciosa-albo",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 75,
+        "priceHigh": 75,
+        "productUrl": "https://www.rareplantfairy.com/products/4169-monstera-deliciosa-albo",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 75,
+        "priceHigh": 75,
+        "productUrl": "https://www.rareplantfairy.com/products/4166-zamioculcas-zamiifolia-variegated",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-variegated-small-form-borsigiana-wk18-a",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-variegated-small-form-borsigiana-wk17-b",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1950,
+        "priceHigh": 1950,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-variegated-large-form-wk17-ub",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/sc2487-monstera-deliciosa-albo-variegated",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-albo-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "steves-leaves",
+        "sellerName": "Steve's Leaves",
+        "price": 54.99,
+        "priceHigh": 54.99,
+        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata-low-color-1",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "steves-leaves",
+        "sellerName": "Steve's Leaves",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "steves-leaves",
+        "sellerName": "Steve's Leaves",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://stevesleaves.com/products/monstera-deliciosa-var-borsigiana-albo-variegata-1259",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-albo-3in-889",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-albo-3in-892",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-albo-3in-891",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-albo-3in-890",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-albo-3in-893",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 19.99,
+        "priceHigh": 19.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-albo-tissue-culture",
+        "growthStage": "tc",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 40,
+        "priceHigh": 230,
+        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-var-borsigiana-albo-variegata",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 699.99,
+        "priceHigh": 699.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-large-form-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 79.99,
+        "priceHigh": 79.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-4",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-one-leaf-rooted-cutting-4",
+        "growthStage": "cutting",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 164.99,
+        "priceHigh": 164.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-full-plant-4",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 149.99,
+        "priceHigh": 149.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-deliciosa-albo-large-form-variegated-4",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-albo-high-variegation-6-us-seller",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 41,
+        "priceHigh": 41,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-halfmoon-cutting-1-leaf",
+        "growthStage": "cutting",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 51,
+        "priceHigh": 51,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-variegated-lush",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 51,
+        "priceHigh": 51,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-half-moon-variegated",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 49,
+        "priceHigh": 49,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-white-tiger",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 34,
+        "priceHigh": 34,
+        "productUrl": "https://aroidmarket.com/products/monstera-albo-variegated-cutting-1-leaf",
+        "growthStage": "cutting",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 46,
+        "priceHigh": 46,
+        "productUrl": "https://aroidmarket.com/products/monstera-variegated",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
       }
     ]
   },
   "monstera-bulbasaur": {
     "slug": "monstera-bulbasaur",
-    "currentMin": 29.99,
+    "currentMin": 25,
     "currentMax": 749.99,
-    "allTimeMin": 29.99,
+    "allTimeMin": 25,
     "allTimeMax": 2799.99,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 3,
     "availableNow": true,
     "recentListings": [
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 500,
-        "priceHigh": 500,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-bulbasaur-wk14-a",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-bulbasaur",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 2799.99,
-        "priceHigh": 2799.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6-xl-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 749.99,
-        "priceHigh": 749.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 549.99,
-        "priceHigh": 549.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-3-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 74.99,
-        "priceHigh": 74.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-tissue-culture-pre-order",
-        "growthStage": "tc",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 500,
-        "priceHigh": 500,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-bulbasaur-wk14-a",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-bulbasaur",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 2799.99,
-        "priceHigh": 2799.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6-xl-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 749.99,
-        "priceHigh": 749.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 549.99,
-        "priceHigh": 549.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-3-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 74.99,
-        "priceHigh": 74.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-tissue-culture-pre-order",
-        "growthStage": "tc",
-        "date": "2026-04-19",
-        "available": false
-      },
       {
         "sellerId": "rare-plant-fairy",
         "sellerName": "Rare Plant Fairy",
@@ -2658,6 +2018,136 @@
         "growthStage": "tc",
         "date": "2026-05-08",
         "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 295,
+        "priceHigh": 295,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-bulbasaur-wk21-d",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 299,
+        "priceHigh": 299,
+        "productUrl": "https://www.rareplantfairy.com/products/lyte-bulb-bundle",
+        "growthStage": "corm",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-bulbasaur",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 129.99,
+        "priceHigh": 129.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-bulbasaur-3in-105",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 129.99,
+        "priceHigh": 129.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-bulbasaur-3in-103",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 129.99,
+        "priceHigh": 129.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-bulbasaur-3in-100",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 25,
+        "priceHigh": 25,
+        "productUrl": "https://orangelakenursery.com/products/monstera-bulbasur-tissue-culture",
+        "growthStage": "tc",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 699.99,
+        "priceHigh": 699.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 79.99,
+        "priceHigh": 79.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-2",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 2799.99,
+        "priceHigh": 2799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6-xl-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 749.99,
+        "priceHigh": 749.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-6",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 549.99,
+        "priceHigh": 549.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-3-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 74.99,
+        "priceHigh": 74.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-tissue-culture-pre-order",
+        "growthStage": "tc",
+        "date": "2026-05-24",
+        "available": false
       }
     ]
   },
@@ -2667,210 +2157,10 @@
     "currentMax": 195,
     "allTimeMin": 9.99,
     "allTimeMax": 649.99,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 6,
     "availableNow": true,
     "recentListings": [
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 550,
-        "priceHigh": 550,
-        "productUrl": "https://www.carnivero.com/products/a886-monstera-burle-marx-flame",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 34.99,
-        "priceHigh": 34.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-3",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 499.99,
-        "priceHigh": 499.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 649.99,
-        "priceHigh": 649.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 399.99,
-        "priceHigh": 399.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant-1",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 499.99,
-        "priceHigh": 499.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant-2",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 34.99,
-        "priceHigh": 34.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-us-seller",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 29.99,
-        "priceHigh": 29.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-5",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 84.99,
-        "priceHigh": 84.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-6",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 45,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-burle-marx-flame-growers-choice",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 550,
-        "priceHigh": 550,
-        "productUrl": "https://www.carnivero.com/products/a886-monstera-burle-marx-flame",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 34.99,
-        "priceHigh": 34.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-3",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 499.99,
-        "priceHigh": 499.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 649.99,
-        "priceHigh": 649.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 399.99,
-        "priceHigh": 399.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant-1",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 499.99,
-        "priceHigh": 499.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant-2",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 34.99,
-        "priceHigh": 34.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-us-seller",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 29.99,
-        "priceHigh": 29.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-5",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 84.99,
-        "priceHigh": 84.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-6",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-burle-marx-flame-growers-choice",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
       {
         "sellerId": "carnivero",
         "sellerName": "Carnivero",
@@ -3200,119 +2490,149 @@
         "growthStage": "plant",
         "date": "2026-05-08",
         "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 150,
+        "priceHigh": 150,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-burle-marx-flame-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 19.99,
+        "priceHigh": 19.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-burle-marx-flame-3in-167",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 9.99,
+        "priceHigh": 9.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-burl-marx-flame-plantlets-1",
+        "growthStage": "tc",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 19.99,
+        "priceHigh": 19.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-burle-marx-flame-3in-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 550,
+        "priceHigh": 550,
+        "productUrl": "https://www.carnivero.com/products/a886-monstera-burle-marx-flame",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 29.99,
+        "priceHigh": 29.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-5",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 84.99,
+        "priceHigh": 84.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-6",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 34.99,
+        "priceHigh": 34.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-3",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant-2",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 34.99,
+        "priceHigh": 34.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-us-seller",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 399.99,
+        "priceHigh": 399.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 649.99,
+        "priceHigh": 649.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-burle-marx-flame-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
       }
     ]
   },
   "monstera-devil-monster": {
     "slug": "monstera-devil-monster",
-    "currentMin": 1000,
+    "currentMin": 2500,
     "currentMax": 2799.99,
     "allTimeMin": 799.99,
     "allTimeMax": 5999.99,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 2,
     "availableNow": true,
     "recentListings": [
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1000,
-        "priceHigh": 1000,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-devil-monster-wk13-uk",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 2799.99,
-        "priceHigh": 2799.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-xl-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 799.99,
-        "priceHigh": 799.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-tissue-culture-preorder-ship-date-mid-march-2026",
-        "growthStage": "tc",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 5999.99,
-        "priceHigh": 5999.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant-1",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 3499.99,
-        "priceHigh": 3499.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1000,
-        "priceHigh": 1000,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-devil-monster-wk13-uk",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 2799.99,
-        "priceHigh": 2799.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-xl-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 799.99,
-        "priceHigh": 799.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-tissue-culture-preorder-ship-date-mid-march-2026",
-        "growthStage": "tc",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 5999.99,
-        "priceHigh": 5999.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant-1",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 3499.99,
-        "priceHigh": 3499.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
       {
         "sellerId": "rare-foliage-plant-co",
         "sellerName": "Rare Foliage Plant Co",
@@ -3402,6 +2722,56 @@
         "growthStage": "plant",
         "date": "2026-05-08",
         "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 2500,
+        "priceHigh": 2500,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-devil-monster-wk18-uz",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 2799.99,
+        "priceHigh": 2799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-xl-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 799.99,
+        "priceHigh": 799.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-tissue-culture-preorder-ship-date-mid-march-2026",
+        "growthStage": "tc",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 5999.99,
+        "priceHigh": 5999.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 3499.99,
+        "priceHigh": 3499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-devil-monster-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
       }
     ]
   },
@@ -3411,150 +2781,10 @@
     "currentMax": 950,
     "allTimeMin": 49.99,
     "allTimeMax": 1049.99,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 3,
     "availableNow": true,
     "recentListings": [
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 450,
-        "priceHigh": 450,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk13-uo",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 450,
-        "priceHigh": 450,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk11-up",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 199.99,
-        "priceHigh": 199.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-2",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 649.99,
-        "priceHigh": 649.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-4-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 1049.99,
-        "priceHigh": 1049.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-2-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 250,
-        "priceHigh": 250,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk16-un",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 450,
-        "priceHigh": 450,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk13-uo",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 450,
-        "priceHigh": 450,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk11-up",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 699.99,
-        "priceHigh": 699.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-6-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 199.99,
-        "priceHigh": 199.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-2",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 649.99,
-        "priceHigh": 649.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-4-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 1049.99,
-        "priceHigh": 1049.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-2-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
       {
         "sellerId": "rare-plant-fairy",
         "sellerName": "Rare Plant Fairy",
@@ -3864,6 +3094,226 @@
         "growthStage": "plant",
         "date": "2026-05-08",
         "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 250,
+        "priceHigh": 250,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk19-e",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk19-c",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 950,
+        "priceHigh": 950,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk17-uc",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 250,
+        "priceHigh": 250,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte-wk16-un",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-electrolyte",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-1048",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-1047",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-1051",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-1050",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-1056",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-1054",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-1053",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-142",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-547",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-553",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 89.99,
+        "priceHigh": 89.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-3in-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-electrolyte-4-tissue-culture",
+        "growthStage": "tc",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 184.99,
+        "priceHigh": 184.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-bulbasaur-2-copy-copy",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 699.99,
+        "priceHigh": 699.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-2",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 649.99,
+        "priceHigh": 649.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 1049.99,
+        "priceHigh": 1049.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-electrolyte-2-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
       }
     ]
   },
@@ -3873,230 +3323,10 @@
     "currentMax": 450,
     "allTimeMin": 7.99,
     "allTimeMax": 450,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 6,
     "availableNow": true,
     "recentListings": [
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 149,
-        "priceHigh": 149,
-        "productUrl": "https://www.nsetropicals.com/product/2-monstera-thai-constellation/",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 34.99,
-        "priceHigh": 34.99,
-        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-thai-constellation",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 299.99,
-        "priceHigh": 299.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-thai-constellation-legacy-5-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 74.99,
-        "priceHigh": 74.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-thai-constellation-6-high-variegation",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 24.99,
-        "priceHigh": 24.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-thai-constellation-3",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 24.99,
-        "priceHigh": 24.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-thai-constellation-4-quot-us-seller",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 129,
-        "priceHigh": 129,
-        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation-mutation",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 93,
-        "priceHigh": 93,
-        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation-mature-size",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 42,
-        "priceHigh": 42,
-        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation-little",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 55,
-        "priceHigh": 55,
-        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 149,
-        "priceHigh": 149,
-        "productUrl": "https://www.nsetropicals.com/product/2-monstera-thai-constellation/",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 450,
-        "priceHigh": 450,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-thai-constellation-creme-brulee-wk16-uf",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 10,
-        "priceHigh": 10,
-        "productUrl": "https://www.rareplantfairy.com/products/sc2431-monstera-thai-constellation-revert",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 28,
-        "priceHigh": 28,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-thai-constellation-large-growers-choice",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 34.99,
-        "priceHigh": 34.99,
-        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-thai-constellation",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 74.99,
-        "priceHigh": 74.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-thai-constellation-6-high-variegation",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 24.99,
-        "priceHigh": 24.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-thai-constellation-3",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 24.99,
-        "priceHigh": 24.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-thai-constellation-4-quot-us-seller",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 129,
-        "priceHigh": 129,
-        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation-mutation",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 93,
-        "priceHigh": 93,
-        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation-mature-size",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 42,
-        "priceHigh": 42,
-        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation-little",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 55,
-        "priceHigh": 55,
-        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
       {
         "sellerId": "nse-tropicals",
         "sellerName": "NSE Tropicals",
@@ -4406,149 +3636,249 @@
         "growthStage": "plant",
         "date": "2026-05-08",
         "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 150,
+        "priceHigh": 150,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-thai-constellation-green-snow-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 50,
+        "priceHigh": 50,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-thai-constellation-wk19-d",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 350,
+        "priceHigh": 350,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-thai-constellation-creme-brulee-wk20-s",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 450,
+        "priceHigh": 450,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-thai-constellation-creme-brulee-wk16-uf",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 28,
+        "priceHigh": 28,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-thai-constellation-large-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 17.99,
+        "priceHigh": 17.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-thai-constellation-3in-884",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 17.99,
+        "priceHigh": 17.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-thai-constellation-3in-888",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 17.99,
+        "priceHigh": 17.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-thai-constellation-3in-887",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 17.99,
+        "priceHigh": 17.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-thai-constellation-3in-886",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 17.99,
+        "priceHigh": 17.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-thai-constellation-3in-885",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 7.99,
+        "priceHigh": 7.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-thai-constellation-tissue-culture-single",
+        "growthStage": "tc",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 29.99,
+        "priceHigh": 29.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-thai-constellation-tissue-culture-5-pack-copy",
+        "growthStage": "tc",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 17.99,
+        "priceHigh": 17.99,
+        "productUrl": "https://orangelakenursery.com/products/monstera-thai-constellation-3in-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 8.99,
+        "priceHigh": 8.99,
+        "productUrl": "https://orangelakenursery.com/products/low-var-monstera-thai-constellation",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 34.99,
+        "priceHigh": 34.99,
+        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-thai-constellation",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 299.99,
+        "priceHigh": 299.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-thai-constellation-green-snow-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 74.99,
+        "priceHigh": 74.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-thai-constellation-6-high-variegation",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 24.99,
+        "priceHigh": 24.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-thai-constellation-3",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 24.99,
+        "priceHigh": 24.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-thai-constellation-4-quot-us-seller",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 79,
+        "priceHigh": 79,
+        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation-mutation",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 51,
+        "priceHigh": 51,
+        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation-mature-size",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 32,
+        "priceHigh": 32,
+        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation-little",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 36,
+        "priceHigh": 36,
+        "productUrl": "https://aroidmarket.com/products/monstera-thai-constellation",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
       }
     ]
   },
   "monstera-white-lava": {
     "slug": "monstera-white-lava",
     "currentMin": 346,
-    "currentMax": 10975,
+    "currentMax": 1500,
     "allTimeMin": 346,
     "allTimeMax": 10975,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 2,
     "availableNow": true,
     "recentListings": [
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1200,
-        "priceHigh": 1200,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk14-ul",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1500,
-        "priceHigh": 1500,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk14-uk",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1500,
-        "priceHigh": 1500,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk12-uq",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 850,
-        "priceHigh": 850,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk11-um",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1500,
-        "priceHigh": 1500,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk10-uf",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 10975,
-        "priceHigh": 10975,
-        "productUrl": "https://aroidmarket.com/products/monstera-white-lava",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1500,
-        "priceHigh": 1500,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk16-uk",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1200,
-        "priceHigh": 1200,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk14-ul",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1500,
-        "priceHigh": 1500,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk14-uk",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1500,
-        "priceHigh": 1500,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk12-uq",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 850,
-        "priceHigh": 850,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk11-um",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 1500,
-        "priceHigh": 1500,
-        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk10-uf",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 10975,
-        "priceHigh": 10975,
-        "productUrl": "https://aroidmarket.com/products/monstera-white-lava",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
       {
         "sellerId": "rare-plant-fairy",
         "sellerName": "Rare Plant Fairy",
@@ -4658,16 +3988,66 @@
         "growthStage": "plant",
         "date": "2026-05-08",
         "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 850,
+        "priceHigh": 850,
+        "productUrl": "https://www.rareplantfairy.com/products/4177-monstera-deliciosa-white-lava",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1500,
+        "priceHigh": 1500,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk18-ut",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1500,
+        "priceHigh": 1500,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk16-uk",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 1200,
+        "priceHigh": 1200,
+        "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk14-ul",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 346,
+        "priceHigh": 346,
+        "productUrl": "https://aroidmarket.com/products/monstera-white-lava",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
       }
     ]
   },
   "monstera-white-monster": {
     "slug": "monstera-white-monster",
-    "currentMin": 54.99,
-    "currentMax": 99.99,
+    "currentMin": 49.99,
+    "currentMax": 54.99,
     "allTimeMin": 49.99,
     "allTimeMax": 1950,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 2,
     "availableNow": true,
     "recentListings": [
@@ -4678,106 +4058,6 @@
         "priceHigh": 49.99,
         "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-white-monster",
         "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 499.99,
-        "priceHigh": 499.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-mutation-6-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 99.99,
-        "priceHigh": 99.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-6",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 549.99,
-        "priceHigh": 549.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-5-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 54.99,
-        "priceHigh": 54.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-3-us-seller",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 49.99,
-        "priceHigh": 49.99,
-        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-white-monster",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 499.99,
-        "priceHigh": 499.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-mutation-6-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 99.99,
-        "priceHigh": 99.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-6",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 549.99,
-        "priceHigh": 549.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-5-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 54.99,
-        "priceHigh": 54.99,
-        "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-3-us-seller",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 49.99,
-        "priceHigh": 49.99,
-        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-white-monster",
-        "growthStage": "plant",
         "date": "2026-04-25",
         "available": false
       },
@@ -4869,6 +4149,56 @@
         "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-3-us-seller",
         "growthStage": "plant",
         "date": "2026-05-08",
+        "available": true
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-white-monster",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-mutation-6-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-6",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 549.99,
+        "priceHigh": 549.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-5-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-3-us-seller",
+        "growthStage": "plant",
+        "date": "2026-05-24",
         "available": true
       }
     ]
@@ -4879,290 +4209,10 @@
     "currentMax": 599.99,
     "allTimeMin": 24.99,
     "allTimeMax": 5000,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 6,
     "availableNow": true,
     "recentListings": [
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 244,
-        "priceHigh": 244,
-        "productUrl": "https://aroidmarket.com/products/philodendron-billietiae-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 309,
-        "priceHigh": 309,
-        "productUrl": "https://aroidmarket.com/products/philodendron-billietiae-variegated-mature-size",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 5000,
-        "priceHigh": 5000,
-        "productUrl": "https://www.carnivero.com/products/philodendron-billietiae-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 295,
-        "priceHigh": 295,
-        "productUrl": "https://www.nsetropicals.com/product/variegated-philodendron-billietiae/",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 99.99,
-        "priceHigh": 99.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-3",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 599.99,
-        "priceHigh": 599.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 549.99,
-        "priceHigh": 549.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant-1",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 249.99,
-        "priceHigh": 249.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant-2",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 599.99,
-        "priceHigh": 599.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-8-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 99.99,
-        "priceHigh": 99.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-tissue-culture-pre-order",
-        "growthStage": "tc",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-growers-choice",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 300,
-        "priceHigh": 300,
-        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk12-f",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 495,
-        "priceHigh": 495,
-        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk9-g",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 244,
-        "priceHigh": 244,
-        "productUrl": "https://aroidmarket.com/products/philodendron-billietiae-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 309,
-        "priceHigh": 309,
-        "productUrl": "https://aroidmarket.com/products/philodendron-billietiae-variegated-mature-size",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 5000,
-        "priceHigh": 5000,
-        "productUrl": "https://www.carnivero.com/products/philodendron-billietiae-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 295,
-        "priceHigh": 295,
-        "productUrl": "https://www.nsetropicals.com/product/variegated-philodendron-billietiae/",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 99.99,
-        "priceHigh": 99.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-3",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 599.99,
-        "priceHigh": 599.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 549.99,
-        "priceHigh": 549.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant-1",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 249.99,
-        "priceHigh": 249.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant-2",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 599.99,
-        "priceHigh": 599.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-8-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 99.99,
-        "priceHigh": 99.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-tissue-culture-pre-order",
-        "growthStage": "tc",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-growers-choice",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 300,
-        "priceHigh": 300,
-        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk12-f",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 450,
-        "priceHigh": 450,
-        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk15-o",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 275,
-        "priceHigh": 275,
-        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk15-p",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk16-g",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
       {
         "sellerId": "aroid-market",
         "sellerName": "Aroid Market",
@@ -5482,16 +4532,166 @@
         "growthStage": "plant",
         "date": "2026-05-08",
         "available": true
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 295,
+        "priceHigh": 295,
+        "productUrl": "https://www.nsetropicals.com/product/variegated-philodendron-billietiae/",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk16-g",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 450,
+        "priceHigh": 450,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-wk15-o",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-billietiae-variegated-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 24.99,
+        "priceHigh": 24.99,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-variegated-billietiae-tissue-culture",
+        "growthStage": "tc",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 5000,
+        "priceHigh": 5000,
+        "productUrl": "https://www.carnivero.com/products/philodendron-billietiae-variegated",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 139.99,
+        "priceHigh": 139.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-orange-variegated-4",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 599.99,
+        "priceHigh": 599.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-8-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-3",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 99.99,
+        "priceHigh": 99.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-tissue-culture-pre-order",
+        "growthStage": "tc",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 249.99,
+        "priceHigh": 249.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant-2",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 549.99,
+        "priceHigh": 549.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 599.99,
+        "priceHigh": 599.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-billietiae-variegated-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 177,
+        "priceHigh": 177,
+        "productUrl": "https://aroidmarket.com/products/philodendron-billietiae-variegated-mature-size",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 124,
+        "priceHigh": 124,
+        "productUrl": "https://aroidmarket.com/products/philodendron-billietiae-variegated",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
       }
     ]
   },
   "philodendron-gloriosum-variegated-type-1": {
     "slug": "philodendron-gloriosum-variegated-type-1",
-    "currentMin": 595,
+    "currentMin": 295,
     "currentMax": 595,
-    "allTimeMin": 595,
+    "allTimeMin": 295,
     "allTimeMax": 1500,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 1,
     "availableNow": false,
     "recentListings": [
@@ -5502,26 +4702,6 @@
         "priceHigh": 595,
         "productUrl": "https://www.nsetropicals.com/product/1494-variegated-philodendron-gloriosum-og-type-1/",
         "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 595,
-        "priceHigh": 595,
-        "productUrl": "https://www.nsetropicals.com/product/1494-variegated-philodendron-gloriosum-og-type-1/",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 595,
-        "priceHigh": 595,
-        "productUrl": "https://www.nsetropicals.com/product/1494-variegated-philodendron-gloriosum-og-type-1/",
-        "growthStage": "plant",
         "date": "2026-04-25",
         "available": false
       },
@@ -5534,16 +4714,26 @@
         "growthStage": "plant",
         "date": "2026-05-08",
         "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 295,
+        "priceHigh": 295,
+        "productUrl": "https://www.nsetropicals.com/product/1494-variegated-philodendron-gloriosum-og-type-1/",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
       }
     ]
   },
   "philodendron-gloriosum-variegated-type-2": {
     "slug": "philodendron-gloriosum-variegated-type-2",
-    "currentMin": 175,
-    "currentMax": 350,
+    "currentMin": 150,
+    "currentMax": 249.99,
     "allTimeMin": 49.99,
     "allTimeMax": 499.99,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 4,
     "availableNow": true,
     "recentListings": [
@@ -5554,186 +4744,6 @@
         "priceHigh": 95,
         "productUrl": "https://www.nsetropicals.com/product/1818-variegated-philodendron-gloriosum-type-2/",
         "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 249,
-        "priceHigh": 249,
-        "productUrl": "https://www.nsetropicals.com/product/variegated-philodendron-gloriosum/",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 199.99,
-        "priceHigh": 199.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-3-quot-us-seller",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 399.99,
-        "priceHigh": 399.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 284.99,
-        "priceHigh": 284.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 499.99,
-        "priceHigh": 499.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4-exact-plant-1",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 184.99,
-        "priceHigh": 184.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-large-4-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 350,
-        "priceHigh": 350,
-        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-albo-variegated-type-2-wk12-c",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 175,
-        "priceHigh": 175,
-        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-variegated-type-2-growers-choice",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 95,
-        "priceHigh": 95,
-        "productUrl": "https://www.nsetropicals.com/product/1818-variegated-philodendron-gloriosum-type-2/",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 249,
-        "priceHigh": 249,
-        "productUrl": "https://www.nsetropicals.com/product/variegated-philodendron-gloriosum/",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 199.99,
-        "priceHigh": 199.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-3-quot-us-seller",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 399.99,
-        "priceHigh": 399.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 249.99,
-        "priceHigh": 249.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 499.99,
-        "priceHigh": 499.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4-exact-plant-1",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 184.99,
-        "priceHigh": 184.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-large-4-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 175,
-        "priceHigh": 175,
-        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-variegated-type-2-growers-choice",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 195,
-        "priceHigh": 195,
-        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-variegated-type-2-wk16-a",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 95,
-        "priceHigh": 95,
-        "productUrl": "https://www.nsetropicals.com/product/1818-variegated-philodendron-gloriosum-type-2/",
-        "growthStage": "plant",
         "date": "2026-04-25",
         "available": false
       },
@@ -5925,6 +4935,116 @@
         "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-3-quot-us-seller",
         "growthStage": "plant",
         "date": "2026-05-08",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 95,
+        "priceHigh": 95,
+        "productUrl": "https://www.nsetropicals.com/product/1819-variegated-philodendron-gloriosum-type-2/",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 125,
+        "priceHigh": 125,
+        "productUrl": "https://www.nsetropicals.com/product/5156-variegated-philodendron-gloriosum-type-2/",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 150,
+        "priceHigh": 150,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-variegated-type-2-wk21-e",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 195,
+        "priceHigh": 195,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-variegated-type-2-wk16-a",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 175,
+        "priceHigh": 175,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-gloriosum-variegated-type-2-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 49.99,
+        "priceHigh": 49.99,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-variegated-gloriosum-plantlets-1",
+        "growthStage": "tc",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 249.99,
+        "priceHigh": 249.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 184.99,
+        "priceHigh": 184.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-large-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 499.99,
+        "priceHigh": 499.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4-exact-plant-1",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 399.99,
+        "priceHigh": 399.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-4",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-gloriosum-variegated-3-quot-us-seller",
+        "growthStage": "plant",
+        "date": "2026-05-24",
         "available": false
       }
     ]
@@ -5932,83 +5052,13 @@
   "philodendron-ilsemanii-variegated": {
     "slug": "philodendron-ilsemanii-variegated",
     "currentMin": 124,
-    "currentMax": 309,
+    "currentMax": 295,
     "allTimeMin": 124,
     "allTimeMax": 899.99,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 3,
     "availableNow": true,
     "recentListings": [
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 309,
-        "priceHigh": 309,
-        "productUrl": "https://aroidmarket.com/products/philodendron-ilsemanii-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 549.99,
-        "priceHigh": 549.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-ilsemanii-variegated-3-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 899.99,
-        "priceHigh": 899.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-ilsemanii-variegated-4-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 309,
-        "priceHigh": 309,
-        "productUrl": "https://aroidmarket.com/products/philodendron-ilsemanii-variegated",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 549.99,
-        "priceHigh": 549.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-ilsemanii-variegated-3-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 899.99,
-        "priceHigh": 899.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-ilsemanii-variegated-4-exact-plant",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 295,
-        "priceHigh": 295,
-        "productUrl": "https://www.rareplantfairy.com/products/philodendron-ilsemanii-kunzo-lineage-wk16-c",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
       {
         "sellerId": "aroid-market",
         "sellerName": "Aroid Market",
@@ -6108,129 +5158,69 @@
         "growthStage": "plant",
         "date": "2026-05-08",
         "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 295,
+        "priceHigh": 295,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-ilsemanii-kunzo-lineage-wk21-d",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 295,
+        "priceHigh": 295,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-ilsemanii-kunzo-lineage-wk18-i",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 549.99,
+        "priceHigh": 549.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-ilsemanii-variegated-3-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 899.99,
+        "priceHigh": 899.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-ilsemanii-variegated-4-exact-plant",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 124,
+        "priceHigh": 124,
+        "productUrl": "https://aroidmarket.com/products/philodendron-ilsemanii-variegated",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
       }
     ]
   },
   "philodendron-spiritus-sancti": {
     "slug": "philodendron-spiritus-sancti",
     "currentMin": 9.99,
-    "currentMax": 249.99,
+    "currentMax": 199.99,
     "allTimeMin": 9.99,
     "allTimeMax": 299.99,
-    "lastSeen": "2026-05-08",
+    "lastSeen": "2026-05-24",
     "sellerCount": 6,
     "availableNow": true,
     "recentListings": [
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 250,
-        "priceHigh": 250,
-        "productUrl": "https://www.nsetropicals.com/product/small-size-philodendron-spiritus-sancti/",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-plant-fairy",
-        "sellerName": "Rare Plant Fairy",
-        "price": 45,
-        "priceHigh": 125,
-        "productUrl": "https://www.rareplantfairy.com/products/philodendron-spiritus-sancti-growers-choice",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 59.99,
-        "priceHigh": 59.99,
-        "productUrl": "https://www.carnivero.com/products/philodendron-spiritus-sancti",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 39.99,
-        "priceHigh": 39.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-spiritus-sancti-4",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 249.99,
-        "priceHigh": 249.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-spiritus-sancti-mature-6-hanging-basket",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 129,
-        "priceHigh": 129,
-        "productUrl": "https://aroidmarket.com/products/philodendron-spiritus-sancti",
-        "growthStage": "plant",
-        "date": "2026-04-09",
-        "available": true
-      },
-      {
-        "sellerId": "nse-tropicals",
-        "sellerName": "NSE Tropicals",
-        "price": 250,
-        "priceHigh": 250,
-        "productUrl": "https://www.nsetropicals.com/product/small-size-philodendron-spiritus-sancti/",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "carnivero",
-        "sellerName": "Carnivero",
-        "price": 59.99,
-        "priceHigh": 59.99,
-        "productUrl": "https://www.carnivero.com/products/philodendron-spiritus-sancti",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": false
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 39.99,
-        "priceHigh": 39.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-spiritus-sancti-4",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "rare-foliage-plant-co",
-        "sellerName": "Rare Foliage Plant Co",
-        "price": 199.99,
-        "priceHigh": 199.99,
-        "productUrl": "https://rarefoliageplantco.com/products/philodendron-spiritus-sancti-mature-6-hanging-basket",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
-      {
-        "sellerId": "aroid-market",
-        "sellerName": "Aroid Market",
-        "price": 129,
-        "priceHigh": 129,
-        "productUrl": "https://aroidmarket.com/products/philodendron-spiritus-sancti",
-        "growthStage": "plant",
-        "date": "2026-04-19",
-        "available": true
-      },
       {
         "sellerId": "nse-tropicals",
         "sellerName": "NSE Tropicals",
@@ -6499,6 +5489,116 @@
         "productUrl": "https://aroidmarket.com/products/philodendron-spiritus-sancti",
         "growthStage": "plant",
         "date": "2026-05-08",
+        "available": true
+      },
+      {
+        "sellerId": "nse-tropicals",
+        "sellerName": "NSE Tropicals",
+        "price": 250,
+        "priceHigh": 250,
+        "productUrl": "https://www.nsetropicals.com/product/small-size-philodendron-spiritus-sancti/",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 30,
+        "priceHigh": 30,
+        "productUrl": "https://www.rareplantfairy.com/products/4259-philodendron-spiritus-sancti",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 30,
+        "priceHigh": 30,
+        "productUrl": "https://www.rareplantfairy.com/products/4257-philodendron-spiritus-sancti-2",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 30,
+        "priceHigh": 30,
+        "productUrl": "https://www.rareplantfairy.com/products/4257-philodendron-spiritus-sancti-1",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-plant-fairy",
+        "sellerName": "Rare Plant Fairy",
+        "price": 35,
+        "priceHigh": 35,
+        "productUrl": "https://www.rareplantfairy.com/products/philodendron-spiritus-sancti-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 9.99,
+        "priceHigh": 9.99,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-spiritus-sancti-tissue-culture",
+        "growthStage": "tc",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "orange-lake-nursery",
+        "sellerName": "Orange Lake Nursery",
+        "price": 19.99,
+        "priceHigh": 19.99,
+        "productUrl": "https://orangelakenursery.com/products/philodendron-spiritus-sancti-3in-growers-choice",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "carnivero",
+        "sellerName": "Carnivero",
+        "price": 59.99,
+        "priceHigh": 59.99,
+        "productUrl": "https://www.carnivero.com/products/philodendron-spiritus-sancti",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": false
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 39.99,
+        "priceHigh": 39.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-spiritus-sancti-4",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "rare-foliage-plant-co",
+        "sellerName": "Rare Foliage Plant Co",
+        "price": 199.99,
+        "priceHigh": 199.99,
+        "productUrl": "https://rarefoliageplantco.com/products/philodendron-spiritus-sancti-mature-6-hanging-basket",
+        "growthStage": "plant",
+        "date": "2026-05-24",
+        "available": true
+      },
+      {
+        "sellerId": "aroid-market",
+        "sellerName": "Aroid Market",
+        "price": 102,
+        "priceHigh": 102,
+        "productUrl": "https://aroidmarket.com/products/philodendron-spiritus-sancti",
+        "growthStage": "plant",
+        "date": "2026-05-24",
         "available": true
       }
     ]

@@ -1,6 +1,6 @@
 {
   "slug": "philodendron-gloriosum-variegated-type-1",
-  "lastUpdated": "2026-05-08",
+  "lastUpdated": "2026-05-24",
   "entries": [
     {
       "date": "2026-03-28",
@@ -82,6 +82,18 @@
       "productUrl": "https://www.nsetropicals.com/product/1494-variegated-philodendron-gloriosum-og-type-1/",
       "price": 595,
       "priceHigh": 595,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-05-24",
+      "sellerId": "nse-tropicals",
+      "sellerName": "NSE Tropicals",
+      "title": "Variegated Philodendron gloriosum OG type 1",
+      "productUrl": "https://www.nsetropicals.com/product/1494-variegated-philodendron-gloriosum-og-type-1/",
+      "price": 295,
+      "priceHigh": 295,
       "available": false,
       "growthStage": "plant",
       "confidence": "high"
