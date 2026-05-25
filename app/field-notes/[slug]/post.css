@@ -127,6 +127,22 @@
   margin: 0 auto;
   overflow: hidden;
 }
+.fn-hero-img--portrait {
+  aspect-ratio: auto;
+  height: auto;
+  width: fit-content;
+  max-width: min(1240px, 96vw);
+  display: flex;
+  justify-content: center;
+}
+.fn-hero-img-intrinsic {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(85vh, 900px);
+  object-fit: contain;
+}
 .fn-hero-cap {
   max-width: 920px;
   margin: 12px auto 0;
@@ -134,6 +150,13 @@
   font-family: var(--font-dm-mono), "Courier New", monospace;
   font-size: 11px;
   color: var(--cream-40);
+}
+/* Portrait heroes are narrower than the default 920px caption column, so
+ *  anchor the caption to the body column (720px) for visual continuity with
+ *  the article text below. */
+.fn-hero-cap--portrait {
+  max-width: 720px;
+  padding: 0 clamp(22px, 5vw, 40px);
 }
 .fn-hero-cap span { color: var(--earth-400); margin-right: 4px; }
 .fn-hero-cap em {
@@ -184,6 +207,12 @@
   aspect-ratio: 16 / 9;
   border-radius: 4px;
   overflow: hidden;
+}
+.fn-fig-img--portrait {
+  aspect-ratio: auto;
+  height: min(70vh, 720px);
+  max-width: 360px;
+  margin: 0 auto;
 }
 .fn-fig figcaption {
   font-family: var(--font-dm-mono), "Courier New", monospace;

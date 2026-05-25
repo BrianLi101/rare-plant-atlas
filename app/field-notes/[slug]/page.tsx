@@ -91,21 +91,23 @@ function renderBlock(block: PostBodyBlock, idx: number) {
         </h2>
       );
 
-    case "figure":
+    case "figure": {
+      const portrait = block.layout === "portrait";
       return (
         <figure key={idx} className="fn-fig">
-          <div className="fn-fig-img">
+          <div className={`fn-fig-img${portrait ? " fn-fig-img--portrait" : ""}`}>
             <Image
               src={block.src}
               alt={block.alt}
               fill
-              sizes="(max-width: 720px) 100vw, 720px"
-              className="object-cover"
+              sizes={portrait ? "(max-width: 720px) 80vw, 360px" : "(max-width: 720px) 100vw, 720px"}
+              className={portrait ? "object-contain" : "object-cover"}
             />
           </div>
           <figcaption>{block.caption}</figcaption>
         </figure>
       );
+    }
 
     case "list":
       return (
@@ -202,17 +204,35 @@ function PostHeader({ post }: { post: FieldNotesPost }) {
           </div>
         </div>
       </div>
-      <div className="fn-hero-img">
-        <Image
-          src={post.hero.src}
-          alt={post.hero.alt}
-          fill
-          priority
-          sizes="(max-width: 1240px) 100vw, 1240px"
-          className="object-cover"
-        />
-      </div>
-      <div className="fn-hero-cap">
+      {post.hero.layout === "portrait" && post.hero.width && post.hero.height ? (
+        <div className="fn-hero-img fn-hero-img--portrait">
+          <Image
+            src={post.hero.src}
+            alt={post.hero.alt}
+            width={post.hero.width}
+            height={post.hero.height}
+            priority
+            sizes="(max-width: 720px) 90vw, 720px"
+            className="fn-hero-img-intrinsic"
+          />
+        </div>
+      ) : (
+        <div className="fn-hero-img">
+          <Image
+            src={post.hero.src}
+            alt={post.hero.alt}
+            fill
+            priority
+            sizes="(max-width: 1240px) 100vw, 1240px"
+            className="object-cover"
+          />
+        </div>
+      )}
+      <div
+        className={`fn-hero-cap${
+          post.hero.layout === "portrait" ? " fn-hero-cap--portrait" : ""
+        }`}
+      >
         <span>Plate I.</span> {post.hero.caption}
       </div>
     </header>
@@ -284,8 +304,34 @@ export default function FieldNotesPost({
           image: `https://www.rareplantatlas.com${post.hero.src}`,
           mainEntityOfPage: `https://www.rareplantatlas.com/field-notes/${post.slug}`,
           keywords: post.tags.join(", "),
+          ...(post.mentions && post.mentions.length > 0
+            ? {
+                mentions: post.mentions.map((m) => ({
+                  "@type": "WebSite",
+                  name: m.name,
+                  url: m.url,
+                  ...(m.description ? { description: m.description } : {}),
+                  ...(m.sameAs && m.sameAs.length > 0
+                    ? { sameAs: m.sameAs }
+                    : {}),
+                })),
+              }
+            : {}),
         }}
       />
+      {post.mentions?.map((m) => (
+        <JsonLd
+          key={m.url}
+          data={{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: m.name,
+            url: m.url,
+            ...(m.description ? { description: m.description } : {}),
+            ...(m.sameAs && m.sameAs.length > 0 ? { sameAs: m.sameAs } : {}),
+          }}
+        />
+      ))}
       <JsonLd
         data={{
           "@context": "https://schema.org",
