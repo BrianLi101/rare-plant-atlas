@@ -85,14 +85,21 @@ export interface PriceSummary {
   lastSeen: string | null
   sellerCount: number
   availableNow: boolean
-  recentListings: {
-    sellerId: string
-    sellerName: string
-    price: number
-    priceHigh: number
-    productUrl: string
-    growthStage: GrowthStage
-    date: string
-    available: boolean
-  }[]
+  // Current in-stock window (last 30 days) — drives current price stats and the
+  // seller table.
+  recentListings: PriceListingPoint[]
+  // Wider window (last 90 days) — drives the price-trend chart so it shows
+  // multiple scrape dates even when scrapes are weeks apart.
+  trendListings?: PriceListingPoint[]
+}
+
+export interface PriceListingPoint {
+  sellerId: string
+  sellerName: string
+  price: number
+  priceHigh: number
+  productUrl: string
+  growthStage: GrowthStage
+  date: string
+  available: boolean
 }

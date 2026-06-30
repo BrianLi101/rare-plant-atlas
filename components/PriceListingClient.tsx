@@ -209,9 +209,49 @@ function StageCard({ group }: { group: StageGroup }) {
   );
 }
 
+// Linear-interpolated quantile of a sorted ascending array.
+function quantile(sorted: number[], q: number): number {
+  if (sorted.length === 0) return 0;
+  if (sorted.length === 1) return sorted[0];
+  const pos = (sorted.length - 1) * q;
+  const lo = Math.floor(pos);
+  const hi = Math.ceil(pos);
+  if (lo === hi) return sorted[lo];
+  return sorted[lo] + (sorted[hi] - sorted[lo]) * (pos - lo);
+}
+
+// Drops only the high-side *extreme* outliers within each growth stage, using a
+// Tukey "far out" upper fence (Q3 + 3·IQR). Low prices are always kept — a cheap
+// listing is useful signal, an absurdly expensive one just flattens the rest of
+// the chart. The 3·IQR (rather than 1.5·IQR) threshold is deliberate: these
+// price distributions are heavily right-skewed, so a tighter fence would clip
+// legitimate mid-high tiers, not just the runaway listings. Needs a handful of
+// points per stage before the fence is meaningful.
+const OUTLIER_IQR_MULTIPLIER = 3;
+function withoutHighOutliers<T extends { price: number; growthStage: GrowthStage }>(
+  listings: T[],
+): T[] {
+  const fenceByStage = new Map<GrowthStage, number>();
+  for (const stage of GROWTH_STAGE_ORDER) {
+    const prices = listings
+      .filter((l) => l.growthStage === stage)
+      .map((l) => l.price)
+      .sort((a, b) => a - b);
+    if (prices.length < 5) continue; // too few to judge — keep them all
+    const q1 = quantile(prices, 0.25);
+    const q3 = quantile(prices, 0.75);
+    fenceByStage.set(stage, q3 + OUTLIER_IQR_MULTIPLIER * (q3 - q1));
+  }
+  return listings.filter((l) => {
+    const fence = fenceByStage.get(l.growthStage);
+    return fence === undefined || l.price <= fence;
+  });
+}
+
 function PriceTrendChart({ summary }: { summary: PriceSummary }) {
   const chartListings = useMemo(() => {
-    return [...summary.recentListings].sort((a, b) => {
+    const source = summary.trendListings ?? summary.recentListings;
+    return withoutHighOutliers([...source]).sort((a, b) => {
       if (a.date !== b.date) return a.date.localeCompare(b.date);
       return a.price - b.price;
     });
