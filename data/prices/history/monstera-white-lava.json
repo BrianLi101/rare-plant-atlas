@@ -1,6 +1,6 @@
 {
   "slug": "monstera-white-lava",
-  "lastUpdated": "2026-05-24",
+  "lastUpdated": "2026-06-30",
   "entries": [
     {
       "date": "2026-03-28",
@@ -400,6 +400,30 @@
     },
     {
       "date": "2026-05-24",
+      "sellerId": "aroid-market",
+      "sellerName": "Aroid Market",
+      "title": "Monstera white lava",
+      "productUrl": "https://aroidmarket.com/products/monstera-white-lava",
+      "price": 346,
+      "priceHigh": 346,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-06-30",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "title": "Monstera Deliciosa 'White Lava' (wk26-UB)",
+      "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-lava-wk26-ub",
+      "price": 950,
+      "priceHigh": 950,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-06-30",
       "sellerId": "aroid-market",
       "sellerName": "Aroid Market",
       "title": "Monstera white lava",

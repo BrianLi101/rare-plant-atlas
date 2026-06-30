@@ -1,6 +1,6 @@
 {
   "slug": "monstera-white-monster",
-  "lastUpdated": "2026-05-24",
+  "lastUpdated": "2026-06-30",
   "entries": [
     {
       "date": "2026-03-28",
@@ -371,6 +371,102 @@
       "price": 49.99,
       "priceHigh": 49.99,
       "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-06-30",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "title": "Monstera Deliciosa 'White Monster' (wk26-A)",
+      "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-monster-wk26-a",
+      "price": 500,
+      "priceHigh": 500,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-06-30",
+      "sellerId": "rare-plant-fairy",
+      "sellerName": "Rare Plant Fairy",
+      "title": "Monstera Deliciosa 'White Monster' (wk24-UK) *Half Moon*",
+      "productUrl": "https://www.rareplantfairy.com/products/monstera-deliciosa-white-monster-wk24-uk",
+      "price": 500,
+      "priceHigh": 500,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-06-30",
+      "sellerId": "orange-lake-nursery",
+      "sellerName": "Orange Lake Nursery",
+      "title": "Monstera White Monster Tissue Culture",
+      "productUrl": "https://orangelakenursery.com/products/monstera-white-monster-tissue-culture",
+      "price": 19.99,
+      "priceHigh": 19.99,
+      "available": false,
+      "growthStage": "tc",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-06-30",
+      "sellerId": "carnivero",
+      "sellerName": "Carnivero",
+      "title": "Monstera deliciosa “White Monster”",
+      "productUrl": "https://www.carnivero.com/products/monstera-deliciosa-white-monster",
+      "price": 49.99,
+      "priceHigh": 49.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-06-30",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Monstera White Monster Mutation 6” Exact Plant",
+      "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-mutation-6-exact-plant",
+      "price": 499.99,
+      "priceHigh": 499.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-06-30",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Monstera White Monster 6”",
+      "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-6",
+      "price": 99.99,
+      "priceHigh": 99.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-06-30",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Monstera White Monster 5” Exact Plant",
+      "productUrl": "https://rarefoliageplantco.com/products/monstera-white-monster-5-exact-plant",
+      "price": 549.99,
+      "priceHigh": 549.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-06-30",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Monstera White Monster Large Form 3”",
+      "productUrl": "https://rarefoliageplantco.com/products/monstera-mint-large-form-white-monster-3-us-seller",
+      "price": 49.99,
+      "priceHigh": 49.99,
+      "available": false,
       "growthStage": "plant",
       "confidence": "high"
     }

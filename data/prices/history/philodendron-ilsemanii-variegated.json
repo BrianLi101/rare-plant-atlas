@@ -1,6 +1,6 @@
 {
   "slug": "philodendron-ilsemanii-variegated",
-  "lastUpdated": "2026-05-24",
+  "lastUpdated": "2026-06-30",
   "entries": [
     {
       "date": "2026-03-28",
@@ -292,6 +292,42 @@
     },
     {
       "date": "2026-05-24",
+      "sellerId": "aroid-market",
+      "sellerName": "Aroid Market",
+      "title": "Philodendron ilsemanii variegated",
+      "productUrl": "https://aroidmarket.com/products/philodendron-ilsemanii-variegated",
+      "price": 124,
+      "priceHigh": 124,
+      "available": true,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-06-30",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Philodendron Ilsemanii Variegated 3” Exact Plant",
+      "productUrl": "https://rarefoliageplantco.com/products/philodendron-ilsemanii-variegated-3-exact-plant",
+      "price": 549.99,
+      "priceHigh": 549.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-06-30",
+      "sellerId": "rare-foliage-plant-co",
+      "sellerName": "Rare Foliage Plant Co",
+      "title": "Philodendron Ilsemanii Variegated 4” Exact Plant",
+      "productUrl": "https://rarefoliageplantco.com/products/philodendron-ilsemanii-variegated-4-exact-plant",
+      "price": 899.99,
+      "priceHigh": 899.99,
+      "available": false,
+      "growthStage": "plant",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-06-30",
       "sellerId": "aroid-market",
       "sellerName": "Aroid Market",
       "title": "Philodendron ilsemanii variegated",
