@@ -196,9 +196,24 @@ function runAggregation(): void {
   }
 
   const CURRENT_WINDOW_DAYS = 30;
+  const TREND_WINDOW_DAYS = 90;
   const cutoff = new Date();
   cutoff.setDate(cutoff.getDate() - CURRENT_WINDOW_DAYS);
   const cutoffStr = cutoff.toISOString().split("T")[0];
+  const trendCutoff = new Date();
+  trendCutoff.setDate(trendCutoff.getDate() - TREND_WINDOW_DAYS);
+  const trendCutoffStr = trendCutoff.toISOString().split("T")[0];
+
+  const toListingPoint = (e: any) => ({
+    sellerId: e.sellerId,
+    sellerName: e.sellerName,
+    price: e.price,
+    priceHigh: e.priceHigh,
+    productUrl: e.productUrl,
+    growthStage: e.growthStage,
+    date: e.date,
+    available: e.available,
+  });
 
   const summaries: Record<string, any> = {};
 
@@ -207,6 +222,7 @@ function runAggregation(): void {
       fs.readFileSync(path.join(HISTORY_DIR, file), "utf-8"),
     );
     const recent = history.entries.filter((e: any) => e.date >= cutoffStr);
+    const trend = history.entries.filter((e: any) => e.date >= trendCutoffStr);
     const all = history.entries;
 
     // Prefer available listings for current price range; fall back to all recent
@@ -230,16 +246,8 @@ function runAggregation(): void {
       lastSeen: recent.length ? recent[recent.length - 1].date : null,
       sellerCount: sellersSeen.size,
       availableNow: recent.some((e: any) => e.available),
-      recentListings: recent.map((e: any) => ({
-        sellerId: e.sellerId,
-        sellerName: e.sellerName,
-        price: e.price,
-        priceHigh: e.priceHigh,
-        productUrl: e.productUrl,
-        growthStage: e.growthStage,
-        date: e.date,
-        available: e.available,
-      })),
+      recentListings: recent.map(toListingPoint),
+      trendListings: trend.map(toListingPoint),
     };
   }
 

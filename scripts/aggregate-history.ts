@@ -11,6 +11,7 @@ const HISTORY_DIR = path.join(process.cwd(), "data/prices/history");
 const OUTPUT_PATH = path.join(process.cwd(), "data/prices/aggregate.json");
 
 const CURRENT_WINDOW_DAYS = 30;
+const TREND_WINDOW_DAYS = 90;
 
 function daysAgo(n: number): string {
   const d = new Date();
@@ -18,9 +19,24 @@ function daysAgo(n: number): string {
   return d.toISOString().split("T")[0];
 }
 
+function toListingPoint(e: PlantPriceHistory["entries"][number]) {
+  return {
+    sellerId: e.sellerId,
+    sellerName: e.sellerName,
+    price: e.price,
+    priceHigh: e.priceHigh,
+    productUrl: e.productUrl,
+    growthStage: e.growthStage,
+    date: e.date,
+    available: e.available,
+  };
+}
+
 function summarizeHistory(history: PlantPriceHistory): PriceSummary {
   const cutoff = daysAgo(CURRENT_WINDOW_DAYS);
+  const trendCutoff = daysAgo(TREND_WINDOW_DAYS);
   const recent = history.entries.filter((e) => e.date >= cutoff);
+  const trend = history.entries.filter((e) => e.date >= trendCutoff);
   const all = history.entries;
 
   // Prefer available listings for current price range; fall back to all recent
@@ -45,16 +61,8 @@ function summarizeHistory(history: PlantPriceHistory): PriceSummary {
     lastSeen: recent.length ? recent[recent.length - 1].date : null,
     sellerCount: sellersSeen.size,
     availableNow: recent.some((e) => e.available),
-    recentListings: recent.map((e) => ({
-      sellerId: e.sellerId,
-      sellerName: e.sellerName,
-      price: e.price,
-      priceHigh: e.priceHigh,
-      productUrl: e.productUrl,
-      growthStage: e.growthStage,
-      date: e.date,
-      available: e.available,
-    })),
+    recentListings: recent.map(toListingPoint),
+    trendListings: trend.map(toListingPoint),
   };
 }
 

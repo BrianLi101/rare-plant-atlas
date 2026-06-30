@@ -211,7 +211,8 @@ function StageCard({ group }: { group: StageGroup }) {
 
 function PriceTrendChart({ summary }: { summary: PriceSummary }) {
   const chartListings = useMemo(() => {
-    return [...summary.recentListings].sort((a, b) => {
+    const source = summary.trendListings ?? summary.recentListings;
+    return [...source].sort((a, b) => {
       if (a.date !== b.date) return a.date.localeCompare(b.date);
       return a.price - b.price;
     });
